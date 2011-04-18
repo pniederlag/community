@@ -52,13 +52,11 @@ class Tx_T3orgFlickrfeed_Controller_ImagesController extends Tx_Extbase_MVC_Cont
 	 * 
 	 */
 	public function listAction() {
-		require_once 'Zend/Service/Flickr.php';
-		
 		$options = $this->buildOptions();
 		
 		$apiKey = $this->settings['apiKey'];
 		
-		$flickr = new Zend_Service_Flickr($apiKey);
+		$flickr = new Tx_T3orgFlickrfeed_Utility_Flickr($apiKey);
 		if($this->settings['type'] == 1) {
 			// tagSearch
 			$this->view->assign('result', $flickr->tagSearch($this->settings['tags'], $options));

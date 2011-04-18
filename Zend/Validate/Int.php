@@ -27,7 +27,7 @@ require_once 'Zend/Validate/Abstract.php';
 /**
  * @see Zend_Locale_Format
  */
-require_once 'Zend/Locale/Format.php';
+//require_once 'Zend/Locale/Format.php';
 
 /**
  * @category   Zend
@@ -57,22 +57,11 @@ class Zend_Validate_Int extends Zend_Validate_Abstract
      */
     public function __construct($locale = null)
     {
-        if ($locale instanceof Zend_Config) {
-            $locale = $locale->toArray();
-        }
-
         if (is_array($locale)) {
             if (array_key_exists('locale', $locale)) {
                 $locale = $locale['locale'];
             } else {
                 $locale = null;
-            }
-        }
-
-        if (empty($locale)) {
-            require_once 'Zend/Registry.php';
-            if (Zend_Registry::isRegistered('Zend_Locale')) {
-                $locale = Zend_Registry::get('Zend_Locale');
             }
         }
 
@@ -96,8 +85,7 @@ class Zend_Validate_Int extends Zend_Validate_Abstract
      */
     public function setLocale($locale = null)
     {
-        require_once 'Zend/Locale.php';
-        $this->_locale = Zend_Locale::findLocale($locale);
+        $this->_locale = $locale;
         return $this;
     }
 
