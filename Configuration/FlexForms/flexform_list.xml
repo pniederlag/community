@@ -1,0 +1,34 @@
+<T3DataStructure>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>Options</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+<!--					<settings.feedUrl>
+						<TCEforms>
+							<label>URL of the feed</label>
+							<config>
+								<type>input</type>
+								<size>255</size>
+								<eval>trim,required</eval>
+							</config>
+						</TCEforms>
+					</settings.feedUrl>
+					<settings.templatePathAndName>
+						<TCEforms>
+							<label>The template path to use</label>
+							<config>
+								<type>input</type>
+								<size>255</size>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</settings.templatePathAndName>-->
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>
