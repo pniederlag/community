@@ -98,7 +98,7 @@ class Tx_T3orgFlickrfeed_Controller_ImagesController extends Tx_Extbase_MVC_Cont
 					continue;
 				}
 				
-				list($key, $value) = t3lib_div::trimExplode(':', $line, false, 2);
+				list($key, $value) = t3lib_div::trimExplode('=', $line, false, 2);
 				if(!empty($key) && !empty($value)) {
 					$options[$key] = $value;
 				}
