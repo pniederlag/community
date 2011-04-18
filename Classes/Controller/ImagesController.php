@@ -30,10 +30,24 @@
  * @version $Id:$
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License, version 2
  */
-class Tx_T3orgFlickrFeed_Controller_FeedController extends Tx_Extbase_MVC_Controller_ActionController {
+class Tx_T3orgFlickrfeed_Controller_ImagesController extends Tx_Extbase_MVC_Controller_ActionController {
 
-	public function showAction() {
+	/**
+	 * set the Zend framework in include_path
+	 */
+	public function initializeAction() {
+		set_include_path(
+			get_include_path().
+			PATH_SEPARATOR.
+			t3lib_extMgm::extPath($this->request->getControllerExtensionKey())
+		);
+	}
+	
+	public function listAction() {
+		require_once 'Zend/Service/Flickr.php';
+		$flickr = new Zend_Service_Flickr('27a0921fa1e736bbd9e9707672f795ef');
 		
+		$this->view->assign('result', $flickr->tagSearch("typo3"));
 	}
 }
 

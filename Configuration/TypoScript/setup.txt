@@ -1,0 +1,3 @@
+plugin.tx_t3orgflickrfeed.settings {
+	apiKey = {$plugin.tx_t3orgflickrfeed.settings.apiKey}
+}
