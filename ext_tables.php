@@ -9,7 +9,7 @@ Tx_Extbase_Utility_Extension::registerPlugin(
 
 t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Default config for '.$_EXTKEY);
 
-$extensionName = t3lib_div::underscoredToLowerCamelCase($_EXTKEY);
+$extensionName = strtolower(t3lib_div::underscoredToLowerCamelCase($_EXTKEY));
 
 $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$extensionName . '_pi1'] = 'layout,select_key,recursive,pages';
 $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$extensionName . '_pi1'] = 'pi_flexform';
