@@ -52,19 +52,28 @@ class Tx_T3orgFlickrfeed_Controller_ImagesController extends Tx_Extbase_MVC_Cont
 	 * 
 	 */
 	public function listAction() {
-		$options = $this->buildOptions();
 		
-		$apiKey = $this->settings['apiKey'];
+		try {
 		
-		$flickr = new Tx_T3orgFlickrfeed_Utility_Flickr($apiKey);
-		if($this->settings['type'] == 1) {
-			// tagSearch
-			$this->view->assign('result', $flickr->tagSearch($this->settings['tags'], $options));
-		} elseif($this->settings['type'] == 2) {
-			// people.getPublicPhotos
-			$this->view->assign('result', $flickr->userSearch($this->settings['user_id'], $options));
-		} else {
-			$this->view->assign('result', $flickr->groupPoolGetPhotos($this->settings['group_id'], $options));
+			$options = $this->buildOptions();
+			
+			$apiKey = $this->settings['apiKey'];
+			
+			$flickr = new Tx_T3orgFlickrfeed_Utility_Flickr($apiKey);
+			if($this->settings['type'] == 1) {
+				// tagSearch
+				$this->view->assign('result', $flickr->tagSearch($this->settings['tags'], $options));
+			} elseif($this->settings['type'] == 2) {
+				// people.getPublicPhotos
+				$this->view->assign('result', $flickr->userSearch($this->settings['user_id'], $options));
+			} else {
+				$this->view->assign('result', $flickr->groupPoolGetPhotos($this->settings['group_id'], $options));
+			}
+			
+		}
+		catch (Exception $e) {
+			t3lib_div::sysLog($e->getMessage(), $this->request->getControllerExtensionKey(), LOG_ERR);
+    		$this->view->assign('error', $e->getMessage());
 		}
 	}
 	
