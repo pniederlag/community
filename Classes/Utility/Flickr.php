@@ -13,7 +13,7 @@ class Tx_T3orgFlickrfeed_Utility_Flickr extends Zend_Service_Flickr {
 	/**
      * Returns a reference to the REST client, instantiating it if necessary
      *
-     * @return Zend_Rest_Client
+     * @return Tx_T3orgFlickrfeed_Utility_HttpClient
      */
     public function getRestClient() {
         if (is_null($this->_restClient)) {

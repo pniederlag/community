@@ -1,17 +1,43 @@
 <?php 
 
+/**
+ * mocks Zend_Rest_Client and Zend_Http_Client
+ * 
+ * @author Christian Zenker <christian.zenker@599media.de>
+ */
 class Tx_T3orgFlickrfeed_Utility_HttpClient {
 	
+	/**
+	 * baseUrl to fetch from
+	 * @var string
+	 */
 	protected $uri = null;
 	
+	/**
+	 * __constructor
+	 * @param string $uri baseUrl
+	 */
 	public function __construct($uri) {
 		$this->uri = $uri;
 	}
 	
+	/**
+	 * get an HTTP client
+	 * 
+	 * (Zend uses different clients, but we just mock this
+	 * one in this class, too)
+	 * 
+	 * @return Tx_T3orgFlickrfeed_Utility_HttpClient
+	 */
 	public function getHttpClient() {
 		return $this;
 	}
 	
+	/**
+	 * reset all given parameters
+	 * 
+	 * this is empty here, as I don't know what should be reset
+	 */
 	public function resetParameters() {
 		
 	}
