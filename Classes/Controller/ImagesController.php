@@ -63,6 +63,11 @@ class Tx_T3orgFlickrfeed_Controller_ImagesController extends Tx_Extbase_MVC_Cont
 			if($this->settings['type'] == 1) {
 				// tagSearch
 				$this->view->assign('result', $flickr->tagSearch($this->settings['tags'], $options));
+				
+				$tags = t3lib_div::trimExplode(',', $this->settings['tags'], true);
+				$this->view->assign('tags', $tags);
+				
+				
 			} elseif($this->settings['type'] == 2) {
 				// people.getPublicPhotos
 				$this->view->assign('result', $flickr->userSearch($this->settings['user_id'], $options));

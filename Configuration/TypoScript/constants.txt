@@ -1,3 +1,4 @@
 plugin.tx_t3orgflickrfeed {
-	apiKey = 27a0921fa1e736bbd9e9707672f795ef
+	# your api key goes here
+	apiKey =
 }
