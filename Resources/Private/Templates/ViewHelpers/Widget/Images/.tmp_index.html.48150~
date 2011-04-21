@@ -1,0 +1,1 @@
+<f:renderChildren arguments="{result:result, tags:tags}" />
