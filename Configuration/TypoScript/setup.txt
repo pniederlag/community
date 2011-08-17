@@ -20,11 +20,14 @@ lib.misc.bannerWidget {
 }
 
 lib.navigation.sub.20 = COA
-lib.navigation.sub.20.10 = TEXT
-lib.navigation.sub.20.10.value = Platinum sponsors
-lib.navigation.sub.20.10.wrap = <h4>|</h4>
-lib.navigation.sub.20.20 < lib.misc.bannerWidget
-lib.navigation.sub.20.20.settings.numberOfBannersShown = 2
+lib.navigation.sub.20 {
+	10 = TEXT
+	10.value = Platinum sponsors
+	10.wrap = <h4 class="h4">|</h4>
+	20 < lib.misc.bannerWidget
+	20.settings.numberOfBannersShown = 2
+	stdWrap.wrap = <div class="d">|</div>
+}
 
 
 plugin.tx_randombanners._CSS_DEFAULT_STYLE (
