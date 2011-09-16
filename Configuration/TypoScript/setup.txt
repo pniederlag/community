@@ -8,7 +8,7 @@ plugin.tx_randombanners {
 		storagePid = {$plugin.tx_randombanners.persistence.storagePid}
 	}
 	settings {
-		numberOfBannersShown = 4
+		numberOfBannersShown = 6
 	}
 }
 
@@ -25,8 +25,8 @@ lib.navigation.sub.20 {
 	10.value = Platinum sponsors
 	10.wrap = <h4 class="h4">|</h4>
 	20 < lib.misc.bannerWidget
-	20.settings.numberOfBannersShown = 2
-	stdWrap.wrap = <div class="d">|</div>
+	20.settings.numberOfBannersShown = 10
+	stdWrap.wrap = <div class="d navigationbanners">|</div>
 }
 
 
