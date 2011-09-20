@@ -12,7 +12,8 @@ plugin.tx_randombanners {
 	}
 }
 
-[globalVar = TSFE:id = ${const.page.root}]
+# Ideally taken from ${const.page.root}
+[globalVar = TSFE:id = 3]
 plugin.tx_randombanners.settings.numberOfBannersShown = -1
 [global]
 
