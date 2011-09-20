@@ -80,37 +80,41 @@ class Tx_Randombanners_Controller_BannerController extends Tx_Extbase_MVC_Contro
 
 			// get the last set of banners from session
 		$lastBanners = $GLOBALS['TSFE']->fe_user->getKey('ses', 'tx_randombanners');
+		$numberOfBannersShown = ($numberOfBannersShown!==0?$numberOfBannersShown:$this->settings['numberOfBannersShown']);
 
-		$numberOfBannersShown = ($numberOfBannersShown?$numberOfBannersShown:$this->settings['numberOfBannersShown']);
-
-			// first round to get all banners not displayed the last time
-		foreach ($banners as $key => $banner) {
-			$banner->setLogo(Tx_ExtbaseDam_Utility_Dam::getOne('tx_randombanners_domain_model_banner', $banner->getUid(), 'tx_randombanner_dam_images'));
-			if (sizeof($newBanners) < $numberOfBannersShown) {
-				if (empty($lastBanners)) {
-					$newBanners[] = $banner;
-				} elseif (array_search($banner->getUid(), $lastBanners) === FALSE) {
-					$newBanners[] = $banner;
-					unset($banners[$key]);
+		if ($numberOfBannersShown == -1) {
+				// just show all banners
+			$newBanners = $banners;
+		} else {
+				// first round to get all banners not displayed the last time
+			foreach ($banners as $key => $banner) {
+				if (sizeof($newBanners) < $numberOfBannersShown) {
+					if (empty($lastBanners)) {
+						$newBanners[] = $banner;
+					} elseif (array_search($banner->getUid(), $lastBanners) === FALSE) {
+						$newBanners[] = $banner;
+						unset($banners[$key]);
+					}
+				} else {
+					break;
 				}
-			} else {
-				break;
 			}
-		}
 
-			// second round to get some other banners if not enough banners in the list
-		foreach ($banners as $banner) {
-			if (sizeof($newBanners) < $numberOfBannersShown) {
-				if (!($banner->getLogo() instanceof Tx_Extbase_Domain_Model_Dam)) {
-					$banner->setLogo(Tx_ExtbaseDam_Utility_Dam::getOne('tx_randombanners_domain_model_banner', $banner->getUid(), 'tx_randombanner_dam_images'));
+				// second round to get some other banners if not enough banners in the list
+			foreach ($banners as $banner) {
+				if (sizeof($newBanners) < $numberOfBannersShown) {
+					$newBanners[] = $banner;
+				} else {
+					break;
 				}
-				$newBanners[] = $banner;
-			} else {
-				break;
 			}
 		}
 
 		foreach ($newBanners as $newBanner) {
+			if (!($newBanner->getLogo() instanceof Tx_Extbase_Domain_Model_Dam)) {
+				$newBanner->setLogo(Tx_ExtbaseDam_Utility_Dam::getOne('tx_randombanners_domain_model_banner', $newBanner->getUid(), 'tx_randombanner_dam_images'));
+			}
+
 				// get uids of all shown banners to save into session
 			$saveIntoSession[] = $newBanner->getUid();
 

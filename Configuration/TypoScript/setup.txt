@@ -12,6 +12,10 @@ plugin.tx_randombanners {
 	}
 }
 
+[globalVar = TSFE:id = ${const.page.root}]
+plugin.tx_randombanners.settings.numberOfBannersShown = -1
+[global]
+
 lib.misc.bannerWidget = USER
 lib.misc.bannerWidget {
 	userFunc = tx_extbase_core_bootstrap->run

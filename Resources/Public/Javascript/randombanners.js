@@ -1,6 +1,5 @@
 var banner_position_array = new Array();
 function clickBanner(el) {
-	console.log('9');
 	$.ajax({
 		url: 'index.php?type=69&tx_randombanners_list[action]=show&tx_randombanners_list[banner]=' + parseInt($(el).attr('rel')) +'&tx_randombanners_list[controller]=Banner',
 		success: function(backData) {
