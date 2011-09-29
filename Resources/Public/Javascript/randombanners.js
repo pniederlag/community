@@ -47,9 +47,9 @@ function initBanners() {
 			$(".banner"+banneri+":eq("+current_banner+")").data('banners', {banneri: banneri, new_banner: new_banner}).fadeOut("slow", function() {
 				$(".banner"+$(this).data('banners').banneri+":eq("+$(this).data('banners').new_banner+")").fadeIn("slow", function() { $(this).addClass("shown")});
 			});
-			$('.gc .tx-randombanners:eq(' + next + ')').data('no', next).oneTime('5s', 'premiumbanner', rotateNext);
+			$('.gc .tx-randombanners:eq(' + next + ')').data('no', next).oneTime((Math.PI + 1) * 1000 /* Why not? */, 'premiumbanner', rotateNext);
 		}
-		$('.gc .tx-randombanners:eq(0)').data('no', 0).oneTime('5s', 'premiumbanner', rotateNext);
+		$('.gc .tx-randombanners:eq(0)').data('no', 0).oneTime((Math.PI + 1) * 1000 /* Why not? */, 'premiumbanner', rotateNext);
 	}
 	
 	$(document).everyTime(5000,function(){
