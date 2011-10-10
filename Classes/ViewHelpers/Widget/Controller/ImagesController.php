@@ -52,7 +52,11 @@ class Tx_T3orgFlickrfeed_ViewHelpers_Widget_Controller_ImagesController extends 
 				// tagSearch
 				$this->view->assign('result', $flickr->tagSearch($this->widgetConfiguration['tags'], $options));
 				
-				$tags = t3lib_div::trimExplode(',', $this->widgetConfiguration['tags'], true);
+				if(is_array($this->widgetConfiguration['tags']) || $this->widgetConfiguration['tags'] instanceof Traversable) {
+					$tags = $this->widgetConfiguration['tags'];
+				} else {
+					$tags = t3lib_div::trimExplode(',', $this->widgetConfiguration['tags'], true);
+				}
 				$this->view->assign('tags', $tags);
 			} elseif($this->widgetConfiguration['type'] == 2 || $this->widgetConfiguration['type'] === 'user') {
 				// people.getPublicPhotos
