@@ -69,12 +69,11 @@ class Tx_Randombanners_Controller_BannerController extends Tx_Extbase_MVC_Contro
 	/**
 	 * Displays all Statistics
 	 *
-	 * @param integer $numberOfBannersShown
 	 * @return void
 	 */
-	public function listAction($numberOfBannersShown=0) {
+	public function listAction() {
 			// initialization
-		$banners = $this->bannerRepository->findRandomBanners();
+		$banners = $this->bannerRepository->findAll();
 		
 		foreach ($banners as $banner) {
 			if (!($banner->getLogo() instanceof Tx_Extbase_Domain_Model_Dam)) {
@@ -82,7 +81,7 @@ class Tx_Randombanners_Controller_BannerController extends Tx_Extbase_MVC_Contro
 			}
 
 				// increment the displayed counter
-			$banner->setDisplayedThisMonth($banner->getDisplayedThisMonth() + 1); // seems rather useless when caching is enabled
+//			$banner->setDisplayedThisMonth($banner->getDisplayedThisMonth() + 1); // seems rather useless when caching is enabled
 		}
 		$this->view->assign('banners', $banners);
 	}

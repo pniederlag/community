@@ -11,7 +11,7 @@
 
 		),
 		array(
-			'Banner' => 'list,show',
+			'Banner' => 'show',
 
 		)
 	);

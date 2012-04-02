@@ -11,7 +11,16 @@ function clickBanner(el) {
 function initBanners() {
 	/* platin members at the left navigation */
     if($(".d.navigationbanners .tx-randombanners").length > 0) {
-        $(".d.navigationbanners .tx-randombanners-item").each(function(){
+        var container = $('#randombanners .tx-randombanners');
+        var banners = $(".d.navigationbanners .tx-randombanners-item");
+        var numBanners = banners.length;
+        for(var i=0; i< 4; i++) {
+            var banner = banners[Math.floor(Math.random() * numBanners)];
+            container.prepend(banner);
+        }
+
+
+        banners.each(function(){
             if($(this).index() > 1)
                 $(this).css("display","none");
         });
@@ -82,7 +91,7 @@ $(document).ready(function() {
 		if($('#randombannersNumber')) {
 			// if: load via ajax should be done
 			$.ajax({
-				url: '/index.php?type=69&tx_randombanners_list[action]=list&tx_randombanners_list[controller]=Banner&tx_randombanners_list[numberOfBannersShown]=' + parseInt($('#randombannersNumber').html()),
+				url: $('#randombannersUrl').text(),
 				success: function(html) {
 					$('#randombanners').append(html);
 					initBanners();
