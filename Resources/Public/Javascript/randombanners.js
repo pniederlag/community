@@ -1,7 +1,7 @@
 var banner_position_array = new Array();
 function clickBanner(el) {
 	$.ajax({
-		url: '/index.php?type=69&tx_randombanners_list[action]=show&tx_randombanners_list[banner]=' + parseInt($(el).attr('rel')) +'&tx_randombanners_list[controller]=Banner',
+		url: '/index.php?type=69&tx_randombanners_list[action]=show&tx_randombanners_list[banner]=' + parseInt($(el).attr('data-itemId')) +'&tx_randombanners_list[controller]=Banner',
 		success: function(backData) {
 			return true;
 		}
@@ -87,19 +87,8 @@ function initBanners() {
 
 
 $(document).ready(function() {
-	if ($('#randombanners').length > 0) {
-		if($('#randombannersNumber')) {
-			// if: load via ajax should be done
-			$.ajax({
-				url: $('#randombannersUrl').text(),
-				success: function(html) {
-					$('#randombanners').append(html);
-					initBanners();
-	            }
-			});
-		} else {
-			initBanners();
-		}
+	if ($('#randombanners')) {
+		initBanners();
 	}
     
 });

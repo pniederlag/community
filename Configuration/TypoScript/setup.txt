@@ -8,8 +8,6 @@ plugin.tx_randombanners {
 		storagePid = {$plugin.tx_randombanners.persistence.storagePid}
 	}
 	settings {
-		numberOfBannersShown = 0
-		pid = {$const.page.root}
 	}
 }
 
