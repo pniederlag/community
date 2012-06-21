@@ -8,12 +8,14 @@ plugin.tx_randombanners {
 		storagePid = {$plugin.tx_randombanners.persistence.storagePid}
 	}
 	settings {
+		noFollowTag = 1
 	}
 }
 
 # Ideally taken from ${const.page.root}
 [globalVar = TSFE:id = 3]
 plugin.tx_randombanners.settings.numberOfBannersShown = -1
+plugin.tx_randombanners.settings.noFollowTag = 0
 [global]
 
 lib.misc.bannerWidget = USER
