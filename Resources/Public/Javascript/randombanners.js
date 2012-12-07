@@ -1,4 +1,92 @@
-var banner_position_array = new Array();
+
+BannerRotator = function(selector) {
+	this.containerCount =  4;
+	this.switchPause = 4000;
+	this.switchDelay = 100;
+
+	if ($(selector).length == 0) {
+		return;
+	}
+
+	this.bannerCount = $(selector + " div.tx-randombanners-item").length;
+
+	this.initialize = function() {
+		this.combinations = this.createCombinations(this.containerCount, this.generateIterativeArray(this.bannerCount));
+		this.hitCombinations = [];
+
+		for (i = 1; i < this.containerCount; i++) {
+			$(selector + " .tx-randombanners:eq(0)").clone().insertAfter(selector + " .tx-randombanners:eq(0)").hide();
+		}
+		for (i = 1; i < this.containerCount; i+=2) {
+			$(selector + " .tx-randombanners").eq(i).addClass('rightbanner');
+		}
+		this.animate();
+	};
+
+	this.generateIterativeArray = function(limit) {
+		array = [];
+		for (i = 0; i < limit; i++) {
+			array.push(i);
+		}
+		return array;
+	};
+
+	this.activateCombination = function(combination) {
+		indexOrder = this.generateOrdering();
+		this.activateBannerInBox(0, indexOrder, combination);
+	};
+
+	this.activateBannerInBox = function(iterationIndex, indexOrder , combination) {
+		var self = this;
+		boxId = indexOrder[iterationIndex];
+		$(selector + " .tx-randombanners").eq(boxId).find('.tx-randombanners-item').hide().eq(combination[boxId]).fadeIn(this.switchDelay, function() {
+			if (iterationIndex < indexOrder.length - 1) {
+				self.activateBannerInBox(iterationIndex + 1, indexOrder, combination);
+			}
+		});
+		$(selector + " .tx-randombanners").eq(boxId).show();
+	};
+
+	this.generateOrdering = function() {
+		orderings = this.createCombinations(this.containerCount, this.generateIterativeArray(this.containerCount));
+		return orderings[Math.floor((Math.random() * orderings.length))];
+	};
+
+	this.animate = function() {
+		if (this.combinations.length == 0 && this.hitCombinations.length > 0) {
+			this.combinations = this.hitCombinations;
+			this.hitCombinations = [];
+		}
+		nextCombinationIndex = Math.floor((Math.random() * this.combinations.length));
+		this.activateCombination(this.combinations[nextCombinationIndex]);
+		this.hitCombinations.push(this.combinations[nextCombinationIndex]);
+		this.combinations.slice(nextCombinationIndex, 1);
+
+		var self = this;
+		window.setTimeout(function() {self.animate()}, this.switchPause);
+	};
+
+	this.createCombinations = function(num, source) {
+		var combinations = [];
+		if (num == 1) {
+			for (i = 0; i < source.length; i++) {
+				combinations.push([source[i]]);
+			}
+		} else {
+			for (var i = 0; i < source.length; i++) {
+				var newSource = source.slice(0);
+				newSource.splice(i, 1);
+				var subCombinations = this.createCombinations(num - 1, newSource);
+				for (j = 0; j < subCombinations.length; j++) {
+					var currentCombination = [source[i]].concat(subCombinations[j]);
+					combinations.push(currentCombination);
+				}
+			}
+		}
+		return combinations;
+	};
+};
+
 function clickBanner(el) {
 	$.ajax({
 		url: '/index.php?type=69&tx_randombanners_list[action]=show&tx_randombanners_list[banner]=' + parseInt($(el).attr('data-itemId')) +'&tx_randombanners_list[controller]=Banner',
@@ -10,85 +98,34 @@ function clickBanner(el) {
 
 function initBanners() {
 	/* platin members at the left navigation */
-    if($(".d.navigationbanners .tx-randombanners").length > 0) {
-        var container = $('#randombanners .tx-randombanners');
-        var banners = $(".d.navigationbanners .tx-randombanners-item");
-        var numBanners = banners.length;
-        for(var i=0; i< 4; i++) {
-            var banner = banners[Math.floor(Math.random() * numBanners)];
-            container.prepend(banner);
-        }
-
-
-        banners.each(function(){
-            if($(this).index() > 1)
-                $(this).css("display","none");
-        });
-        $(".d.navigationbanners .tx-randombanners-item:eq(0), .d.navigationbanners .tx-randombanners-item:eq(1)").addClass("shown");
-    }
-    /* platin members at the homepage */
-    if($(".gc .tx-randombanners").length > 0) {
-		for(var banneri = 0; banneri < 4; banneri++) {
-			banner_position_array[banneri] = banneri;
+	if($(".d.navigationbanners .tx-randombanners").length > 0) {
+		var container = $('#randombanners .tx-randombanners');
+		var banners = $(".d.navigationbanners .tx-randombanners-item");
+		var numBanners = banners.length;
+		for(var i=0; i< 4; i++) {
+			var banner = banners[Math.floor(Math.random() * numBanners)];
+			container.prepend(banner);
 		}
-        for(var bannerfields = 0; bannerfields < 3; bannerfields++)
-            $(".gc .tx-randombanners:eq(0)").clone().insertAfter(".tx-randombanners:eq(0)");
 
-        for(var bannerfields = 0; bannerfields < 4; bannerfields++){
-            if(bannerfields%2 != 0)
-                $(".gc .tx-randombanners:eq("+bannerfields+")").addClass("rightbanner");
-            $(".gc .tx-randombanners:eq("+bannerfields+")").children(".tx-randombanners-item").addClass("banner"+((bannerfields)));
-        }
-
-        $(".gc .tx-randombanners-item").each(function(){
-            $(this).css("display","none");
-        });
-        $(".gc .tx-randombanners:eq(0) .tx-randombanners-item:eq(0), .gc .tx-randombanners:eq(1) .tx-randombanners-item:eq(1), .gc .tx-randombanners:eq(2) .tx-randombanners-item:eq(2), .gc .tx-randombanners:eq(3) .tx-randombanners-item:eq(3)").addClass("shown").fadeIn("slow", function() {
-
+		banners.each(function(){
+			if($(this).index() > 1)
+				$(this).css("display","none");
 		});
-
-		banner_amount = $(".gc .tx-randombanners:first .tx-randombanners-item").length;
-		var rotateNext = function() {
-			var banneri = $(this).data('no');
-			var next = (banneri + 1)%4;
-			current_banner = banner_position_array[banneri];
-			new_banner = banner_position_array[banneri] = (banner_position_array[banneri]-1+banner_amount)%banner_amount;
-			$(".banner"+banneri+":eq("+current_banner+")").data('banners', {banneri: banneri, new_banner: new_banner}).fadeOut("slow", function() {
-				$(".banner"+$(this).data('banners').banneri+":eq("+$(this).data('banners').new_banner+")").fadeIn("slow", function() { $(this).addClass("shown")});
-			});
-			$('.gc .tx-randombanners:eq(' + next + ')').data('no', next).oneTime((Math.PI + 1) * 1000 /* Why not? */, 'premiumbanner', rotateNext);
-		}
-		$('.gc .tx-randombanners:eq(0)').data('no', 0).oneTime((Math.PI + 1) * 1000 /* Why not? */, 'premiumbanner', rotateNext);
+		$(".d.navigationbanners .tx-randombanners-item:eq(0), .d.navigationbanners .tx-randombanners-item:eq(1)").addClass("shown");
 	}
-	
-	$(document).everyTime(5000,function(){
-        if($(".d.navigationbanners .tx-randombanners").length > 0) {
-            var first_shown = $(".d.navigationbanners #randombanners .shown:first").index(".tx-randombanners-item");
-            var last_shown = $(".d.navigationbanners #randombanners .shown:last").index(".tx-randombanners-item");
-            $(".d.navigationbanners #randombanners .shown").each(function(){
-                $(this).removeClass("shown").fadeOut("slow",function(){
-                    if(last_shown == $(".d.navigationbanners .tx-randombanners-item:last").index(".tx-randombanners-item") && first_shown == 0){
-                        $(".d.navigationbanners .tx-randombanners-item:eq(1), .d.navigationbanners .tx-randombanners-item:eq(2)").fadeIn("slow").addClass("shown");
-                    }
-                    else if(last_shown == $(".d.navigationbanners .tx-randombanners-item:last").index(".tx-randombanners-item")-1){
-                        $(".d.navigationbanners .tx-randombanners-item:eq(0), .d.navigationbanners .tx-randombanners-item:last").fadeIn("slow").addClass("shown");
-                    }
-                    else if(last_shown == $(".d.navigationbanners .tx-randombanners-item:last").index(".tx-randombanners-item") && first_shown == $(".d.navigationbanners .tx-randombanners-item:last").index(".tx-randombanners-item")-1){
-                        $(".d.navigationbanners .tx-randombanners-item:first, .d.navigationbanners .tx-randombanners-item:eq(1)").fadeIn("slow").addClass("shown");
-                    }
-                    else{
-                        $(".d.navigationbanners .tx-randombanners-item:eq("+(last_shown+1)+"), .d.navigationbanners .tx-randombanners-item:eq("+(last_shown+2)+")").fadeIn("slow").addClass("shown");
-                    }
-                });
-            });
-        }
-	});
+
+
+	/* platin members at the homepage */
+	if($(".gc .tx-randombanners").length > 0) {
+
+	}
 }
 
 
 $(document).ready(function() {
 	if ($('#randombanners')) {
 		initBanners();
+		var rotator = new BannerRotator("#randombanners");
+		rotator.initialize();
 	}
-    
 });
