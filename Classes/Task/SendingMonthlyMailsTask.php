@@ -117,7 +117,11 @@
 		 * @return boolean
 		 */
 		protected function sendReport(Tx_Randombanners_Domain_Model_Banner $banner) {
-			$message = "Your banner statistics for ".date('F Y', strtotime('-1 month')).":\n\nDisplayed: ".$banner->getDisplayedThisMonth()." times\nClicked: ".$banner->getClickedThisMonth()." times\n\nThanks for sponsoring\nTYPO3 Association";
+			$message = "Your banner statistics for " . date('F Y', strtotime('-1 month')) . ":\n"
+				. "\nClicked: ".$banner->getClickedThisMonth()." times\n"
+				. "\nThanks for sponsoring\nTYPO3 Association";
+
+
 
 			$this->htmlMail->start();
 			$this->htmlMail->subject = 'Report for your banner on typo3.org on '.date('F', strtotime('-1 month'));
