@@ -97,35 +97,19 @@ function clickBanner(el) {
 }
 
 function initBanners() {
+	var rotator = new BannerRotator("#randombanners");
 	/* platin members at the left navigation */
 	if($(".d.navigationbanners .tx-randombanners").length > 0) {
-		var container = $('#randombanners .tx-randombanners');
-		var banners = $(".d.navigationbanners .tx-randombanners-item");
-		var numBanners = banners.length;
-		for(var i=0; i< 4; i++) {
-			var banner = banners[Math.floor(Math.random() * numBanners)];
-			container.prepend(banner);
-		}
-
-		banners.each(function(){
-			if($(this).index() > 1)
-				$(this).css("display","none");
-		});
-		$(".d.navigationbanners .tx-randombanners-item:eq(0), .d.navigationbanners .tx-randombanners-item:eq(1)").addClass("shown");
+		rotator.containerCount = 2;
+		rotator.switchDelay = 0;
+		rotator.switchPause = 5000;
 	}
-
-
-	/* platin members at the homepage */
-	if($(".gc .tx-randombanners").length > 0) {
-
-	}
+	rotator.initialize();
 }
 
 
 $(document).ready(function() {
 	if ($('#randombanners')) {
 		initBanners();
-		var rotator = new BannerRotator("#randombanners");
-		rotator.initialize();
 	}
 });

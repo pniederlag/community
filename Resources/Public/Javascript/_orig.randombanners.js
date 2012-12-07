@@ -60,28 +60,28 @@ function initBanners() {
 		}
 		$('.gc .tx-randombanners:eq(0)').data('no', 0).oneTime((Math.PI + 1) * 1000 /* Why not? */, 'premiumbanner', rotateNext);
 	}
-	
+
 	$(document).everyTime(5000,function(){
-        if($(".d.navigationbanners .tx-randombanners").length > 0) {
-            var first_shown = $(".d.navigationbanners #randombanners .shown:first").index(".tx-randombanners-item");
-            var last_shown = $(".d.navigationbanners #randombanners .shown:last").index(".tx-randombanners-item");
-            $(".d.navigationbanners #randombanners .shown").each(function(){
-                $(this).removeClass("shown").fadeOut("slow",function(){
-                    if(last_shown == $(".d.navigationbanners .tx-randombanners-item:last").index(".tx-randombanners-item") && first_shown == 0){
-                        $(".d.navigationbanners .tx-randombanners-item:eq(1), .d.navigationbanners .tx-randombanners-item:eq(2)").fadeIn("slow").addClass("shown");
-                    }
-                    else if(last_shown == $(".d.navigationbanners .tx-randombanners-item:last").index(".tx-randombanners-item")-1){
-                        $(".d.navigationbanners .tx-randombanners-item:eq(0), .d.navigationbanners .tx-randombanners-item:last").fadeIn("slow").addClass("shown");
-                    }
-                    else if(last_shown == $(".d.navigationbanners .tx-randombanners-item:last").index(".tx-randombanners-item") && first_shown == $(".d.navigationbanners .tx-randombanners-item:last").index(".tx-randombanners-item")-1){
-                        $(".d.navigationbanners .tx-randombanners-item:first, .d.navigationbanners .tx-randombanners-item:eq(1)").fadeIn("slow").addClass("shown");
-                    }
-                    else{
-                        $(".d.navigationbanners .tx-randombanners-item:eq("+(last_shown+1)+"), .d.navigationbanners .tx-randombanners-item:eq("+(last_shown+2)+")").fadeIn("slow").addClass("shown");
-                    }
-                });
-            });
-        }
+		if($(".d.navigationbanners .tx-randombanners").length > 0) {
+			var first_shown = $(".d.navigationbanners #randombanners .shown:first").index(".tx-randombanners-item");
+			var last_shown = $(".d.navigationbanners #randombanners .shown:last").index(".tx-randombanners-item");
+			$(".d.navigationbanners #randombanners .shown").each(function(){
+				$(this).removeClass("shown").fadeOut("slow",function(){
+					if(last_shown == $(".d.navigationbanners .tx-randombanners-item:last").index(".tx-randombanners-item") && first_shown == 0){
+						$(".d.navigationbanners .tx-randombanners-item:eq(1), .d.navigationbanners .tx-randombanners-item:eq(2)").fadeIn("slow").addClass("shown");
+					}
+					else if(last_shown == $(".d.navigationbanners .tx-randombanners-item:last").index(".tx-randombanners-item")-1){
+						$(".d.navigationbanners .tx-randombanners-item:eq(0), .d.navigationbanners .tx-randombanners-item:last").fadeIn("slow").addClass("shown");
+					}
+					else if(last_shown == $(".d.navigationbanners .tx-randombanners-item:last").index(".tx-randombanners-item") && first_shown == $(".d.navigationbanners .tx-randombanners-item:last").index(".tx-randombanners-item")-1){
+						$(".d.navigationbanners .tx-randombanners-item:first, .d.navigationbanners .tx-randombanners-item:eq(1)").fadeIn("slow").addClass("shown");
+					}
+					else{
+						$(".d.navigationbanners .tx-randombanners-item:eq("+(last_shown+1)+"), .d.navigationbanners .tx-randombanners-item:eq("+(last_shown+2)+")").fadeIn("slow").addClass("shown");
+					}
+				});
+			});
+		}
 	});
 }
 
@@ -90,5 +90,5 @@ $(document).ready(function() {
 	if ($('#randombanners')) {
 		initBanners();
 	}
-    
+
 });
