@@ -21,6 +21,7 @@
 			<label index="options.per_page">Number of results</label>
 			
 			<label index="optionsAsText">Additional Options</label>
+			<label index="templatePath">Template Path</label>
 		</languageKey>
 	</data>
 </T3locallang>

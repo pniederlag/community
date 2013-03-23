@@ -111,6 +111,15 @@
 							</config>
 						</TCEforms>
 					</settings.templatePathAndName>-->
+					<settings.templatePath>
+						<TCEforms>
+							<label>LLL:EXT:t3org_flickrfeed/Resources/Private/Language/locallang_flex.xml:templatePath</label>
+							<config>
+								<type>input</type>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</settings.templatePath>
 				</el>
 			</ROOT>
 		</sDEF>

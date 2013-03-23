@@ -42,7 +42,18 @@ class Tx_T3orgFlickrfeed_Controller_ImagesController extends Tx_Extbase_MVC_Cont
 			t3lib_extMgm::extPath($this->request->getControllerExtensionKey())
 		);
 	}
-	
+
+	protected function initializeView(Tx_Extbase_MVC_View_ViewInterface $view)
+	{
+		if(array_key_exists('templatePath', $this->settings) && !empty($this->settings['templatePath'])) {
+			$rootPath = t3lib_div::getFileAbsFileName($this->settings['templatePath']);
+			$this->view->setTemplateRootPath($rootPath . '/Templates');
+			$this->view->setPartialRootPath($rootPath . '/Partials');
+			$this->view->setLayoutRootPath($rootPath . '/Layout');
+		}
+	}
+
+
 	/**
 	 * listAction
 	 * 
