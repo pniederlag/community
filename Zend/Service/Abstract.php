@@ -14,21 +14,22 @@
  *
  * @category   Zend
  * @package    Zend_Service
- * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: Abstract.php 23775 2011-03-01 17:25:24Z ralph $
+ * @version    $Id: Abstract.php 24593 2012-01-05 20:35:02Z matthew $
  */
 
 
 /**
  * Zend_Http_Client
  */
+require_once 'Zend/Http/Client.php';
 
 
 /**
  * @category   Zend
  * @package    Zend_Service
- * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 abstract class Zend_Service_Abstract
@@ -60,7 +61,11 @@ abstract class Zend_Service_Abstract
      */
     final public static function getHttpClient()
     {
-        return null;
+        if (!self::$_httpClient instanceof Zend_Http_Client) {
+            self::$_httpClient = new Zend_Http_Client();
+        }
+
+        return self::$_httpClient;
     }
 }
 
