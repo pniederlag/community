@@ -13,7 +13,7 @@ plugin.tx_randombanners {
 }
 
 # Ideally taken from ${const.page.root}
-[globalVar = TSFE:id = 3]
+[globalVar = TSFE:id = 3 || globalVar = TSFE:id = 2]
 plugin.tx_randombanners.settings.numberOfBannersShown = -1
 plugin.tx_randombanners.settings.noFollowTag = 0
 [global]
