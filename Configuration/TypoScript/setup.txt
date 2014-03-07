@@ -1,0 +1,14 @@
+plugin.tx_t3orgspamremover {
+	view {
+		templateRootPath = {$plugin.tx_t3orgspamremover.view.templateRootPath}
+		partialRootPath = {$plugin.tx_t3orgspamremover.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_t3orgspamremover.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_t3orgspamremover.persistence.storagePid}
+	}
+	features {
+		# uncomment the following line to enable the new Property Mapper.
+		# rewrittenPropertyMapper = 1
+	}
+}
