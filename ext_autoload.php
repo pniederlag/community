@@ -30,6 +30,7 @@ return array(
 	'tx_amqp_util_connectionstatus' => $extensionClassesPath . 'Util/ConnectionStatus.php',
 	'tx_amqp_util_configurationhelper' => $extensionClassesPath . 'Util/ConfigurationHelper.php',
 	'tx_amqp_util_randomizer' => $extensionClassesPath . 'Util/Randomizer.php',
+	'tx_amqp_service_producerservice' => $extensionClassesPath . 'Service/ProducerService.php',
 
 	'tx_amqp_tests_unit_basetestcase' => $extensionClassesPath . '../Tests/Unit/BaseTestCase.php',
 );
