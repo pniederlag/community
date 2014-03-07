@@ -48,8 +48,10 @@ class Tx_Amqp_Messaging_AMQPConnectionFactory implements Tx_Amqp_Messaging_AMQPC
 	 *
 	 * @param string $host
 	 */
-	public function __construct($host) {
-		$this->host = $host;
+	public function __construct($host = NULL) {
+		if($host) {
+			$this->setHost($host);
+		}
 	}
 
 	/**
