@@ -17,7 +17,7 @@ class Tx_Amqp_Service_ProducerService implements t3lib_Singleton {
 	}
 
 	/**
-	 * send some object as message to the queue
+	 * send some object as message to a queue
 	 *
 	 * If $message is not a string, it will be converted to such.
 	 * Objects and arrays will be JSON encoded, Primitive types
@@ -38,6 +38,38 @@ class Tx_Amqp_Service_ProducerService implements t3lib_Singleton {
 		$amqpMessage = new \PhpAmqpLib\Message\AMQPMessage($message);
 		try {
 			$this->amqpService->send($amqpMessage, '', $queue);
+			return TRUE;
+		} catch(\PhpAmqpLib\Exception\AMQPRuntimeException $e) {
+			if($silent === FALSE) {
+				throw $e;
+			}
+			return FALSE;
+		}
+	}
+
+	/**
+	 * send some object as message to an exchange
+	 *
+	 * If $message is not a string, it will be converted to such.
+	 * Objects and arrays will be JSON encoded, Primitive types
+	 * will be casted into a string.
+	 *
+	 * If the $silent parameter is set to true (default) any exceptions from the
+	 * service are suppressed. The return value is true or false then.
+	 *
+	 * @param array|object|string $message
+	 * @param string $exchange
+	 * @param null|string $routingKey
+	 * @param boolean $silent
+	 * @return bool
+	 * @throws Exception
+	 * @throws PhpAmqpLib\Exception\AMQPRuntimeException
+	 */
+	public function sendToExchange($message, $exchange, $routingKey = NULL, $silent = TRUE) {
+		$message = $this->castMessageToString($message);
+		$amqpMessage = new \PhpAmqpLib\Message\AMQPMessage($message);
+		try {
+			$this->amqpService->send($amqpMessage, $exchange, $routingKey);
 			return TRUE;
 		} catch(\PhpAmqpLib\Exception\AMQPRuntimeException $e) {
 			if($silent === FALSE) {
