@@ -48,12 +48,21 @@ class Tx_T3orgSpamremover_Controller_SpammerController extends Tx_Extbase_MVC_Co
 	public function showAction(Tx_T3orgSpamremover_Domain_Model_Spammer $spammer) {
 		$this->restrictAccessToAdministrators();
 
+		if($spammer->getSpam()->count() === 0) {
+			$GLOBALS['TSFE']->pageNotFoundAndExit('This use has no reported spam');
+		}
+
 		$this->view->assign('spammer', $spammer);
 	}
 
 	public function confirmAction(Tx_T3orgSpamremover_Domain_Model_Spammer $user) {
 		$this->restrictAccessToAdministrators();
 
+		if($user->getSpam()->count() === 0) {
+			$GLOBALS['TSFE']->pageNotFoundAndExit('This use has no reported spam');
+		}
+
+		/** @var Tx_Amqp_Service_ProducerService $producerService */
 		$producerService = $this->objectManager->get('Tx_Amqp_Service_ProducerService');
 
 		$data = array(
@@ -81,6 +90,10 @@ class Tx_T3orgSpamremover_Controller_SpammerController extends Tx_Extbase_MVC_Co
 	 */
 	public function deleteAction(Tx_T3orgSpamremover_Domain_Model_Spammer $user) {
 		$this->restrictAccessToAdministrators();
+
+		if($user->getSpam()->count() === 0) {
+			$GLOBALS['TSFE']->pageNotFoundAndExit('This use has no reported spam');
+		}
 
 		$this->removeReportsForUser($user);
 
