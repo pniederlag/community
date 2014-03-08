@@ -36,6 +36,7 @@ class Tx_T3orgSpamremover_Domain_Model_SpamReport extends Tx_Extbase_DomainObjec
 	/**
 	 * title
 	 *
+	 * @validator StringLength(minimum=3,maximum=255)
 	 * @var string
 	 */
 	protected $title;
@@ -43,6 +44,7 @@ class Tx_T3orgSpamremover_Domain_Model_SpamReport extends Tx_Extbase_DomainObjec
 	/**
 	 * description
 	 *
+	 * @validator StringLength(minimum=5,maximum=2000)
 	 * @var string
 	 */
 	protected $description;
@@ -50,16 +52,24 @@ class Tx_T3orgSpamremover_Domain_Model_SpamReport extends Tx_Extbase_DomainObjec
 	/**
 	 * reporter
 	 *
-	 * @var Tx_Extbase_Domain_Model_FrontendUser
+	 * @validator NotEmpty()
+	 * @var Tx_T3orgSpamremover_Domain_Model_Spammer
 	 */
 	protected $reporter;
 
 	/**
 	 * spammer
 	 *
+	 * @validator NotEmpty()
 	 * @var Tx_T3orgSpamremover_Domain_Model_Spammer
 	 */
 	protected $spammer;
+
+	/**
+	 * @var string
+	 * @validate Tx_T3orgSpamremover_Validator_Typo3UrlValidator()
+	 */
+	protected $link;
 
 	/**
 	 * Returns the title
@@ -71,13 +81,15 @@ class Tx_T3orgSpamremover_Domain_Model_SpamReport extends Tx_Extbase_DomainObjec
 	}
 
 	/**
-	 * Sets the title
-	 *
-	 * @param string $title
 	 * @return void
 	 */
-	public function setTitle($title) {
-		$this->title = $title;
+	public function updateTitle() {
+		$this->title = sprintf(
+			'"%s" reports: "%s" spams on %s',
+			$this->getReporter() ? $this->getReporter()->getUsername() : '[anonymous]',
+			$this->getSpammer() ? $this->getSpammer()->getUsername() : '[anonymous]',
+			$this->getLinkDomain()
+		);
 	}
 
 	/**
@@ -116,6 +128,7 @@ class Tx_T3orgSpamremover_Domain_Model_SpamReport extends Tx_Extbase_DomainObjec
 	 */
 	public function setReporter(Tx_Extbase_Domain_Model_FrontendUser $reporter) {
 		$this->reporter = $reporter;
+		$this->updateTitle();
 	}
 
 	/**
@@ -135,6 +148,29 @@ class Tx_T3orgSpamremover_Domain_Model_SpamReport extends Tx_Extbase_DomainObjec
 	 */
 	public function setSpammer(Tx_T3orgSpamremover_Domain_Model_Spammer $spammer) {
 		$this->spammer = $spammer;
+		$this->updateTitle();
+	}
+
+	/**
+	 * @param string $link
+	 */
+	public function setLink($link) {
+		$this->link = $link;
+		$this->updateTitle();
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getLink() {
+		return $this->link;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getLinkDomain() {
+		return parse_url($this->link, PHP_URL_HOST);
 	}
 
 }

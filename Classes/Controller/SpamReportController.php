@@ -41,6 +41,30 @@ class Tx_T3orgSpamremover_Controller_SpamReportController extends Tx_Extbase_MVC
 	 * @return void
 	 */
 	public function newAction(Tx_T3orgSpamremover_Domain_Model_SpamReport $newSpamReport = NULL) {
+		try {
+			$newSpamReport = $this->addDefaultValuesToReport($newSpamReport);
+
+			// don't use plugin specific parameters, because url should be public API
+			if (t3lib_div::_GET('spammer')) {
+				/** @var Tx_T3orgSpamremover_Domain_Repository_SpammerRepository $spammerRepository */
+				$spammerRepository = $this->objectManager->get('Tx_T3orgSpamremover_Domain_Repository_SpammerRepository');
+				$spammer = $spammerRepository->getSpammerByMd5Email(
+					t3lib_div::_GET('spammer')
+				);
+				if (!$spammer) {
+					throw new InvalidArgumentException('The given user is not found. The user might have been deleted in the meantime.');
+				}
+				$newSpamReport->setSpammer($spammer);
+			} elseif (!$newSpamReport->getSpammer()) {
+				throw new InvalidArgumentException('No user given');
+			}
+
+			if (t3lib_div::_GET('link')) {
+				$newSpamReport->setLink((string)t3lib_div::_GET('link'));
+			}
+		} catch(InvalidArgumentException $e) {
+			$this->view->assign('error_text', $e->getMessage());
+		}
 		$this->view->assign('newSpamReport', $newSpamReport);
 	}
 
@@ -51,9 +75,50 @@ class Tx_T3orgSpamremover_Controller_SpamReportController extends Tx_Extbase_MVC
 	 * @return void
 	 */
 	public function createAction(Tx_T3orgSpamremover_Domain_Model_SpamReport $newSpamReport) {
-		$this->spamReportRepository->add($newSpamReport);
-		$this->flashMessageContainer->add('Your new SpamReport was created.');
-		$this->redirect('list');
+		$newSpamReport = $this->addDefaultValuesToReport($newSpamReport);
+
+		$spamReportRepository = $this->objectManager->get('Tx_T3orgSpamremover_Domain_Repository_SpamReportRepository');
+		$spammerRepository = $this->objectManager->get('Tx_T3orgSpamremover_Domain_Repository_SpammerRepository');
+		$persistenceManager = $this->objectManager->get('Tx_Extbase_Persistence_Manager');
+
+		$spamReportRepository->add($newSpamReport);
+		$persistenceManager->persistAll();
+
+		// spammer needs to be updated, so tx_t3orgspamremover_spam is increased
+		$spammer = $newSpamReport->getSpammer();
+		$spammer->addSpam($newSpamReport);
+		$spammerRepository->update($spammer);
+		$persistenceManager->persistAll();
+
+		$this->redirect('thanks', NULL, NULL, array('user' => $spammer));
+	}
+
+	public function thanksAction(Tx_T3orgSpamremover_Domain_Model_Spammer $user) {
+		$this->view->assign('spammer', $user);
+	}
+
+	/**
+	 * @param Tx_T3orgSpamremover_Domain_Model_SpamReport|NULL $newSpamReport
+	 * @throws InvalidArgumentException
+	 * @return Tx_T3orgSpamremover_Domain_Model_SpamReport
+	 */
+	protected function addDefaultValuesToReport(Tx_T3orgSpamremover_Domain_Model_SpamReport $newSpamReport = NULL) {
+		if (!$newSpamReport) {
+			$newSpamReport = $this->objectManager->get('Tx_T3orgSpamremover_Domain_Model_SpamReport');
+		}
+		if(!$GLOBALS['TSFE']->fe_user->user || !$GLOBALS['TSFE']->fe_user->user['uid']) {
+			throw new InvalidArgumentException('You need to be logged in to report spam.');
+		}
+
+		/** @var Tx_T3orgSpamremover_Domain_Repository_SpammerRepository $spammerRepository */
+		$spammerRepository = $this->objectManager->get('Tx_T3orgSpamremover_Domain_Repository_SpammerRepository');
+		$reporter = $spammerRepository->findByUid($GLOBALS['TSFE']->fe_user->user['uid']);
+		if(!$reporter) {
+			throw new InvalidArgumentException('You are not allowed to report spam.');
+		}
+		$newSpamReport->setReporter($reporter);
+
+		return $newSpamReport;
 	}
 
 }

@@ -31,14 +31,14 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_T3orgSpamremover_Domain_Model_Spammer extends Tx_Extbase_DomainObject_AbstractEntity {
+class Tx_T3orgSpamremover_Domain_Model_Spammer extends Tx_Extbase_Domain_Model_FrontendUser {
 
 	/**
 	 * spam
 	 *
 	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_T3orgSpamremover_Domain_Model_SpamReport>
 	 */
-	protected $tx_t3orgspamremover_spam;
+	protected $spam;
 
 	/**
 	 * __construct
@@ -61,7 +61,7 @@ class Tx_T3orgSpamremover_Domain_Model_Spammer extends Tx_Extbase_DomainObject_A
 		 * It will be rewritten on each save in the extension builder
 		 * You may modify the constructor of this class instead
 		 */
-		$this->tx_t3orgspamremover_spam = new Tx_Extbase_Persistence_ObjectStorage();
+		$this->spam = new Tx_Extbase_Persistence_ObjectStorage();
 	}
 
 	/**
@@ -71,7 +71,8 @@ class Tx_T3orgSpamremover_Domain_Model_Spammer extends Tx_Extbase_DomainObject_A
 	 * @return void
 	 */
 	public function addSpam(Tx_T3orgSpamremover_Domain_Model_SpamReport $spam) {
-		$this->tx_t3orgspamremover_spam->attach($spam);
+		$this->spam->attach($spam);
+		$spam->setSpammer($this);
 	}
 
 	/**
@@ -81,7 +82,7 @@ class Tx_T3orgSpamremover_Domain_Model_Spammer extends Tx_Extbase_DomainObject_A
 	 * @return void
 	 */
 	public function removeSpam(Tx_T3orgSpamremover_Domain_Model_SpamReport $spamToRemove) {
-		$this->tx_t3orgspamremover_spam->detach($spamToRemove);
+		$this->spam->detach($spamToRemove);
 	}
 
 	/**
@@ -90,7 +91,7 @@ class Tx_T3orgSpamremover_Domain_Model_Spammer extends Tx_Extbase_DomainObject_A
 	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_T3orgSpamremover_Domain_Model_SpamReport> $spam
 	 */
 	public function getSpam() {
-		return $this->tx_t3orgspamremover_spam;
+		return $this->spam;
 	}
 
 	/**
@@ -100,7 +101,7 @@ class Tx_T3orgSpamremover_Domain_Model_Spammer extends Tx_Extbase_DomainObject_A
 	 * @return void
 	 */
 	public function setSpam(Tx_Extbase_Persistence_ObjectStorage $spam) {
-		$this->tx_t3orgspamremover_spam = $spam;
+		$this->spam = $spam;
 	}
 
 }

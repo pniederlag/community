@@ -10,6 +10,7 @@
 			<label index="tx_t3orgspamremover_domain_model_spamreport">Spam Report</label>
 			<label index="tx_t3orgspamremover_domain_model_spamreport.title">Title</label>
 			<label index="tx_t3orgspamremover_domain_model_spamreport.description">Description</label>
+			<label index="tx_t3orgspamremover_domain_model_spamreport.link">Link</label>
 			<label index="tx_t3orgspamremover_domain_model_spamreport.reporter">Reporter</label>
 			<label index="tx_t3orgspamremover_domain_model_spamreport.spammer">Spammer</label>
 

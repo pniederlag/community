@@ -25,8 +25,6 @@
  ***************************************************************/
 
 /**
- *
- *
  * @package t3org_spamremover
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
@@ -39,8 +37,84 @@ class Tx_T3orgSpamremover_Controller_SpammerController extends Tx_Extbase_MVC_Co
 	 * @return void
 	 */
 	public function listAction() {
-		$spammers = $this->spammerRepository->findAll();
+		$this->restrictAccessToAdministrators();
+
+		/** @var Tx_T3orgSpamremover_Domain_Repository_SpammerRepository $spammerRepository */
+		$spammerRepository = $this->objectManager->get('Tx_T3orgSpamremover_Domain_Repository_SpammerRepository');
+		$spammers = $spammerRepository->findAll();
 		$this->view->assign('spammers', $spammers);
+	}
+
+	public function showAction(Tx_T3orgSpamremover_Domain_Model_Spammer $spammer) {
+		$this->restrictAccessToAdministrators();
+
+		$this->view->assign('spammer', $spammer);
+	}
+
+	public function confirmAction(Tx_T3orgSpamremover_Domain_Model_Spammer $user) {
+		$this->restrictAccessToAdministrators();
+
+		$producerService = $this->objectManager->get('Tx_Amqp_Service_ProducerService');
+
+		$data = array(
+			'id' => $user->getUid(),
+			'username' => $user->getUsername(),
+			'email' => $user->getEmail(),
+		);
+
+		if($producerService->send($data, 'spam', FALSE)) {
+			$this->removeReportsForUser($user);
+			$this->view->assign('success_text', 'User is successfully queued to be removed.');
+		} else {
+			$this->view->assign(
+				'error_text',
+				'User could not be queued to be removed, because the message queue was not reachable. Try again later.'
+			);
+		}
+		$this->view->assign('spammer', $user);
+	}
+
+	/**
+	 * delete spam reports for user
+	 *
+	 * @param Tx_T3orgSpamremover_Domain_Model_Spammer $user
+	 */
+	public function deleteAction(Tx_T3orgSpamremover_Domain_Model_Spammer $user) {
+		$this->restrictAccessToAdministrators();
+
+		$this->removeReportsForUser($user);
+
+		$this->view->assign('success_text', 'Thanks for rehabilitating this user.');
+		$this->view->assign('spammer', $user);
+	}
+
+	/**
+	 * remove all spam reports for that user
+	 *
+	 * @param $user Tx_T3orgSpamremover_Domain_Model_Spammer
+	 */
+	protected function removeReportsForUser($user) {
+		$spamReportRepository = $this->objectManager->get('Tx_T3orgSpamremover_Domain_Repository_SpamReportRepository');
+		$spammerRepository = $this->objectManager->get('Tx_T3orgSpamremover_Domain_Repository_SpammerRepository');
+		$persistenceManager = $this->objectManager->get('Tx_Extbase_Persistence_Manager');
+
+		foreach($user->getSpam()->toArray() as $spam) {
+			$user->removeSpam($spam);
+			$spamReportRepository->remove($spam);
+		}
+		$persistenceManager->persistAll();
+
+		// spammer needs to be updated so spam count is set to zero
+		$spammerRepository->update($user);
+		$persistenceManager->persistAll();
+
+	}
+
+	protected function restrictAccessToAdministrators() {
+		$adminRoleId = intval($this->settings['adminUserGroup']);
+		if(!is_array($GLOBALS['TSFE']->fe_user->groupData['uid']) || !in_array($adminRoleId, $GLOBALS['TSFE']->fe_user->groupData['uid'])) {
+			$this->throwStatus(403, 'You are not allowed to access this page.');
+		}
 	}
 
 }

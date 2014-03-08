@@ -1,0 +1,21 @@
+<h1>Report spam</h1>
+<f:security.ifHasRole role="{settings.adminUserGroup}">
+    <f:then>
+        <div class="b-message congratulations">
+            <p><strong>Thanks for keeping your community clean</strong></p>
+            <p>
+                Because you are a valuable member of the community and we trust you,
+                you are allowed to
+                <f:link.action action="confirm" controller="Spammer" arguments="{user:spammer}">remove the spammer</f:link.action>
+                right away.
+            </p>
+        </div>
+    </f:then>
+    <f:else>
+        <div class="b-message congratulations">
+            <p><strong>Report created</strong></p>
+            <p>Thanks for reporting spam on typo3.org.</p>
+        </div>
+    </f:else>
+    <f:link.action class="bu dark-grey" action="list" controller="Spammer">List reported spammers</f:link.action>
+</f:security.ifHasRole>

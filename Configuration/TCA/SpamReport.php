@@ -6,10 +6,10 @@ if (!defined ('TYPO3_MODE')) {
 $TCA['tx_t3orgspamremover_domain_model_spamreport'] = array(
 	'ctrl' => $TCA['tx_t3orgspamremover_domain_model_spamreport']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, description, reporter, spammer',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, link, description, reporter, spammer',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, title, description, reporter, spammer,--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access,starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, title, description, link, reporter, spammer,--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access,starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -96,6 +96,15 @@ $TCA['tx_t3orgspamremover_domain_model_spamreport'] = array(
 		'title' => array(
 			'exclude' => 0,
 			'label' => 'LLL:EXT:t3org_spamremover/Resources/Private/Language/locallang_db.xml:tx_t3orgspamremover_domain_model_spamreport.title',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'link' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:t3org_spamremover/Resources/Private/Language/locallang_db.xml:tx_t3orgspamremover_domain_model_spamreport.link',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,

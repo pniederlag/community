@@ -1,0 +1,11 @@
+<h1>{spammer.name} is reported as spammer</h1>
+<p><strong>{spammer.name}</strong>, alias <strong>{spammer.username}</strong>, email: <strong>{spammer.email}</strong></p>
+
+<f:if condition="{success_text}">
+    <div class="b-message congratulations">
+        <p>{success_text}</p>
+    </div>
+</f:if>
+
+<hr />
+<f:link.action class="bu dark-grey" action="list" controller="Spammer">List reported spammers</f:link.action>
