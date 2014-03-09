@@ -24,7 +24,7 @@
  ***************************************************************/
 
 
-class Tx_Amqp_Util_ConnectionStatus implements tx_reports_StatusProvider {
+class Tx_Amqp_Reports_ConnectionStatus implements tx_reports_StatusProvider {
 
 	/**
 	 * @return array<tx_reports_reports_status_Status>

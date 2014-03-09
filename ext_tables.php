@@ -5,7 +5,8 @@ if (!defined('TYPO3_MODE')) {
 
 if (TYPO3_MODE == 'BE' ) {
 	$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['reports']['tx_reports']['status']['providers']['amqp'] = array(
-		'Tx_Amqp_Util_ConnectionStatus',
+		'Tx_Amqp_Reports_ConnectionStatus',
+		'Tx_Amqp_Reports_RegisteredConsumers',
 	);
 }
 ?>
