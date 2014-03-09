@@ -17,4 +17,7 @@ if(!isset($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY . '/connectionF
 	);
 }
 
+// extensions should use Tx_Amqp_Util_ConfigurationHelper::registerConsumer
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS'][$_EXTKEY]['consumers'] = array();
+
 ?>

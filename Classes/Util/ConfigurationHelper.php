@@ -112,6 +112,63 @@ final class Tx_Amqp_Util_ConfigurationHelper {
 		}
 		return NULL;
 	}
+
+	/**
+	 * register a consumer (aka "listener") for a certain queue
+	 *
+	 * should be called in ext_localconf.php
+	 *
+	 * @param $queueName
+	 * @param $consumerClassName
+	 * @throws InvalidArgumentException
+	 */
+	public static function registerConsumer($queueName, $consumerClassName) {
+		$queueName = trim($queueName);
+		if($queueName === '') {
+			throw new InvalidArgumentException(sprintf(
+				'queueName for registration of %s must not be empty.',
+				$consumerClassName
+			));
+		}
+		$consumerConfiguration = &$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['amqp']['consumers'];
+		if(!array_key_exists($queueName, $consumerConfiguration)) {
+			$consumerConfiguration[$queueName] = array();
+		}
+		$consumerConfiguration[$queueName][] = array(
+			'className' => $consumerClassName
+		);
+	}
+
+	/**
+	 * get configuration for all registered consumers for a certain queue
+	 *
+	 * @param $queueName
+	 * @return array
+	 */
+	public static function getRegisteredConsumerConfiguration($queueName) {
+		$queueName = trim($queueName);
+		$consumerConfiguration = &$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['amqp']['consumers'];
+		if(!array_key_exists($queueName, $consumerConfiguration)) {
+			return array();
+		} else {
+			return $consumerConfiguration[$queueName];
+		}
+	}
+
+	/**
+	 * get all the queue names that have a consumer attached
+	 *
+	 * @return array
+	 */
+	public static function getQueueNames() {
+		$queueNames = array();
+		foreach($GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['amqp']['consumers'] as $queueName=>$consumerConfiguration) {
+			if(!empty($consumerConfiguration)) {
+				$queueNames[] = $queueName;
+			}
+		}
+		return $queueNames;
+	}
 }
 
 ?>
