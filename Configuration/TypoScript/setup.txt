@@ -28,6 +28,6 @@ plugin.tx_t3orgspamremover {
 	}
 
 	settings {
-		adminUserGroup = 30
+		adminUserGroup = 
 	}
 }
