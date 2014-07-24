@@ -71,7 +71,7 @@ class Tx_T3orgSpamremover_Controller_SpammerController extends Tx_Extbase_MVC_Co
 			'email' => $user->getEmail(),
 		);
 
-		if($producerService->sendToExchange($data, 'spam')) {
+		if($producerService->sendToExchange($data, 'org.typo3.spam.user')) {
 			$this->removeReportsForUser($user);
 			$this->view->assign('success_text', 'User is successfully queued to be removed.');
 		} else {
