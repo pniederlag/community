@@ -29,7 +29,7 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_T3orgSpamremover_Controller_SpammerController extends Tx_Extbase_MVC_Controller_ActionController {
+class Tx_T3orgSpamremover_Controller_SpammerController extends Tx_T3orgSpamremover_Controller_AbstractController {
 
 	/**
 	 * action list
@@ -121,13 +121,6 @@ class Tx_T3orgSpamremover_Controller_SpammerController extends Tx_Extbase_MVC_Co
 		$spammerRepository->update($user);
 		$persistenceManager->persistAll();
 
-	}
-
-	protected function restrictAccessToAdministrators() {
-		$adminRoleId = intval($this->settings['adminUserGroup']);
-		if(!is_array($GLOBALS['TSFE']->fe_user->groupData['uid']) || !in_array($adminRoleId, $GLOBALS['TSFE']->fe_user->groupData['uid'])) {
-			$this->throwStatus(403, 'You are not allowed to access this page.');
-		}
 	}
 
 }

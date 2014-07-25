@@ -31,7 +31,7 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_T3orgSpamremover_Controller_SpamReportController extends Tx_Extbase_MVC_Controller_ActionController {
+class Tx_T3orgSpamremover_Controller_SpamReportController extends Tx_T3orgSpamremover_Controller_AbstractController {
 
 	/**
 	 * action new
@@ -56,6 +56,9 @@ class Tx_T3orgSpamremover_Controller_SpamReportController extends Tx_Extbase_MVC
 				}
 				$newSpamReport->setSpammer($spammer);
 			} elseif (!$newSpamReport->getSpammer()) {
+				if($this->isLoggedInUserAnAdministrator()) {
+					$this->redirect('list', 'Spammer');
+				}
 				throw new InvalidArgumentException('No user given');
 			}
 
