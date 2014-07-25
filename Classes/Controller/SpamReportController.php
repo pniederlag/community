@@ -62,10 +62,10 @@ class Tx_T3orgSpamremover_Controller_SpamReportController extends Tx_Extbase_MVC
 			if (t3lib_div::_GET('link')) {
 				$newSpamReport->setLink((string)t3lib_div::_GET('link'));
 			}
+			$this->view->assign('newSpamReport', $newSpamReport);
 		} catch(InvalidArgumentException $e) {
 			$this->view->assign('error_text', $e->getMessage());
 		}
-		$this->view->assign('newSpamReport', $newSpamReport);
 	}
 
 	/**
