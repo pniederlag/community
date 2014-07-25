@@ -45,6 +45,9 @@ class Tx_T3orgSpamremover_Controller_SpammerController extends Tx_T3orgSpamremov
 		$this->view->assign('spammers', $spammers);
 	}
 
+	/**
+	 * @param Tx_T3orgSpamremover_Domain_Model_Spammer $spammer
+	 */
 	public function showAction(Tx_T3orgSpamremover_Domain_Model_Spammer $spammer) {
 		$this->restrictAccessToAdministrators();
 
@@ -55,6 +58,9 @@ class Tx_T3orgSpamremover_Controller_SpammerController extends Tx_T3orgSpamremov
 		$this->view->assign('spammer', $spammer);
 	}
 
+	/**
+	 * @param Tx_T3orgSpamremover_Domain_Model_Spammer $user
+	 */
 	public function confirmAction(Tx_T3orgSpamremover_Domain_Model_Spammer $user) {
 		$this->restrictAccessToAdministrators();
 

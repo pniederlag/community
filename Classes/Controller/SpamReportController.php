@@ -26,7 +26,6 @@
 
 /**
  *
- *
  * @package t3org_spamremover
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
@@ -48,9 +47,7 @@ class Tx_T3orgSpamremover_Controller_SpamReportController extends Tx_T3orgSpamre
 			if (t3lib_div::_GET('spammer')) {
 				/** @var Tx_T3orgSpamremover_Domain_Repository_SpammerRepository $spammerRepository */
 				$spammerRepository = $this->objectManager->get('Tx_T3orgSpamremover_Domain_Repository_SpammerRepository');
-				$spammer = $spammerRepository->getSpammerByMd5Email(
-					t3lib_div::_GET('spammer')
-				);
+				$spammer = $spammerRepository->getSpammerByMd5Email(t3lib_div::_GET('spammer'));
 				if (!$spammer) {
 					throw new InvalidArgumentException('The given user is not found. The user might have been deleted in the meantime.');
 				}
@@ -96,6 +93,9 @@ class Tx_T3orgSpamremover_Controller_SpamReportController extends Tx_T3orgSpamre
 		$this->redirect('thanks', NULL, NULL, array('user' => $spammer));
 	}
 
+	/**
+	 * @param Tx_T3orgSpamremover_Domain_Model_Spammer $user
+	 */
 	public function thanksAction(Tx_T3orgSpamremover_Domain_Model_Spammer $user) {
 		$this->view->assign('spammer', $user);
 	}
@@ -109,14 +109,14 @@ class Tx_T3orgSpamremover_Controller_SpamReportController extends Tx_T3orgSpamre
 		if (!$newSpamReport) {
 			$newSpamReport = $this->objectManager->get('Tx_T3orgSpamremover_Domain_Model_SpamReport');
 		}
-		if(!$GLOBALS['TSFE']->fe_user->user || !$GLOBALS['TSFE']->fe_user->user['uid']) {
+		if (!$GLOBALS['TSFE']->fe_user->user || !$GLOBALS['TSFE']->fe_user->user['uid']) {
 			throw new InvalidArgumentException('You need to be logged in to report spam.');
 		}
 
 		/** @var Tx_T3orgSpamremover_Domain_Repository_SpammerRepository $spammerRepository */
 		$spammerRepository = $this->objectManager->get('Tx_T3orgSpamremover_Domain_Repository_SpammerRepository');
 		$reporter = $spammerRepository->findByUid($GLOBALS['TSFE']->fe_user->user['uid']);
-		if(!$reporter) {
+		if (!$reporter) {
 			throw new InvalidArgumentException('You are not allowed to report spam.');
 		}
 		$newSpamReport->setReporter($reporter);
