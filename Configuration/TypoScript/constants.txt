@@ -9,6 +9,6 @@ plugin.tx_t3orgspamremover {
 	}
 	persistence {
 		# cat=plugin.tx_t3orgspamremover//a; type=string; label=Default storage PID
-		storagePid =
+		storagePid = 11
 	}
 }
