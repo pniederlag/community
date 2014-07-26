@@ -9,6 +9,8 @@ require_once 'Zend/Service/Flickr.php';
  * @author Christian Zenker <christian.zenker@599media.de>
  */
 class Tx_T3orgFlickrfeed_Utility_Flickr extends Zend_Service_Flickr {
+
+	const URI_BASE = 'https://www.flickr.com';
 	
 	/**
      * Returns a reference to the REST client, instantiating it if necessary
