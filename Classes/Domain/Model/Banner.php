@@ -50,9 +50,9 @@ class Tx_Randombanners_Domain_Model_Banner extends Tx_Extbase_DomainObject_Abstr
 	protected $email;
 
 	/**
-	 * logo
+	 * Logo
 	 *
-	 * @var integer
+	 * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
 	 */
 	protected $logo;
 
@@ -118,12 +118,18 @@ class Tx_Randombanners_Domain_Model_Banner extends Tx_Extbase_DomainObject_Abstr
 	 * @param integer $logo
 	 * @return void
 	 */
+
+	/**
+	 * Set Logo
+	 * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $logo
+	 */
 	public function setLogo($logo) {
 		$this->logo = $logo;
 	}
 
 	/**
-	 * @return integer
+	 * Get logo
+	 * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $logo
 	 */
 	public function getLogo() {
 		return $this->logo;

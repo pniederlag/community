@@ -5,12 +5,12 @@
 			<f:if condition="{settings.noFollowTag} == 1">
 				<f:then>
 					<a class="tx-randombanners-link" onclick="clickBanner($(this));" href="<f:uri.external uri='{banner.link}' />" data-itemId="{banner.uid}" rel="nofollow" target="_blank">
-						<f:image src="{banner.logo.filePath}{banner.logo.fileName}" alt="{banner.name}" />
+						<f:image src="{banner.logo.uid}" treatIdAsReference="1" alt="{banner.name}" />
 					</a>
 				</f:then>
 				<f:else>
 					<a class="tx-randombanners-link" onclick="clickBanner($(this));" href="<f:uri.external uri='{banner.link}' />" data-itemId="{banner.uid}" target="_blank">
-						<f:image src="{banner.logo.filePath}{banner.logo.fileName}" alt="{banner.name}" />
+						<f:image src="{banner.logo.uid}" treatIdAsReference="1" alt="{banner.name}" />
 					</a>
 				</f:else>
 			</f:if>

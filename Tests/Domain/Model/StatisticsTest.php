@@ -36,7 +36,7 @@
  * 
  * @author Thomas Loeffler <loeffler@spooner-web.de>
  */
-class Tx_Randombanners_Domain_Model_BannerTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
+class Tx_Randombanners_Domain_Model_BannerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 	/**
 	 * @var Tx_Randombanners_Domain_Model_Banner
 	 */

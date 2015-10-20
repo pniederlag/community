@@ -9,8 +9,8 @@ class RandomBannersAjax {
 	protected $objectManager;
 
 	public function __construct() {
-		$this->bannerRepository = t3lib_div::makeInstance('Tx_Randombanners_Domain_Repository_BannerRepository');
-		$this->objectManager = t3lib_div::makeInstance('Tx_Extbase_Object_ObjectManager');
+		$this->bannerRepository = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('Tx_Randombanners_Domain_Repository_BannerRepository');
+		$this->objectManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('Tx_Extbase_Object_ObjectManager');
 		$this->persistenceManager = $this->objectManager->get('Tx_Extbase_Persistence_Manager');
 	}
 
@@ -21,11 +21,11 @@ class RandomBannersAjax {
 	}
 }
 
-$function = t3lib_div::_GET('function');
+$function = \TYPO3\CMS\Core\Utility\GeneralUtility::_GET('function');
 
 switch ($function) {
 	case 'clickBanner':
-		if ($uid = intval(t3lib_div::_GET('banner'))) {
+		if ($uid = intval(\TYPO3\CMS\Core\Utility\GeneralUtility::_GET('banner'))) {
 			$output = new RandomBannersAjax();
 			$output->increaseClickNumber($uid);
 		}

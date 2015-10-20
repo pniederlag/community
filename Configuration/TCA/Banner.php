@@ -123,7 +123,19 @@ $TCA['tx_randombanners_domain_model_banner'] = array(
 				'max'  => 256
 			)
 		),
-		'logo' => txdam_getMediaTCA('image_field', 'tx_randombanner_dam_images'),
+        'logo' => array(
+            'exclude' => 1,
+            'l10n_mode' => 'mergeIfNotBlank',
+            'label' => 'LLL:EXT:randombanners/Resources/Private/Language/locallang_db.xml:tx_randombanners_domain_model_banner.logo',
+            'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
+				'logo',
+				array(
+					'minitems' => 0,
+					'maxitems' => 1,
+					'foreign_sortby' => '__UNSET'
+				)
+			),
+        ),
 		'displayed_this_month' => array(
 			'exclude' => 0,
 			'label' => 'LLL:EXT:randombanners/Resources/Private/Language/locallang_db.xml:tx_randombanners_domain_model_banner.displayed_this_month',

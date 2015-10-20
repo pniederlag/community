@@ -50,17 +50,17 @@
 		 */
 		static protected function initialize() {
 			// Get configuration manager
-			$objectManager = t3lib_div::makeInstance('Tx_Extbase_Object_ObjectManager');
+			$objectManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('Tx_Extbase_Object_ObjectManager');
 			self::$configurationManager = $objectManager->get('Tx_Extbase_Configuration_ConfigurationManager');
 
 			// Simulate Frontend
 			if (TYPO3_MODE == 'BE') {
-				Tx_Extbase_Utility_FrontendSimulator::simulateFrontendEnvironment();
+				\TYPO3\CMS\Extbase\Utility\FrontendSimulatorUtility::simulateFrontendEnvironment();
 				if (empty($GLOBALS['TSFE']->sys_page)) {
-					$GLOBALS['TSFE']->sys_page = t3lib_div::makeInstance('t3lib_pageSelect');
+					$GLOBALS['TSFE']->sys_page = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('t3lib_pageSelect');
 				}
 				if (empty($GLOBALS['TT'])) {
-					$GLOBALS['TT'] = t3lib_div::makeInstance('t3lib_TimeTrackNull');
+					$GLOBALS['TT'] = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('t3lib_TimeTrackNull');
 				}
 				self::$configurationManager->setContentObject($GLOBALS['TSFE']->cObj);
 			}
@@ -68,12 +68,12 @@
 			// Get content object
 			self::$contentObject = self::$configurationManager->getContentObject();
 			if (empty(self::$contentObject)) {
-				self::$contentObject = t3lib_div::makeInstance('tslib_cObj');
+				self::$contentObject = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('tslib_cObj');
 			}
 
 			// Reset Frontend if modified
 			if (TYPO3_MODE == 'BE') {
-				Tx_Extbase_Utility_FrontendSimulator::resetFrontendEnvironment();
+				\TYPO3\CMS\Extbase\Utility\FrontendSimulatorUtility::resetFrontendEnvironment();
 			}
 		}
 
@@ -89,7 +89,7 @@
 			}
 
 			$setup = self::$configurationManager->getConfiguration(
-				Tx_Extbase_Configuration_ConfigurationManager::CONFIGURATION_TYPE_FULL_TYPOSCRIPT
+				\TYPO3\CMS\Extbase\Configuration\ConfigurationManager::CONFIGURATION_TYPE_FULL_TYPOSCRIPT
 			);
 
 			if (empty($setup['plugin.']['tx_randombanners.'])) {
@@ -114,12 +114,12 @@
 
 			// Convert to classic TypoScript array
 			if ($isPlain) {
-				$configuration = Tx_Extbase_Utility_TypoScript::convertPlainArrayToTypoScriptArray($configuration);
+				$configuration = \TYPO3\CMS\Extbase\Service\TypoScriptService::convertPlainArrayToTypoScriptArray($configuration);
 			}
 
 			// Parse configuration
 			$configuration = self::parseTypoScriptArray($configuration);
-			$configuration = t3lib_div::removeDotsFromTS($configuration);
+			$configuration = \TYPO3\CMS\Core\Utility\GeneralUtility::removeDotsFromTS($configuration);
 
 			return $configuration;
 		}

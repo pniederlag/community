@@ -43,18 +43,10 @@ class Tx_Randombanners_Controller_BannerController extends Tx_Extbase_MVC_Contro
 
 
 	/**
-	 *
-	 *
 	 * @return void
 	 */
 	public function indexAction() {
         $banners = $this->bannerRepository->findAll();
-
-        foreach ($banners as $banner) {
-            if (!($banner->getLogo() instanceof Tx_Extbase_Domain_Model_Dam)) {
-                $banner->setLogo(Tx_ExtbaseDam_Utility_Dam::getOne('tx_randombanners_domain_model_banner', $banner->getUid(), 'tx_randombanner_dam_images'));
-            }
-        }
         $this->view->assign('banners', $banners);
 	}
 
