@@ -1,0 +1,26 @@
+{
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://composer.typo3.org/"
+        }
+    ],
+    "name": "TYPO3/t3o-community",
+	"scripts": {
+		"post-update-cmd": "Helhum\\Typo3Console\\Composer\\InstallerScripts::setupConsole",
+		"post-install-cmd": "Helhum\\Typo3Console\\Composer\\InstallerScripts::setupConsole"
+	},
+	"extra": {
+		"typo3/cms": {
+			"cms-package-dir": "{$vendor-dir}/typo3/cms",
+			"web-dir": "htdocs"
+		}
+	},
+    "require": {
+        "typo3/cms": "dev-master as 7.5.0",
+        "typo3-ter/static-info-tables": "^6.3.4",
+        "helhum/realurl": "^2.0.2",
+        "typo3-ter/typo3-console": "1.2.3",
+		"georgringer/news": "dev-master"
+    }
+}

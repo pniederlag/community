@@ -1,0 +1,5 @@
+/htdocs/typo3conf/ext/*
+htdocs/index.php
+htdocs/typo3
+htdocs/typo3cms
+vendor
