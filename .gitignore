@@ -1,5 +1,48 @@
+nbproject/
+*~
+*.bak
+*.idea
+*.project
+*.swp
+.buildpath
+.cache
+.project
+.session
+.settings
+.TemporaryItems
+.webprj
+nbproject
+.DS_Store
+.vagrant
+*.t3x
+*.t3d
+*.sql
+!ext_tables.sql
+
+# Ignore TYPO3 system folders, you should have them symlinked.
+# If not comment out the following entries.
+/htdocs/index.php
+/htdocs/typo3
+/htdocs/typo3cms
+/vendor/
+
+# Ignore temp directory.
+/htdocs/typo3temp/
+
+# basically user generated content
+/htdocs/fileadmin/
+/htdocs/uploads/
+
+# generally exclude all exts except 'local' ones
 /htdocs/typo3conf/ext/*
-htdocs/index.php
-htdocs/typo3
-htdocs/typo3cms
-vendor
+
+# ext:realurl autoconfiguration
+/htdocs/typo3conf/realurl_autoconf.php
+
+# /typo3conf stuff
+/htdocs/typo3conf/deprecation_*.log
+/htdocs/typo3conf/ENABLE_INSTALL_TOOL
+/htdocs/FIRST_INSTALL
+
+# custom localConfiguration for development
+/htdocs/typo3conf/AdditionalConfiguration_custom.php
