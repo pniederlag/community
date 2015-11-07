@@ -37,5 +37,10 @@
 		"georgringer/news": "dev-master",
 		"kaystrobach/voice": "0.0.67",
 		"apache-solr-for-typo3/solr": "dev-master"
-    }
+    },
+	"autoload": {
+		"psr-4": {
+
+		}
+	}
 }
