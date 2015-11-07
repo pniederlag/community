@@ -3,7 +3,20 @@
         {
             "type": "composer",
             "url": "http://composer.typo3.org/"
-        }
+        },
+		{
+			"type": "package",
+			"package": {
+				"version": "0.0.67",
+				"name": "kaystrobach/voice",
+				"type": "typo3-cms-extension",
+				"source": {
+					"url": "https://github.com/kaystrobach/TYPO3.voice",
+					"type": "git",
+					"reference": "master"
+				}
+			}
+		}
     ],
     "name": "TYPO3/t3o-community",
 	"scripts": {
@@ -21,6 +34,7 @@
         "typo3-ter/static-info-tables": "^6.3.4",
         "helhum/realurl": "^2.0.2",
         "typo3-ter/typo3-console": "1.2.3",
-		"georgringer/news": "dev-master"
+		"georgringer/news": "dev-master",
+		"kaystrobach/voice": "0.0.67"
     }
 }

@@ -35,6 +35,14 @@ nbproject
 
 # generally exclude all exts except 'local' ones
 /htdocs/typo3conf/ext/*
+!/htdocs/typo3conf/ext/t3org*
+!/htdocs/typo3conf/ext/amqp
+!/htdocs/typo3conf/ext/cz_simple_cal
+!/htdocs/typo3conf/ext/randombanners
+!/htdocs/typo3conf/ext/solr_redmine
+!/htdocs/typo3conf/ext/t3org_flickrfeed
+!/htdocs/typo3conf/ext/t3org_spamremover
+
 
 # ext:realurl autoconfiguration
 /htdocs/typo3conf/realurl_autoconf.php

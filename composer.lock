@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2f1dc754a0d101821ef67fa268730df3",
-    "content-hash": "1e1b4e5517c2afec91e15ff01bc40c44",
+    "hash": "cdc07437a17e28f1b1dc60871c700059",
+    "content-hash": "f122baa198df984a5ad7040db9ff5316",
     "packages": [
         {
             "name": "cogpowered/finediff",
@@ -226,6 +226,16 @@
             "description": "RealURL: speaking paths for TYPO3",
             "homepage": "http://typo3.org",
             "time": "2015-10-07 15:56:20"
+        },
+        {
+            "name": "kaystrobach/voice",
+            "version": "0.0.67",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kaystrobach/TYPO3.voice",
+                "reference": "master"
+            },
+            "type": "typo3-cms-extension"
         },
         {
             "name": "pear/http_request2",
@@ -821,12 +831,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3/TYPO3.CMS.git",
-                "reference": "1da997b9d7823900300568e181d7d1c17ecef71f"
+                "reference": "9da6bd15deb0595bb2b57b216dbdb9202963f40e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3/TYPO3.CMS/zipball/1da997b9d7823900300568e181d7d1c17ecef71f",
-                "reference": "1da997b9d7823900300568e181d7d1c17ecef71f",
+                "url": "https://api.github.com/repos/TYPO3/TYPO3.CMS/zipball/9da6bd15deb0595bb2b57b216dbdb9202963f40e",
+                "reference": "9da6bd15deb0595bb2b57b216dbdb9202963f40e",
                 "shasum": ""
             },
             "require": {
@@ -1011,7 +1021,7 @@
                 "extbase",
                 "typo3"
             ],
-            "time": "2015-11-06 20:57:58"
+            "time": "2015-11-07 17:10:21"
         },
         {
             "name": "typo3/cms-composer-installers",
