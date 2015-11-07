@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'randombanners'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_randombanners_domain_model_banner">Banner</label>
+			<label index="tx_randombanners_domain_model_banner.name">Banner Name</label>
+			<label index="tx_randombanners_domain_model_banner.link">Banner link</label>
+			<label index="tx_randombanners_domain_model_banner.logo">Banner image</label>
+			<label index="tx_randombanners_domain_model_banner.email">Email for sending status mails</label>
+			<label index="tx_randombanners_domain_model_banner.displayed_this_month">Banner displayed this month</label>
+			<label index="tx_randombanners_domain_model_banner.clicked_this_month">Banner clicked this month</label>
+			<label index="tx_randombanners_domain_model_banner.displayed_last_month">Banner displayed last month</label>
+			<label index="tx_randombanners_domain_model_banner.clicked_last_month">Banner clicked last month</label>
+		</languageKey>
+	</data>
+</T3locallang>
