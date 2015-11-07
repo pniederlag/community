@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for the Spam Remover for typo3org extension in the FRONTEND</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_t3orgspamremover_domain_model_spamreport">SpamReport</label>
+			<label index="tx_t3orgspamremover_domain_model_spamreport.title">title</label>
+			<label index="tx_t3orgspamremover_domain_model_spamreport.description">description</label>
+			<label index="tx_t3orgspamremover_domain_model_spamreport.link">link</label>
+			<label index="tx_t3orgspamremover_domain_model_spamreport.reporter">reporter</label>
+			<label index="tx_t3orgspamremover_domain_model_spamreport.spammer">spammer</label>
+			<label index="tx_t3orgspamremover_domain_model_spammer">Spammer</label>
+			<label index="tx_t3orgspamremover_domain_model_spammer.spam">spam</label>
+		</languageKey>
+	</data>
+</T3locallang>

@@ -1,0 +1,21 @@
+<h1>{spammer.name} is reported as spammer</h1>
+<p><strong>{spammer.name}</strong>, alias <strong>{spammer.username}</strong>, email: <strong>{spammer.email}</strong></p>
+<h2>Reports</h2>
+<f:for each="{spammer.spam}" as="report">
+    <div>
+        <h3>{report.title}</h3>
+        <p><a href="{report.link}" target="_blank">{report.link}</a></p>
+        <f:if condition="{report.reporter}">
+            <p>Reported by {report.reporter.name} ({report.reporter.username})</p>
+        </f:if>
+        <f:if condition="{report.description}">
+            <p><strong>Comment: </strong><f:format.nl2br>{report.description}</f:format.nl2br></p>
+        </f:if>
+    </div>
+</f:for>
+<div class="b-message warning">
+    <p><strong>Please make sure that the reported user is actually the user who created the spam!</strong></p>
+    <p>A malicious user might be able to submit arbitrary email addresses or urls.</p>
+</div>
+<f:link.action class="bu dark-grey" action="delete" arguments="{user:spammer}">No spam</f:link.action>
+<f:link.action class="bu" action="confirm" arguments="{user:spammer}">Confirm spam</f:link.action>

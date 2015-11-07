@@ -1,0 +1,33 @@
+config.tx_extbase {
+	persistence {
+		classes {
+			Tx_T3orgSpamremover_Domain_Model_Spammer {
+				mapping {
+					tableName = fe_users
+					columns {
+						tx_t3orgspamremover_spam.mapOnProperty = spam
+					}
+				}
+			}
+		}
+	}
+}
+
+plugin.tx_t3orgspamremover {
+	view {
+		templateRootPath = {$plugin.tx_t3orgspamremover.view.templateRootPath}
+		partialRootPath = {$plugin.tx_t3orgspamremover.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_t3orgspamremover.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_t3orgspamremover.persistence.storagePid}
+	}
+	features {
+		# uncomment the following line to enable the new Property Mapper.
+		# rewrittenPropertyMapper = 1
+	}
+
+	settings {
+		adminUserGroup = 31
+	}
+}

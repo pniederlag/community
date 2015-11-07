@@ -1,0 +1,50 @@
+<h1>Report spam</h1>
+<f:if condition="{error_text}">
+    <f:then>
+        <div class="b-message error">
+            <p>{error_text}</p>
+        </div>
+    </f:then>
+    <f:else>
+        <f:form id="{formToken}" action="create" objectName="newSpamReport" object="{newSpamReport}">
+            <div class="b-form-row">
+                <label for="tx-t3orgspamremover-spammer">Spammer</label>
+                <div class="b-form-inputs">
+                    <f:form.errors for="newSpamReport.spammer">
+                        <div class="b-form-error-message">{error.message}</div>
+                    </f:form.errors>
+                    <f:form.hidden id="tx-t3orgspamremover-spammer" property="spammer" value="{newSpamReport.spammer}" />
+                    {newSpamReport.spammer.name} ({newSpamReport.spammer.username})
+                </div>
+            </div>
+            <div class="b-form-row">
+                <label for="tx-t3orgspamremover-link">Link</label>
+                <div class="b-form-inputs">
+                    <f:form.errors for="newSpamReport.link">
+                        <div class="b-form-error-message">{error.message}</div>
+                    </f:form.errors>
+                    <f:form.textfield id="tx-t3orgspamremover-link" property="link" value="{newSpamReport.link}" />
+                </div>
+            </div>
+            <div class="b-form-row">
+                <label for="tx-t3orgspamremover-description">Please explain the kind of spam</label>
+                <div class="b-form-inputs">
+                    <f:form.errors for="newSpamReport.description">
+                        <div class="b-form-error-message">{error.message}</div>
+                    </f:form.errors>
+                    <f:form.textarea id="tx-t3orgspamremover-description" property="description" rows="5" cols="30" value="{newSpamReport.description}" />
+                </div>
+            </div>
+
+            <div class="b-form-inputs">
+                <div class="b-form-row">
+                    <button type="submit" name="submit" value="Submit" class="bu">Submit</button>
+                </div>
+            </div>
+        </f:form>
+    </f:else>
+</f:if>
+<f:security.ifHasRole role="{settings.adminUserGroup}">
+    <hr />
+    <f:link.action class="bu dark-grey" action="list" controller="Spammer">List reported spammers</f:link.action>
+</f:security.ifHasRole>

@@ -1,0 +1,18 @@
+<h1>Reported spammers</h1>
+<f:if condition="{spammers}">
+    <f:then>
+        <ul>
+        <f:for each="{spammers}" as="spammer">
+            <li>
+                <f:link.action action="show" arguments="{spammer:spammer}">
+                    {spammer.name} ({spammer.username}, {spammer.email})
+                </f:link.action>
+                (<f:count>{spammer.spam}</f:count> reports)
+            </li>
+        </f:for>
+        </ul>
+    </f:then>
+    <f:else>
+        <p>There are no reported spammers.</p>
+    </f:else>
+</f:if>
