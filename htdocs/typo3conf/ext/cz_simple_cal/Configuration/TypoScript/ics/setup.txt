@@ -1,0 +1,36 @@
+ics = PAGE
+ics {
+	typeNum = 150
+	10 < tt_content.list.20.czsimplecal_pi1
+	10 {
+		
+		settings {
+			
+			EventIndex {
+				allowedActions = list
+				actions {
+					list >
+					list {
+						startDate  = today
+						endDate    = today +6 months
+
+						maxEvents = 9999
+						orderBy   = start
+						order     = ASC
+					}
+				}
+			}
+		}
+	}
+	config {
+		disableAllHeaderCode = 1
+		additionalHeaders = Content-type:text/calendar | Content-Disposition:inline;filename="calendar.ics" 
+		xhtml_cleaning = 0
+		admPanel = 0
+		debug = 0
+		
+		# workaround as the format in extbase 1.2.0 could only be set using GET params
+		# @see http://forge.typo3.org/issues/9216
+		defaultGetVars.tx_czsimplecal_pi1.format = ics
+	}
+}

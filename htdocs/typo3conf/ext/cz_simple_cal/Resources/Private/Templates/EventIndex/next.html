@@ -1,0 +1,19 @@
+{namespace cal=Tx_CzSimpleCal_ViewHelpers}
+<cal:useMicroformat format="hcalendar" />
+<div class="vcalendar vcalendar-next">
+<f:if condition="{events}">
+	<f:then>
+		<h2><f:translate key="action.EventIndex.next.title" /></h2>
+		<f:for each="{events}" as="event">
+			<cal:calendar.onNewDay event="{event}">
+				<f:render partial="EventIndex/dayWrapper.html" arguments="{event: event, settings:settings}" />
+			</cal:calendar.onNewDay>
+			
+			<f:render partial="EventIndex/event-for-list.html" arguments="{event: event, settings:settings}" />
+		</f:for>
+	</f:then>
+	<f:else>
+		<p><f:translate key="msg.noEvents" /></p>
+	</f:else>
+</f:if>
+</div>

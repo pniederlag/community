@@ -1,0 +1,6 @@
+.*
+*~
+_*
+
+!.gitignore
+Documentation/makefile

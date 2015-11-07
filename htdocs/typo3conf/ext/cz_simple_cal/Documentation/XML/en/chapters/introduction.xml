@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter.introduction"
+	 xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:xi="http://www.w3.org/2001/XInclude"
+     xmlns:xhtml="http://www.w3.org/1999/xhtml"
+     xmlns:svg="http://www.w3.org/2000/svg"
+     xmlns:ns="http://docbook.org/ns/docbook"
+     xmlns:mathml="http://www.w3.org/1998/Math/MathML">
+
+	<title>Introduction</title>
+
+	<caution>
+		<para>This extension in alpha state.</para>
+		<para>
+			The current version is only compatible with <productname>TYPO3</productname> 4.5 LTS
+			and the corresponding version of <productname>extbase</productname> (1.3). <sbr />
+			There is a version for <productname>TYPO3</productname> 4.4 and <productname>extbase</productname> 1.2 on
+			github in the <literal>extbase-1.2</literal> branch. But this is deprecated, so don't expect any bugfixes
+			or even new features.
+		</para>
+	</caution>
+	
+	<section xml:id="chapter.introduction.whatdoesitdo">
+		<title>What does it do?</title>
+		<para>
+			This extension provides a simple calendar.
+		</para>
+	</section>
+	
+	<section xml:id="chapter.introduction.features">
+		<title>Feature List</title>
+		<itemizedlist>
+			<listitem><simpara>Allday Events</simpara></listitem>
+			<listitem><simpara>Recurring Events</simpara></listitem>
+			<listitem><simpara>Exceptions, Exception Groups</simpara></listitem>
+			<listitem><simpara>Categories</simpara></listitem>
+			<listitem><simpara>adding actions via Typoscript</simpara></listitem>
+			<listitem><simpara>templates using the hCalendar and hCard microformats</simpara></listitem>
+			<listitem><simpara>...and all the goodness that is <productname>Extbase</productname> and <productname>Fluid</productname>.</simpara></listitem>
+		</itemizedlist>
+	</section>
+	
+	<section xml:id="chapter.introduction.sources">
+		<title>Sources</title>
+		<variablelist>
+			<varlistentry>
+				<term>Home in forge</term>
+				<listitem><para><link xlink:href="http://forge.typo3.org/projects/extension-cz_simple_cal" /></para></listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>Distribution in TER</term>
+				<listitem><para><link xlink:href="http://typo3.org/extensions/repository/view/cz_simple_cal/current/" /></para></listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>Bugtracker</term>
+				<listitem><para><link xlink:href="http://forge.typo3.org/projects/extension-cz_simple_cal/issues" /></para></listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>Official Git Repository</term>
+				<listitem><para><link xlink:href="http://github.com/czenker/cz_simple_cal" /></para></listitem>
+			</varlistentry>
+			
+		</variablelist>
+	</section>
+
+	
+</chapter>
