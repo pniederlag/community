@@ -35,6 +35,7 @@
         "helhum/realurl": "^2.0.2",
         "typo3-ter/typo3-console": "1.2.3",
 		"georgringer/news": "dev-master",
-		"kaystrobach/voice": "0.0.67"
+		"kaystrobach/voice": "0.0.67",
+		"apache-solr-for-typo3/solr": "dev-master"
     }
 }
