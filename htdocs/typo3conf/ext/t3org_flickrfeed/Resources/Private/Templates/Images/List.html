@@ -1,0 +1,11 @@
+<f:if condition="{error}">
+	<f:then>
+	</f:then>
+	<f:else>
+		<ul>
+		<f:for each="{result}" as="image">
+			<li><img src="{image.Square.uri}" width="{image.Square.width}" height="{image.Square.height}" title="{image.title}" /></li>
+		</f:for>
+		</ul>
+	</f:else>
+</f:if>

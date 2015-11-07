@@ -1,0 +1,127 @@
+<T3DataStructure>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>Options</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.type>
+						<TCEforms>
+							<label>LLL:EXT:t3org_flickrfeed/Resources/Private/Language/locallang_flex.xml:type</label>
+							<config>
+								<type>select</type>
+								<items>
+				                	<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:t3org_flickrfeed/Resources/Private/Language/locallang_flex.xml:type.group</numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:t3org_flickrfeed/Resources/Private/Language/locallang_flex.xml:type.tag</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:t3org_flickrfeed/Resources/Private/Language/locallang_flex.xml:type.user</numIndex>
+										<numIndex index="1">2</numIndex>
+									</numIndex>
+								</items>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</settings.type>
+					<settings.group_id>
+						<TCEforms>
+							<displayCond>FIELD:settings.type:IN:0</displayCond>
+							<label>LLL:EXT:t3org_flickrfeed/Resources/Private/Language/locallang_flex.xml:group_id</label>
+							<config>
+								<type>input</type>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</settings.group_id>
+					<settings.user_id>
+						<TCEforms>
+							<displayCond>FIELD:settings.type:IN:2</displayCond>
+							<label>LLL:EXT:t3org_flickrfeed/Resources/Private/Language/locallang_flex.xml:user_id</label>
+							<config>
+								<type>input</type>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</settings.user_id>
+					<settings.tags>
+						<TCEforms>
+							<displayCond>FIELD:settings.type:IN:1</displayCond>
+							<label>LLL:EXT:t3org_flickrfeed/Resources/Private/Language/locallang_flex.xml:tags</label>
+							<config>
+								<type>input</type>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</settings.tags>
+					<settings.options.per_page>
+						<TCEforms>
+							<displayCond>FIELD:settings.type:IN:0,1,2</displayCond>
+							<label>LLL:EXT:t3org_flickrfeed/Resources/Private/Language/locallang_flex.xml:options.per_page</label>
+							<config>
+								<type>input</type>
+								<max>4</max>
+								<size>4</size>
+								<eval>trim,int</eval>
+							</config>
+						</TCEforms>
+					</settings.options.per_page>
+<!--					<settings.options.text>
+						<TCEforms>
+							<label>LLL:EXT:t3org_flickrfeed/Resources/Private/Language/locallang_flex.xml:options.text</label>
+							<config>
+								<type>input</type>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</settings.options.text> -->
+					<settings.optionsAsText>
+						<TCEforms>
+							<label>LLL:EXT:t3org_flickrfeed/Resources/Private/Language/locallang_flex.xml:optionsAsText</label>
+							<config>
+								<type>text</type>
+								<cols>60</cols>
+								<rows>5</rows>
+							</config>
+						</TCEforms>
+					</settings.optionsAsText>
+<!--					<settings.feedUrl>
+						<TCEforms>
+							<label>URL of the feed</label>
+							<config>
+								<type>input</type>
+								<size>255</size>
+								<eval>trim,required</eval>
+							</config>
+						</TCEforms>
+					</settings.feedUrl>
+					<settings.templatePathAndName>
+						<TCEforms>
+							<label>The template path to use</label>
+							<config>
+								<type>input</type>
+								<size>255</size>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</settings.templatePathAndName>-->
+					<settings.templatePath>
+						<TCEforms>
+							<label>LLL:EXT:t3org_flickrfeed/Resources/Private/Language/locallang_flex.xml:templatePath</label>
+							<config>
+								<type>input</type>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</settings.templatePath>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

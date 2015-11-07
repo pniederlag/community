@@ -1,0 +1,4 @@
+plugin.tx_t3orgflickrfeed {
+	# your api key goes here
+	apiKey =
+}

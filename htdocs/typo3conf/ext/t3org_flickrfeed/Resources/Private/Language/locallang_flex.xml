@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for the Simple calendar using Extbase extension in the FLEXFORM</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="type">Stream Type</label>
+			<label index="type.group">Group Stream</label>
+			<label index="type.tag">Tag Stream</label>
+			<label index="type.user">User Stream</label>
+			
+			<label index="user_id">User Id (space seperated)</label>
+			<label index="group_id">Group Id</label>-
+			<label index="tags">Tags (comma seperated)</label>
+<!--		<label index="options.tag_mode">Tag mode</label>
+			<label index="options.tag_mode.any">...OR...</label>
+			<label index="options.tag_mode.all">...AND...</label> -->
+<!--		<label index="options.text">Search for text</label>-->
+			<label index="options.per_page">Number of results</label>
+			
+			<label index="optionsAsText">Additional Options</label>
+			<label index="templatePath">Template Path</label>
+		</languageKey>
+	</data>
+</T3locallang>
