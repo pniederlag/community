@@ -1,0 +1,6 @@
+mod {
+	SHARED {
+		web_list.enableLocalizationView = activated
+		web_list.enableDisplayBigControlPanel = activated
+	}
+}

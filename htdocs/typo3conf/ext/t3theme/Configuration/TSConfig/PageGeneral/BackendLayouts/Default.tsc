@@ -1,0 +1,31 @@
+mod {
+	web_layout {
+		BackendLayouts {
+			Default {
+				title = Default
+				config {
+					backend_layout {
+						colCount = 4
+						rowCount = 1
+						rows {
+							1 {
+								columns {
+									1 {
+										name = LLL:EXT:t3theme/Resources/Private/Language/BackendLayouts.xlf:col.main
+										colPos = 0
+										colspan = 3
+									}
+									2 {
+										name = LLL:EXT:t3theme/Resources/Private/Language/BackendLayouts.xlf:col.sidebar
+										colPos = 1
+									}
+								}
+							}
+						}
+					}
+				}
+				icon = EXT:t3theme/Resources/Public/Images/BackendLayouts/Default.svg
+			}
+		}
+	}
+}

@@ -1,0 +1,26 @@
+TCEFORM.tt_content {
+
+	layout {
+		// disable default layouts
+		removeItems = 1,2,3
+
+		altLabels {
+		}
+
+		addItems {
+		}
+	}
+
+	header_layout {
+		removeItems = 4,5
+
+		altLabels {
+		}
+	}
+
+	// not used anymore -> but anyway remove items
+	section_frame {
+		removeItems = 1,5,6,10,11,12,20,21
+	}
+
+}

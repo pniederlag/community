@@ -1,0 +1,26 @@
+mod {
+	web_layout {
+		BackendLayouts {
+			Homepage {
+				title = Homepage
+				config {
+					backend_layout {
+						colCount = 1
+						rowCount = 1
+						rows {
+							1 {
+								columns {
+									1 {
+										name = LLL:EXT:t3theme/Resources/Private/Language/BackendLayouts.xlf:col.main
+										colPos = 0
+									}
+								}
+							}
+						}
+					}
+				}
+				icon = EXT:t3theme/Resources/Public/Images/BackendLayouts/Homepage.svg
+			}
+		}
+	}
+}
