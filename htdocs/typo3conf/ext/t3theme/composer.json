@@ -1,0 +1,21 @@
+{
+	"name": "typo3/t3theme-config",
+	"description": "typo3.org Website configuration",
+	"version": "0.0.0",
+	"type": "typo3-cms-extension",
+	"authors": [
+		{
+			"name": "T3O Team",
+			"role": "Developer",
+			"homepage": "http://www.typo3.org/"
+		}
+	],
+	"require": {
+		"typo3/cms-core": "~7.5"
+	},
+	"autoload": {
+		"psr-4": {
+			"TYPO3\\T3theme\\": "Classes/"
+		}
+	}
+}

@@ -42,6 +42,7 @@ nbproject
 !/htdocs/typo3conf/ext/solr_redmine
 !/htdocs/typo3conf/ext/t3org_flickrfeed
 !/htdocs/typo3conf/ext/t3org_spamremover
+!/htdocs/typo3conf/ext/t3theme
 
 
 # ext:realurl autoconfiguration
