@@ -18,7 +18,7 @@
 			}
 		}
     ],
-    "name": "TYPO3/t3o-community",
+    "name": "typo3/t3o-community",
 	"scripts": {
 		"post-update-cmd": "Helhum\\Typo3Console\\Composer\\InstallerScripts::setupConsole",
 		"post-install-cmd": "Helhum\\Typo3Console\\Composer\\InstallerScripts::setupConsole"
