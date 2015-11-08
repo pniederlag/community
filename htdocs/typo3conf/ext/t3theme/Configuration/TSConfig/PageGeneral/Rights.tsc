@@ -1,0 +1,5 @@
+// TODO pagetsconfig couldnt load through files
+TCEMAIN {
+  permissions.group = show,edit,delete,new,editcontent
+#  permissions.groupid = 1
+}
