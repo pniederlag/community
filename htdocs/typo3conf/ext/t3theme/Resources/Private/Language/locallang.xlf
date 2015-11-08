@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" product-name="theme">
+		<header/>
+		<body>
+			<trans-unit id="frontend.close"><source><![CDATA[Close]]></source></trans-unit>
+		</body>
+	</file>
+</xliff>

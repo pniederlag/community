@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" product-name="theme">
+		<header/>
+		<body>
+			<trans-unit id="tt_content.layout.1">
+				<source><![CDATA[Layout 1]]></source>
+			</trans-unit>
+			<trans-unit id="tt_content.layout.2">
+				<source><![CDATA[Layout 2]]></source>
+			</trans-unit>
+			<trans-unit id="tt_content.layout.3">
+				<source><![CDATA[Layout 3]]></source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
