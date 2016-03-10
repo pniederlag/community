@@ -1,0 +1,13 @@
+// -----------------------------------------------------------------------------
+// Include base objects
+// -----------------------------------------------------------------------------
+
+// Objects
+// -----------------------------------------------------------------------------
+
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pt_campo/Configuration/TypoScript/Base/lib.ts">
+
+// Page
+// -----------------------------------------------------------------------------
+
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pt_campo/Configuration/TypoScript/Base/page.ts">
