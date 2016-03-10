@@ -18,6 +18,9 @@ nbproject
 *.t3d
 *.sql
 !ext_tables.sql
+log/
+.ssh/
+fcgi-bin/
 
 # Ignore TYPO3 system folders, you should have them symlinked.
 # If not comment out the following entries.
@@ -43,7 +46,7 @@ nbproject
 !/htdocs/typo3conf/ext/t3org_flickrfeed
 !/htdocs/typo3conf/ext/t3org_spamremover
 !/htdocs/typo3conf/ext/t3theme
-
+!/htdocs/typo3conf/ext/t3theme_typo3com
 
 # ext:realurl autoconfiguration
 /htdocs/typo3conf/realurl_autoconf.php
@@ -55,3 +58,8 @@ nbproject
 
 # custom localConfiguration for development
 /htdocs/typo3conf/AdditionalConfiguration_custom.php
+
+# Generated files
+.sass-cache/
+node_modules/
+*.css.map
