@@ -2,7 +2,7 @@
     "repositories": [
         {
             "type": "composer",
-            "url": "http://composer.typo3.org/"
+            "url": "https://composer.typo3.org/"
         },
 		{
 			"type": "package",
@@ -30,7 +30,7 @@
 		}
 	},
     "require": {
-        "typo3/cms": "dev-master as 7.5.0",
+        "typo3/cms": "^7.6",
         "typo3-ter/static-info-tables": "^6.3.4",
         "helhum/realurl": "^2.0.2",
         "typo3-ter/typo3-console": "1.2.3",
