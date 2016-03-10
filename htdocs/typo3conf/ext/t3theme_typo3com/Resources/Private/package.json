@@ -1,0 +1,12 @@
+{
+  "name": "t3theme-typo3com",
+  "version": "1.0.0",
+  "description": "TYPO3.com website",
+  "private": "true",
+  "devDependencies": {
+    "grunt": "0.4.5",
+    "grunt-contrib-watch": "0.6.1",
+    "grunt-contrib-compass": "1.1.1",
+    "bootstrap": "4.0.0-alpha.2"
+  }
+}
