@@ -3746,17 +3746,16 @@ h1, h2, h3 {
 
 /* line 10, ../../Private/Styles/Layout/_Header.scss */
 .header-burger-menu-icon, .header-search-icon {
-  display: inline-block;
-  height: 1.575rem;
+  display: block;
   width: 1.575rem;
-  margin: 1.4rem 0;
+  height: 1.575rem;
+  margin: 1.4rem auto;
 }
 
 /* line 17, ../../Private/Styles/Layout/_Header.scss */
 .header-logo {
-  display: inline-block;
-  height: 4.175rem;
   width: 100%;
+  height: 4.175rem;
   margin: 0.1rem 0;
 }
 

@@ -8,15 +8,14 @@
 }
 
 .header-burger-menu-icon, .header-search-icon {
-	display: inline-block;
-	height: 1.575rem;
+	display: block;
 	width: 1.575rem;
-	margin: 1.4rem 0;
+	height: 1.575rem;
+	margin: 1.4rem auto;
 }
 
 .header-logo {
-	display: inline-block;
-	height: 4.175rem;
 	width: 100%;
+	height: 4.175rem;
 	margin: 0.1rem 0;
 }
