@@ -320,7 +320,7 @@ html {
 
 /* line 69, ../../Private/node_modules/bootstrap/scss/_reboot.scss */
 body {
-  font-family: "Source Sans Pro" Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.3;
   color: #373a3c;
@@ -525,7 +525,7 @@ output {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0;
-  font-family: "Source Sans Pro Bold" Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro Bold", Helvetica, Arial, sans-serif;
   font-weight: 300;
   line-height: 1;
   color: inherit;
