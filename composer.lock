@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c23a29ab087b4b4d07391f280714b3af",
-    "content-hash": "14e0976088a9273404c33fc819de4fb3",
+    "hash": "6931eecafe3a19e8ac460290c183bed1",
+    "content-hash": "81e711322d66c0a40bdd38750e03b04b",
     "packages": [
         {
             "name": "apache-solr-for-typo3/solr",
@@ -809,6 +809,86 @@
             "time": "2016-02-22 16:12:29"
         },
         {
+            "name": "typo3-ter/bootstrap-grids",
+            "version": "1.1.5",
+            "dist": {
+                "type": "t3x",
+                "url": "https://typo3.org/extensions/repository/download/bootstrap_grids/1.1.5/t3x/",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "typo3-ter/gridelements": ">= 3.0.0",
+                "typo3/cms-core": ">= 6.2.0, <= 7.6.99"
+            },
+            "replace": {
+                "bootstrap_grids": "self.version",
+                "typo3-ter/bootstrap_grids": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "classmap": [
+                    ""
+                ],
+                "exclude-from-classmap": [
+                    "Tests",
+                    "tests",
+                    "class.ext_update.php"
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Pascal Mayer",
+                    "email": "typo3@bsdist.ch",
+                    "company": "",
+                    "username": "laxap"
+                }
+            ],
+            "description": "Gridelements for bootstrap. Column grids, grids for simple accordions, tabs and content slider.",
+            "time": "2016-01-25 17:11:03"
+        },
+        {
+            "name": "typo3-ter/gridelements",
+            "version": "7.0.5",
+            "dist": {
+                "type": "t3x",
+                "url": "https://typo3.org/extensions/repository/download/gridelements/7.0.5/t3x/",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "typo3/cms-core": ">= 7.6.2, <= 7.99.99"
+            },
+            "conflict": {
+                "typo3-ter/jfmulticontent": "*",
+                "typo3-ter/templavoila": "*"
+            },
+            "replace": {
+                "gridelements": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "classmap": [
+                    ""
+                ],
+                "exclude-from-classmap": [
+                    "Tests",
+                    "tests",
+                    "class.ext_update.php"
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Grid Elements Team",
+                    "email": "info@cybercraft.de",
+                    "company": "",
+                    "username": "cybercraft"
+                }
+            ],
+            "description": "This extension integrates the grid layout concept also to regular content elements - the grid elements.\r\nIt offers a lot of new features like advanced drag & drop or real references, that improve the usability of the page and list module to speed up the daily work with the backend.",
+            "time": "2016-01-29 13:10:05"
+        },
+        {
             "name": "typo3-ter/static-info-tables",
             "version": "6.3.9",
             "dist": {
@@ -857,20 +937,26 @@
             "version": "1.2.3",
             "dist": {
                 "type": "t3x",
-                "url": "http://typo3.org/extensions/repository/download/typo3_console/1.2.3/t3x/",
+                "url": "https://typo3.org/extensions/repository/download/typo3_console/1.2.3/t3x/",
                 "reference": null,
                 "shasum": null
             },
             "require": {
-                "typo3/cms": ">= 7.4.0, <= 7.99.99"
+                "typo3/cms-core": ">= 7.4.0, <= 7.99.99"
             },
             "replace": {
-                "typo3-ter/typo3_console": "self.version"
+                "typo3-ter/typo3_console": "self.version",
+                "typo3_console": "self.version"
             },
             "type": "typo3-cms-extension",
             "autoload": {
                 "classmap": [
                     ""
+                ],
+                "exclude-from-classmap": [
+                    "Tests",
+                    "tests",
+                    "class.ext_update.php"
                 ]
             },
             "authors": [

@@ -246,6 +246,18 @@ return [
             'packagePath' => 'typo3/sysext/viewpage/',
             'suggestions' => [],
         ],
+        'gridelements' => [
+            'composerName' => 'GridElementsTeam/Gridelements',
+            'state' => 'active',
+            'packagePath' => 'typo3conf/ext/gridelements/',
+            'suggestions' => [],
+        ],
+        'bootstrap_grids' => [
+            'composerName' => 'laxap/bootstrap-grids',
+            'state' => 'active',
+            'packagePath' => 'typo3conf/ext/bootstrap_grids/',
+            'suggestions' => [],
+        ],
         'belayout_fileprovider' => [
             'composerName' => 'georgringer/belayout-fileprovider',
             'state' => 'active',
@@ -394,6 +406,7 @@ return [
             'packagePath' => 'typo3conf/ext/t3theme/',
             'suggestions' => [
                 'static_info_tables',
+                'gridelements',
                 'css_styled_content',
             ],
         ],

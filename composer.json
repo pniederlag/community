@@ -41,7 +41,9 @@
 		"georgringer/news": "dev-master",
 		"georgringer/belayout-fileprovider": "dev-master",
 		"kaystrobach/voice": "0.0.67",
-		"apache-solr-for-typo3/solr": "dev-master"
+		"apache-solr-for-typo3/solr": "dev-master",
+        "typo3-ter/gridelements": "^7",
+        "typo3-ter/bootstrap-grids": "^1"
     },
 	"autoload": {
 		"psr-4": {
