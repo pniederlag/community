@@ -19,6 +19,12 @@ lib.layout1 {
 		content  < styles.content.get
 		content.select.where = colPos=0
 
-		footer. < temp.footer
+		footerMenu < temp.footerMenu
+
+		contactPid = TEXT
+		contactPid.value = {$plugin.t3theme_typo3com.footer.contactPid}
+
+		legalInfoPid = TEXT
+		legalInfoPid.value = {$plugin.t3theme_typo3com.footer.legalInfoPid}
 	}
 }

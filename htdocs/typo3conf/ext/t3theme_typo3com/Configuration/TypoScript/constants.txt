@@ -1,0 +1,9 @@
+plugin.t3theme_typo3com {
+
+	footer {
+		contactPid = 14
+		legalInfoPid = 15
+
+		menuPid = 4
+	}
+}
