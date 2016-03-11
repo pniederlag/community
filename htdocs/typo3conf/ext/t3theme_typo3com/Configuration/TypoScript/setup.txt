@@ -5,9 +5,10 @@
 // Objects
 // -----------------------------------------------------------------------------
 
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pt_campo/Configuration/TypoScript/Base/lib.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/temp.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/lib.ts">
 
 // Page
 // -----------------------------------------------------------------------------
 
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pt_campo/Configuration/TypoScript/Base/page.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/page.ts">

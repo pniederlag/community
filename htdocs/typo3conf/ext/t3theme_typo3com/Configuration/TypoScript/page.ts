@@ -5,6 +5,14 @@
 page = PAGE
 page {
 
+	includeCSS {
+		main = EXT:t3theme_typo3com/Resources/Public/Styles/Main.css
+	}
+
+	includeJSFooterlibs {
+
+	}
+
 
 	10 = CASE
 	10 {

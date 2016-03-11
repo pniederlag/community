@@ -16,7 +16,8 @@ lib.layout1 {
 		search < temp.search
 
 
-		content < temp.content
+		content  < styles.content.get
+		content.select.where = colPos=0
 
 		footer. < temp.footer
 	}
