@@ -1,0 +1,22 @@
+.header {
+	height: 4.375rem;
+}
+
+.header-burger-menu-link, .header-logo-link, .header-search-link {
+	display: inline-block;
+	width: 100%;
+}
+
+.header-burger-menu-icon, .header-search-icon {
+	display: inline-block;
+	height: 1.575rem;
+	width: 1.575rem;
+	margin: 1.4rem 0;
+}
+
+.header-logo {
+	display: inline-block;
+	height: 4.175rem;
+	width: 100%;
+	margin: 0.1rem 0;
+}
