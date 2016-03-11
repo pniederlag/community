@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-07-21T10:17:45Z" product-name="t3theme_typo3com">
+		<header/>
+		<body>
+			<trans-unit id="Homepage" xml:space="preserve">
+				<source>Homepage</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

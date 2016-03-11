@@ -20,6 +20,6 @@ page {
 		key.override.field = backend_layout
 
 		// [1] Home
-		1 < lib.layout1
+		file__Homepage < lib.layout1
 	}
 }

@@ -6,7 +6,7 @@
 // [1] Home
 lib.layout1 = FLUIDTEMPLATE
 lib.layout1 {
-	file = EXT:t3theme_typo3com/Resources/Private/Templates/Pages/homepage.html
+	file = EXT:t3theme_typo3com/Resources/Private/Templates/Pages/Homepage.html
 	partialRootPath = EXT:t3theme_typo3com/Resources/Private/Partials/
 	layoutRootPath = EXT:t3theme_typo3com/Resources/Private/Layouts/
 
