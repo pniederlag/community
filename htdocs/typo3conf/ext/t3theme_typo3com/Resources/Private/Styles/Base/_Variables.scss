@@ -19,3 +19,15 @@ $valid-message-green: #5abc55;
 $warning-message-yellow: #ffc800;
 $error-message-red: #dd123d;
 $information-message-blue: #0080ff;
+
+
+// Style guide font definitions
+// ------------------------------
+
+$source-sans-pro: "Source Sans Pro";
+$source-sans-pro-italic: "Source Sans Pro Italic";
+$source-sans-pro-bold: "Source Sans Pro Bold";
+
+@include font-face($source-sans-pro, font-files("SourceSansPro-Regular.woff2", "SourceSansPro-Regular.woff", "SourceSansPro-Regular.otf"), "SourceSansPro-Regular.eot", 400, normal);
+@include font-face($source-sans-pro-italic, font-files("SourceSansPro-Regular.woff2", "SourceSansPro-Regular.woff", "SourceSansPro-Regular.otf"), "SourceSansPro-Regular.eot", 400, italic);
+@include font-face($source-sans-pro-bold, font-files("SourceSansPro-Regular.woff2", "SourceSansPro-Regular.woff", "SourceSansPro-Regular.otf"), "SourceSansPro-Regular.eot", 700, normal);
