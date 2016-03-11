@@ -3736,15 +3736,16 @@ h1, h2, h3 {
 /* line 1, ../../Private/Styles/Layout/_Header.scss */
 .header {
   height: 4.375rem;
+  background-color: #f4f4f4;
 }
 
-/* line 5, ../../Private/Styles/Layout/_Header.scss */
+/* line 6, ../../Private/Styles/Layout/_Header.scss */
 .header-burger-menu-link, .header-logo-link, .header-search-link {
   display: inline-block;
   width: 100%;
 }
 
-/* line 10, ../../Private/Styles/Layout/_Header.scss */
+/* line 11, ../../Private/Styles/Layout/_Header.scss */
 .header-burger-menu-icon, .header-search-icon {
   display: block;
   width: 1.575rem;
@@ -3752,12 +3753,12 @@ h1, h2, h3 {
   margin: 1.4rem auto;
 }
 
-/* line 20, ../../Private/Styles/Layout/_Header.scss */
+/* line 18, ../../Private/Styles/Layout/_Header.scss */
 .header-burger-menu-icon {
   cursor: pointer;
 }
 
-/* line 24, ../../Private/Styles/Layout/_Header.scss */
+/* line 22, ../../Private/Styles/Layout/_Header.scss */
 .header-logo {
   width: 100%;
   height: 4.175rem;
