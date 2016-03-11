@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "678142e08e8f82b34d8cb79fd5383f2f",
-    "content-hash": "261b86b7e1f4e624b8eaa117520696f2",
+    "hash": "c23a29ab087b4b4d07391f280714b3af",
+    "content-hash": "14e0976088a9273404c33fc819de4fb3",
     "packages": [
         {
             "name": "apache-solr-for-typo3/solr",
@@ -13,29 +13,30 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-Solr/ext-solr.git",
-                "reference": "1ba41d080e19904957fef388470ed600f8745d39"
+                "reference": "b97e1861bb7b411c1507dcd36bbd40baad7b7f83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-Solr/ext-solr/zipball/1ba41d080e19904957fef388470ed600f8745d39",
-                "reference": "1ba41d080e19904957fef388470ed600f8745d39",
+                "url": "https://api.github.com/repos/TYPO3-Solr/ext-solr/zipball/b97e1861bb7b411c1507dcd36bbd40baad7b7f83",
+                "reference": "b97e1861bb7b411c1507dcd36bbd40baad7b7f83",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.7 <6.0",
-                "typo3/cms-core": ">=6.2.14,<8.0"
+                "php": ">=5.5.0",
+                "typo3/cms": ">=7.6.0"
             },
             "replace": {
                 "solr": "self.version",
                 "typo3-ter/solr": "self.version"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.8.0"
+                "fabpot/php-cs-fixer": "~1.11",
+                "phpunit/phpunit": ">=4.8.0 <6.0.0"
             },
             "type": "typo3-cms-extension",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1.x-dev"
+                    "dev-master": "3.2.x-dev"
                 },
                 "class-alias-maps": [
                     "Migrations/Code/ClassAliasMap.php"
@@ -70,7 +71,7 @@
                     "role": "Lead Developer"
                 }
             ],
-            "description": "Apache Solr integration for TYPO3",
+            "description": "Apache Solr for TYPO3",
             "homepage": "http://www.typo3-solr.com",
             "keywords": [
                 "TYPO3 CMS",
@@ -78,7 +79,7 @@
                 "solr",
                 "typo3"
             ],
-            "time": "2015-11-04 15:39:40"
+            "time": "2016-03-11 07:02:53"
         },
         {
             "name": "cogpowered/finediff",
@@ -186,21 +187,48 @@
             "time": "2015-06-14 21:17:01"
         },
         {
+            "name": "georgringer/belayout-fileprovider",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:georgringer/belayout_fileprovider.git",
+                "reference": "a111078db466331cb31bfd4e339440ccde99919c"
+            },
+            "require": {
+                "typo3/cms-core": ">=6.2.0,<8.0"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "GeorgRinger\\BelayoutFileprovider\\": "Classes"
+                }
+            },
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "A File provider for Backend Layouts",
+            "homepage": "https://github.com/georgringer/belayout_fileprovider",
+            "keywords": [
+                "TYPO3 CMS"
+            ],
+            "time": "2015-07-15 12:48:45"
+        },
+        {
             "name": "georgringer/news",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-extensions/news.git",
-                "reference": "783f097a037a266aef627058329fea1e9b85f46a"
+                "reference": "b326cb5dc6ee9834e515fb962c0dac9d37a49b9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-extensions/news/zipball/783f097a037a266aef627058329fea1e9b85f46a",
-                "reference": "783f097a037a266aef627058329fea1e9b85f46a",
+                "url": "https://api.github.com/repos/TYPO3-extensions/news/zipball/b326cb5dc6ee9834e515fb962c0dac9d37a49b9b",
+                "reference": "b326cb5dc6ee9834e515fb962c0dac9d37a49b9b",
                 "shasum": ""
             },
             "require": {
-                "typo3/cms-core": ">=7.5.0,<8.0"
+                "typo3/cms-core": ">=7.6.0,<8.0"
             },
             "replace": {
                 "news": "self.version",
@@ -210,10 +238,14 @@
                 "mikey179/vfsstream": "1.4.*@dev",
                 "phpunit/phpunit": "~4.8.0"
             },
+            "suggest": {
+                "dmitryd/typo3-dd-googlesitemap": "~2.0",
+                "reelworx/rx-shariff": "~7.0"
+            },
             "type": "typo3-cms-extension",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0.x-dev"
+                    "dev-master": "4.2.x-dev"
                 },
                 "typo3/cms": {
                     "cms-package-dir": "{$vendor-dir}/typo3/cms",
@@ -259,7 +291,7 @@
                 "source": "https://github.com/TYPO3-extensions/news/tree/master",
                 "issues": "https://github.com/TYPO3-extensions/news/issues"
             },
-            "time": "2015-11-06 09:30:05"
+            "time": "2016-03-09 05:29:55"
         },
         {
             "name": "helhum/realurl",
@@ -309,6 +341,56 @@
                 "reference": "master"
             },
             "type": "typo3-cms-extension"
+        },
+        {
+            "name": "mso/idna-convert",
+            "version": "v0.9.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phlylabs/idna-convert.git",
+                "reference": "0a0a09e460e63739d82c3f0c3f0e5555567a6be3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phlylabs/idna-convert/zipball/0a0a09e460e63739d82c3f0c3f0e5555567a6be3",
+                "reference": "0a0a09e460e63739d82c3f0c3f0e5555567a6be3",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pcre": "*",
+                "php": ">=5.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.9.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "idna_convert.class.php",
+                    "uctc.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1+"
+            ],
+            "authors": [
+                {
+                    "name": "Matthias Sommerfeld",
+                    "email": "mso@phlylabs.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A library for encoding and decoding internationalized domain names",
+            "homepage": "http://idnaconv.net/",
+            "keywords": [
+                "idn",
+                "idna",
+                "php"
+            ],
+            "time": "2016-01-06 21:05:46"
         },
         {
             "name": "pear/http_request2",
@@ -479,56 +561,6 @@
             "time": "2015-02-10 20:07:52"
         },
         {
-            "name": "phpwhois/idna-convert",
-            "version": "v0.8.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phpWhois/idna-convert.git",
-                "reference": "ea337954b43ae47f5ebba97c19d309081bebc46e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phpWhois/idna-convert/zipball/ea337954b43ae47f5ebba97c19d309081bebc46e",
-                "reference": "ea337954b43ae47f5ebba97c19d309081bebc46e",
-                "shasum": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.8.x-dev"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "idna_convert.class.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL-2.1"
-            ],
-            "authors": [
-                {
-                    "name": "Matthias Sommerfeld",
-                    "email": "phlymail@phlylabs.de",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Dmitry Lukashin",
-                    "email": "dmitry@lukashin.ru",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "idna-convert library based on http://idnaconv.phlymail.de/",
-            "homepage": "http://idnaconv.phlymail.de/",
-            "keywords": [
-                "idn",
-                "idna",
-                "php"
-            ],
-            "time": "2014-12-26 04:51:08"
-        },
-        {
             "name": "psr/http-message",
             "version": "1.0",
             "source": {
@@ -670,16 +702,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v2.7.6",
+            "version": "v2.7.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "5efd632294c8320ea52492db22292ff853a43766"
+                "reference": "ee91ec301cd88ee38ab14505025fe94bbc19a9c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/5efd632294c8320ea52492db22292ff853a43766",
-                "reference": "5efd632294c8320ea52492db22292ff853a43766",
+                "url": "https://api.github.com/repos/symfony/console/zipball/ee91ec301cd88ee38ab14505025fe94bbc19a9c1",
+                "reference": "ee91ec301cd88ee38ab14505025fe94bbc19a9c1",
                 "shasum": ""
             },
             "require": {
@@ -704,7 +736,10 @@
             "autoload": {
                 "psr-4": {
                     "Symfony\\Component\\Console\\": ""
-                }
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -722,20 +757,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2015-10-20 14:38:46"
+            "time": "2016-02-28 16:19:47"
         },
         {
             "name": "symfony/finder",
-            "version": "v2.7.6",
+            "version": "v2.7.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "2ffb4e9598db3c48eb6d0ae73b04bbf09280c59d"
+                "reference": "addcb70b33affbca4f3979b0d000259b63dd6711"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/2ffb4e9598db3c48eb6d0ae73b04bbf09280c59d",
-                "reference": "2ffb4e9598db3c48eb6d0ae73b04bbf09280c59d",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/addcb70b33affbca4f3979b0d000259b63dd6711",
+                "reference": "addcb70b33affbca4f3979b0d000259b63dd6711",
                 "shasum": ""
             },
             "require": {
@@ -750,7 +785,10 @@
             "autoload": {
                 "psr-4": {
                     "Symfony\\Component\\Finder\\": ""
-                }
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -768,20 +806,20 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2015-10-11 09:39:48"
+            "time": "2016-02-22 16:12:29"
         },
         {
             "name": "typo3-ter/static-info-tables",
-            "version": "6.3.4",
+            "version": "6.3.9",
             "dist": {
                 "type": "t3x",
-                "url": "http://typo3.org/extensions/repository/download/static_info_tables/6.3.4/t3x/",
+                "url": "https://typo3.org/extensions/repository/download/static_info_tables/6.3.9/t3x/",
                 "reference": null,
                 "shasum": null
             },
             "require": {
                 "php": ">= 5.3.7",
-                "typo3/cms": ">= 6.2.0, <= 7.99.99"
+                "typo3/cms-core": ">= 6.2.0, <= 7.6.99"
             },
             "conflict": {
                 "typo3-ter/cc-infotablesmgm": "<= 99.99.99",
@@ -789,12 +827,18 @@
                 "typo3-ter/uncache": "<= 99.99.99"
             },
             "replace": {
+                "static_info_tables": "self.version",
                 "typo3-ter/static_info_tables": "self.version"
             },
             "type": "typo3-cms-extension",
             "autoload": {
                 "classmap": [
                     ""
+                ],
+                "exclude-from-classmap": [
+                    "Tests",
+                    "tests",
+                    "class.ext_update.php"
                 ]
             },
             "authors": [
@@ -806,7 +850,7 @@
                 }
             ],
             "description": "Data and API for countries, languages and currencies.",
-            "time": "2015-11-03 16:09:32"
+            "time": "2016-02-19 23:35:04"
         },
         {
             "name": "typo3-ter/typo3-console",
@@ -900,16 +944,16 @@
         },
         {
             "name": "typo3/cms",
-            "version": "dev-master",
+            "version": "7.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3/TYPO3.CMS.git",
-                "reference": "9da6bd15deb0595bb2b57b216dbdb9202963f40e"
+                "reference": "bd0c7f6ca9cb3093bd647e85035e9f36bf1e9e86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3/TYPO3.CMS/zipball/9da6bd15deb0595bb2b57b216dbdb9202963f40e",
-                "reference": "9da6bd15deb0595bb2b57b216dbdb9202963f40e",
+                "url": "https://api.github.com/repos/TYPO3/TYPO3.CMS/zipball/bd0c7f6ca9cb3093bd647e85035e9f36bf1e9e86",
+                "reference": "bd0c7f6ca9cb3093bd647e85035e9f36bf1e9e86",
                 "shasum": ""
             },
             "require": {
@@ -919,16 +963,16 @@
                 "ext-pcre": "*",
                 "ext-session": "*",
                 "ext-xml": "*",
+                "mso/idna-convert": "^0.9.1",
                 "pear/http_request2": "~2.2.1",
                 "php": ">=5.5.0",
-                "phpwhois/idna-convert": "~0.8.2",
                 "psr/http-message": "~1.0",
                 "psr/log": "1.0.*@dev",
                 "swiftmailer/swiftmailer": "~5.4.1",
                 "symfony/console": "~2.7.0",
                 "symfony/finder": "~2.7.0",
                 "typo3/class-alias-loader": "^1.0",
-                "typo3/cms-composer-installers": "^1.2.2"
+                "typo3/cms-composer-installers": "^1.2.5"
             },
             "replace": {
                 "typo3/cms-about": "self.version",
@@ -1094,24 +1138,27 @@
                 "extbase",
                 "typo3"
             ],
-            "time": "2015-11-07 17:10:21"
+            "time": "2016-02-23 11:00:40"
         },
         {
             "name": "typo3/cms-composer-installers",
-            "version": "1.2.4",
+            "version": "1.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3/CmsComposerInstallers.git",
-                "reference": "f41bf519acc9430a7d999a6a22a5720e1ee3a27a"
+                "reference": "68dce62bbfed9912583de4a1db16df8feb8f7e2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3/CmsComposerInstallers/zipball/f41bf519acc9430a7d999a6a22a5720e1ee3a27a",
-                "reference": "f41bf519acc9430a7d999a6a22a5720e1ee3a27a",
+                "url": "https://api.github.com/repos/TYPO3/CmsComposerInstallers/zipball/68dce62bbfed9912583de4a1db16df8feb8f7e2d",
+                "reference": "68dce62bbfed9912583de4a1db16df8feb8f7e2d",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^1.0.0"
+            },
+            "conflict": {
+                "composer/installers": "*"
             },
             "replace": {
                 "lw/typo3cms-installers": "*",
@@ -1155,22 +1202,15 @@
                 "installer",
                 "typo3"
             ],
-            "time": "2015-10-08 20:34:38"
+            "time": "2015-11-03 21:19:57"
         }
     ],
     "packages-dev": [],
-    "aliases": [
-        {
-            "alias": "7.5.0",
-            "alias_normalized": "7.5.0.0",
-            "version": "9999999-dev",
-            "package": "typo3/cms"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "typo3/cms": 20,
         "georgringer/news": 20,
+        "georgringer/belayout-fileprovider": 20,
         "apache-solr-for-typo3/solr": 20
     },
     "prefer-stable": false,
