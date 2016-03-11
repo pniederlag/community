@@ -5,8 +5,46 @@
 
 // Main Menu
 // -------------------------------------
+temp.mainMenu = HMENU
 temp.mainMenu {
+	entryLevel = 0
+	wrap = <ul class="burger-navigation">|</ul>
 
+	1 = TMENU
+	1 {
+		expAll = 1
+		noBlur = 1
+		wrap = |
+
+		NO = 1
+		NO {
+			wrapItemAndSub = <li class="menu-lvl1"><span class="list-icon"></span>|</li>
+		}
+
+		ACT < .NO
+		ACT = 1
+		ACT {
+			ATagParams = class="active"
+		}
+	}
+
+	2 = TMENU
+	2 {
+		wrap = <ul class="list-inline">|</ul>
+		expAll = 1
+		noBlur = 1
+		NO = 1
+		NO {
+			wrapItemAndSub = <li class="list-inline-item menu-lvl2">|</li>
+			stdWrap.htmlSpecialChars = 1
+		}
+
+		ACT < .NO
+		ACT = 1
+		ACT {
+			ATagParams = class="active"
+		}
+	}
 }
 
 

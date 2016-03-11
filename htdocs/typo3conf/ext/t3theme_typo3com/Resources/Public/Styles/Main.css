@@ -1,33 +1,33 @@
 @font-face {
   font-family: "Source Sans Pro";
-  src: url('../Fonts/SourceSansPro-Regular.eot?1457692917');
-  src: url('../Fonts/SourceSansPro-Regular.eot?&1457692917#iefix') format('embedded-opentype'), url('../Fonts/SourceSansPro-Regular.woff2?1457692917') format('woff2'), url('../Fonts/SourceSansPro-Regular.woff?1457692917') format('woff'), url('../Fonts/SourceSansPro-Regular.otf?1457692917') format('opentype');
+  src: url('../Fonts/SourceSansPro-Regular.eot?1457702477');
+  src: url('../Fonts/SourceSansPro-Regular.eot?&1457702477#iefix') format('embedded-opentype'), url('../Fonts/SourceSansPro-Regular.woff2?1457702477') format('woff2'), url('../Fonts/SourceSansPro-Regular.woff?1457702477') format('woff'), url('../Fonts/SourceSansPro-Regular.otf?1457702477') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Source Sans Pro Italic";
-  src: url('../Fonts/SourceSansPro-Italic.eot?1457692917');
-  src: url('../Fonts/SourceSansPro-Italic.eot?&1457692917#iefix') format('embedded-opentype'), url('../Fonts/SourceSansPro-Italic.woff2?1457692917') format('woff2'), url('../Fonts/SourceSansPro-Italic.woff?1457692917') format('woff'), url('../Fonts/SourceSansPro-Italic.otf?1457692917') format('opentype');
+  src: url('../Fonts/SourceSansPro-Italic.eot?1457702477');
+  src: url('../Fonts/SourceSansPro-Italic.eot?&1457702477#iefix') format('embedded-opentype'), url('../Fonts/SourceSansPro-Italic.woff2?1457702477') format('woff2'), url('../Fonts/SourceSansPro-Italic.woff?1457702477') format('woff'), url('../Fonts/SourceSansPro-Italic.otf?1457702477') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Source Sans Pro Bold";
-  src: url('../Fonts/SourceSansPro-Bold.eot?1457692917');
-  src: url('../Fonts/SourceSansPro-Bold.eot?&1457692917#iefix') format('embedded-opentype'), url('../Fonts/SourceSansPro-Bold.woff2?1457692917') format('woff2'), url('../Fonts/SourceSansPro-Bold.woff?1457692917') format('woff'), url('../Fonts/SourceSansPro-Bold.otf?1457692917') format('opentype');
+  src: url('../Fonts/SourceSansPro-Bold.eot?1457702477');
+  src: url('../Fonts/SourceSansPro-Bold.eot?&1457702477#iefix') format('embedded-opentype'), url('../Fonts/SourceSansPro-Bold.woff2?1457702477') format('woff2'), url('../Fonts/SourceSansPro-Bold.woff?1457702477') format('woff'), url('../Fonts/SourceSansPro-Bold.otf?1457702477') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Share";
-  src: url('../Fonts/Share-Regular.otf?1457724945') format('opentype');
+  src: url('../Fonts/Share-Regular.otf?1457729274') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Share Bold";
-  src: url('../Fonts/Share-Bold.otf?1457724945') format('opentype');
+  src: url('../Fonts/Share-Bold.otf?1457729274') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -3824,6 +3824,31 @@ footer h3 {
 /* line 46, ../../Private/Styles/Layout/_Footer.scss */
 .footer-navigation a {
   color: #8c8c8c;
+}
+
+/* line 3, ../../Private/Styles/Layout/_Navigation.scss */
+#main-mavigation .burger-navigation {
+  list-style-type: none;
+  width: 500px;
+  padding-left: 0;
+}
+/* line 10, ../../Private/Styles/Layout/_Navigation.scss */
+#main-mavigation .menu-lvl1 .list-icon {
+  width: 0.5rem;
+  height: 0.5rem;
+  display: inline-block;
+  background-color: #ff8700;
+  margin-bottom: 0.125rem;
+  margin-right: 0.625rem;
+}
+/* line 19, ../../Private/Styles/Layout/_Navigation.scss */
+#main-mavigation .menu-lvl1 ul {
+  padding-left: 1.2rem;
+}
+/* line 26, ../../Private/Styles/Layout/_Navigation.scss */
+#main-mavigation .menu-lvl2:not(:last-child)::after {
+  content: "|";
+  margin: 0 0.625rem;
 }
 
 /*# sourceMappingURL=Main.css.map */

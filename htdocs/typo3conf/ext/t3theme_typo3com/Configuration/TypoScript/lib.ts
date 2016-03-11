@@ -12,9 +12,6 @@ lib.layout1 {
 
 	variables {
 		mainMenu < temp.mainMenu
-		logo < temp.logo
-		search < temp.search
-
 
 		content  < styles.content.get
 		content.select.where = colPos=0
