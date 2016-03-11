@@ -1,0 +1,44 @@
+.footer-copyright {
+	background-color: $grey-dark;
+	color: $white;
+	min-height: 5.75rem;
+	padding-top: 2.5rem;
+
+
+	li.list-inline-item:not(:last-child) {
+		margin-right: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	a {
+		color: $white;
+
+		&:hover {
+			color: $white;
+		}
+	}
+}
+
+
+.footer-navigation {
+	padding-top: 3.75rem;
+	color: $grey-medium;
+
+	h3 {
+		color: $grey-dark;
+	}
+
+	ul {
+		margin-top: 1.5rem;
+		margin-bottom: 2rem;
+
+		li {
+			margin: 0.5rem 0;
+		}
+	}
+
+	a {
+		color: $grey-medium;
+
+	}
+}

@@ -30,7 +30,7 @@ Grunt is a task runner configured in the **Gruntfile.js** in **Resources/Private
 
 Install **grunt-cli** globally to use the `grunt` command in the terminal:
 
-	sudo npm install -g grunt-cli.
+	sudo npm install -g grunt-cli
 
 Run `npm install` in **Resources/Private** to install all configured Node modules.
 
