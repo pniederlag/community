@@ -1,31 +1,19 @@
-body {
-	font-family: $source-sans-pro, Helvetica, Arial, sans-serif;
+body,
+h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
 	font-style: normal;
-	line-height: 130%;
 }
 
-h1, h2, h3, h4, h5, h6, strong, b {
+strong, b {
 	font-family: $source-sans-pro-bold, Helvetica, Arial, sans-serif;
 	font-weight: normal;
 	font-style: normal;
 }
 
-em,i {
+em, i {
 	font-family: $source-sans-pro-italic, Helvetica, Arial, sans-serif;
 }
 
-h1 {
-	font-size: 3.375rem;
-	line-height: 120%;
-}
-
-h2 {
-	font-size: 2.1875rem;
-	line-height: 120%;
-}
-
-h3 {
-	font-size: 1.375rem;
-	line-height: 120%;
+h1, h2, h3 {
+	line-height: 1.2;
 }
