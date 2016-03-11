@@ -7,11 +7,11 @@ return [
         'loginSecurityLevel' => 'rsa',
     ],
     'DB' => [
-        'database' => 'typo3com_dev',
+        'database' => 't3com',
         'host' => '127.0.0.1',
-        'password' => 'typo3com_dev',
+        'password' => 'Typo3Com!?2016',
         'port' => 3306,
-        'username' => 'typo3com_dev',
+        'username' => 't3com',
     ],
     'EXT' => [
         'extConf' => [
@@ -91,7 +91,7 @@ return [
         'encryptionKey' => '077983a67a90ba2926842e5c98320b1a32802d4564ac3712445da1628188d0e4fea53887c5e9712c0ed0f9cccaa93b59',
         'isInitialDatabaseImportDone' => true,
         'isInitialInstallationInProgress' => false,
-        'sitename' => 'TYPO3 community website [Production]',
+        'sitename' => 'TYPO3 community website [Content]',
         'sqlDebug' => 0,
         'systemLogLevel' => 2,
         't3lib_cs_convMethod' => 'mbstring',
