@@ -5,6 +5,16 @@
 page = PAGE
 page {
 
+	meta {
+		viewport= width=device-width, initial-scale=1.0, shrink-to-fit=no
+	}
+
+	// Force IE to use latest rendering mode
+	headerData {
+		3 = TEXT
+		3.value = <meta http-equiv="x-ua-compatible" content="ie=edge">
+	}
+
 	includeCSS {
 		main = EXT:t3theme_typo3com/Resources/Public/Styles/Main.css
 	}
