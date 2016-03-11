@@ -27,7 +27,11 @@ $information-message-blue: #0080ff;
 $source-sans-pro: "Source Sans Pro";
 $source-sans-pro-italic: "Source Sans Pro Italic";
 $source-sans-pro-bold: "Source Sans Pro Bold";
+$share: "Share";
+$share-bold: "Share Bold";
 
 @include font-face($source-sans-pro, font-files("SourceSansPro-Regular.woff2", "SourceSansPro-Regular.woff", "SourceSansPro-Regular.otf"), "SourceSansPro-Regular.eot", normal, normal);
 @include font-face($source-sans-pro-italic, font-files("SourceSansPro-Italic.woff2", "SourceSansPro-Italic.woff", "SourceSansPro-Italic.otf"), "SourceSansPro-Italic.eot", normal, normal);
 @include font-face($source-sans-pro-bold, font-files("SourceSansPro-Bold.woff2", "SourceSansPro-Bold.woff", "SourceSansPro-Bold.otf"), "SourceSansPro-Bold.eot", normal, normal);
+@include font-face($share, font-files("Share-Regular.otf"), false, normal, normal);
+@include font-face($share-bold, font-files("Share-Bold.otf"), false, normal, normal);
