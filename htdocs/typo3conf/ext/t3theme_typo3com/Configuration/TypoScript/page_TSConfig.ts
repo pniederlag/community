@@ -1,6 +1,6 @@
 TCEFORM.tt_content.layout {
     # Remove items from select
-    removeItems = 1,2,3
+    removeItems = 1,2,3,4
 
     # Add new items to select
     addItems {
@@ -8,6 +8,8 @@ TCEFORM.tt_content.layout {
         facts-section = Facts-Start
         why-typo3 = Why-Check
         subpage-header = Subpage Header
+        text-image-indented = Indented Text Image
+        casestudy-company = Company section in Case Study
     }
 }
 
