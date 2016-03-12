@@ -4366,25 +4366,27 @@ footer h3 {
 /* line 22, ../../Private/Styles/Modules/_CaseStudyTeaser.scss */
 .case-study-teaser-author {
   color: #b9b9b9;
+  margin-top: 0.8rem;
+  margin-bottom: 1.5rem;
 }
 
-/* line 27, ../../Private/Styles/Modules/_CaseStudyTeaser.scss */
+/* line 29, ../../Private/Styles/Modules/_CaseStudyTeaser.scss */
 .case-study-detail-view:hover, .case-study-detail-view:active, .case-study-overview-page:hover, .case-study-overview-page:active {
   text-decoration: none;
 }
 
-/* line 32, ../../Private/Styles/Modules/_CaseStudyTeaser.scss */
+/* line 34, ../../Private/Styles/Modules/_CaseStudyTeaser.scss */
 .case-study-detail-view {
   margin-right: 1rem;
 }
 
-/* line 36, ../../Private/Styles/Modules/_CaseStudyTeaser.scss */
+/* line 38, ../../Private/Styles/Modules/_CaseStudyTeaser.scss */
 .case-study-teaser-box {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 2rem;
 }
 @media only screen and (min-width: 768px) {
-  /* line 36, ../../Private/Styles/Modules/_CaseStudyTeaser.scss */
+  /* line 38, ../../Private/Styles/Modules/_CaseStudyTeaser.scss */
   .case-study-teaser-box {
     position: absolute;
     top: 4rem;
