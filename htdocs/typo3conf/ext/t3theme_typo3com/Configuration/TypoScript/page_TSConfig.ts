@@ -6,6 +6,8 @@ TCEFORM.tt_content.layout {
     addItems {
         hero-section = Hero Section
         facts-section = Facts-Start
+        why-typo3 = Why-Check
+        subpage-header = Subpage Header
     }
 }
 
