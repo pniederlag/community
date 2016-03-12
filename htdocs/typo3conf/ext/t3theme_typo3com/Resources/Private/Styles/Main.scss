@@ -16,15 +16,12 @@
 @import "Base/Base";
 
 // Layout
-@import
-	"Layout/Header",
-	"Layout/Footer",
-	"Layout/Content",
-	"Layout/Navigation";
+@import "Layout/Header";
+@import "Layout/Footer";
+@import "Layout/Content";
+@import "Layout/Navigation";
 
-=======
 // Modules
-@import
-	"Modules/HeroStart",
-	"Modules/Feature-Start";
+@import "Modules/HeroStart";
+@import "Modules/Feature-Start";
 
