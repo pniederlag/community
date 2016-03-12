@@ -21,3 +21,7 @@
 // Extensions
 // -----------------------------------------------------------------------------
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/gridelements.ts">
+
+// Content
+// -----------------------------------------------------------------------------
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/content.ts">
