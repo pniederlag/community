@@ -35,3 +35,9 @@ $share-bold: "Share Bold";
 @include font-face($source-sans-pro-bold, font-files("SourceSansPro-Bold.woff2", "SourceSansPro-Bold.woff", "SourceSansPro-Bold.otf"), "SourceSansPro-Bold.eot", normal, normal);
 @include font-face($share, font-files("Share-Regular.otf"), false, normal, normal);
 @include font-face($share-bold, font-files("Share-Bold.otf"), false, normal, normal);
+
+
+// Paths
+// ------------------------------
+
+$images: "../../Public/Images";

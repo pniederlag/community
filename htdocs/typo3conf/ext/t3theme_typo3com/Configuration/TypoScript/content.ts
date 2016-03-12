@@ -5,6 +5,7 @@ tt_content.casestudy_teaser < lib.gridelements.defaultGridSetup
 tt_content.casestudy_teaser = FLUIDTEMPLATE
 tt_content.casestudy_teaser {
     file = EXT:t3theme_typo3com/Resources/Private/Templates/ContentElements/CaseStudyTeaser.html
+
     partialRootPath = EXT:t3theme_typo3com/Resources/Private/Partials/ContentElements/
     dataProcessing {
         10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
