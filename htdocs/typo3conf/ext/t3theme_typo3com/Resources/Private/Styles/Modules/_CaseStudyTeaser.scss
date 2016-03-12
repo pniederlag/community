@@ -1,3 +1,15 @@
+.case-study-teaser {
+	@include medium {
+		position: relative;
+	}
+}
+
+.case-study-teaser-image {
+	@include medium {
+		position: relative;
+	}
+}
+
 .case-study-teaser-subheader {
 	font-family: $share;
 	color: $typo3-key-color;
@@ -14,5 +26,20 @@
 .case-study-detail-view, .case-study-overview-page {
 	&:hover, &:active {
 		text-decoration: none;
+	}
+}
+
+.case-study-detail-view {
+	margin-right: 1rem;
+}
+
+.case-study-teaser-box {
+	background-color: rgba($black, 0.7);
+	padding: 2rem;
+
+	@include medium {
+		position: absolute;
+		top: 4rem;
+		left: 4rem;
 	}
 }

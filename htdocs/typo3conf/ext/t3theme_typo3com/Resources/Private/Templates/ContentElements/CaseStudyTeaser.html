@@ -1,15 +1,17 @@
 <html xmlns:f="http://xsd.helhum.io/ns/typo3/cms-fluid/master/ViewHelpers">
-	<div class="case-study-teaser row">
-		<div class="col-xs-12">
+<div class="case-study-teaser row">
+	<div class="col-xs-12 case-study-teaser-image">
 		<f:render partial="MediaGallery" arguments="{_all}" />
 	</div>
-	<div class="col-xs-12">
+	<div class="col-xs-12 col-md-6 col-lg-5 case-study-teaser-box">
 		<p class="case-study-teaser-subheader">{data.subheader}</p>
 		<h3 class="case-study-teaser-headline">{data.header}</h3>
 		<p class="case-study-teaser-author">{data.table_caption}</p>
 		<p>
 			<f:link.page pageUid="{data.link}" class="case-study-detail-view typo3button">Read more</f:link.page>
-			<f:link.page pageUid="{caseStudyOverviewPage}" class="case-study-overview-page button">View all Case Studies</f:link.page>
+			<f:link.page pageUid="{caseStudyOverviewPage}"
+						 class="case-study-overview-page button">View all Case Studies
+			</f:link.page>
 		</p>
 	</div>
 </div>
