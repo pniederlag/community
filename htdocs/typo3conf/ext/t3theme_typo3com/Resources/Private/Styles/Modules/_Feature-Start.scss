@@ -7,7 +7,7 @@
   img{
     width: 5rem;
     height: auto;
-    padding: 3.125rem 0 1.875rem 0;
+    padding: 1rem 0 1.875rem 0;
   }
   .ce-bodytext p{
     font-family: $share-bold;
@@ -16,6 +16,9 @@
   .ce-bodytext a{
     font-family: $source-sans-pro;
     font-size: 1rem;
+  }
+  .more-feature{
+    text-align: left;
   }
 }
 .feature-first-line{

@@ -5,5 +5,6 @@ TCEFORM.tt_content.layout {
     # Add new items to select
     addItems {
         hero-section = Hero Section
+        facts-section = Facts-Start
     }
 }

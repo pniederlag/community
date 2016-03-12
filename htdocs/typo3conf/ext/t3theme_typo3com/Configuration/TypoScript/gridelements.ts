@@ -15,12 +15,12 @@ tt_content.gridelements_pi1 {
 				5< .default
 				5.wrap = <div class="col-md-4"><div class="feature-start">|</div></div>
 				6 < .default
-				6.wrap = <div class="col-md-4"><div class="feature-start">|</div></div>
+				6.wrap = <div class="col-md-4"><div class="feature-start more-features">|</div></div>
 				7 < .default
 				7.wrap = <div class="col-md-12 feature-head">|</div>
 
 			}
-
+		wrap = <div class="row">|</div>
 		}
 	}
 }
