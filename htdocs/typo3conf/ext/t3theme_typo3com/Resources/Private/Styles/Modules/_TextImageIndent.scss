@@ -12,10 +12,14 @@ div.text-image-indented:after {
 }
 
 div.text-image-indented div.ce-gallery {
-  position: absolute;
-  right: 0px;
-  top: -40px;
-  z-index: 5;
+
+  @include medium {
+    position: absolute;
+    right: 0px;
+    top: -40px;
+    z-index: 5;
+  }
+  
 }
 
 div.text-image-indented div.ce-gallery img {
