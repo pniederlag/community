@@ -21,8 +21,11 @@
 	"Layout/Footer",
 	"Layout/Content",
 	"Layout/Navigation";
-// Modules
-@import
-	"Modules/HeroStart",
-	"Modules/Feature-Start";
+@import "Layout/Header";
+@import "Layout/Footer";
+@import "Layout/Content";
+@import "Layout/Navigation";
 
+// Modules
+@import "Modules/HeroStart";
+@import "Modules/Feature-Start";

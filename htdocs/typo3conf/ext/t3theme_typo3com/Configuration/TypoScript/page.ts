@@ -32,6 +32,9 @@ page {
 
 		// [1] Home
 		file__Homepage < lib.layout1
+
+		// [2] Content
+		file__Contentpage < lib.layout2
 	}
 }
 
