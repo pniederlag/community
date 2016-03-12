@@ -25,4 +25,4 @@ lib.layout1 {
 		legalInfoPid.value = {$plugin.t3theme_typo3com.footer.legalInfoPid}
 	}
 }
-lib.fluidContent.templateRootPaths.10 = EXT:t3theme_typo3com/Resources/Private/Templates/Module/Template
+lib.fluidContent.templateRootPaths.10 = EXT:t3theme_typo3com/Resources/Private/Templates/ContentElements
