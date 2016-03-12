@@ -87,7 +87,7 @@ temp.footerMenu {
 
 			NO = 1
 			NO {
-				wrapItemAndSub = <div class="col-md-3">|</div>
+				wrapItemAndSub = <div class="col-sm-3">|</div>
 				stdWrap.htmlSpecialChars = 1
 				stdWrap.wrap = <h3 class="footer-menu-headline">|</h3>
 				doNotLinkIt = 1
@@ -116,6 +116,6 @@ temp.footerMenu {
 
 	20 = TEXT
 	20.value = Newsletter
-	20.wrap = <div class="col-md-3"><h3>|</h3></div>
+	20.wrap = <div class="col-sm-3"><h3>|</h3></div>
 }
 
