@@ -6,7 +6,6 @@
 // -----------------------------------------------------------------------------
 
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/config.ts">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/gridelements.ts">
 
 // Objects
 // -----------------------------------------------------------------------------
@@ -18,3 +17,7 @@
 // -----------------------------------------------------------------------------
 
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/page.ts">
+
+// Extensions
+// -----------------------------------------------------------------------------
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/gridelements.ts">
