@@ -32,3 +32,16 @@ tt_content.casestudy_teaser {
 
 	file = EXT:t3theme_typo3com/Resources/Private/Templates/ContentElements/CaseStudyTeaser.html
 }
+
+
+tt_content {
+
+	//add default row
+	stdWrap.innerWrap.cObject.default.20.10.value = csc-default row
+
+
+	textpic {
+		20.text.wrap = <div class="csc-textpic-text col-md-12"> | </div>
+	}
+
+}
