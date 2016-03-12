@@ -4177,6 +4177,40 @@ footer h3 {
   background-color: #ffffff;
 }
 
+/* line 1, ../../Private/Styles/Modules/_ButtonsAndLinks.scss */
+.button {
+  display: inline-block;
+  background: #373a3c;
+  color: #ffffff;
+  line-height: 1;
+  font-weight: bold;
+  padding: 1em;
+  border: 0;
+  text-align: center;
+}
+/* line 11, ../../Private/Styles/Modules/_ButtonsAndLinks.scss */
+.button:hover, .button:focus {
+  background: #8c8c8c;
+  color: #ffffff;
+}
+
+/* line 17, ../../Private/Styles/Modules/_ButtonsAndLinks.scss */
+.typo3button {
+  display: inline-block;
+  background: #ff8700;
+  color: #ffffff;
+  line-height: 1;
+  font-weight: bold;
+  padding: 1em;
+  border: 0;
+  text-align: center;
+}
+/* line 27, ../../Private/Styles/Modules/_ButtonsAndLinks.scss */
+.typo3button:hover, .typo3button:focus {
+  background: #e67a00;
+  color: #ffffff;
+}
+
 /* line 1, ../../Private/Styles/Modules/_HeroStart.scss */
 .hero-section .ce-bodytext {
   background-color: rgba(0, 0, 0, 0.8);
@@ -4208,6 +4242,27 @@ footer h3 {
 .feature-start .ce-bodytext {
   font-family: "Share Bold";
   font-size: 1.375rem;
+}
+
+/* line 1, ../../Private/Styles/Modules/_CaseStudyTeaser.scss */
+.case-study-teaser-subheader {
+  font-family: "Share";
+  color: #ff8700;
+}
+
+/* line 6, ../../Private/Styles/Modules/_CaseStudyTeaser.scss */
+.case-study-teaser-headline {
+  color: #ffffff;
+}
+
+/* line 10, ../../Private/Styles/Modules/_CaseStudyTeaser.scss */
+.case-study-teaser-author {
+  color: #b9b9b9;
+}
+
+/* line 15, ../../Private/Styles/Modules/_CaseStudyTeaser.scss */
+.case-study-detail-view:hover, .case-study-detail-view:active, .case-study-overview-page:hover, .case-study-overview-page:active {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=Main.css.map */
