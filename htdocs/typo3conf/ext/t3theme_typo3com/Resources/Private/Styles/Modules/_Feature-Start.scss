@@ -3,6 +3,7 @@
   width: 10rem;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 3rem;
   img{
     width: 5rem;
     height: auto;
@@ -16,14 +17,13 @@
     font-family: $source-sans-pro;
     font-size: 1rem;
   }
-  margin: 3rem 0 3rem 0;
 }
 .feature-first-line{
   padding-bottom: 3rem;
   border-bottom: 1px solid $grey-light;
 }
-.feature-head{
+.feature-head h2{
   text-align: center;
   font-family: $share;
-  margin: 6.2rem 0 ;
+  margin: 6.2rem 0 3.125rem 0 ;
 }
