@@ -20,6 +20,8 @@ temp.mainMenu {
 		NO = 1
 		NO {
 			wrapItemAndSub = <li class="menu-lvl1"><span class="list-icon"></span>|</li>
+			doNotLinkIt = 1
+			linkWrap = <span class="headline-lvl1">|</span>
 		}
 
 		ACT < .NO
