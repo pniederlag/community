@@ -9,6 +9,7 @@ TCEFORM.tt_content.layout {
         why-typo3 = Why-Check
         subpage-header = Subpage Header
         text-image-indented = Indented Text Image
+        casestudy-company = Company section in Case Study
     }
 }
 
