@@ -4076,14 +4076,36 @@ footer h3 {
   overflow: hidden;
   transition: all 500ms ease-in 0s;
 }
-/* line 17, ../../Private/Styles/Layout/_Navigation.scss */
+/* line 16, ../../Private/Styles/Layout/_Navigation.scss */
+#main-mavigation .burger-navigation.closed li {
+  transition: opacity 500ms ease-in 0s;
+  opacity: 0;
+}
+/* line 23, ../../Private/Styles/Layout/_Navigation.scss */
 #main-mavigation .burger-navigation.open {
   width: 100%;
   height: 100%;
   background-color: white;
   transition: all 500ms ease-in 0s;
+  padding-left: 3rem;
 }
-/* line 26, ../../Private/Styles/Layout/_Navigation.scss */
+/* line 30, ../../Private/Styles/Layout/_Navigation.scss */
+#main-mavigation .burger-navigation.open li {
+  transition: opacity 500ms ease-in 0s;
+  opacity: 1;
+}
+/* line 37, ../../Private/Styles/Layout/_Navigation.scss */
+#main-mavigation .menu-lvl1 {
+  padding-top: 1.3rem;
+  padding-bottom: 0.5rem;
+  color: #000000;
+  font-size: 1.375rem;
+}
+/* line 43, ../../Private/Styles/Layout/_Navigation.scss */
+#main-mavigation .menu-lvl1 .headline-lvl1 {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+/* line 47, ../../Private/Styles/Layout/_Navigation.scss */
 #main-mavigation .menu-lvl1 .list-icon {
   width: 0.5rem;
   height: 0.5rem;
@@ -4093,17 +4115,27 @@ footer h3 {
   margin-right: 0.625rem;
   overflow: visible;
 }
-/* line 36, ../../Private/Styles/Layout/_Navigation.scss */
+/* line 57, ../../Private/Styles/Layout/_Navigation.scss */
 #main-mavigation .menu-lvl1 ul {
   padding-left: 1.2rem;
+  font-size: 1rem;
+  color: #b9b9b9;
 }
-/* line 43, ../../Private/Styles/Layout/_Navigation.scss */
+/* line 62, ../../Private/Styles/Layout/_Navigation.scss */
+#main-mavigation .menu-lvl1 ul a {
+  color: #b9b9b9;
+}
+/* line 65, ../../Private/Styles/Layout/_Navigation.scss */
+#main-mavigation .menu-lvl1 ul a.active {
+  color: #ff8700;
+}
+/* line 74, ../../Private/Styles/Layout/_Navigation.scss */
 #main-mavigation .menu-lvl2:not(:last-child)::after {
   content: "|";
   margin: 0 0.625rem;
 }
 
-/* line 51, ../../Private/Styles/Layout/_Navigation.scss */
+/* line 82, ../../Private/Styles/Layout/_Navigation.scss */
 .header-burger-menu-link.active {
   background-color: #ffffff;
 }
@@ -4138,14 +4170,36 @@ footer h3 {
   overflow: hidden;
   transition: all 500ms ease-in 0s;
 }
-/* line 17, ../../Private/Styles/Layout/_Navigation.scss */
+/* line 16, ../../Private/Styles/Layout/_Navigation.scss */
+#main-mavigation .burger-navigation.closed li {
+  transition: opacity 500ms ease-in 0s;
+  opacity: 0;
+}
+/* line 23, ../../Private/Styles/Layout/_Navigation.scss */
 #main-mavigation .burger-navigation.open {
   width: 100%;
   height: 100%;
   background-color: white;
   transition: all 500ms ease-in 0s;
+  padding-left: 3rem;
 }
-/* line 26, ../../Private/Styles/Layout/_Navigation.scss */
+/* line 30, ../../Private/Styles/Layout/_Navigation.scss */
+#main-mavigation .burger-navigation.open li {
+  transition: opacity 500ms ease-in 0s;
+  opacity: 1;
+}
+/* line 37, ../../Private/Styles/Layout/_Navigation.scss */
+#main-mavigation .menu-lvl1 {
+  padding-top: 1.3rem;
+  padding-bottom: 0.5rem;
+  color: #000000;
+  font-size: 1.375rem;
+}
+/* line 43, ../../Private/Styles/Layout/_Navigation.scss */
+#main-mavigation .menu-lvl1 .headline-lvl1 {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+/* line 47, ../../Private/Styles/Layout/_Navigation.scss */
 #main-mavigation .menu-lvl1 .list-icon {
   width: 0.5rem;
   height: 0.5rem;
@@ -4155,17 +4209,27 @@ footer h3 {
   margin-right: 0.625rem;
   overflow: visible;
 }
-/* line 36, ../../Private/Styles/Layout/_Navigation.scss */
+/* line 57, ../../Private/Styles/Layout/_Navigation.scss */
 #main-mavigation .menu-lvl1 ul {
   padding-left: 1.2rem;
+  font-size: 1rem;
+  color: #b9b9b9;
 }
-/* line 43, ../../Private/Styles/Layout/_Navigation.scss */
+/* line 62, ../../Private/Styles/Layout/_Navigation.scss */
+#main-mavigation .menu-lvl1 ul a {
+  color: #b9b9b9;
+}
+/* line 65, ../../Private/Styles/Layout/_Navigation.scss */
+#main-mavigation .menu-lvl1 ul a.active {
+  color: #ff8700;
+}
+/* line 74, ../../Private/Styles/Layout/_Navigation.scss */
 #main-mavigation .menu-lvl2:not(:last-child)::after {
   content: "|";
   margin: 0 0.625rem;
 }
 
-/* line 51, ../../Private/Styles/Layout/_Navigation.scss */
+/* line 82, ../../Private/Styles/Layout/_Navigation.scss */
 .header-burger-menu-link.active {
   background-color: #ffffff;
 }
