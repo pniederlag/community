@@ -1,33 +1,33 @@
 @font-face {
   font-family: "Source Sans Pro";
-  src: url('../Fonts/SourceSansPro-Regular.eot?1457702477');
-  src: url('../Fonts/SourceSansPro-Regular.eot?&1457702477#iefix') format('embedded-opentype'), url('../Fonts/SourceSansPro-Regular.woff2?1457702477') format('woff2'), url('../Fonts/SourceSansPro-Regular.woff?1457702477') format('woff'), url('../Fonts/SourceSansPro-Regular.otf?1457702477') format('opentype');
+  src: url('../Fonts/SourceSansPro-Regular.eot?1457692917');
+  src: url('../Fonts/SourceSansPro-Regular.eot?&1457692917#iefix') format('embedded-opentype'), url('../Fonts/SourceSansPro-Regular.woff2?1457692917') format('woff2'), url('../Fonts/SourceSansPro-Regular.woff?1457692917') format('woff'), url('../Fonts/SourceSansPro-Regular.otf?1457692917') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Source Sans Pro Italic";
-  src: url('../Fonts/SourceSansPro-Italic.eot?1457702477');
-  src: url('../Fonts/SourceSansPro-Italic.eot?&1457702477#iefix') format('embedded-opentype'), url('../Fonts/SourceSansPro-Italic.woff2?1457702477') format('woff2'), url('../Fonts/SourceSansPro-Italic.woff?1457702477') format('woff'), url('../Fonts/SourceSansPro-Italic.otf?1457702477') format('opentype');
+  src: url('../Fonts/SourceSansPro-Italic.eot?1457692917');
+  src: url('../Fonts/SourceSansPro-Italic.eot?&1457692917#iefix') format('embedded-opentype'), url('../Fonts/SourceSansPro-Italic.woff2?1457692917') format('woff2'), url('../Fonts/SourceSansPro-Italic.woff?1457692917') format('woff'), url('../Fonts/SourceSansPro-Italic.otf?1457692917') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Source Sans Pro Bold";
-  src: url('../Fonts/SourceSansPro-Bold.eot?1457702477');
-  src: url('../Fonts/SourceSansPro-Bold.eot?&1457702477#iefix') format('embedded-opentype'), url('../Fonts/SourceSansPro-Bold.woff2?1457702477') format('woff2'), url('../Fonts/SourceSansPro-Bold.woff?1457702477') format('woff'), url('../Fonts/SourceSansPro-Bold.otf?1457702477') format('opentype');
+  src: url('../Fonts/SourceSansPro-Bold.eot?1457692917');
+  src: url('../Fonts/SourceSansPro-Bold.eot?&1457692917#iefix') format('embedded-opentype'), url('../Fonts/SourceSansPro-Bold.woff2?1457692917') format('woff2'), url('../Fonts/SourceSansPro-Bold.woff?1457692917') format('woff'), url('../Fonts/SourceSansPro-Bold.otf?1457692917') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Share";
-  src: url('../Fonts/Share-Regular.otf?1457729274') format('opentype');
+  src: url('../Fonts/Share-Regular.otf?1457725807') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Share Bold";
-  src: url('../Fonts/Share-Bold.otf?1457729274') format('opentype');
+  src: url('../Fonts/Share-Bold.otf?1457725807') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -3967,7 +3967,7 @@ h1, h2, h3 {
 }
 
 /* line 1, ../../Private/Styles/Layout/_Header.scss */
-.header {
+.header, .header-container {
   height: 4.375rem;
   background-color: #f4f4f4;
 }
@@ -4004,45 +4004,49 @@ footer h3 {
 }
 
 /* line 7, ../../Private/Styles/Layout/_Footer.scss */
-.footer-copyright {
+.footer-copyright-container {
   background-color: #515151;
+}
+
+/* line 11, ../../Private/Styles/Layout/_Footer.scss */
+.footer-copyright {
   color: #ffffff;
   min-height: 5.75rem;
   padding-top: 2.5rem;
 }
-/* line 14, ../../Private/Styles/Layout/_Footer.scss */
+/* line 17, ../../Private/Styles/Layout/_Footer.scss */
 .footer-copyright li.list-inline-item:not(:last-child) {
   margin-right: 2.5rem;
   margin-bottom: 1rem;
 }
-/* line 19, ../../Private/Styles/Layout/_Footer.scss */
+/* line 22, ../../Private/Styles/Layout/_Footer.scss */
 .footer-copyright a {
   color: #ffffff;
 }
-/* line 22, ../../Private/Styles/Layout/_Footer.scss */
+/* line 25, ../../Private/Styles/Layout/_Footer.scss */
 .footer-copyright a:hover {
   color: #ffffff;
 }
 
-/* line 29, ../../Private/Styles/Layout/_Footer.scss */
+/* line 31, ../../Private/Styles/Layout/_Footer.scss */
 .footer-navigation {
   padding-top: 3.75rem;
   color: #8c8c8c;
 }
-/* line 33, ../../Private/Styles/Layout/_Footer.scss */
+/* line 35, ../../Private/Styles/Layout/_Footer.scss */
 .footer-navigation h3 {
   color: #515151;
 }
-/* line 37, ../../Private/Styles/Layout/_Footer.scss */
+/* line 39, ../../Private/Styles/Layout/_Footer.scss */
 .footer-navigation ul {
   margin-top: 1.5rem;
   margin-bottom: 2rem;
 }
-/* line 41, ../../Private/Styles/Layout/_Footer.scss */
+/* line 43, ../../Private/Styles/Layout/_Footer.scss */
 .footer-navigation ul li {
   margin: 0.5rem 0;
 }
-/* line 46, ../../Private/Styles/Layout/_Footer.scss */
+/* line 48, ../../Private/Styles/Layout/_Footer.scss */
 .footer-navigation a {
   color: #8c8c8c;
 }
