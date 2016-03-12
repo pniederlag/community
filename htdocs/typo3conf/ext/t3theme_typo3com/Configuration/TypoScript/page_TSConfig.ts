@@ -4,6 +4,6 @@ TCEFORM.tt_content.layout {
 
     # Add new items to select
     addItems {
-        12 = Hero_Header
+        hero_section = Hero Section
     }
 }
