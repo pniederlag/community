@@ -6,6 +6,9 @@
 			<trans-unit id="Homepage" xml:space="preserve">
 				<source>Homepage</source>
 			</trans-unit>
+			<trans-unit id="Contentpage" xml:space="preserve">
+				<source>Contentpage</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
