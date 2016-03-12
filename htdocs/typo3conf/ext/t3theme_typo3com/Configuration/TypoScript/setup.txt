@@ -17,3 +17,4 @@
 // -----------------------------------------------------------------------------
 
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/page.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/page_TSConfig.ts">

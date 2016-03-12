@@ -12,9 +12,6 @@ lib.layout1 {
 
 	variables {
 		mainMenu < temp.mainMenu
-		logo < temp.logo
-		search < temp.search
-
 
 		content  < styles.content.get
 		content.select.where = colPos=0
@@ -28,3 +25,4 @@ lib.layout1 {
 		legalInfoPid.value = {$plugin.t3theme_typo3com.footer.legalInfoPid}
 	}
 }
+lib.fluidContent.templateRootPaths.10 = EXT:t3theme_typo3com/Resources/Private/Templates/Module/Template

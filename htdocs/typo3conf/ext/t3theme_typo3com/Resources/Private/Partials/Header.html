@@ -1,8 +1,11 @@
-<div class="container">
+<header class="container">
 	<div class="header row">
 		<div class="col-xs-2 col-md-1">
 			<div class="header-burger-menu-link">
-				<f:image src="typo3conf/ext/t3theme_typo3com/Resources/Public/Images/Icons/burger-menu.svg" class="header-burger-menu-icon"/>
+				<nav id="main-mavigation">
+					<f:image src="typo3conf/ext/t3theme_typo3com/Resources/Public/Images/Icons/burger-menu.svg" class="header-burger-menu-icon"/>
+					<f:format.raw>{mainMenu}</f:format.raw>
+				</nav>
 			</div>
 		</div>
 		<div class="col-xs-offset-2 col-xs-4 col-md-offset-4 col-md-2">
@@ -19,4 +22,4 @@
 			</f:comment>
 		</div>
 	</div>
-</div>
+</header>
