@@ -1,0 +1,18 @@
+.case-study-teaser-subheader {
+	font-family: $share;
+	color: $typo3-key-color;
+}
+
+.case-study-teaser-headline {
+	color: $white;
+}
+
+.case-study-teaser-author {
+	color: $grey-light;
+}
+
+.case-study-detail-view, .case-study-overview-page {
+	&:hover, &:active {
+		text-decoration: none;
+	}
+}
