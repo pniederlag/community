@@ -4,7 +4,9 @@
   font-size: 53px;
   color: #ffffff;
   float: right;
-  width: 600px;
+  max-width: 650px;
+  min-width: 500px;
+  width: auto;
   position: absolute;
   top: 200px;
   right: 30px;
