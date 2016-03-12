@@ -8,7 +8,7 @@
 temp.mainMenu = HMENU
 temp.mainMenu {
 	entryLevel = 0
-	wrap = <ul class="burger-navigation">|</ul>
+	wrap = <ul class="burger-navigation closed">|</ul>
 
 	1 = TMENU
 	1 {

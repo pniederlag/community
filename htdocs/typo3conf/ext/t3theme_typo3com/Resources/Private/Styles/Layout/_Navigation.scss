@@ -2,8 +2,22 @@
 
 	.burger-navigation {
 		list-style-type: none;
-		width: 500px;
-		padding-left: 0;
+		position: fixed;
+		margin-left: -1rem;
+
+		&.closed {
+			width: 0;
+			height: 0;
+			overflow: hidden;
+			transition: all 500ms ease-in 0s;
+		}
+
+		&.open {
+			width: 100%;
+			height: 100%;
+			background-color: white;
+			transition: all 500ms ease-in 0s;
+		}
 	}
 
 	.menu-lvl1 {
@@ -14,6 +28,7 @@
 			background-color: $typo3-key-color;
 			margin-bottom: 0.125rem;
 			margin-right: 0.625rem;
+			overflow: visible;
 		}
 
 		ul {
@@ -27,7 +42,11 @@
 			content:"|";
 			margin: 0 0.625rem;
 		}
+	}
+}
 
-
+.header-burger-menu-link {
+	&.active {
+		background-color: $white;
 	}
 }
