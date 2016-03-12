@@ -3971,26 +3971,35 @@ a {
   color: #ff8700;
 }
 /* line 22, ../../Private/Styles/Base/_Base.scss */
-a :hover {
+a:hover {
   color: #ff8700;
 }
 
 /* line 26, ../../Private/Styles/Base/_Base.scss */
 h1 {
   font-size: 3.313rem;
+  font-family: "Share";
 }
 
-/* line 29, ../../Private/Styles/Base/_Base.scss */
+/* line 30, ../../Private/Styles/Base/_Base.scss */
 h2 {
   font-size: 2.188rem;
+  font-family: "Share";
 }
 
-/* line 33, ../../Private/Styles/Base/_Base.scss */
+/* line 35, ../../Private/Styles/Base/_Base.scss */
 h3 {
   font-size: 1.375rem;
+  font-family: "Share";
 }
 
-/* line 37, ../../Private/Styles/Base/_Base.scss */
+/* line 40, ../../Private/Styles/Base/_Base.scss */
+h6 {
+  font-size: 1rem;
+  font-family: "Source Sans Pro Bold";
+}
+
+/* line 44, ../../Private/Styles/Base/_Base.scss */
 p {
   font-size: 1rem;
 }
@@ -4025,6 +4034,18 @@ p {
   width: 100%;
   height: 4.175rem;
   margin: 0.1rem 0;
+}
+
+/* line 29, ../../Private/Styles/Layout/_Header.scss */
+.header-burger-menu-icon {
+  background-image: url(../../Public/Images/Icons/burger-menu.svg);
+  background-repeat: no-repeat;
+  background-size: 1.6rem 1.6rem;
+}
+
+/* line 35, ../../Private/Styles/Layout/_Header.scss */
+.active .header-burger-menu-icon {
+  background-image: url(../../Public/Images/Icons/burger-menu-close.svg);
 }
 
 /* line 2, ../../Private/Styles/Layout/_Footer.scss */
@@ -4214,9 +4235,6 @@ footer h3 {
 /* line 1, ../../Private/Styles/Modules/_HeroStart.scss */
 .hero-section .ce-bodytext {
   background-color: rgba(0, 0, 0, 0.8);
-  font-family: "Share";
-  font-size: 3.313rem;
-  color: #ffffff;
   float: right;
   max-width: 40.625rem;
   min-width: 31.250rem;
@@ -4227,42 +4245,151 @@ footer h3 {
   padding: 1.250rem 2.188rem;
   line-height: 3.125rem;
 }
+/* line 13, ../../Private/Styles/Modules/_HeroStart.scss */
+.hero-section .ce-bodytext p {
+  font-family: "Share";
+  font-size: 3.313rem;
+  color: #ffffff;
+}
 
 /* line 1, ../../Private/Styles/Modules/_Feature-Start.scss */
 .feature-start {
   text-align: center;
+  width: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
 }
-/* line 3, ../../Private/Styles/Modules/_Feature-Start.scss */
+/* line 7, ../../Private/Styles/Modules/_Feature-Start.scss */
 .feature-start img {
   width: 5rem;
   height: auto;
-  padding: 3.125rem 0 1.875rem 0;
+  padding: 1rem 0 1.875rem 0;
 }
-/* line 8, ../../Private/Styles/Modules/_Feature-Start.scss */
-.feature-start .ce-bodytext {
+/* line 12, ../../Private/Styles/Modules/_Feature-Start.scss */
+.feature-start .ce-bodytext p {
   font-family: "Share Bold";
   font-size: 1.375rem;
 }
+/* line 16, ../../Private/Styles/Modules/_Feature-Start.scss */
+.feature-start .ce-bodytext a {
+  font-family: "Source Sans Pro";
+  font-size: 1rem;
+}
+/* line 20, ../../Private/Styles/Modules/_Feature-Start.scss */
+.feature-start .more-feature {
+  text-align: left;
+}
 
-/* line 1, ../../Private/Styles/Modules/_CaseStudyTeaser.scss */
+/* line 24, ../../Private/Styles/Modules/_Feature-Start.scss */
+.feature-first-line {
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #b9b9b9;
+}
+
+/* line 28, ../../Private/Styles/Modules/_Feature-Start.scss */
+.feature-head h2 {
+  text-align: center;
+  font-family: "Share";
+  margin: 6.2rem 0 3.125rem 0;
+}
+
+/* line 1, ../../Private/Styles/Modules/_Facts-Start.scss */
+.facts-section {
+  text-align: center;
+  margin: 3.125rem 0;
+}
+/* line 4, ../../Private/Styles/Modules/_Facts-Start.scss */
+.facts-section img {
+  width: 5rem;
+  height: auto;
+  margin-bottom: 1.875rem;
+}
+/* line 9, ../../Private/Styles/Modules/_Facts-Start.scss */
+.facts-section h2 {
+  margin-bottom: 1rem;
+}
+
+/* line 1, ../../Private/Styles/Modules/_subpage-header.scss */
+.subpage-header {
+  text-align: center;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: -5rem;
+  background-color: #ffffff;
+  padding: 3rem 8rem;
+}
+/* line 9, ../../Private/Styles/Modules/_subpage-header.scss */
+.subpage-header h2 {
+  font-family: "Share Bold";
+}
+
+/* line 1, ../../Private/Styles/Modules/_why-typo3.scss */
+.why-typo3 {
+  list-style-image: url("EXT:t3theme_typo3com/Resources/Public/Icons/check.svg");
+}
+/* line 2, ../../Private/Styles/Modules/_why-typo3.scss */
+.why-typo3 h2 {
+  text-align: center;
+}
+/* line 5, ../../Private/Styles/Modules/_why-typo3.scss */
+.why-typo3 li {
+  margin-top: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 1, ../../Private/Styles/Modules/_CaseStudyTeaser.scss */
+  .case-study-teaser {
+    position: relative;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 7, ../../Private/Styles/Modules/_CaseStudyTeaser.scss */
+  .case-study-teaser-image {
+    position: relative;
+  }
+}
+
+/* line 13, ../../Private/Styles/Modules/_CaseStudyTeaser.scss */
 .case-study-teaser-subheader {
   font-family: "Share";
   color: #ff8700;
 }
 
-/* line 6, ../../Private/Styles/Modules/_CaseStudyTeaser.scss */
+/* line 18, ../../Private/Styles/Modules/_CaseStudyTeaser.scss */
 .case-study-teaser-headline {
   color: #ffffff;
 }
 
-/* line 10, ../../Private/Styles/Modules/_CaseStudyTeaser.scss */
+/* line 22, ../../Private/Styles/Modules/_CaseStudyTeaser.scss */
 .case-study-teaser-author {
   color: #b9b9b9;
 }
 
-/* line 15, ../../Private/Styles/Modules/_CaseStudyTeaser.scss */
+/* line 27, ../../Private/Styles/Modules/_CaseStudyTeaser.scss */
 .case-study-detail-view:hover, .case-study-detail-view:active, .case-study-overview-page:hover, .case-study-overview-page:active {
   text-decoration: none;
+}
+
+/* line 32, ../../Private/Styles/Modules/_CaseStudyTeaser.scss */
+.case-study-detail-view {
+  margin-right: 1rem;
+}
+
+/* line 36, ../../Private/Styles/Modules/_CaseStudyTeaser.scss */
+.case-study-teaser-box {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+}
+@media only screen and (min-width: 768px) {
+  /* line 36, ../../Private/Styles/Modules/_CaseStudyTeaser.scss */
+  .case-study-teaser-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
 }
 
 /*# sourceMappingURL=Main.css.map */
