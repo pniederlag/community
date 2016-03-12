@@ -7,3 +7,5 @@ TCEFORM.tt_content.layout {
         hero-section = Hero Section
     }
 }
+
+TCAdefaults.tt_content.imagecols = 1
