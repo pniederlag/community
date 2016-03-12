@@ -7,7 +7,11 @@ tt_content.gridelements_pi1 {
                 1 < .default
                 1.wrap = <div class="col-md-4 cols_1">|</div>
 
+
+
             }
 
             wrap = <div class="row hannebmbel">|</div>
         }
+      }
+    }
