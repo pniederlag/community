@@ -24,3 +24,14 @@
 	height: 4.175rem;
 	margin: 0.1rem 0;
 }
+
+
+.header-burger-menu-icon {
+	background-image: url(#{$images}/Icons/burger-menu.svg);
+	background-repeat: no-repeat;
+	background-size: 1.6rem 1.6rem;
+}
+
+.active .header-burger-menu-icon {
+	background-image: url(#{$images}/Icons/burger-menu-close.svg);
+}

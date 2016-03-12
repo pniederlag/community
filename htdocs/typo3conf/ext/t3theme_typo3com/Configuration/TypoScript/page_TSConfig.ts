@@ -8,3 +8,5 @@ TCEFORM.tt_content.layout {
         facts-section = Facts-Start
     }
 }
+
+TCAdefaults.tt_content.imagecols = 1
