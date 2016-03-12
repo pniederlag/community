@@ -4,8 +4,11 @@ footer {
 	}
 }
 
-.footer-copyright {
+.footer-copyright-container {
 	background-color: $grey-dark;
+}
+
+.footer-copyright {
 	color: $white;
 	min-height: 5.75rem;
 	padding-top: 2.5rem;
@@ -24,7 +27,6 @@ footer {
 		}
 	}
 }
-
 
 .footer-navigation {
 	padding-top: 3.75rem;
@@ -45,6 +47,5 @@ footer {
 
 	a {
 		color: $grey-medium;
-
 	}
 }
