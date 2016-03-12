@@ -6,6 +6,7 @@ TCEFORM.tt_content.layout {
     addItems {
         hero-section = Hero Section
         facts-section = Facts-Start
+        subpage-header = Lift element to top
     }
 }
 
