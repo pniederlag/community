@@ -19,7 +19,7 @@ h1, h2, h3 {
 }
 a{
 	color: $typo3-key-color;
-	:hover{
+	&:hover{
 		color: $typo3-key-color;
 	}
 }

@@ -5,8 +5,18 @@
     height: auto;
     padding: 3.125rem 0 1.875rem 0;
   }
-  .ce-bodytext{
+  .ce-bodytext p{
     font-family: $share-bold;
     font-size: 1.375rem;
   }
+  .ce-bodytext a{
+    font-family: $source-sans-pro;
+    font-size: 1rem;
+  }
+  margin: 3rem 0 3rem 0;
+}
+.feature-first-line{
+  padding-bottom: 3rem;
+  border-bottom: 1px solid $grey-light;
+
 }

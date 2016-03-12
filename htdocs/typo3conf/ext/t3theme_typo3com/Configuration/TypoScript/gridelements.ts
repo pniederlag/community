@@ -5,11 +5,11 @@ tt_content.gridelements_pi1 {
 			columns {
 				# colPos from BE grid layout
 				1 < .default
-				1.wrap = <div class="col-md-4 feature-start">|</div>
+				1.wrap = <div class="col-md-4 feature-start feature-first-line">|</div>
 				2 < .default
-				2.wrap = <div class="col-md-4 feature-start">|</div>
+				2.wrap = <div class="col-md-4 feature-start feature-first-line">|</div>
 				3 < .default
-				3.wrap = <div class="col-md-4 feature-start">|</div>
+				3.wrap = <div class="col-md-4 feature-start feature-first-line">|</div>
 				4 < .default
 				4.wrap = <div class="col-md-4 feature-start">|</div>
 				5< .default
