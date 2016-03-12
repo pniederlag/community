@@ -2,23 +2,29 @@
 @import "compass/css3";
 
 // Variables
-@import "Base/Variables";
-@import "Base/BootstrapVariables";
+@import
+	"Base/Variables",
+	"Base/BootstrapVariables";
 
 // Bootstrap imports
 @import "Base/BootstrapImports";
+
+// Mixins
+@import "Mixins/BreakPoints";
 
 // Basic styling
 @import "Base/Base";
 
 // Layout
-@import "Layout/Header";
-@import "Layout/Footer";
-@import "Layout/Content";
-@import "Layout/Navigation";
+@import
+	"Layout/Header",
+	"Layout/Footer",
+	"Layout/Content",
+	"Layout/Navigation";
 
-// Basic styling
-@import "Modules/HeroStart";
-@import "Layout/Navigation";
-@import "Modules/Feature-Start";
+=======
+// Modules
+@import
+	"Modules/HeroStart",
+	"Modules/Feature-Start";
 
