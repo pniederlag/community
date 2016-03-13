@@ -7500,10 +7500,16 @@ footer h3 {
 /* line 24, ../../Private/Styles/Modules/_Feature-Start.scss */
 .feature-first-line {
   padding-bottom: 3rem;
-  border-bottom: 1px solid #b9b9b9;
+  border-bottom: none;
+}
+@media only screen and (min-width: 992px) {
+  /* line 24, ../../Private/Styles/Modules/_Feature-Start.scss */
+  .feature-first-line {
+    border-bottom: 1px solid #b9b9b9;
+  }
 }
 
-/* line 28, ../../Private/Styles/Modules/_Feature-Start.scss */
+/* line 32, ../../Private/Styles/Modules/_Feature-Start.scss */
 .feature-head h2 {
   text-align: center;
   font-family: "Share";
@@ -7513,7 +7519,7 @@ footer h3 {
 /* line 1, ../../Private/Styles/Modules/_Facts-Start.scss */
 .facts-section {
   text-align: center;
-  margin: 3.125rem 0;
+  margin: 6.125rem 0;
 }
 /* line 4, ../../Private/Styles/Modules/_Facts-Start.scss */
 .facts-section img {
