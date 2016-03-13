@@ -264,12 +264,6 @@ return [
             'packagePath' => 'typo3conf/ext/t3theme_typo3com/',
             'suggestions' => [],
         ],
-        'owl_slider' => [
-            'composerName' => 'owl_slider',
-            'state' => 'active',
-            'packagePath' => 'typo3conf/ext/owl_slider/',
-            'suggestions' => [],
-        ],
         'adodb' => [
             'composerName' => 'typo3/cms-adodb',
             'state' => 'inactive',
@@ -342,6 +336,12 @@ return [
             'composerName' => 'typo3/cms-opendocs',
             'state' => 'inactive',
             'packagePath' => 'typo3/sysext/opendocs/',
+            'suggestions' => [],
+        ],
+        'owl_slider' => [
+            'composerName' => 'owl_slider',
+            'state' => 'inactive',
+            'packagePath' => 'typo3conf/ext/owl_slider/',
             'suggestions' => [],
         ],
         'randombanners' => [
