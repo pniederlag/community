@@ -1,19 +1,27 @@
-.hero-section .ce-bodytext{
-  background-color: rgba(0, 0, 0, 0.8);
+.hero-container {
+	position: relative;
+	top: 4.375rem;
+}
 
-  float: right;
-  max-width: 40.625rem;
-  min-width: 31.250rem;
-  width: auto;
-  position: absolute;
-  top: 12.500rem;
-  right: 1.875rem;
-  padding: 1.250rem 2.188rem;
-  line-height: 3.125rem;
-  p{
-    font-family: "Share";
-    font-size: 3.313rem;
-    color: #ffffff;
+.hero-section .ce-bodytext {
+	width: auto;
+	padding: 1.250rem 2.188rem;
+	line-height: 3.125rem;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 1;
 
-  }
+	@include large {
+		min-width: 31.250rem;
+		max-width: 40.625rem;
+		float: right;
+		position: absolute;
+		top: 12.500rem;
+		right: 1.875rem;
+	}
+
+	p {
+		font-family: $share;
+		font-size: 3.313rem;
+		color: #ffffff;
+	}
 }

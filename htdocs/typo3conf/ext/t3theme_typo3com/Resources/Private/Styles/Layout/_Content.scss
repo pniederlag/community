@@ -1,3 +1,19 @@
+.layout-homepage {
+	main {
+		position: relative;
+
+		@include extraLarge {
+			top: -5vw;
+			background-color: $white;
+		}
+
+		@include extraExtraLarge {
+			top: -7vw;
+			background-color: $white;
+		}
+	}
+}
+
 .content.container {
 	margin-top: 4.375rem;
 }
