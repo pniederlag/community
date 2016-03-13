@@ -13,8 +13,11 @@ lib.layout1 {
 	variables {
 		mainMenu < temp.mainMenu
 
+		header < styles.content.get
+		header.select.where = colPos=0
+
 		content  < styles.content.get
-		content.select.where = colPos=0
+		content.select.where = colPos=1
 
 		footerMenu < temp.footerMenu
 
