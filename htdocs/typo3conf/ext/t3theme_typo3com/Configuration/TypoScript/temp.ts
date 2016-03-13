@@ -73,8 +73,6 @@ temp.footerMenu {
 
 	10 = HMENU
 	10 {
-		special = directory
-		special.value = {$plugin.t3theme_typo3com.footer.menuPid}
 
 		1 = TMENU
 		1 {
