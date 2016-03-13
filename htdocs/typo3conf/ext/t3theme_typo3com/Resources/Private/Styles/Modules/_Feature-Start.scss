@@ -23,7 +23,11 @@
 }
 .feature-first-line{
   padding-bottom: 3rem;
-  border-bottom: 1px solid $grey-light;
+  border-bottom: none;
+  @include large{
+
+    border-bottom: 1px solid $grey-light;
+  }
 }
 .feature-head h2{
   text-align: center;

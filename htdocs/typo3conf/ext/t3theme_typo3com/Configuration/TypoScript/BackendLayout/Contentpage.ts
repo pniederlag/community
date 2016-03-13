@@ -6,7 +6,7 @@ backend_layout {
 			columns {
 				1 {
 					name = Content
-					colPos = 0
+					colPos = 1
 				}
 			}
 		}
