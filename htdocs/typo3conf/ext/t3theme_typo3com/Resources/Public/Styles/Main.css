@@ -7307,6 +7307,21 @@ footer h3 {
   margin-top: 4.375rem;
 }
 
+/* line 5, ../../Private/Styles/Layout/_Content.scss */
+.left {
+  text-align: left !important;
+}
+
+/* line 9, ../../Private/Styles/Layout/_Content.scss */
+.right {
+  text-align: right !important;
+}
+
+/* line 12, ../../Private/Styles/Layout/_Content.scss */
+.center {
+  text-align: center !important;
+}
+
 /* line 3, ../../Private/Styles/Layout/_Navigation.scss */
 #main-mavigation .burger-navigation {
   list-style-type: none;
@@ -7625,6 +7640,55 @@ footer h3 {
   font-family: "Source Sans Pro Bold";
   margin-bottom: 0.5rem;
   margin-top: -1rem;
+}
+
+/* line 1, ../../Private/Styles/Modules/_TextImageIndent.scss */
+div.text-image-indented {
+  position: relative;
+  margin-top: 60px;
+}
+
+/* line 6, ../../Private/Styles/Modules/_TextImageIndent.scss */
+div.text-image-indented:after {
+  content: ".";
+  clear: both;
+  display: block;
+  visibility: hidden;
+  height: 0px;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 14, ../../Private/Styles/Modules/_TextImageIndent.scss */
+  div.text-image-indented div.ce-gallery {
+    position: absolute;
+    right: 0px;
+    top: -40px;
+    z-index: 5;
+  }
+}
+
+/* line 25, ../../Private/Styles/Modules/_TextImageIndent.scss */
+div.text-image-indented div.ce-gallery img {
+  width: 250px;
+  height: 100px;
+}
+
+/* line 30, ../../Private/Styles/Modules/_TextImageIndent.scss */
+div.text-image-indented div.ce-bodytext {
+  position: relative;
+  top: 60%;
+  background-color: #fff;
+  width: 75%;
+  z-index: 10;
+}
+
+/* line 38, ../../Private/Styles/Modules/_TextImageIndent.scss */
+div.text-image-indented div.ce-bodytext:after {
+  content: ".";
+  clear: both;
+  display: block;
+  visibility: hidden;
+  height: 0px;
 }
 
 /*# sourceMappingURL=Main.css.map */
