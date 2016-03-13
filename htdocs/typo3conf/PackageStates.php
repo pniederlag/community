@@ -264,12 +264,6 @@ return [
             'packagePath' => 'typo3conf/ext/t3theme_typo3com/',
             'suggestions' => [],
         ],
-        'owl_slider' => [
-            'composerName' => 'owl_slider',
-            'state' => 'active',
-            'packagePath' => 'typo3conf/ext/owl_slider/',
-            'suggestions' => [],
-        ],
         'adodb' => [
             'composerName' => 'typo3/cms-adodb',
             'state' => 'inactive',
