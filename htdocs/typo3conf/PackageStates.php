@@ -338,6 +338,12 @@ return [
             'packagePath' => 'typo3/sysext/opendocs/',
             'suggestions' => [],
         ],
+        'owl_slider' => [
+            'composerName' => 'owl_slider',
+            'state' => 'inactive',
+            'packagePath' => 'typo3conf/ext/owl_slider/',
+            'suggestions' => [],
+        ],
         'randombanners' => [
             'composerName' => 'randombanners',
             'state' => 'inactive',
