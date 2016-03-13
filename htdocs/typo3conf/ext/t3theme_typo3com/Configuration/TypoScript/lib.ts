@@ -34,3 +34,4 @@ lib.layout2 {
 }
 
 lib.fluidContent.templateRootPaths.10 = EXT:t3theme_typo3com/Resources/Private/Templates/ContentElements
+lib.fluidContent.partialRootPaths.10 = EXT:t3theme_typo3com/Resources/Private/Partials
