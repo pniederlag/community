@@ -7183,14 +7183,14 @@ h1 {
 h2 {
   font-size: 2.188rem;
   font-family: "Share";
-  margin: 2rem 0 1rem 0;
+  margin: 0 0 1rem 0;
 }
 
 /* line 37, ../../Private/Styles/Base/_Base.scss */
 h3 {
   font-size: 1.375rem;
   font-family: "Share";
-  margin: 1.5rem 0 0.5rem 0;
+  margin: 0 0 0.5rem 0;
 }
 
 /* line 44, ../../Private/Styles/Base/_Base.scss */
@@ -7204,19 +7204,24 @@ p {
   font-size: 1rem;
 }
 
-/* line 1, ../../Private/Styles/Layout/_Header.scss */
+/* line 2, ../../Private/Styles/Layout/_Header.scss */
+.layout-homepage header {
+  position: relative;
+}
+
+/* line 7, ../../Private/Styles/Layout/_Header.scss */
 .header, .header-container {
   height: 4.375rem;
   background-color: #f4f4f4;
 }
 
-/* line 6, ../../Private/Styles/Layout/_Header.scss */
+/* line 12, ../../Private/Styles/Layout/_Header.scss */
 .header-logo-link, .header-search-link {
   display: inline-block;
   width: 100%;
 }
 
-/* line 11, ../../Private/Styles/Layout/_Header.scss */
+/* line 17, ../../Private/Styles/Layout/_Header.scss */
 .header-burger-menu-icon, .header-search-icon {
   display: block;
   width: 1.575rem;
@@ -7224,21 +7229,21 @@ p {
   margin: 1.4rem auto;
 }
 
-/* line 19, ../../Private/Styles/Layout/_Header.scss */
+/* line 25, ../../Private/Styles/Layout/_Header.scss */
 .header-logo {
   width: 100%;
   height: 4.175rem;
   margin: 0.1rem 0;
 }
 
-/* line 26, ../../Private/Styles/Layout/_Header.scss */
+/* line 32, ../../Private/Styles/Layout/_Header.scss */
 .header-burger-menu-icon {
   background-image: url(../../Public/Images/Icons/burger-menu.svg);
   background-repeat: no-repeat;
   background-size: 1.6rem 1.6rem;
 }
 
-/* line 32, ../../Private/Styles/Layout/_Header.scss */
+/* line 38, ../../Private/Styles/Layout/_Header.scss */
 .active .header-burger-menu-icon {
   background-image: url(../../Public/Images/Icons/burger-menu-close.svg);
 }
@@ -7300,22 +7305,41 @@ footer h3 {
   color: #8c8c8c;
 }
 
-/* line 1, ../../Private/Styles/Layout/_Content.scss */
+/* line 2, ../../Private/Styles/Layout/_Content.scss */
+.layout-homepage main {
+  position: relative;
+}
+@media only screen and (min-width: 1250px) {
+  /* line 2, ../../Private/Styles/Layout/_Content.scss */
+  .layout-homepage main {
+    top: -5vw;
+    background-color: #ffffff;
+  }
+}
+@media only screen and (min-width: 1480px) {
+  /* line 2, ../../Private/Styles/Layout/_Content.scss */
+  .layout-homepage main {
+    top: -7vw;
+    background-color: #ffffff;
+  }
+}
+
+/* line 17, ../../Private/Styles/Layout/_Content.scss */
 .content.container {
   margin-top: 4.375rem;
 }
 
-/* line 5, ../../Private/Styles/Layout/_Content.scss */
+/* line 21, ../../Private/Styles/Layout/_Content.scss */
 .left {
   text-align: left !important;
 }
 
-/* line 9, ../../Private/Styles/Layout/_Content.scss */
+/* line 25, ../../Private/Styles/Layout/_Content.scss */
 .right {
   text-align: right !important;
 }
 
-/* line 12, ../../Private/Styles/Layout/_Content.scss */
+/* line 28, ../../Private/Styles/Layout/_Content.scss */
 .center {
   text-align: center !important;
 }
@@ -7456,19 +7480,31 @@ footer h3 {
 }
 
 /* line 1, ../../Private/Styles/Modules/_HeroStart.scss */
+.hero-container {
+  position: relative;
+  top: 4.375rem;
+}
+
+/* line 6, ../../Private/Styles/Modules/_HeroStart.scss */
 .hero-section .ce-bodytext {
-  background-color: rgba(0, 0, 0, 0.8);
-  float: right;
-  max-width: 40.625rem;
-  min-width: 31.250rem;
   width: auto;
-  position: absolute;
-  top: 12.500rem;
-  right: 1.875rem;
   padding: 1.250rem 2.188rem;
   line-height: 3.125rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
 }
-/* line 13, ../../Private/Styles/Modules/_HeroStart.scss */
+@media only screen and (min-width: 992px) {
+  /* line 6, ../../Private/Styles/Modules/_HeroStart.scss */
+  .hero-section .ce-bodytext {
+    min-width: 31.250rem;
+    max-width: 40.625rem;
+    float: right;
+    position: absolute;
+    top: 12.500rem;
+    right: 1.875rem;
+  }
+}
+/* line 22, ../../Private/Styles/Modules/_HeroStart.scss */
 .hero-section .ce-bodytext p {
   font-family: "Share";
   font-size: 3.313rem;
@@ -7521,6 +7557,12 @@ footer h3 {
   text-align: center;
   font-family: "Share";
   margin: 6.2rem 0 3.125rem 0;
+}
+@media only screen and (min-width: 1250px) {
+  /* line 32, ../../Private/Styles/Modules/_Feature-Start.scss */
+  .feature-head h2 {
+    margin-top: 4.2rem;
+  }
 }
 
 /* line 1, ../../Private/Styles/Modules/_Facts-Start.scss */
@@ -7704,12 +7746,13 @@ div.text-image-indented div.ce-right div.ce-bodytext {
   div.text-image-indented div.ce-right div.ce-bodytext {
     position: relative;
     width: 75%;
+    padding-right: 20px;
     z-index: 10;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 56, ../../Private/Styles/Modules/_TextImageIndent.scss */
+  /* line 57, ../../Private/Styles/Modules/_TextImageIndent.scss */
   div.text-image-indented div.ce-left div.ce-gallery {
     position: absolute;
     left: 0px;
@@ -7718,16 +7761,17 @@ div.text-image-indented div.ce-right div.ce-bodytext {
   }
 }
 
-/* line 67, ../../Private/Styles/Modules/_TextImageIndent.scss */
+/* line 68, ../../Private/Styles/Modules/_TextImageIndent.scss */
 div.text-image-indented div.ce-left div.ce-bodytext {
   background-color: #fff;
 }
 @media only screen and (min-width: 768px) {
-  /* line 67, ../../Private/Styles/Modules/_TextImageIndent.scss */
+  /* line 68, ../../Private/Styles/Modules/_TextImageIndent.scss */
   div.text-image-indented div.ce-left div.ce-bodytext {
     position: absolute;
     width: 75%;
     right: 0px;
+    padding-left: 20px;
     z-index: 10;
   }
 }
