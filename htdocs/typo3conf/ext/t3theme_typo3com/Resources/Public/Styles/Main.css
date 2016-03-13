@@ -7176,27 +7176,30 @@ a:hover {
 h1 {
   font-size: 3.313rem;
   font-family: "Share";
+  margin: 4rem 0 4rem 0;
 }
 
-/* line 30, ../../Private/Styles/Base/_Base.scss */
+/* line 31, ../../Private/Styles/Base/_Base.scss */
 h2 {
   font-size: 2.188rem;
   font-family: "Share";
+  margin: 2rem 0 1rem 0;
 }
 
-/* line 35, ../../Private/Styles/Base/_Base.scss */
+/* line 37, ../../Private/Styles/Base/_Base.scss */
 h3 {
   font-size: 1.375rem;
   font-family: "Share";
+  margin: 1.5rem 0 0.5rem 0;
 }
 
-/* line 40, ../../Private/Styles/Base/_Base.scss */
+/* line 44, ../../Private/Styles/Base/_Base.scss */
 h6 {
   font-size: 1rem;
   font-family: "Source Sans Pro Bold";
 }
 
-/* line 44, ../../Private/Styles/Base/_Base.scss */
+/* line 48, ../../Private/Styles/Base/_Base.scss */
 p {
   font-size: 1rem;
 }
