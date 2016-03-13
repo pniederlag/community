@@ -144,12 +144,6 @@ return [
             'packagePath' => 'typo3/sysext/cshmanual/',
             'suggestions' => [],
         ],
-        'css_styled_content' => [
-            'composerName' => 'typo3/cms-css-styled-content',
-            'state' => 'active',
-            'packagePath' => 'typo3/sysext/css_styled_content/',
-            'suggestions' => [],
-        ],
         'felogin' => [
             'composerName' => 'typo3/cms-felogin',
             'state' => 'active',
@@ -270,6 +264,12 @@ return [
             'packagePath' => 'typo3conf/ext/t3theme_typo3com/',
             'suggestions' => [],
         ],
+        'owl_slider' => [
+            'composerName' => 'owl_slider',
+            'state' => 'active',
+            'packagePath' => 'typo3conf/ext/owl_slider/',
+            'suggestions' => [],
+        ],
         'adodb' => [
             'composerName' => 'typo3/cms-adodb',
             'state' => 'inactive',
@@ -280,6 +280,12 @@ return [
             'composerName' => 'amqp',
             'state' => 'inactive',
             'packagePath' => 'typo3conf/ext/amqp/',
+            'suggestions' => [],
+        ],
+        'css_styled_content' => [
+            'composerName' => 'typo3/cms-css-styled-content',
+            'state' => 'inactive',
+            'packagePath' => 'typo3/sysext/css_styled_content/',
             'suggestions' => [],
         ],
         'cz_simple_cal' => [

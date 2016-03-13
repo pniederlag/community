@@ -44,4 +44,21 @@ tt_content {
 		20.text.wrap = <div class="csc-textpic-text col-md-12"> | </div>
 	}
 
+	textmedia {
+		variables {
+			rows = TEXT
+			rows {
+				current = 1
+				setCurrent.field = imagecols
+				setCurrent.wrap = 12 / |
+				prioriCalc = 1
+			}
+		}
+	}
+}
+
+
+
+lib.fluidContent {
+	partialRootPaths.10 = EXT:t3theme_typo3com/Resources/Private/Partials/ContentElements/
 }

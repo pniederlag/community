@@ -43,7 +43,8 @@
 		"kaystrobach/voice": "0.0.67",
 		"apache-solr-for-typo3/solr": "dev-master",
         "typo3-ter/gridelements": "^7",
-        "typo3-ter/bootstrap-grids": "^1"
+        "typo3-ter/bootstrap-grids": "^1",
+        "typo3-ter/owl-slider": "^2.3"
     },
 	"autoload": {
 		"psr-4": {

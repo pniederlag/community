@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6931eecafe3a19e8ac460290c183bed1",
-    "content-hash": "81e711322d66c0a40bdd38750e03b04b",
+    "hash": "e7bd3aaa9b94c1558f9eabd752c6a9f2",
+    "content-hash": "d279dedaa150fa76f24b17bfd0c9a94f",
     "packages": [
         {
             "name": "apache-solr-for-typo3/solr",
@@ -887,6 +887,44 @@
             ],
             "description": "This extension integrates the grid layout concept also to regular content elements - the grid elements.\r\nIt offers a lot of new features like advanced drag & drop or real references, that improve the usability of the page and list module to speed up the daily work with the backend.",
             "time": "2016-01-29 13:10:05"
+        },
+        {
+            "name": "typo3-ter/owl-slider",
+            "version": "2.3.3",
+            "dist": {
+                "type": "t3x",
+                "url": "https://typo3.org/extensions/repository/download/owl_slider/2.3.3/t3x/",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "typo3/cms-core": ">= 6.0.99, <= 7.6.99"
+            },
+            "replace": {
+                "owl_slider": "self.version",
+                "typo3-ter/owl_slider": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "classmap": [
+                    ""
+                ],
+                "exclude-from-classmap": [
+                    "Tests",
+                    "tests",
+                    "class.ext_update.php"
+                ]
+            },
+            "authors": [
+                {
+                    "name": "comsolit AG",
+                    "email": "info@comsolit.com",
+                    "company": "comsolit AG",
+                    "username": "larsmessmer"
+                }
+            ],
+            "description": "Responsive carousel slider for TYPO3, Touch enabled based on the jQuery OWL Carousel.",
+            "time": "2016-01-29 13:23:56"
         },
         {
             "name": "typo3-ter/static-info-tables",
