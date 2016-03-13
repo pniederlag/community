@@ -7,11 +7,11 @@ return [
         'loginSecurityLevel' => 'rsa',
     ],
     'DB' => [
-        'database' => 't3com',
-        'host' => '127.0.0.1',
-        'password' => 'Typo3Com!?2016',
+        'database' => 'typo3com',
+        'host' => 'localhost',
+        'password' => 'PTcqVPeXQd493mp',
         'port' => 3306,
-        'username' => 't3com',
+        'username' => 'typo3com',
     ],
     'EXT' => [
         'extConf' => [
