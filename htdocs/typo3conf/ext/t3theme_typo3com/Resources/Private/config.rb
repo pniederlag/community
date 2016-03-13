@@ -12,8 +12,8 @@ fonts_dir = "../Public/Fonts"
 javascripts_dir = "../Public/JavaScript"
 
 # Additional options
-line_comments = true
-output_style = :expanded
+line_comments = false
+output_style = :compressed
 disable_warnings = false
 color_output = true
-sourcemap = true
+sourcemap = false

@@ -1,8 +1,8 @@
 $small: "only screen and (min-width: 320px)";
 $medium: "only screen and (min-width: 768px)";
 $large: "only screen and (min-width: 992px)";
-
-
+$extra-large: "only screen and (min-width: 1250px)";
+$extra-extra-large: "only screen and (min-width: 1480px)";
 
 @mixin small {
 	@media #{$small} {
@@ -19,5 +19,17 @@ $large: "only screen and (min-width: 992px)";
 @mixin large {
 	@media #{$large} {
 		@content;
+	}
+}
+
+@mixin extraLarge {
+	@media #{$extra-large} {
+		@content
+	}
+}
+
+@mixin extraExtraLarge {
+	@media #{$extra-extra-large} {
+		@content
 	}
 }
