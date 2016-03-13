@@ -13,6 +13,35 @@
  */
 
 $tca = [
+    'columns' => [
+        'header_position' => [
+            'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_position',
+            'exclude' => true,
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    [
+                        'LLL:EXT:lang/locallang_general.xlf:LGL.default_value',
+                        ''
+                    ],
+                    [
+                        'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_position.I.1',
+                        'center'
+                    ],
+                    [
+                        'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_position.I.2',
+                        'right'
+                    ],
+                    [
+                        'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_position.I.3',
+                        'left'
+                    ]
+                ],
+                'default' => ''
+            ]
+        ],
+    ],
     'types' => [
         'casestudy_teaser' => [
             'showitem' => '--palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
@@ -40,3 +69,20 @@ $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items']['casestudy_
     'Case Study Teaser',
     'casestudy_teaser'
 ];
+
+$GLOBALS['TCA']['tt_content']['palettes'] = array_replace(
+    $GLOBALS['TCA']['tt_content']['palettes'],
+    [
+        'header' => [
+            'showitem' => '
+                header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_formlabel,
+                --linebreak--,
+                header_layout;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_layout_formlabel,
+                header_position;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_position_formlabel,
+                date;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:date_formlabel,
+                --linebreak--,
+                header_link;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_link_formlabel
+            ',
+        ]
+    ]
+);
