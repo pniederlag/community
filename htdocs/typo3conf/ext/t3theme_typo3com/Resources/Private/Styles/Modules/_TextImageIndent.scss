@@ -1,6 +1,14 @@
+// Indent Text Image
+
 div.text-image-indented {
   position: relative;
   margin-top: 60px;
+}
+
+// :O
+div.text-image-indented div.ce-gallery img {
+  width: 250px;
+  height: 100px;
 }
 
 div.text-image-indented:after {
@@ -11,7 +19,18 @@ div.text-image-indented:after {
   height: 0px;
 }
 
-div.text-image-indented div.ce-gallery {
+div.text-image-indented div.ce-bodytext:after,div.text-image-indented div.ce-gallery:after {
+  content: ".";
+  clear: both;
+  display: block;
+  visibility: hidden;
+  height: 0px;
+}
+
+
+// Indent Text Image right
+
+div.text-image-indented div.ce-right div.ce-gallery {
 
   @include medium {
     position: absolute;
@@ -19,26 +38,39 @@ div.text-image-indented div.ce-gallery {
     top: -40px;
     z-index: 5;
   }
-  
+
 }
 
-div.text-image-indented div.ce-gallery img {
-  width: 250px;
-  height: 100px;
-}
-
-div.text-image-indented div.ce-bodytext {
-  position: relative;
-  top: 60%;
+div.text-image-indented div.ce-right div.ce-bodytext {
   background-color: #fff;
-  width: 75%;
-  z-index: 10;
+
+  @include medium {
+    position: relative;
+    width: 75%;
+    z-index: 10;
+  }
 }
 
-div.text-image-indented div.ce-bodytext:after {
-  content: ".";
-  clear: both;
-  display: block;
-  visibility: hidden;
-  height: 0px;
+// Indent Text Image left
+
+div.text-image-indented div.ce-left div.ce-gallery {
+
+  @include medium {
+    position: absolute;
+    left: 0px;
+    top: -40px;
+    z-index: 5;
+  }
+
+}
+
+div.text-image-indented div.ce-left div.ce-bodytext {
+  background-color: #fff;
+
+  @include medium {
+    position: absolute;
+    width: 75%;
+    right: 0px;
+    z-index: 10;
+  }
 }

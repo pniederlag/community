@@ -3,7 +3,7 @@
 	background-color: $grey-superlight;
 }
 
-.header-burger-menu-link, .header-logo-link, .header-search-link {
+.header-logo-link, .header-search-link {
 	display: inline-block;
 	width: 100%;
 }
@@ -15,9 +15,6 @@
 	margin: 1.4rem auto;
 }
 
-.header-burger-menu-icon {
-	cursor: pointer;
-}
 
 .header-logo {
 	width: 100%;
