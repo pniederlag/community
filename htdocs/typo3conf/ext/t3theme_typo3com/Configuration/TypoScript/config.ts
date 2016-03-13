@@ -24,4 +24,6 @@ config {
     removeDefaultJS = 1
 
     sys_language_mode = strict
+
+    tx_realurl_enable = 1
 }

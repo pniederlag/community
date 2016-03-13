@@ -264,6 +264,14 @@ return [
             'packagePath' => 'typo3conf/ext/t3theme_typo3com/',
             'suggestions' => [],
         ],
+        'realurl' => [
+            'composerName' => 'helhum/realurl',
+            'state' => 'active',
+            'packagePath' => 'typo3conf/ext/realurl/',
+            'suggestions' => [
+                'static_info_tables',
+            ],
+        ],
         'adodb' => [
             'composerName' => 'typo3/cms-adodb',
             'state' => 'inactive',
@@ -349,14 +357,6 @@ return [
             'state' => 'inactive',
             'packagePath' => 'typo3conf/ext/randombanners/',
             'suggestions' => [],
-        ],
-        'realurl' => [
-            'composerName' => 'helhum/realurl',
-            'state' => 'inactive',
-            'packagePath' => 'typo3conf/ext/realurl/',
-            'suggestions' => [
-                'static_info_tables',
-            ],
         ],
         'recycler' => [
             'composerName' => 'typo3/cms-recycler',
