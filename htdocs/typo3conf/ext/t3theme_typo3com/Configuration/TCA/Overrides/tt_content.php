@@ -61,6 +61,26 @@ $tca = [
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access
                 --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.extended,tx_gridelements_container,tx_gridelements_columns'
         ],
+        'indented_textmedia' => [
+            'columnsOverrides' => [
+                'bodytext' => [
+                    'defaultExtras' => 'richtext:rte_transform[mode=ts_css]'
+                ]
+            ],
+            'showitem' => '--palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.header;header,
+                bodytext;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext_formlabel,
+                --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.media,assets,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.imagelinks;imagelinks,
+                --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,layout;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:layout_formlabel,
+                --palette--;LLL:EXT:fluid_styled_content/Resources/Private/Language/Database.xlf:tt_content.palette.mediaAdjustments;mediaAdjustments,
+                --palette--;LLL:EXT:fluid_styled_content/Resources/Private/Language/Database.xlf:tt_content.palette.gallerySettings;gallerySettings,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,
+                --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.visibility;visibility,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access
+                --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.extended,tx_gridelements_container,tx_gridelements_columns'
+        ],
     ]
 ];
 
@@ -68,6 +88,10 @@ $GLOBALS['TCA']['tt_content'] = array_replace_recursive($GLOBALS['TCA']['tt_cont
 $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items']['casestudy_teaser'] = [
     'Case Study Teaser',
     'casestudy_teaser'
+];
+$GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items']['indented_textmedia'] = [
+    'Indented TextMedia Element',
+    'indented_textmedia'
 ];
 
 $GLOBALS['TCA']['tt_content']['palettes'] = array_replace(
