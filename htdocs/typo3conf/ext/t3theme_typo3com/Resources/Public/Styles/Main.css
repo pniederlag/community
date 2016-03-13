@@ -7208,7 +7208,7 @@ p {
 }
 
 /* line 6, ../../Private/Styles/Layout/_Header.scss */
-.header-burger-menu-link, .header-logo-link, .header-search-link {
+.header-logo-link, .header-search-link {
   display: inline-block;
   width: 100%;
 }
@@ -7221,26 +7221,21 @@ p {
   margin: 1.4rem auto;
 }
 
-/* line 18, ../../Private/Styles/Layout/_Header.scss */
-.header-burger-menu-icon {
-  cursor: pointer;
-}
-
-/* line 22, ../../Private/Styles/Layout/_Header.scss */
+/* line 19, ../../Private/Styles/Layout/_Header.scss */
 .header-logo {
   width: 100%;
   height: 4.175rem;
   margin: 0.1rem 0;
 }
 
-/* line 29, ../../Private/Styles/Layout/_Header.scss */
+/* line 26, ../../Private/Styles/Layout/_Header.scss */
 .header-burger-menu-icon {
   background-image: url(../../Public/Images/Icons/burger-menu.svg);
   background-repeat: no-repeat;
   background-size: 1.6rem 1.6rem;
 }
 
-/* line 35, ../../Private/Styles/Layout/_Header.scss */
+/* line 32, ../../Private/Styles/Layout/_Header.scss */
 .active .header-burger-menu-icon {
   background-image: url(../../Public/Images/Icons/burger-menu-close.svg);
 }
@@ -7328,58 +7323,60 @@ footer h3 {
   padding-left: 0;
   position: fixed;
   margin-left: -1rem;
+  cursor: default;
 }
-/* line 9, ../../Private/Styles/Layout/_Navigation.scss */
+/* line 10, ../../Private/Styles/Layout/_Navigation.scss */
 #main-mavigation .burger-navigation.closed {
   width: 0;
   height: 0;
   overflow: hidden;
   transition: all 500ms ease-in 0s;
 }
-/* line 15, ../../Private/Styles/Layout/_Navigation.scss */
+/* line 16, ../../Private/Styles/Layout/_Navigation.scss */
 #main-mavigation .burger-navigation.closed li {
   transition: opacity 500ms ease-in 0s;
   opacity: 0;
 }
 @media only screen and (min-width: 992px) {
-  /* line 9, ../../Private/Styles/Layout/_Navigation.scss */
+  /* line 10, ../../Private/Styles/Layout/_Navigation.scss */
   #main-mavigation .burger-navigation.closed {
     width: 70%;
     max-width: 62.5rem;
   }
 }
-/* line 27, ../../Private/Styles/Layout/_Navigation.scss */
+/* line 28, ../../Private/Styles/Layout/_Navigation.scss */
 #main-mavigation .burger-navigation.open {
   width: 100%;
   height: 100%;
   background-color: white;
   transition: all 500ms ease-in 0s;
   padding-left: 3rem;
+  margin-left: 0;
 }
-/* line 34, ../../Private/Styles/Layout/_Navigation.scss */
+/* line 36, ../../Private/Styles/Layout/_Navigation.scss */
 #main-mavigation .burger-navigation.open li {
   transition: opacity 500ms ease-in 0s;
   opacity: 1;
 }
 @media only screen and (min-width: 992px) {
-  /* line 27, ../../Private/Styles/Layout/_Navigation.scss */
+  /* line 28, ../../Private/Styles/Layout/_Navigation.scss */
   #main-mavigation .burger-navigation.open {
     width: 70%;
     max-width: 62.5rem;
   }
 }
-/* line 46, ../../Private/Styles/Layout/_Navigation.scss */
+/* line 48, ../../Private/Styles/Layout/_Navigation.scss */
 #main-mavigation .menu-lvl1 {
   padding-top: 1.3rem;
   padding-bottom: 0.5rem;
   color: #000000;
   font-size: 1.375rem;
 }
-/* line 52, ../../Private/Styles/Layout/_Navigation.scss */
+/* line 54, ../../Private/Styles/Layout/_Navigation.scss */
 #main-mavigation .menu-lvl1 .headline-lvl1 {
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
 }
-/* line 56, ../../Private/Styles/Layout/_Navigation.scss */
+/* line 58, ../../Private/Styles/Layout/_Navigation.scss */
 #main-mavigation .menu-lvl1 .list-icon {
   width: 0.5rem;
   height: 0.5rem;
@@ -7389,27 +7386,34 @@ footer h3 {
   margin-right: 0.625rem;
   overflow: visible;
 }
-/* line 66, ../../Private/Styles/Layout/_Navigation.scss */
+/* line 68, ../../Private/Styles/Layout/_Navigation.scss */
 #main-mavigation .menu-lvl1 ul {
   padding-left: 1.2rem;
   font-size: 1rem;
   color: #b9b9b9;
 }
-/* line 71, ../../Private/Styles/Layout/_Navigation.scss */
+/* line 73, ../../Private/Styles/Layout/_Navigation.scss */
 #main-mavigation .menu-lvl1 ul a {
   color: #b9b9b9;
 }
-/* line 74, ../../Private/Styles/Layout/_Navigation.scss */
+/* line 76, ../../Private/Styles/Layout/_Navigation.scss */
 #main-mavigation .menu-lvl1 ul a.active {
   color: #ff8700;
 }
-/* line 83, ../../Private/Styles/Layout/_Navigation.scss */
+/* line 85, ../../Private/Styles/Layout/_Navigation.scss */
 #main-mavigation .menu-lvl2:not(:last-child)::after {
   content: "|";
   margin: 0 0.625rem;
 }
 
-/* line 91, ../../Private/Styles/Layout/_Navigation.scss */
+/* line 92, ../../Private/Styles/Layout/_Navigation.scss */
+.header-burger-menu-link {
+  cursor: pointer;
+  display: inline-block;
+  width: 4.375rem;
+  margin-left: -1rem;
+}
+/* line 98, ../../Private/Styles/Layout/_Navigation.scss */
 .header-burger-menu-link.active {
   background-color: #ffffff;
 }
@@ -7648,13 +7652,19 @@ footer h3 {
   margin-top: -1rem;
 }
 
-/* line 1, ../../Private/Styles/Modules/_TextImageIndent.scss */
+/* line 3, ../../Private/Styles/Modules/_TextImageIndent.scss */
 div.text-image-indented {
   position: relative;
   margin-top: 60px;
 }
 
-/* line 6, ../../Private/Styles/Modules/_TextImageIndent.scss */
+/* line 9, ../../Private/Styles/Modules/_TextImageIndent.scss */
+div.text-image-indented div.ce-gallery img {
+  width: 250px;
+  height: 100px;
+}
+
+/* line 14, ../../Private/Styles/Modules/_TextImageIndent.scss */
 div.text-image-indented:after {
   content: ".";
   clear: both;
@@ -7663,9 +7673,18 @@ div.text-image-indented:after {
   height: 0px;
 }
 
+/* line 22, ../../Private/Styles/Modules/_TextImageIndent.scss */
+div.text-image-indented div.ce-bodytext:after, div.text-image-indented div.ce-gallery:after {
+  content: ".";
+  clear: both;
+  display: block;
+  visibility: hidden;
+  height: 0px;
+}
+
 @media only screen and (min-width: 768px) {
-  /* line 14, ../../Private/Styles/Modules/_TextImageIndent.scss */
-  div.text-image-indented div.ce-gallery {
+  /* line 33, ../../Private/Styles/Modules/_TextImageIndent.scss */
+  div.text-image-indented div.ce-right div.ce-gallery {
     position: absolute;
     right: 0px;
     top: -40px;
@@ -7673,28 +7692,41 @@ div.text-image-indented:after {
   }
 }
 
-/* line 25, ../../Private/Styles/Modules/_TextImageIndent.scss */
-div.text-image-indented div.ce-gallery img {
-  width: 250px;
-  height: 100px;
-}
-
-/* line 30, ../../Private/Styles/Modules/_TextImageIndent.scss */
-div.text-image-indented div.ce-bodytext {
-  position: relative;
-  top: 60%;
+/* line 44, ../../Private/Styles/Modules/_TextImageIndent.scss */
+div.text-image-indented div.ce-right div.ce-bodytext {
   background-color: #fff;
-  width: 75%;
-  z-index: 10;
+}
+@media only screen and (min-width: 768px) {
+  /* line 44, ../../Private/Styles/Modules/_TextImageIndent.scss */
+  div.text-image-indented div.ce-right div.ce-bodytext {
+    position: relative;
+    width: 75%;
+    z-index: 10;
+  }
 }
 
-/* line 38, ../../Private/Styles/Modules/_TextImageIndent.scss */
-div.text-image-indented div.ce-bodytext:after {
-  content: ".";
-  clear: both;
-  display: block;
-  visibility: hidden;
-  height: 0px;
+@media only screen and (min-width: 768px) {
+  /* line 56, ../../Private/Styles/Modules/_TextImageIndent.scss */
+  div.text-image-indented div.ce-left div.ce-gallery {
+    position: absolute;
+    left: 0px;
+    top: -40px;
+    z-index: 5;
+  }
+}
+
+/* line 67, ../../Private/Styles/Modules/_TextImageIndent.scss */
+div.text-image-indented div.ce-left div.ce-bodytext {
+  background-color: #fff;
+}
+@media only screen and (min-width: 768px) {
+  /* line 67, ../../Private/Styles/Modules/_TextImageIndent.scss */
+  div.text-image-indented div.ce-left div.ce-bodytext {
+    position: absolute;
+    width: 75%;
+    right: 0px;
+    z-index: 10;
+  }
 }
 
 /*# sourceMappingURL=Main.css.map */
