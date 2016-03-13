@@ -3,7 +3,7 @@ return [
     'BE' => [
         'debug' => false,
         'explicitADmode' => 'explicitAllow',
-        'installToolPassword' => '$P$C1six3ctqldn6yuiu0cx4ub1I1nwgt0',
+        'installToolPassword' => '$P$CF3/pH6G49P3GuW7aomMyzjz/kFzOq1',
         'loginSecurityLevel' => 'rsa',
     ],
     'DB' => [
@@ -39,10 +39,10 @@ return [
         'colorspace' => 'sRGB',
         'im' => 1,
         'im_mask_temp_ext_gif' => 1,
-        'im_path' => '/opt/local/bin/',
-        'im_path_lzw' => '',
-        'im_v5effects' => 1,
-        'im_version_5' => 'im6',
+        'im_path' => '/usr/bin/',
+        'im_path_lzw' => '/usr/bin/',
+        'im_v5effects' => -1,
+        'im_version_5' => 'gm',
         'image_processing' => 1,
         'jpg_quality' => '80',
     ],
