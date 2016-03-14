@@ -1,11 +1,23 @@
 <html xmlns:f="http://xsd.helhum.io/ns/typo3/cms-fluid/master/ViewHelpers">
-<div class="indented-text-media row">
-	<div class="col-xs-12 col-md-4 indented-text-media">
-		<f:render partial="ImageIndent" arguments="{_all}" />
-	</div>
-	<div class="col-xs-12 col-md-8 indented-text-media-text">
-		<f:render partial="Header" arguments="{_all}" />
-		{data.bodytext}
-	</div>
+<div class="indented-text-media ce-{gallery.position.horizontal} row">
+	<f:if condition="{gallery.position.horizontal} != 'right'">
+		<div class="col-xs-12 col-md-4 indented-text-media">
+			<f:render partial="ImageIndent" arguments="{_all}" />
+		</div>
+		<div class="col-xs-12 col-md-8 indented-text-media-text">
+			<f:render partial="Header" arguments="{_all}" />
+			{data.bodytext}
+		</div>
+	</f:if>
+	<f:if condition="{gallery.position.horizontal} == 'right'">
+		<div class="col-xs-12 col-md-8 indented-text-media-text">
+			<f:render partial="Header" arguments="{_all}" />
+			{data.bodytext}
+		</div>
+		<div class="col-xs-12 col-md-4 indented-text-media">
+			<f:render partial="ImageIndent" arguments="{_all}" />
+		</div>
+	</f:if>
+
 </div>
 </html>

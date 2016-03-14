@@ -1,13 +1,35 @@
 .indented-text-media {
-
+  position: relative;
 }
 
-.indented-text-media-text {
+.ce-right .indented-text-media-text {
 
   @include medium {
     background-color: #fff;
     padding-left: 15px;
     padding-bottom: 15px;
+    padding-top: 15px;
+    margin-top: 5%;
+    margin-left: 10.638297872340425%;
+    z-index: 10;
+  }
+}
+
+.ce-right .indented-text-media {
+
+  @include medium {
+    margin-left: -10.638297872340425%;
+    z-index: 5;
+  }
+}
+
+.ce-left .indented-text-media-text {
+
+  @include medium {
+    background-color: #fff;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    padding-top: 15px;
     margin-top: 5%;
     margin-left: -10.638297872340425%;
   }
