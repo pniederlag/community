@@ -41,9 +41,11 @@ tt_content {
 page = PAGE
 page {
 	meta {
-		meta.X-UA-Compatible = IE=edge
-		meta.X-UA-Compatible.httpEquivalent = 1
 		viewport = width=device-width, initial-scale=1
+		X-UA-Compatible = IE=edge
+		X-UA-Compatible {
+            attribute = http-equiv
+        }
 	}
 
 	includeCSS {
