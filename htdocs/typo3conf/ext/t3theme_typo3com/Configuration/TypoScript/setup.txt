@@ -62,6 +62,9 @@ page {
 			pagets__homepage = TEXT
 			pagets__homepage.value = Homepage
 
+			pagets__casestudy = TEXT
+			pagets__casestudy.value = CaseStudy
+
 			default = TEXT
 			default.value = Default
 		}

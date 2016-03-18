@@ -1,0 +1,60 @@
+#################################
+#### BACKENDLAYOUT: HOMEPAGE ####
+#################################
+mod {
+	web_layout {
+		BackendLayouts {
+			casestudy {
+				title = LLL:EXT:t3theme_typo3com/Resources/Private/Language/Backend.xlf:backend_layout.casestudy
+				config {
+					backend_layout {
+						colCount = 3
+						rowCount = 4
+						rows {
+							1 {
+								columns {
+									1 {
+										name = LLL:EXT:t3theme_typo3com/Resources/Private/Language/Backend.xlf:backend_layout.column.special1
+										colPos = 30
+										colspan = 2
+									}
+								}
+							}
+							2 {
+								columns {
+									1 {
+										name = LLL:EXT:t3theme_typo3com/Resources/Private/Language/Backend.xlf:backend_layout.column.content
+										colPos = 1
+										colspan = 3
+									}
+								}
+							}
+							3 {
+								columns {
+									1 {
+										name = LLL:EXT:t3theme_typo3com/Resources/Private/Language/Backend.xlf:backend_layout.column.middle1
+										colPos = 20
+										colspan = 2
+									}
+									2 {
+										name = LLL:EXT:t3theme_typo3com/Resources/Private/Language/Backend.xlf:backend_layout.column.middle3
+										colPos = 22
+									}
+								}
+							}
+							4 {
+								columns {
+									1 {
+										name = LLL:EXT:t3theme_typo3com/Resources/Private/Language/Backend.xlf:backend_layout.column.footer1
+										colPos = 10
+										colspan = 3
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
