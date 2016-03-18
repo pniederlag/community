@@ -32,18 +32,6 @@ return [
             'packagePath' => 'typo3/sysext/documentation/',
             'suggestions' => [],
         ],
-        'info' => [
-            'composerName' => 'typo3/cms-info',
-            'state' => 'active',
-            'packagePath' => 'typo3/sysext/info/',
-            'suggestions' => [],
-        ],
-        'info_pagetsconfig' => [
-            'composerName' => 'typo3/cms-info-pagetsconfig',
-            'state' => 'active',
-            'packagePath' => 'typo3/sysext/info_pagetsconfig/',
-            'suggestions' => [],
-        ],
         'extensionmanager' => [
             'composerName' => 'typo3/cms-extensionmanager',
             'state' => 'active',
@@ -94,12 +82,6 @@ return [
             'composerName' => 'typo3/cms-wizard-crpages',
             'state' => 'active',
             'packagePath' => 'typo3/sysext/wizard_crpages/',
-            'suggestions' => [],
-        ],
-        'wizard_sortpages' => [
-            'composerName' => 'typo3/cms-wizard-sortpages',
-            'state' => 'active',
-            'packagePath' => 'typo3/sysext/wizard_sortpages/',
             'suggestions' => [],
         ],
         'about' => [
@@ -180,6 +162,12 @@ return [
             'packagePath' => 'typo3/sysext/impexp/',
             'suggestions' => [],
         ],
+        'info' => [
+            'composerName' => 'typo3/cms-info',
+            'state' => 'active',
+            'packagePath' => 'typo3/sysext/info/',
+            'suggestions' => [],
+        ],
         'install' => [
             'composerName' => 'typo3/cms-install',
             'state' => 'active',
@@ -210,12 +198,6 @@ return [
             'packagePath' => 'typo3/sysext/sv/',
             'suggestions' => [],
         ],
-        'sys_note' => [
-            'composerName' => 'typo3/cms-sys-note',
-            'state' => 'active',
-            'packagePath' => 'typo3/sysext/sys_note/',
-            'suggestions' => [],
-        ],
         't3editor' => [
             'composerName' => 'typo3/cms-t3editor',
             'state' => 'active',
@@ -232,12 +214,6 @@ return [
             'composerName' => 'typo3/cms-tstemplate',
             'state' => 'active',
             'packagePath' => 'typo3/sysext/tstemplate/',
-            'suggestions' => [],
-        ],
-        'viewpage' => [
-            'composerName' => 'typo3/cms-viewpage',
-            'state' => 'active',
-            'packagePath' => 'typo3/sysext/viewpage/',
             'suggestions' => [],
         ],
         'gridelements' => [
@@ -328,6 +304,12 @@ return [
             'packagePath' => 'typo3/sysext/indexed_search_mysql/',
             'suggestions' => [],
         ],
+        'info_pagetsconfig' => [
+            'composerName' => 'typo3/cms-info-pagetsconfig',
+            'state' => 'inactive',
+            'packagePath' => 'typo3/sysext/info_pagetsconfig/',
+            'suggestions' => [],
+        ],
         'linkvalidator' => [
             'composerName' => 'typo3/cms-linkvalidator',
             'state' => 'inactive',
@@ -394,6 +376,12 @@ return [
             'packagePath' => 'typo3/sysext/sys_action/',
             'suggestions' => [],
         ],
+        'sys_note' => [
+            'composerName' => 'typo3/cms-sys-note',
+            'state' => 'inactive',
+            'packagePath' => 'typo3/sysext/sys_note/',
+            'suggestions' => [],
+        ],
         't3org_flickrfeed' => [
             'composerName' => 't3org_flickrfeed',
             'state' => 'inactive',
@@ -436,10 +424,22 @@ return [
             'packagePath' => 'typo3/sysext/version/',
             'suggestions' => [],
         ],
+        'viewpage' => [
+            'composerName' => 'typo3/cms-viewpage',
+            'state' => 'inactive',
+            'packagePath' => 'typo3/sysext/viewpage/',
+            'suggestions' => [],
+        ],
         'voice' => [
             'composerName' => 'voice',
             'state' => 'inactive',
             'packagePath' => 'typo3conf/ext/voice/',
+            'suggestions' => [],
+        ],
+        'wizard_sortpages' => [
+            'composerName' => 'typo3/cms-wizard-sortpages',
+            'state' => 'inactive',
+            'packagePath' => 'typo3/sysext/wizard_sortpages/',
             'suggestions' => [],
         ],
         'workspaces' => [
