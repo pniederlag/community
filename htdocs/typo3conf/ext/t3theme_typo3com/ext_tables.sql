@@ -13,4 +13,5 @@ CREATE TABLE pages (
   tx_t3themetypo3com_case_logo int(11) DEFAULT '0',
   tx_t3themetypo3com_feature_icon int(11) DEFAULT '0',
   tx_t3themetypo3com_featured_case int(11) DEFAULT '0',
+  tx_t3themetypo3com_case_study_hero int(11) DEFAULT '0',
 );

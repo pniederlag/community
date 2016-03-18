@@ -148,6 +148,24 @@ $additionalFields = [
                 )
             )
         ),
+        'tx_t3themetypo3com_case_study_hero' => array(
+            'exclude' => 1,
+            'label' => 'select Case Study',
+            'config' => array(
+                'type' => 'group',
+                'internal_type' => 'db',
+                'allowed' => 'pages',
+                'size' => '1',
+                'maxitems' => '1',
+                'minitems' => '0',
+                'show_thumbs' => '1',
+                'wizards' => array(
+                    'suggest' => array(
+                        'type' => 'suggest'
+                    )
+                )
+            )
+        ),
     ],
     'types' => [
         102 => [
@@ -226,3 +244,5 @@ $additionalFields = [
     ]
 ];
 $GLOBALS['TCA']['pages'] = array_replace_recursive($GLOBALS['TCA']['pages'], $additionalFields);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('pages', '--div--;Case Study Hero,tx_t3themetypo3com_case_study_hero', 1);
