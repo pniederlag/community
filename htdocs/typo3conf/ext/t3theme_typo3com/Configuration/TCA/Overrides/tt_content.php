@@ -45,11 +45,7 @@ $tca = [
     'types' => [
         'casestudy_teaser' => [
             'showitem' => '--palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
-                image;Teaser Image,
-                header;Headline,
-                subheader;Sub headline,
-                header_link;Link to the case study,
-                table_caption;Name,
+                pages;Link to the case study,
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.media,assets,
                 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.imagelinks;imagelinks,
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,layout;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:layout_formlabel,

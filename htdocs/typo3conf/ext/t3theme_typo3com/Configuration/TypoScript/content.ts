@@ -1,6 +1,6 @@
 # text_only CE
 # register new CE for gridelements
-tt_content.casestudy_teaser < lib.gridelements.defaultGridSetup
+#tt_content.casestudy_teaser < lib.gridelements.defaultGridSetup
 
 tt_content.casestudy_teaser = FLUIDTEMPLATE
 tt_content.casestudy_teaser {
@@ -28,6 +28,40 @@ tt_content.casestudy_teaser {
 
 		legalInfoPid = TEXT
 		legalInfoPid.value = {$plugin.t3theme_typo3com.footer.legalInfoPid}
+
+
+		longTeaserHeadline = TEXT
+		longTeaserHeadline {
+			dataWrap = DB:pages:{field:pages}:tx_t3themetypo3com_longteaser_headline
+			wrap3 = {|}
+			insertData = 1
+		}
+
+		longteaserAuthor = TEXT
+		longteaserAuthor {
+			dataWrap = DB:pages:{field:pages}:tx_t3themetypo3com_longteaser_author
+			wrap3 = {|}
+			insertData = 1
+		}
+
+
+
+		teaserImage = FILES
+		teaserImage.references {
+			table = pages
+			uid.field = pages
+			fieldName = media
+		}
+
+		teaserImage.renderObj = COA
+		teaserImage.renderObj {
+			10 = TEXT
+			10.data = file:current:uid_local
+		}
+
+		detailPage = TEXT
+		detailPage.field = pages
+
 	}
 
 	file = EXT:t3theme_typo3com/Resources/Private/Templates/ContentElements/CaseStudyTeaser.html

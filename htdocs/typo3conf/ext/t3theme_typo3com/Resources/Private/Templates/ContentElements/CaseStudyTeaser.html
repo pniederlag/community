@@ -1,16 +1,16 @@
 <html xmlns:f="http://xsd.helhum.io/ns/typo3/cms-fluid/master/ViewHelpers">
 <div class="case-study-teaser row">
 	<div class="col-xs-12 case-study-teaser-image">
-		<f:render partial="CaseStudyImage" arguments="{_all}" />
+		<f:render partial="CaseStudyImage" section="CaseStudyImage" arguments="{teaserImage: teaserImage, detailPage: detailPage}" />
 	</div>
 	<div class="col-xs-12 col-md-6 col-lg-5 case-study-teaser-box">
-		<p class="case-study-teaser-subheader">{data.subheader}</p>
-		<h3 class="case-study-teaser-headline">{data.header}</h3>
-		<p class="case-study-teaser-author">{data.table_caption}</p>
+		<p class="case-study-teaser-subheader"><f:translate key="LLL:EXT:t3theme_typo3com/Resources/Private/Language/locallang.xlf:casestudy_teaser.headline" /></p>
+		<h3 class="case-study-teaser-headline">{longTeaserHeadline}</h3>
+		<p class="case-study-teaser-author">{longteaserAuthor}</p>
 		<p>
-			<f:link.page pageUid="{data.link}" class="case-study-detail-view typo3button">Read more</f:link.page>
+			<f:link.page pageUid="{data.pages}" class="case-study-detail-view typo3button"><f:translate key="LLL:EXT:t3theme_typo3com/Resources/Private/Language/locallang.xlf:readmore" /></f:link.page>
 			<f:link.page pageUid="{caseStudyOverviewPage}"
-						 class="case-study-overview-page button">View all Case Studies
+						 class="case-study-overview-page button"><f:translate key="LLL:EXT:t3theme_typo3com/Resources/Private/Language/locallang.xlf:casestudy_teaser.overview" />
 			</f:link.page>
 		</p>
 	</div>
