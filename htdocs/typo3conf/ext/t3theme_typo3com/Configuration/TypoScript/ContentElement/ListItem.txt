@@ -1,0 +1,5 @@
+tt_content.list_item = FLUIDTEMPLATE
+tt_content.list_item {
+	file = EXT:t3theme_typo3com/Resources/Private/Templates/ContentElements/ListItem.html
+	partialRootPath = EXT:t3theme_typo3com/Resources/Private/Partials/ContentElements/
+}

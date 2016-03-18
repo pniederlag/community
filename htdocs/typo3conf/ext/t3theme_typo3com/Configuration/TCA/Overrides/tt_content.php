@@ -90,6 +90,15 @@ $tca = [
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access
                 --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.extended,tx_gridelements_container,tx_gridelements_columns',
         ],
+        'list_item' => [
+            'showitem' => '--palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.header;header,
+                bodytext;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext_formlabel,
+                --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.visibility;visibility,
+                --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access
+                --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.extended,tx_gridelements_container,tx_gridelements_columns'
+        ]
     ],
 ];
 
@@ -101,6 +110,10 @@ $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items']['casestudy_
 $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items']['indented_textmedia'] = [
     'Indented TextMedia Element',
     'indented_textmedia',
+];
+$GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items']['list_item'] = [
+    'List Item',
+    'list_item'
 ];
 
 $GLOBALS['TCA']['tt_content']['palettes'] = array_replace(
