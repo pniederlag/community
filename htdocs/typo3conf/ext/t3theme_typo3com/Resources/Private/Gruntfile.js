@@ -13,12 +13,27 @@ module.exports = function(grunt) {
 				dest: '../Public/Styles'
 			}
 		},
-		compass: {
+		sass: {
+			options: {
+				sourceMap: true
+			},
+			dist: {
+				files: [{
+					src: 'Styles/Main.scss',
+					dest: '../Public/Styles/Main.css'
+				}]
+			}
+		},
+		cssmin: {
 			dist: {
 				options: {
-					config: 'config.rb',
-					force: true
-				}
+					shorthandCompacting: false,
+					roundingPrecision: -1
+				},
+				files: [{
+					src: '../Public/Styles/Main.css',
+					dest: '../Public/Styles/Main.min.css'
+				}]
 			}
 		},
 		watch: {
@@ -28,19 +43,20 @@ module.exports = function(grunt) {
 			},
 			sass: {
 				files: ['<%= dirs.sass.src %>/**/*.scss'],
-				tasks: ['compass']
+				tasks: ['sass', 'cssmin']
 			}
 		}
 	});
 
 
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-compass');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-sass');
 
 	// Default task
 	grunt.registerTask('default', ['build']);
 
-	grunt.registerTask('build', ['compass']);
+	grunt.registerTask('build', ['sass', 'cssmin']);
 
 	grunt.registerTask('w', ['default', 'watch']);
 };

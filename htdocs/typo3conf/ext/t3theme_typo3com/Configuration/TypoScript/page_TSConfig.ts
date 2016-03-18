@@ -25,4 +25,13 @@ TCEFORM.tt_content.layout {
     }
 }
 
-TCAdefaults.tt_content.imagecols = 1
+TCEFORM.tt_content.imageorient {
+    # Remove items from select
+    keepItems = 25, 26
+
+}
+
+TCAdefaults.tt_content {
+    imagecols = 1
+    imageorient = 25
+}
