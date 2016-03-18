@@ -27,6 +27,7 @@ fcgi-bin/
 /htdocs/index.php
 /htdocs/typo3
 /htdocs/typo3cms
+/htdocs/typo3cms.bat
 /vendor/
 
 # Ignore temp directory.
