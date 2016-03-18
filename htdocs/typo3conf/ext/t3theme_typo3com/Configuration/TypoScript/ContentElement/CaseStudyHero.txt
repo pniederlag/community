@@ -1,0 +1,33 @@
+lib.caseStudyHero = RECORDS
+lib.caseStudyHero {
+	source.field = tx_t3themetypo3com_case_study_hero
+	tables = pages
+
+	conf.pages = COA
+	conf.pages {
+		10 = FILES
+		10.maxItems = 1
+		10.references {
+			table = pages
+			uid.field = uid
+			fieldName = media
+		}
+		10.renderObj = COA
+		10.renderObj {
+			10 = IMG_RESOURCE
+			10.stdWrap.wrap = <img src="|" width="100%" height="auto" />
+			10 {
+				file.import.data = file:current:publicUrl
+			}
+		}
+
+		20 = TEXT
+		20 {
+			field = tx_t3themetypo3com_hero_headline
+			typolink{
+				parameter.field = uid
+			}
+			wrap = <div class="ce-bodytext"><p>|</p></div>
+		}
+	}
+}

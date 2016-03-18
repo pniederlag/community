@@ -1,0 +1,15 @@
+lib.headerImage = COA
+lib.headerImage {
+	10 = FILES
+	10.maxItems = 1
+	10.references {
+		table = pages
+		uid.field = uid
+		fieldName = media
+	}
+	10.renderObj = COA
+	10.renderObj {
+		10 = IMG_RESOURCE
+		10.file.import.data = file:current:publicUrl
+	}
+}

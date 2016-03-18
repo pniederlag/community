@@ -228,18 +228,6 @@ return [
             'packagePath' => 'typo3conf/ext/bootstrap_grids/',
             'suggestions' => [],
         ],
-        'belayout_fileprovider' => [
-            'composerName' => 'georgringer/belayout-fileprovider',
-            'state' => 'active',
-            'packagePath' => 'typo3conf/ext/belayout_fileprovider/',
-            'suggestions' => [],
-        ],
-        't3theme_typo3com' => [
-            'composerName' => 't3theme_typo3com',
-            'state' => 'active',
-            'packagePath' => 'typo3conf/ext/t3theme_typo3com/',
-            'suggestions' => [],
-        ],
         'realurl' => [
             'composerName' => 'helhum/realurl',
             'state' => 'active',
@@ -247,6 +235,12 @@ return [
             'suggestions' => [
                 'static_info_tables',
             ],
+        ],
+        't3theme_typo3com' => [
+            'composerName' => 't3theme_typo3com',
+            'state' => 'active',
+            'packagePath' => 'typo3conf/ext/t3theme_typo3com/',
+            'suggestions' => [],
         ],
         'adodb' => [
             'composerName' => 'typo3/cms-adodb',

@@ -20,9 +20,135 @@
 
 // Extensions
 // -----------------------------------------------------------------------------
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/gridelements.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/Extension/GridElements.txt">
 
 // Content
 // -----------------------------------------------------------------------------
+tt_content {
+	stdWrap.innerWrap.cObject.default.20.10.value = csc-default row
+}
+
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/ContentElement/CaseStudyHero.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/ContentElement/CaseStudyTeaser.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/ContentElement/HeaderImage.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/ContentElement/IndentedTextmedia.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/ContentElement/Menu.txt">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/content.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/ContentElement/Textmedia.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/ContentElement/Textpic.txt">
+
+// Page
+// -----------------------------------------------------------------------------
+page = PAGE
+page {
+	meta {
+		viewport = width=device-width, initial-scale=1.0, shrink-to-fit=no
+
+		meta.X-UA-Compatible = IE=edge
+		meta.X-UA-Compatible.httpEquivalent = 1
+	}
+
+	includeCSS {
+		main = EXT:t3theme_typo3com/Resources/Public/Styles/Main.min.css
+	}
+
+	includeJSFooterlibs {
+		jQuery = EXT:t3theme_typo3com/Resources/Public/JavaScript/jQuery/jquery-2.2.1.js
+		script = EXT:t3theme_typo3com/Resources/Public/JavaScript/Script.js
+	}
+
+	10 = FLUIDTEMPLATE
+	10 {
+		templateName = TEXT
+		templateName.stdWrap.cObject = CASE
+		templateName.stdWrap.cObject {
+			key.data = levelfield:-1, backend_layout_next_level, slide
+			key.override.field = backend_layout
+
+			pagets__homepage = TEXT
+			pagets__homepage.value = Homepage
+
+			default = TEXT
+			default.value = Default
+		}
+
+		settings {
+			contactPid = {$plugin.t3theme_typo3com.footer.contactPid}
+			legalInfoPid = {$plugin.t3theme_typo3com.footer.legalInfoPid}
+		}
+
+		templateRootPaths {
+			0 = EXT:t3theme_typo3com/Resources/Private/Templates/Page/
+		}
+
+		partialRootPaths {
+			0 = EXT:t3theme_typo3com/Resources/Private/Partials/Page/
+		}
+
+		layoutRootPaths {
+			0 = EXT:t3theme_typo3com/Resources/Private/Layouts/Page/
+		}
+	}
+
+	bodyTagCObject = COA
+	bodyTagCObject {
+		stdWrap.wrap = <body|>
+
+		// Class
+		10 = CASE
+		10 {
+			key.data = levelfield:-1, backend_layout_next_level, slide
+			key.override.field = backend_layout
+
+			// Default
+			default = TEXT
+			default {
+				noTrimWrap = | class="layout-|"|
+				data = levelfield:-1, backend_layout_next_level, slide
+				override.field = backend_layout
+
+				stdWrap {
+					replacement {
+						10 {
+							search = pagets__
+							replace =
+						}
+					}
+
+					case = lower
+				}
+			}
+		}
+	}
+}
+
+// Config
+// -----------------------------------------------------------------------------
+config {
+	doctype = html5
+	language = en
+	linkVars = L(0-1)
+	sys_language_uid = 0
+	locale_all = en_GB.utf8
+	absRefPrefix = /
+	index_enable = 1
+	disablePrefixComment = 1
+
+	htmlTag_setParams = lang="en" class="no-js"
+	sendCacheHeaders = 1
+	pageTitleFirst = 1
+	inlineStyle2TempFile = 0
+
+	spamProtectEmailAddresses = ascii
+
+	typolinkEnableLinksAcrossDomains = 1
+
+	compressJS = 0
+	compressCSS = 0
+
+	removeDefaultCss = 1
+	removeDefaultJS = 1
+
+	sys_language_mode = strict
+
+	tx_realurl_enable = 1
+}
