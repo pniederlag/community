@@ -1,5 +1,5 @@
 TCEFORM {
-	tt_content
+	tt_content {
 		layout {
 			# Remove items from select
 			removeItems = 1,2,3,4
@@ -30,6 +30,12 @@ TCEFORM {
 		imageorient {
 			# Remove items from select
 			keepItems = 25, 26
+		}
+
+		menu_type {
+			addItems {
+				feature_menu = Feature Menu
+			}
 		}
 	}
 }
