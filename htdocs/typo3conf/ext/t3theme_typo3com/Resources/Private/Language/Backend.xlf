@@ -4,11 +4,18 @@
 		  product-name="t3theme_typo3com">
 		<header/>
 		<body>
-			<trans-unit id="Homepage" xml:space="preserve">
+			<trans-unit id="backend_layout.homepage">
 				<source>Homepage</source>
 			</trans-unit>
-			<trans-unit id="Contentpage" xml:space="preserve">
-				<source>Contentpage</source>
+			<trans-unit id="backend_layout.default">
+				<source>Default</source>
+			</trans-unit>
+
+			<trans-unit id="backend_layout.column.hero">
+				<source>Hero</source>
+			</trans-unit>
+			<trans-unit id="backend_layout.column.content">
+				<source>Content</source>
 			</trans-unit>
 		</body>
 	</file>

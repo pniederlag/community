@@ -3,14 +3,12 @@
 // -----------------------------------------------------------------------------
 
 
-// [1] Home
-
+// [1] Hero
 lib.caseStudyHero = RECORDS
 lib.caseStudyHero.source.field = tx_t3themetypo3com_case_study_hero
 lib.caseStudyHero.tables = pages
 lib.caseStudyHero.conf.pages = COA
 lib.caseStudyHero.conf.pages {
-	
 	10 = FILES
 	10.maxItems = 1
 	10.references {
@@ -37,54 +35,20 @@ lib.caseStudyHero.conf.pages {
 	}
 }
 
-
-
-
-lib.layout1 = FLUIDTEMPLATE
-lib.layout1 {
-	file = EXT:t3theme_typo3com/Resources/Private/Templates/Pages/Homepage.html
-	partialRootPath = EXT:t3theme_typo3com/Resources/Private/Partials/
-	layoutRootPath = EXT:t3theme_typo3com/Resources/Private/Layouts/
-
-	variables {
-		mainMenu < temp.mainMenu
-
-		header < lib.caseStudyHero
-
-		content  < styles.content.get
-		content.select.where = colPos=1
-
-		footerMenu < temp.footerMenu
-
-		contactPid = TEXT
-		contactPid.value = {$plugin.t3theme_typo3com.footer.contactPid}
-
-		legalInfoPid = TEXT
-		legalInfoPid.value = {$plugin.t3theme_typo3com.footer.legalInfoPid}
-
-		headerImage = COA
-		headerImage {
-			10 = FILES
-			10.maxItems = 1
-			10.references {
-				table = pages
-				uid.field = uid
-				fieldName = media
-			}
-			10.renderObj = COA
-			10.renderObj {
-				10 = IMG_RESOURCE
-				10.file.import.data = file:current:publicUrl
-			}
-		}
+lib.headerImage = COA
+lib.headerImage {
+	10 = FILES
+	10.maxItems = 1
+	10.references {
+		table = pages
+		uid.field = uid
+		fieldName = media
 	}
-}
-
-// [2] Content
-lib.layout2 = FLUIDTEMPLATE
-lib.layout2 < lib.layout1
-lib.layout2 {
-	file = EXT:t3theme_typo3com/Resources/Private/Templates/Pages/Contentpage.html
+	10.renderObj = COA
+	10.renderObj {
+		10 = IMG_RESOURCE
+		10.file.import.data = file:current:publicUrl
+	}
 }
 
 lib.fluidContent.templateRootPaths.10 = EXT:t3theme_typo3com/Resources/Private/Templates/ContentElements

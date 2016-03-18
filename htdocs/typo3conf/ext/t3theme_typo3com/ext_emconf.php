@@ -25,7 +25,6 @@ $EM_CONF[$_EXTKEY] = array(
     'constraints'      => array(
         'depends'   => array(
             'typo3'   => '7.6',
-            'belayout_fileprovider' => ''
         ),
         'conflicts' => array(),
         'suggests'  => array(),

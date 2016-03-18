@@ -25,16 +25,35 @@ page {
 	}
 
 
-	10 = CASE
-	10 {
-		key.data = levelfield:-1, backend_layout_next_level, slide
-		key.override.field = backend_layout
+    10 = FLUIDTEMPLATE
+    10 {
+        templateName = TEXT
+        templateName.stdWrap.cObject = CASE
+        templateName.stdWrap.cObject {
+            key.data = levelfield:-1, backend_layout_next_level, slide
+            key.override.field = backend_layout
 
-		// [1] Home
-		file__Homepage < lib.layout1
+            pagets__homepage = TEXT
+            pagets__homepage.value = Homepage
 
-		// [2] Content
-		file__Contentpage < lib.layout2
+            default = TEXT
+            default.value = Default
+        }
+
+        settings {
+            contactPid = {$plugin.t3theme_typo3com.footer.contactPid}
+            legalInfoPid = {$plugin.t3theme_typo3com.footer.legalInfoPid}
+        }
+
+        templateRootPaths {
+            0 = EXT:t3theme_typo3com/Resources/Private/Templates/Page/
+        }
+        partialRootPaths {
+            0 = EXT:t3theme_typo3com/Resources/Private/Partials/Page/
+        }
+        layoutRootPaths {
+            0 = EXT:t3theme_typo3com/Resources/Private/Layouts/Page/
+        }
 	}
 
 
@@ -58,7 +77,7 @@ page {
 				stdWrap {
 					replacement {
 						10 {
-							search = file__
+							search = pagets__
 							replace =
 						}
 					}

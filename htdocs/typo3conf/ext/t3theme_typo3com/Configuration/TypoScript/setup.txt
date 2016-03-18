@@ -4,18 +4,18 @@
 
 // Config
 // -----------------------------------------------------------------------------
-
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/config.ts">
+
+// Helper
+// -----------------------------------------------------------------------------
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/Helper/DynamicContent.txt">
 
 // Objects
 // -----------------------------------------------------------------------------
-
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/temp.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/lib.ts">
 
 // Page
 // -----------------------------------------------------------------------------
-
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/page.ts">
 
 // Extensions
@@ -24,4 +24,5 @@
 
 // Content
 // -----------------------------------------------------------------------------
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/ContentElement/Menu.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/content.ts">

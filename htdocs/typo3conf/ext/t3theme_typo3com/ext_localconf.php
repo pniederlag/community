@@ -1,19 +1,13 @@
 <?php
 
-
 if (!defined('TYPO3_MODE')) {
-    die ('Access denied.');
+    die('Access denied.');
 }
 
 if (TYPO3_MODE === 'BE') {
-
-    // homepage backend layout
-    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['BackendLayoutFileProvider']['file'][]
-        =  'EXT:t3theme_typo3com/Configuration/TypoScript/BackendLayout/Homepage.ts';
-
-    // contentpage backend layout
-    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['BackendLayoutFileProvider']['file'][]
-        =  'EXT:t3theme_typo3com/Configuration/TypoScript/BackendLayout/Contentpage.ts';
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+        '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/PageTS/Mod/WebLayout/BackendLayouts.txt">'
+    );
 
     $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
         \TYPO3\CMS\Core\Imaging\IconRegistry::class

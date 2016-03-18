@@ -5,8 +5,8 @@
 
 // Main Menu
 // -------------------------------------
-temp.mainMenu = HMENU
-temp.mainMenu {
+lib.mainMenu = HMENU
+lib.mainMenu {
 	entryLevel = 0
 	wrap = <ul class="burger-navigation">|</ul>
 	wrap = <ul class="burger-navigation closed">|</ul>
@@ -50,24 +50,8 @@ temp.mainMenu {
 	}
 }
 
-
-// Logo
-// -------------------------------------
-temp.logo {
-
-}
-
-
-// Search
-// -------------------------------------
-temp.search {
-
-}
-
-
 // Footer-Menu
 // -------------------------------------
-
 temp.footerMenu = COA
 temp.footerMenu {
 
@@ -112,4 +96,3 @@ temp.footerMenu {
 	20.value = Newsletter
 	20.wrap = <div class="col-sm-3"><h3>|</h3></div>
 }
-
