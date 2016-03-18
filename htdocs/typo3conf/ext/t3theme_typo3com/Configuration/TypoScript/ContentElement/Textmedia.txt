@@ -42,8 +42,8 @@ tt_content {
 				default.value = default
 			}
 
-			leftColumnClass = CASE
-			leftColumnClass {
+			textColumnClass = CASE
+			textColumnClass {
 				key.field = layout
 
 				feature-1-11 = TEXT
@@ -80,8 +80,8 @@ tt_content {
 				feature-11-1.value = col-md-11
 			}
 
-			rightColumnClass = CASE
-			rightColumnClass {
+			imageColumnClass = CASE
+			imageColumnClass {
 				key.field = layout
 
 				feature-1-11 = TEXT

@@ -36,18 +36,16 @@
 
 <f:section name="feature-details">
 	<div class="{f:if(condition: data.image_overlap, then: 'row row--overlap', else: 'row')}">
-			<div class="{leftColumnClass}">
-				<f:if condition="{data.imageorient} == 25">
-					<f:then>{data.bodytext -> f:format.html()}</f:then>
-					<f:else>{f:media(file: files.0)}</f:else>
-				</f:if>
-			</div>
-			<div class="{rightColumnClass}">
-				<f:if condition="{data.imageorient} == 25">
-					<f:then>{f:media(file: files.0)}</f:then>
-					<f:else>{data.bodytext -> f:format.html()}</f:else>
-				</f:if>
-			</div>
+		<f:if condition="{data.imageorient} == 25">
+			<f:then>
+				<div class="{textColumnClass}">{data.bodytext -> f:format.html()}</div>
+				<div class="{imageColumnClass}">{f:media(file: files.0, style: 'width: 100%; height: auto;')}</div>
+			</f:then>
+			<f:else>
+				<div class="{imageColumnClass}">{f:media(file: files.0, style: 'width: 100%; height: auto;')}</div>
+				<div class="{textColumnClass}">{data.bodytext -> f:format.html()}</div>
+			</f:else>
+		</f:if>
 	</div>
 </f:section>
 </html>
