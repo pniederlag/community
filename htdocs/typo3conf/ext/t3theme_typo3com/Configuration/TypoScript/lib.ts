@@ -12,6 +12,7 @@ lib.caseStudyHero.conf.pages = COA
 lib.caseStudyHero.conf.pages {
 	
 	10 = FILES
+	10.maxItems = 1
 	10.references {
 		table = pages
 		uid.field = uid
@@ -23,8 +24,6 @@ lib.caseStudyHero.conf.pages {
 		10.stdWrap.wrap = <img src="|" width="100%" height="auto" />
 		10 {
 			file.import.data = file:current:publicUrl
-			altText.data = file:current:alternative
-			titleText.data = file:current:title
 		}
 	}
 
@@ -62,6 +61,22 @@ lib.layout1 {
 
 		legalInfoPid = TEXT
 		legalInfoPid.value = {$plugin.t3theme_typo3com.footer.legalInfoPid}
+
+		headerImage = COA
+		headerImage {
+			10 = FILES
+			10.maxItems = 1
+			10.references {
+				table = pages
+				uid.field = uid
+				fieldName = media
+			}
+			10.renderObj = COA
+			10.renderObj {
+				10 = IMG_RESOURCE
+				10.file.import.data = file:current:publicUrl
+			}
+		}
 	}
 }
 

@@ -3,30 +3,45 @@
 	<div class="col-md-12">
 		<div class="{f:if(condition:'{data.layout}',then:' {data.layout}')}">
 			<div id="c{data.uid}">
-				<f:if condition="{gallery.position.noWrap} != 1">
-					<f:render partial="Header" arguments="{_all}" />
-				</f:if>
-
-				<div class="ce-textpic ce-{gallery.position.horizontal} ce-{gallery.position.vertical}{f:if(condition: gallery.position.noWrap, then: ' ce-nowrap')}">
-					<f:if condition="{gallery.position.vertical} != 'below'">
-						<f:render partial="MediaGallery" arguments="{_all}" />
-					</f:if>
-
-					<div class="ce-bodytext">
-						<f:if condition="{gallery.position.noWrap}">
-							<f:render partial="Header" arguments="{_all}" />
-						</f:if>
-						<f:format.html>{data.bodytext}</f:format.html>
-					</div>
-
-					<f:if condition="{gallery.position.vertical} == 'below'">
-						<f:render partial="MediaGallery" arguments="{_all}" />
-					</f:if>
-				</div>
-				<f:render partial="Footer" arguments="{_all}" />
+				<f:render section="{sectionName}" arguments="{_all}"/>
 			</div>
-			<div class="clearfix"></div>
 		</div>
+		<div class="clearfix"></div>
 	</div>
 </div>
+
+<f:section name="default">
+	<f:if condition="{gallery.position.noWrap} != 1">
+		<f:render partial="Header" arguments="{_all}"/>
+	</f:if>
+
+	<div class="ce-textpic ce-{gallery.position.horizontal} ce-{gallery.position.vertical}{f:if(condition: gallery.position.noWrap, then: ' ce-nowrap')}">
+		<f:if condition="{gallery.position.vertical} != 'below'">
+			<f:render partial="MediaGallery" arguments="{_all}"/>
+		</f:if>
+
+		<div class="ce-bodytext">
+			<f:if condition="{gallery.position.noWrap}">
+				<f:render partial="Header" arguments="{_all}"/>
+			</f:if>
+			<f:format.html>{data.bodytext}</f:format.html>
+		</div>
+
+		<f:if condition="{gallery.position.vertical} == 'below'">
+			<f:render partial="MediaGallery" arguments="{_all}"/>
+		</f:if>
+	</div>
+	<f:render partial="Footer" arguments="{_all}"/>
+</f:section>
+
+<f:section name="feature-details">
+	<div class="{f:if(condition: data.image_overlap, then: 'row row--overlap', else: 'row')}">
+		<div class="{leftColumnClass}">
+			{data.bodytext -> f:format.html()}
+		</div>
+		<div class="{rightColumnClass}">
+			<f:media file="{files.0}" width="" height="" />
+		</div>
+	</div>
+</f:section>
 </html>

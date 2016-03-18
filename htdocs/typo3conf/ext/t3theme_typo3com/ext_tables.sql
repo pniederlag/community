@@ -1,5 +1,6 @@
 CREATE TABLE tt_content (
-	header_position varchar(6) DEFAULT '' NOT NULL
+	header_position varchar(6) DEFAULT '' NOT NULL,
+	image_overlap tinyint(4) DEFAULT '0' NOT NULL
 );
 
 CREATE TABLE pages (

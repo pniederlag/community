@@ -104,6 +104,123 @@ tt_content {
 
 	textmedia {
 		variables {
+		    sectionName = CASE
+		    sectionName {
+				key.field = layout
+
+				feature-1-11 = TEXT
+				feature-1-11.value = feature-details
+
+				feature-2-10 = TEXT
+				feature-2-10.value = feature-details
+
+				feature-3-9 = TEXT
+				feature-3-9.value = feature-details
+
+				feature-4-8 = TEXT
+				feature-4-8.value = feature-details
+
+				feature-5-7 = TEXT
+				feature-5-7.value = feature-details
+
+				feature-6-6 = TEXT
+				feature-6-6.value = feature-details
+
+				feature-7-5 = TEXT
+				feature-7-5.value = feature-details
+
+				feature-8-4 = TEXT
+				feature-8-4.value = feature-details
+
+				feature-9-3 = TEXT
+				feature-9-3.value = feature-details
+
+				feature-10-2 = TEXT
+				feature-10-2.value = feature-details
+
+				feature-11-1 = TEXT
+				feature-11-1.value = feature-details
+
+				default = TEXT
+				default.value = default
+			}
+
+			leftColumnClass = CASE
+			leftColumnClass {
+				key.field = layout
+
+				feature-1-11 = TEXT
+				feature-1-11.value = col-md-1
+
+				feature-2-10 = TEXT
+				feature-2-10.value = col-md-2
+
+				feature-3-9 = TEXT
+				feature-3-9.value = col-md-3
+
+				feature-4-8 = TEXT
+				feature-4-8.value = col-md-4
+
+				feature-5-7 = TEXT
+				feature-5-7.value = col-md-5
+
+				feature-6-6 = TEXT
+				feature-6-6.value = col-md-6
+
+				feature-7-5 = TEXT
+				feature-7-5.value = col-md-7
+
+				feature-8-4 = TEXT
+				feature-8-4.value = col-md-8
+
+				feature-9-3 = TEXT
+				feature-9-3.value = col-md-9
+
+				feature-10-2 = TEXT
+				feature-10-2.value = col-md-10
+
+				feature-11-1 = TEXT
+				feature-11-1.value = col-md-11
+			}
+
+			rightColumnClass = CASE
+			rightColumnClass {
+				key.field = layout
+
+				feature-1-11 = TEXT
+				feature-1-11.value = col-md-11
+
+				feature-2-10 = TEXT
+				feature-2-10.value = col-md-10
+
+				feature-3-9 = TEXT
+				feature-3-9.value = col-md-9
+
+				feature-4-8 = TEXT
+				feature-4-8.value = col-md-8
+
+				feature-5-7 = TEXT
+				feature-5-7.value = col-md-7
+
+				feature-6-6 = TEXT
+				feature-6-6.value = col-md-6
+
+				feature-7-5 = TEXT
+				feature-7-5.value = col-md-5
+
+				feature-8-4 = TEXT
+				feature-8-4.value = col-md-4
+
+				feature-9-3 = TEXT
+				feature-9-3.value = col-md-3
+
+				feature-10-2 = TEXT
+				feature-10-2.value = col-md-2
+
+				feature-11-1 = TEXT
+				feature-11-1.value = col-md-1
+			}
+
 			rows = TEXT
 			rows {
 				current = 1

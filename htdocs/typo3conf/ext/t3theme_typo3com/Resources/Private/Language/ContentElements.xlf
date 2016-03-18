@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-07-21T10:17:45Z" product-name="t3theme_typo3com">
+		<header/>
+		<body>
+			<trans-unit id="labels.image_overlap">
+				<source>Text overlaps Image</source>
+			</trans-unit>
+			<trans-unit id="layout.feature-1-11">
+				<source>Text: 1 Column, Image: 11 Columns</source>
+			</trans-unit>
+			<trans-unit id="layout.feature-2-10">
+				<source>Text: 2 Columns, Image: 10 Columns</source>
+			</trans-unit>
+			<trans-unit id="layout.feature-3-9">
+				<source>Text: 3 Columns, Image: 9 Columns</source>
+			</trans-unit>
+			<trans-unit id="layout.feature-4-8">
+				<source>Text: 4 Columns, Image: 8 Columns</source>
+			</trans-unit>
+			<trans-unit id="layout.feature-5-7">
+				<source>Text: 5 Columns, Image: 7 Columns</source>
+			</trans-unit>7
+			<trans-unit id="layout.feature-6-6">
+				<source>Text: 6 Columns, Image: 6 Columns</source>
+			</trans-unit>
+			<trans-unit id="layout.feature-7-5">
+				<source>Text: 7 Columns, Image: 5 Columns</source>
+			</trans-unit>
+			<trans-unit id="layout.feature-8-4">
+				<source>Text: 8 Columns, Image: 4 Columns</source>
+			</trans-unit>
+			<trans-unit id="layout.feature-9-3">
+				<source>Text: 9 Columns, Image: 3 Columns</source>
+			</trans-unit>
+			<trans-unit id="layout.feature-10-2">
+				<source>Text: 10 Columns, Image: 2 Columns</source>
+			</trans-unit>
+			<trans-unit id="layout.feature-11-1">
+				<source>Text: 11 Columns, Image: 1 Column</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
