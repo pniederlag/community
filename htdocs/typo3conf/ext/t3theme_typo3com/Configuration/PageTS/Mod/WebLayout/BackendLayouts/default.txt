@@ -14,7 +14,7 @@ mod {
                             1 {
                                 columns {
                                     1 {
-                                        name = LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:backend_layout.column.content
+                                        name = LLL:EXT:t3theme_typo3com/Resources/Private/Language/Backend.xlf:backend_layout.column.content
                                         colPos = 0
                                     }
                                 }
