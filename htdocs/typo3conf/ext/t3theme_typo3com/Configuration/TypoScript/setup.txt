@@ -54,6 +54,7 @@ page {
 
 	includeJSFooterlibs {
 		jQuery = EXT:t3theme_typo3com/Resources/Public/JavaScript/jQuery/jquery-2.2.1.js
+        jQuery.forceOnTop = 1
 		script = EXT:t3theme_typo3com/Resources/Public/JavaScript/Script.js
 	}
 
