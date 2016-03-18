@@ -1,10 +1,10 @@
-// Compass
-@import "compass/css3";
-
 // Variables
 @import
 	"Base/Variables",
 	"Base/BootstrapVariables";
+
+// Fonts
+@import "Base/Fonts";
 
 // Bootstrap imports
 @import "Base/BootstrapImports";

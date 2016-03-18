@@ -16,7 +16,7 @@ page {
 	}
 
 	includeCSS {
-		main = EXT:t3theme_typo3com/Resources/Public/Styles/Main.css
+		main = EXT:t3theme_typo3com/Resources/Public/Styles/Main.min.css
 	}
 
 	includeJSFooterlibs {
