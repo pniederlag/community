@@ -58,7 +58,7 @@ $tca = [
     'types' => [
         'casestudy_teaser' => [
             'showitem' => '--palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
-                pages;Link to the case study,
+                pages;LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.pages,
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.media,assets,
                 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.imagelinks;imagelinks,
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,layout;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:layout_formlabel,

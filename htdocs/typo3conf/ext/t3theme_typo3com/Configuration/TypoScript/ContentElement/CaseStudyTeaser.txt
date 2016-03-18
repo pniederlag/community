@@ -8,53 +8,24 @@ tt_content.casestudy_teaser {
 			references.fieldName = assets
 		}
 
-		20 = TYPO3\CMS\Frontend\DataProcessing\GalleryProcessor
+		20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
 		20 {
-			maxGalleryWidth = {$styles.content.textmedia.maxW}
-			maxGalleryWidthInText = {$styles.content.textmedia.maxWInText}
-			columnSpacing = {$styles.content.textmedia.columnSpacing}
-			borderWidth = {$styles.content.textmedia.borderWidth}
-			borderPadding = {$styles.content.textmedia.borderPadding}
+			table = pages
+			uidInList.field = pages
+			pidInList = {$plugin.t3theme_typo3com.caseStudy.overviewPage}
+			as = teaserPages
+			max = 1
+
+			dataProcessing {
+				10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+				10 {
+					references.fieldName = media
+				}
+			}
 		}
 	}
 
-	variables {
-		caseStudyOverviewPage = TEXT
-		caseStudyOverviewPage.value = {$plugin.t3theme_typo3com.caseStudy.overviewPage}
-
-		legalInfoPid = TEXT
-		legalInfoPid.value = {$plugin.t3theme_typo3com.footer.legalInfoPid}
-
-
-		longTeaserHeadline = TEXT
-		longTeaserHeadline {
-			dataWrap = DB:pages:{field:pages}:tx_t3themetypo3com_longteaser_headline
-			wrap3 = {|}
-			insertData = 1
-		}
-
-		longteaserAuthor = TEXT
-		longteaserAuthor {
-			dataWrap = DB:pages:{field:pages}:tx_t3themetypo3com_longteaser_author
-			wrap3 = {|}
-			insertData = 1
-		}
-
-		teaserImage = FILES
-		teaserImage.references {
-			table = pages
-			uid.field = pages
-			fieldName = media
-		}
-
-		teaserImage.renderObj = COA
-		teaserImage.renderObj {
-			10 = TEXT
-			10.data = file:current:uid_local
-		}
-
-		detailPage = TEXT
-		detailPage.field = pages
-
+	settings {
+		caseStudyOverviewPid = {$plugin.t3theme_typo3com.caseStudy.overviewPage}
 	}
 }

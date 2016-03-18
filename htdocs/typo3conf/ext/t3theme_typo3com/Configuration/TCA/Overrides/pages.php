@@ -28,7 +28,7 @@ $additionalFields = [
     'columns' => [
         'tx_t3themetypo3com_case_logo' => [
             'exclude' => 1,
-            'label' => 'Case Logo',
+            'label' => 'LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.tx_t3themetypo3com_case_logo',
             'config' => ExtensionManagementUtility::getFileFieldTCAConfig(
                 'tx_t3themetypo3com_case_logo',
                 [
@@ -49,7 +49,7 @@ $additionalFields = [
         ],
         'tx_t3themetypo3com_feature_icon' => [
             'exclude' => 1,
-            'label' => 'Feature Icon',
+            'label' => 'LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.tx_t3themetypo3com_feature_icon',
             'config' => ExtensionManagementUtility::getFileFieldTCAConfig(
                 'tx_t3themetypo3com_feature_icon',
                 [
@@ -70,7 +70,7 @@ $additionalFields = [
         ],
         'tx_t3themetypo3com_hero_headline' => [
             'exclude' => 1,
-            'label' => 'Hero Headline',
+            'label' => 'LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.tx_t3themetypo3com_hero_headline',
             'config' => [
                 'type' => 'input',
                 'eval' => 'trim',
@@ -79,7 +79,7 @@ $additionalFields = [
         ],
         'tx_t3themetypo3com_longteaser_headline' => [
             'exclude' => 1,
-            'label' => 'Longteaser Headline',
+            'label' => 'LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.tx_t3themetypo3com_longteaser_headline',
             'config' => [
                 'type' => 'input',
                 'eval' => 'trim',
@@ -88,7 +88,7 @@ $additionalFields = [
         ],
         'tx_t3themetypo3com_longteaser_author' => [
             'exclude' => 1,
-            'label' => 'Longteaser Author',
+            'label' => 'LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.tx_t3themetypo3com_longteaser_author',
             'config' => [
                 'type' => 'input',
                 'eval' => 'trim',
@@ -97,7 +97,7 @@ $additionalFields = [
         ],
         'tx_t3themetypo3com_shortteaser_headline' => [
             'exclude' => 1,
-            'label' => 'Shortteaser Headline',
+            'label' => 'LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.tx_t3themetypo3com_shortteaser_headline',
             'config' => [
                 'type' => 'input',
                 'eval' => 'trim',
@@ -106,7 +106,7 @@ $additionalFields = [
         ],
         'tx_t3themetypo3com_testimonial_headline' => [
             'exclude' => 1,
-            'label' => 'Testimonial Headline',
+            'label' => 'LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.tx_t3themetypo3com_testimonial_headline',
             'config' => [
                 'type' => 'input',
                 'eval' => 'trim',
@@ -115,7 +115,7 @@ $additionalFields = [
         ],
         'tx_t3themetypo3com_testimonial_copytext' => [
             'exclude' => 1,
-            'label' => 'Testimonial Copytext',
+            'label' => 'LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.tx_t3themetypo3com_testimonial_copytext',
             'config' => [
                 'type' => 'text',
                 'cols' => '80',
@@ -125,7 +125,7 @@ $additionalFields = [
         ],
         'tx_t3themetypo3com_case_copytext' => [
             'exclude' => 1,
-            'label' => 'Case Vendor Copytext',
+            'label' => 'LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.tx_t3themetypo3com_case_copytext',
             'config' => [
                 'type' => 'text',
                 'cols' => '80',
@@ -135,7 +135,7 @@ $additionalFields = [
         ],
         'tx_t3themetypo3com_featured_case' => [
             'exclude' => 1,
-            'label' => 'Featured Case Study',
+            'label' => 'LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.tx_t3themetypo3com_featured_case',
             'config' => [
                 'type' => 'group',
                 'internal_type' => 'db',
@@ -153,7 +153,7 @@ $additionalFields = [
         ],
         'tx_t3themetypo3com_case_study_hero' => [
             'exclude' => 1,
-            'label' => 'select Case Study',
+            'label' => 'LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.tx_t3themetypo3com_case_study_hero',
             'config' => [
                 'type' => 'group',
                 'internal_type' => 'db',

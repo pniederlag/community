@@ -6,7 +6,7 @@ plugin.t3theme_typo3com {
 		menuPid = 4
 	}
 
-	caseStudy.overviewPage = 29
+	caseStudy.overviewPage = 9
 }
 
 styles.content {

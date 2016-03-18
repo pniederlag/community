@@ -6,6 +6,44 @@
 			<trans-unit id="labels.image_overlap">
 				<source>Text overlaps Image</source>
 			</trans-unit>
+			<trans-unit id="labels.pages">
+				<source>Case Study</source>
+			</trans-unit>
+			<trans-unit id="labels.tx_t3themetypo3com_case_logo">
+				<source>Case Logo</source>
+			</trans-unit>
+			<trans-unit id="labels.tx_t3themetypo3com_feature_icon">
+				<source>Feature Icon</source>
+			</trans-unit>
+			<trans-unit id="labels.tx_t3themetypo3com_hero_headline">
+				<source>Hero Headline</source>
+			</trans-unit>
+			<trans-unit id="labels.tx_t3themetypo3com_longteaser_headline">
+				<source>Longteaser Headline</source>
+			</trans-unit>
+			<trans-unit id="labels.tx_t3themetypo3com_longteaser_author">
+				<source>Longteaser Author</source>
+			</trans-unit>
+			<trans-unit id="labels.tx_t3themetypo3com_shortteaser_headline">
+				<source>Shortteaser Headline</source>
+			</trans-unit>
+			<trans-unit id="labels.tx_t3themetypo3com_testimonial_headline">
+				<source>Testimonial Headline</source>
+			</trans-unit>
+			<trans-unit id="labels.tx_t3themetypo3com_testimonial_copytext">
+				<source>Testimonial Copytext</source>
+			</trans-unit>
+			<trans-unit id="labels.tx_t3themetypo3com_case_copytext">
+				<source>Case Vendor Copytext</source>
+			</trans-unit>
+			<trans-unit id="labels.tx_t3themetypo3com_featured_case">
+				<source>Featured Case Study</source>
+			</trans-unit>
+			<trans-unit id="labels.tx_t3themetypo3com_case_study_hero">
+				<source>Select Case Study</source>
+			</trans-unit>
+
+
 			<trans-unit id="layout.feature-1-11">
 				<source>Text: 1 Column, Image: 11 Columns</source>
 			</trans-unit>
@@ -39,6 +77,17 @@
 			<trans-unit id="layout.feature-11-1">
 				<source>Text: 11 Columns, Image: 1 Column</source>
 			</trans-unit>
+
+			<trans-unit id="casestudy_teaser.headline">
+				<source>Success Story</source>
+			</trans-unit>
+			<trans-unit id="casestudy_teaser.overview">
+				<source>View all Case Studies</source>
+			</trans-unit>
+			<trans-unit id="casestudy_teaser.readmore">
+				<source>Read more</source>
+			</trans-unit>
+
 		</body>
 	</file>
 </xliff>
