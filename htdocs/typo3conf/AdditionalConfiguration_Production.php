@@ -8,6 +8,7 @@ $customChanges = [
         'warning_email_addr' => '',
         'warning_mode' => '',
         'adminOnly' => 0,
+        'installToolPassword' => '$P$CWETx5l5d1H4jWTSv4pjqmsxurHb6I/',
     ],
     'FE' => [
         'debug' => false,
