@@ -209,47 +209,35 @@ lib.mainMenu {
 
 // Footer-Menu
 // -------------------------------------
-lib.footerMenu = COA
+lib.footerMenu = HMENU
 lib.footerMenu {
-
-	10 = HMENU
-	10 {
-
-		1 = TMENU
-		1 {
-			wrap = |
-			expAll = 1
-
-			NO = 1
-			NO {
-				wrapItemAndSub = <div class="col-sm-3">|</div>
-				stdWrap.htmlSpecialChars = 1
-				stdWrap.wrap = <h3 class="footer-menu-headline">|</h3>
-				doNotLinkIt = 1
-			}
-		}
-
-		2 = TMENU
-		2 {
-			wrap = <ul class="list-unstyled">|</ul>
-			expAll = 1
-
-			NO = 1
-			NO {
-				wrapItemAndSub = <li>|</li>
-				stdWrap.htmlSpecialChars = 1
-			}
-
-			ACT = 1
-			ACT < .NO
-			ACT {
-				wrapItemAndSub = <li>|</li>
-				ATagParams = class="active"
-			}
-		}
-	}
-
-	20 = TEXT
-	20.value = Newsletter
-	20.wrap = <div class="col-sm-3"><h3>|</h3></div>
+    1 = TMENU
+    1 {
+        wrap = |
+        expAll = 1
+        NO = 1
+        NO {
+            wrapItemAndSub = <div class="footer-navigation-menu-column">|</div>
+            stdWrap.htmlSpecialChars = 1
+            stdWrap.wrap = <h3 class="footer-navigation-headline">|</h3>
+            doNotLinkIt = 1
+        }
+    }
+    2 = TMENU
+    2 {
+        wrap = <ul class="footer-navigation-menu-list">|</ul>
+        expAll = 1
+        NO = 1
+        NO {
+            wrapItemAndSub = <li>|</li>
+            stdWrap.htmlSpecialChars = 1
+        }
+        ACT = 1
+        ACT < .NO
+        ACT {
+            wrapItemAndSub = <li>|</li>
+            ATagParams = class="active"
+        }
+    }
+    wrap = <div class="footer-navigation-menu">|</div>
 }
