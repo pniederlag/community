@@ -2,21 +2,9 @@
 // Include base objects
 // -----------------------------------------------------------------------------
 
-// Config
-// -----------------------------------------------------------------------------
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/config.ts">
-
 // Helper
 // -----------------------------------------------------------------------------
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/Helper/DynamicContent.txt">
-
-// Objects
-// -----------------------------------------------------------------------------
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/lib.ts">
-
-// Page
-// -----------------------------------------------------------------------------
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/page.ts">
 
 // Extensions
 // -----------------------------------------------------------------------------
@@ -31,7 +19,7 @@ tt_content {
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/ContentElement/CaseStudyHero.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/ContentElement/CaseStudyTeaser.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/ContentElement/HeaderImage.txt">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/ContentElement/IndentedTextmedia.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/ContentElement/IndentedTextMedia.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/ContentElement/Menu.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/ContentElement/Textmedia.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/ContentElement/Textpic.txt">
