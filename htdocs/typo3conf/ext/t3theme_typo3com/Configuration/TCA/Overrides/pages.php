@@ -4,6 +4,8 @@
 /**
  * Custom Doktypes for Features and Case Studies
  */
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
 $itemsConf = array(
     'Feature',
     101,
@@ -28,7 +30,7 @@ $additionalFields = [
         'tx_t3themetypo3com_case_logo' => [
             'exclude' => 1,
             'label' => 'Case Logo',
-            'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig('tx_t3themetypo3com_case_logo',
+            'config' => ExtensionManagementUtility::getFileFieldTCAConfig('tx_t3themetypo3com_case_logo',
                 [
                     'foreign_types' => [
                         '0' => [
@@ -48,7 +50,7 @@ $additionalFields = [
         'tx_t3themetypo3com_feature_icon' => [
             'exclude' => 1,
             'label' => 'Feature Icon',
-            'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig('tx_t3themetypo3com_feature_icon',
+            'config' => ExtensionManagementUtility::getFileFieldTCAConfig('tx_t3themetypo3com_feature_icon',
                 [
                     'foreign_types' => [
                         '0' => [
@@ -245,4 +247,5 @@ $additionalFields = [
 ];
 $GLOBALS['TCA']['pages'] = array_replace_recursive($GLOBALS['TCA']['pages'], $additionalFields);
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('pages', '--div--;Case Study Hero,tx_t3themetypo3com_case_study_hero', 1);
+ExtensionManagementUtility::addToAllTCAtypes('pages', '--div--;Case Study Hero,tx_t3themetypo3com_case_study_hero', 1);
+ExtensionManagementUtility::registerPageTSConfigFile('t3theme_typo3com', 'Configuration/TypoScript/page_TSConfig.ts', 'TYPO3.com Page TSConfig');
