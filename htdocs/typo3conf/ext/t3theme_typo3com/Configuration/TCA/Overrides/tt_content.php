@@ -35,6 +35,7 @@ $tca = [
                     ],
                     [
                         'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_position.I.3',
+                        'left'
                     ]
                 ],
                 'default' => '',
