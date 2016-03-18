@@ -17,7 +17,7 @@ jQuery.noConflict();
 		// Isotope
 		var $isotope = $('.isotope-items').isotope({
 			itemSelector: '.isotope-item',
-			layoutMode: 'masonry',
+			layoutMode: 'fitRows',
 			percentPosition: true,
 			transitionDuration: '0.2s'
 		});
