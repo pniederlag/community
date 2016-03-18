@@ -1,0 +1,6 @@
+TCAdefaults {
+	tt_content {
+		imagecols = 1
+		imageorient = 25
+	}
+}
