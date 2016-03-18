@@ -1,26 +1,22 @@
 <footer class="footer">
-	<div class="footer-copyright-container">
-		<div class="container">
-			<div class="row footer-copyright">
-				<div class="col-sm-10">
-					<ul class="list-inline list-unstyled">
-						<li class="list-inline-item">
-							&copy;
-							<f:format.date date="NOW" format="Y" />
-							TYPO3 CMS Association
-						</li>
-						<li class="list-inline-item">
-							<f:link.page pageUid="{settings.contactPid}">Contact</f:link.page>
-						</li>
-						<li class="list-inline-item">
-							<f:link.page pageUid="{settings.legalInfoPid}">Legal Information</f:link.page>
-						</li>
-					</ul>
-				</div>
-				<div class="col-sm-2"></div>
-			</div>
-		</div>
-	</div>
+    <div class="footer-meta">
+        <div class="container">
+            <ul class="footer-meta-items">
+                <li class="footer-meta-item footer-meta-copyright">
+                    &copy;
+                    <f:format.date date="NOW" format="Y" />
+                    TYPO3 CMS Association
+                </li>
+                <li class="footer-meta-item footer-meta-contact">
+                    <f:link.page pageUid="{settings.contactPid}">Contact</f:link.page>
+                </li>
+                <li class="footer-meta-item footer-meta-legal">
+                    <f:link.page pageUid="{settings.legalInfoPid}">Legal Information</f:link.page>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
 	<div class="container">
 		<div class="row footer-navigation">
 			<f:format.raw>{footerMenu}</f:format.raw>
