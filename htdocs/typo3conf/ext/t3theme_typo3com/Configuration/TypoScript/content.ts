@@ -230,6 +230,45 @@ tt_content {
 			}
 		}
 	}
+
+
+	menu.8 = COA
+	menu.8 {
+
+		10 = HMENU
+		10.includeNotInMenu = 1
+		10.special = list
+		10.special.value.field = pages
+		10.1 = TMENU
+		10.1.NO.doNotLinkIt = 1
+		10.1.NO.stdWrap.cObject = COA
+		10.1.NO.stdWrap.cObject {
+			10 = FILES
+			10.references {
+				table = pages
+				uid.field = uid
+				fieldName = media
+			}
+			10.renderObj = COA
+			10.renderObj {
+				10 = IMG_RESOURCE
+				10.stdWrap.wrap = <img src="|" />
+				10 {
+					file.import.data = file:current:publicUrl
+					altText.data = file:current:alternative
+					titleText.data = file:current:title
+					}
+				}
+
+			20 = TEXT
+			20.value.field = title
+			}
+
+		}
+
+
+	}
+
 }
 
 
