@@ -1,10 +1,6 @@
 {
     "repositories": [
 		{
-			"type": "git",
-			"url": "git@github.com:georgringer/belayout_fileprovider.git"
-		},
-		{
             "type": "composer",
             "url": "https://composer.typo3.org/"
         },
@@ -39,7 +35,6 @@
         "helhum/realurl": "^2.0.2",
         "typo3-ter/typo3-console": "1.2.3",
 		"georgringer/news": "dev-master",
-		"georgringer/belayout-fileprovider": "dev-master",
 		"kaystrobach/voice": "0.0.67",
 		"apache-solr-for-typo3/solr": "dev-master",
         "typo3-ter/gridelements": "^7",

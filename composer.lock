@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e7bd3aaa9b94c1558f9eabd752c6a9f2",
-    "content-hash": "d279dedaa150fa76f24b17bfd0c9a94f",
+    "hash": "940d8622f6fdab08394bdaf50d572956",
+    "content-hash": "cf721e47a3cad3316279dd2363a8204a",
     "packages": [
         {
             "name": "apache-solr-for-typo3/solr",
@@ -17,7 +17,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-Solr/ext-solr/zipball/b97e1861bb7b411c1507dcd36bbd40baad7b7f83",
+                "url": "https://api.github.com/repos/TYPO3-Solr/ext-solr/zipball/5c0af89d40bb5219a27393a80e889155c788a8a3",
                 "reference": "b97e1861bb7b411c1507dcd36bbd40baad7b7f83",
                 "shasum": ""
             },
@@ -187,33 +187,6 @@
             "time": "2015-06-14 21:17:01"
         },
         {
-            "name": "georgringer/belayout-fileprovider",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:georgringer/belayout_fileprovider.git",
-                "reference": "a111078db466331cb31bfd4e339440ccde99919c"
-            },
-            "require": {
-                "typo3/cms-core": ">=6.2.0,<8.0"
-            },
-            "type": "typo3-cms-extension",
-            "autoload": {
-                "psr-4": {
-                    "GeorgRinger\\BelayoutFileprovider\\": "Classes"
-                }
-            },
-            "license": [
-                "GPL-2.0+"
-            ],
-            "description": "A File provider for Backend Layouts",
-            "homepage": "https://github.com/georgringer/belayout_fileprovider",
-            "keywords": [
-                "TYPO3 CMS"
-            ],
-            "time": "2015-07-15 12:48:45"
-        },
-        {
             "name": "georgringer/news",
             "version": "dev-master",
             "source": {
@@ -223,7 +196,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-extensions/news/zipball/b326cb5dc6ee9834e515fb962c0dac9d37a49b9b",
+                "url": "https://api.github.com/repos/TYPO3-extensions/news/zipball/780c11182da0476145c68336da52382cfebb3d44",
                 "reference": "b326cb5dc6ee9834e515fb962c0dac9d37a49b9b",
                 "shasum": ""
             },
@@ -1334,7 +1307,6 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "georgringer/news": 20,
-        "georgringer/belayout-fileprovider": 20,
         "apache-solr-for-typo3/solr": 20
     },
     "prefer-stable": false,
