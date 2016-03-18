@@ -35,11 +35,23 @@ $tca = [
                     ],
                     [
                         'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_position.I.3',
-                        'left'
                     ]
                 ],
-                'default' => ''
-            ]
+                'default' => '',
+            ],
+        ],
+        'image_overlap' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.image_overlap',
+            'config' => [
+                'type' => 'check',
+                'items' => [
+                    '1' => [
+                        '0' => 'LLL:EXT:lang/locallang_core.xlf:labels.enabled',
+                    ],
+                ],
+                'default' => 0
+            ],
         ],
     ],
     'types' => [
@@ -81,7 +93,7 @@ $tca = [
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access
                 --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.extended,tx_gridelements_container,tx_gridelements_columns'
         ],
-    ]
+    ],
 ];
 
 $GLOBALS['TCA']['tt_content'] = array_replace_recursive($GLOBALS['TCA']['tt_content'], $tca);
@@ -97,6 +109,12 @@ $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items']['indented_t
 $GLOBALS['TCA']['tt_content']['palettes'] = array_replace(
     $GLOBALS['TCA']['tt_content']['palettes'],
     [
+        'imagelinks' => [
+            'showitem' => '
+				image_zoom;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:image_zoom_formlabel,
+				image_overlap;LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.image_overlap
+            ',
+        ],
         'header' => [
             'showitem' => '
                 header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_formlabel,
@@ -107,6 +125,6 @@ $GLOBALS['TCA']['tt_content']['palettes'] = array_replace(
                 --linebreak--,
                 header_link;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_link_formlabel
             ',
-        ]
+        ],
     ]
 );
