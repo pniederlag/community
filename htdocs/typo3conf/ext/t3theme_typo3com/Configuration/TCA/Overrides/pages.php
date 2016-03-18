@@ -1,24 +1,23 @@
 <?php
 
-
 /**
  * Custom Doktypes for Features and Case Studies
  */
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
-$itemsConf = array(
+$itemsConf = [
     'Feature',
     101,
-    'page-doktype-feature'
-);
+    'page-doktype-feature',
+];
 $GLOBALS['TCA']['pages']['columns']['doktype']['config']['items'][] = $itemsConf;
 $GLOBALS['TCA']['pages_language_overlay']['columns']['doktype']['config']['items'][] = $itemsConf;
 
-$itemsConf = array(
+$itemsConf = [
     'Case Study',
     102,
-    'page-doktype-casestudy'
-);
+    'page-doktype-casestudy',
+];
 $GLOBALS['TCA']['pages']['columns']['doktype']['config']['items'][] = $itemsConf;
 $GLOBALS['TCA']['pages_language_overlay']['columns']['doktype']['config']['items'][] = $itemsConf;
 
@@ -30,42 +29,44 @@ $additionalFields = [
         'tx_t3themetypo3com_case_logo' => [
             'exclude' => 1,
             'label' => 'Case Logo',
-            'config' => ExtensionManagementUtility::getFileFieldTCAConfig('tx_t3themetypo3com_case_logo',
+            'config' => ExtensionManagementUtility::getFileFieldTCAConfig(
+                'tx_t3themetypo3com_case_logo',
                 [
                     'foreign_types' => [
                         '0' => [
                             'showitem' => '
                                     --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
-                                    --palette--;;filePalette'
+                                    --palette--;;filePalette',
                         ],
                         \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
                             'showitem' => '
                                     --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
-                                    --palette--;;filePalette'
-                        ]
-                    ]
+                                    --palette--;;filePalette',
+                        ],
+                    ],
                 ]
-            )
+            ),
         ],
         'tx_t3themetypo3com_feature_icon' => [
             'exclude' => 1,
             'label' => 'Feature Icon',
-            'config' => ExtensionManagementUtility::getFileFieldTCAConfig('tx_t3themetypo3com_feature_icon',
+            'config' => ExtensionManagementUtility::getFileFieldTCAConfig(
+                'tx_t3themetypo3com_feature_icon',
                 [
                     'foreign_types' => [
                         '0' => [
                             'showitem' => '
                                     --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
-                                    --palette--;;filePalette'
+                                    --palette--;;filePalette',
                         ],
                         \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
                             'showitem' => '
                                     --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
-                                    --palette--;;filePalette'
-                        ]
-                    ]
+                                    --palette--;;filePalette',
+                        ],
+                    ],
                 ]
-            )
+            ),
         ],
         'tx_t3themetypo3com_hero_headline' => [
             'exclude' => 1,
@@ -74,7 +75,7 @@ $additionalFields = [
                 'type' => 'input',
                 'eval' => 'trim',
                 'max' => '255',
-            ]
+            ],
         ],
         'tx_t3themetypo3com_longteaser_headline' => [
             'exclude' => 1,
@@ -83,7 +84,7 @@ $additionalFields = [
                 'type' => 'input',
                 'eval' => 'trim',
                 'max' => '255',
-            ]
+            ],
         ],
         'tx_t3themetypo3com_longteaser_author' => [
             'exclude' => 1,
@@ -92,7 +93,7 @@ $additionalFields = [
                 'type' => 'input',
                 'eval' => 'trim',
                 'max' => '255',
-            ]
+            ],
         ],
         'tx_t3themetypo3com_shortteaser_headline' => [
             'exclude' => 1,
@@ -101,7 +102,7 @@ $additionalFields = [
                 'type' => 'input',
                 'eval' => 'trim',
                 'max' => '255',
-            ]
+            ],
         ],
         'tx_t3themetypo3com_testimonial_headline' => [
             'exclude' => 1,
@@ -110,7 +111,7 @@ $additionalFields = [
                 'type' => 'input',
                 'eval' => 'trim',
                 'max' => '255',
-            ]
+            ],
         ],
         'tx_t3themetypo3com_testimonial_copytext' => [
             'exclude' => 1,
@@ -132,10 +133,10 @@ $additionalFields = [
             ],
             'defaultExtras' => 'richtext:rte_transform',
         ],
-        'tx_t3themetypo3com_featured_case' => array(
+        'tx_t3themetypo3com_featured_case' => [
             'exclude' => 1,
             'label' => 'Featured Case Study',
-            'config' => array(
+            'config' => [
                 'type' => 'group',
                 'internal_type' => 'db',
                 'allowed' => 'pages',
@@ -143,17 +144,17 @@ $additionalFields = [
                 'maxitems' => '1',
                 'minitems' => '0',
                 'show_thumbs' => '1',
-                'wizards' => array(
-                    'suggest' => array(
-                        'type' => 'suggest'
-                    )
-                )
-            )
-        ),
-        'tx_t3themetypo3com_case_study_hero' => array(
+                'wizards' => [
+                    'suggest' => [
+                        'type' => 'suggest',
+                    ],
+                ],
+            ],
+        ],
+        'tx_t3themetypo3com_case_study_hero' => [
             'exclude' => 1,
             'label' => 'select Case Study',
-            'config' => array(
+            'config' => [
                 'type' => 'group',
                 'internal_type' => 'db',
                 'allowed' => 'pages',
@@ -161,13 +162,13 @@ $additionalFields = [
                 'maxitems' => '1',
                 'minitems' => '0',
                 'show_thumbs' => '1',
-                'wizards' => array(
-                    'suggest' => array(
-                        'type' => 'suggest'
-                    )
-                )
-            )
-        ),
+                'wizards' => [
+                    'suggest' => [
+                        'type' => 'suggest',
+                    ],
+                ],
+            ],
+        ],
     ],
     'types' => [
         102 => [
@@ -208,7 +209,7 @@ $additionalFields = [
              tx_t3themetypo3com_testimonial_headline,
              tx_t3themetypo3com_testimonial_copytext,
              tx_t3themetypo3com_case_copytext,
-             tx_t3themetypo3com_case_logo'
+             tx_t3themetypo3com_case_logo',
         ],
         101 => [
             'showitem' => '
@@ -241,11 +242,15 @@ $additionalFields = [
              --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.config;config,
              --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.extended,
              --div--;Feature,
-             tx_t3themetypo3com_feature_icon'
-        ]
-    ]
+             tx_t3themetypo3com_feature_icon',
+        ],
+    ],
 ];
 $GLOBALS['TCA']['pages'] = array_replace_recursive($GLOBALS['TCA']['pages'], $additionalFields);
 
 ExtensionManagementUtility::addToAllTCAtypes('pages', '--div--;Case Study Hero,tx_t3themetypo3com_case_study_hero', 1);
-ExtensionManagementUtility::registerPageTSConfigFile('t3theme_typo3com', 'Configuration/TypoScript/page_TSConfig.ts', 'TYPO3.com Page TSConfig');
+ExtensionManagementUtility::registerPageTSConfigFile(
+    't3theme_typo3com',
+    'Configuration/TypoScript/page_TSConfig.ts',
+    'TYPO3.com Page TSConfig'
+);

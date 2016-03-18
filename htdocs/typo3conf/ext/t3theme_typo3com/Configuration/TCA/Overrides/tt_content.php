@@ -23,20 +23,20 @@ $tca = [
                 'items' => [
                     [
                         'LLL:EXT:lang/locallang_general.xlf:LGL.default_value',
-                        ''
+                        '',
                     ],
                     [
                         'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_position.I.1',
-                        'center'
+                        'center',
                     ],
                     [
                         'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_position.I.2',
-                        'right'
+                        'right',
                     ],
                     [
                         'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_position.I.3',
-                        'left'
-                    ]
+                        'left',
+                    ],
                 ],
                 'default' => '',
             ],
@@ -51,7 +51,7 @@ $tca = [
                         '0' => 'LLL:EXT:lang/locallang_core.xlf:labels.enabled',
                     ],
                 ],
-                'default' => 0
+                'default' => 0,
             ],
         ],
     ],
@@ -68,13 +68,13 @@ $tca = [
                 --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.visibility;visibility,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access
-                --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.extended,tx_gridelements_container,tx_gridelements_columns'
+                --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.extended,tx_gridelements_container,tx_gridelements_columns',
         ],
         'indented_textmedia' => [
             'columnsOverrides' => [
                 'bodytext' => [
-                    'defaultExtras' => 'richtext:rte_transform[mode=ts_css]'
-                ]
+                    'defaultExtras' => 'richtext:rte_transform[mode=ts_css]',
+                ],
             ],
             'showitem' => '--palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
                 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.header;header,
@@ -88,7 +88,7 @@ $tca = [
                 --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.visibility;visibility,
                 --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access
-                --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.extended,tx_gridelements_container,tx_gridelements_columns'
+                --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.extended,tx_gridelements_container,tx_gridelements_columns',
         ],
     ],
 ];
@@ -96,11 +96,11 @@ $tca = [
 $GLOBALS['TCA']['tt_content'] = array_replace_recursive($GLOBALS['TCA']['tt_content'], $tca);
 $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items']['casestudy_teaser'] = [
     'Case Study Teaser',
-    'casestudy_teaser'
+    'casestudy_teaser',
 ];
 $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items']['indented_textmedia'] = [
     'Indented TextMedia Element',
-    'indented_textmedia'
+    'indented_textmedia',
 ];
 
 $GLOBALS['TCA']['tt_content']['palettes'] = array_replace(
