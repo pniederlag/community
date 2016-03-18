@@ -216,6 +216,12 @@ return [
             'packagePath' => 'typo3/sysext/tstemplate/',
             'suggestions' => [],
         ],
+        'viewpage' => [
+            'composerName' => 'typo3/cms-viewpage',
+            'state' => 'active',
+            'packagePath' => 'typo3/sysext/viewpage/',
+            'suggestions' => [],
+        ],
         'gridelements' => [
             'composerName' => 'GridElementsTeam/Gridelements',
             'state' => 'active',
@@ -252,6 +258,12 @@ return [
             'composerName' => 'amqp',
             'state' => 'inactive',
             'packagePath' => 'typo3conf/ext/amqp/',
+            'suggestions' => [],
+        ],
+        'belayout_fileprovider' => [
+            'composerName' => 'georgringer/belayout-fileprovider',
+            'state' => 'inactive',
+            'packagePath' => 'typo3conf/ext/belayout_fileprovider/',
             'suggestions' => [],
         ],
         'css_styled_content' => [
@@ -416,12 +428,6 @@ return [
             'composerName' => 'typo3/cms-version',
             'state' => 'inactive',
             'packagePath' => 'typo3/sysext/version/',
-            'suggestions' => [],
-        ],
-        'viewpage' => [
-            'composerName' => 'typo3/cms-viewpage',
-            'state' => 'inactive',
-            'packagePath' => 'typo3/sysext/viewpage/',
             'suggestions' => [],
         ],
         'voice' => [
