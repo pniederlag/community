@@ -1,10 +1,12 @@
 <f:layout name="Default" />
 
 <f:section name="Content">
-	<div class="hero-container">
+	<div class="hero">
 		<f:cObject typoscriptObjectPath="lib.caseStudyHero"/>
 	</div>
-	<main class="content container">
-		<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '1'}"/>
+	<main class="content">
+        <div class="container">
+		    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '1'}"/>
+        </div>
 	</main>
 </f:section>
