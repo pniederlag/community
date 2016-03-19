@@ -17,6 +17,4 @@ tt_content.indented_textmedia {
 			borderPadding = {$styles.content.textmedia.borderPadding}
 		}
 	}
-
-	file = EXT:t3theme_typo3com/Resources/Private/Templates/ContentElements/IndentedTextmedia.html
 }
