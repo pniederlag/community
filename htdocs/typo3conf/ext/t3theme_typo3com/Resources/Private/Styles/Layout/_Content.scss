@@ -24,16 +24,43 @@
 	text-align: center !important;
 }
 
+//
+// Default Layout
+//
+.layout-default {
+    .masthead + .content {
+        > .container:first-child {
+            .contentelement-intro_block {
+                margin-top: -5rem;
+            }
+        }
+    }
+}
+
 
 //
 // Content Element
 //
 .contentelement {
-    margin: 2.5rem 0;
+    margin: 2rem 0;
     > *:first-child {
         margin-top: 0;
     }
     > *:last-child {
         margin-bottom: 0;
     }
+}
+
+
+//
+// Content Element Intro Block
+//
+.contentelement-intro_block {
+   background-color: #ffffff;
+   text-align: center;
+   padding: 3rem;
+   @media (min-width: map-get($grid-breakpoints, md)) {
+       padding-left: 8rem;
+       padding-right: 8rem;
+   }
 }

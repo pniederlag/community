@@ -4600,12 +4600,24 @@ body {
 .center {
   text-align: center !important; }
 
+.layout-default .masthead + .content > .container:first-child .contentelement-intro_block {
+  margin-top: -5rem; }
+
 .contentelement {
-  margin: 2.5rem 0; }
+  margin: 2rem 0; }
   .contentelement > *:first-child {
     margin-top: 0; }
   .contentelement > *:last-child {
     margin-bottom: 0; }
+
+.contentelement-intro_block {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 3rem; }
+  @media (min-width: 768px) {
+    .contentelement-intro_block {
+      padding-left: 8rem;
+      padding-right: 8rem; } }
 
 .navigation,
 .navigation ul {
