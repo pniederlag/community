@@ -16,6 +16,7 @@
 @import "Base/Base";
 
 // Layout
+@import "Layout/Scaffolding";
 @import "Layout/Header";
 @import "Layout/Footer";
 @import "Layout/Content";
@@ -27,7 +28,6 @@
 @import "Modules/HeroStart";
 @import "Modules/Feature-Start";
 @import "Modules/Facts-Start";
-@import "Modules/subpage-header";
 @import "Modules/why-typo3";
 @import "Modules/CaseStudyTeaser";
 @import "Modules/CaseStudy-Detail";

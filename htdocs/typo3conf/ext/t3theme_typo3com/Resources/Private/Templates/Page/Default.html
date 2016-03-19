@@ -1,7 +1,9 @@
 <f:layout name="Default" />
 
 <f:section name="Content">
-	<main class="content container subpage">
-		<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '1'}"/>
+	<main class="content">
+        <div class="container">
+		    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '1'}"/>
+        </div>
 	</main>
 </f:section>

@@ -4768,22 +4768,6 @@ footer {
   .facts-section h2 {
     margin-bottom: 1rem; }
 
-.subpage-header {
-  text-align: center;
-  width: 90%;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: -5rem;
-  background-color: #ffffff;
-  padding: 2rem 8rem; }
-  .subpage-header h2 {
-    font-family: "Share Bold"; }
-  .subpage-header h1 {
-    font-family: "Share Bold"; }
-
-.subpage .row {
-  margin: 1rem 0 1rem 0; }
-
 .why-typo3 {
   width: 90%;
   margin-left: auto;
