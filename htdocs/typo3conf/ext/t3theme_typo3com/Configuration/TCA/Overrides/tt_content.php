@@ -54,11 +54,63 @@ $tca = [
                 'default' => 0,
             ],
         ],
+        'tx_t3themetypo3com_t3a_membership' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.tx_t3themetypo3com_t3a_membership',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    [
+                        'LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.tx_t3themetypo3com_t3a_membership.I.0',
+                        0,
+                    ],
+                    [
+                        'LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.tx_t3themetypo3com_t3a_membership.I.1',
+                        1,
+                    ],
+                    [
+                        'LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.tx_t3themetypo3com_t3a_membership.I.2',
+                        2,
+                    ],
+                    [
+                        'LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.tx_t3themetypo3com_t3a_membership.I.3',
+                        3,
+                    ],
+                    [
+                        'LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.tx_t3themetypo3com_t3a_membership.I.4',
+                        4,
+                    ],
+                ],
+                'default' => 0,
+            ],
+        ],
     ],
     'types' => [
         'casestudy_teaser' => [
             'showitem' => '--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
                 pages;LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.pages,
+                --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.media,assets,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.imagelinks;imagelinks,
+                --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,layout;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:layout_formlabel,
+                --palette--;LLL:EXT:fluid_styled_content/Resources/Private/Language/Database.xlf:tt_content.palette.mediaAdjustments;mediaAdjustments,
+                --palette--;LLL:EXT:fluid_styled_content/Resources/Private/Language/Database.xlf:tt_content.palette.gallerySettings;gallerySettings,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,
+                --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
+                --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.extended,tx_gridelements_container,tx_gridelements_columns',
+        ],
+        'casestudy_partner' => [
+            'columnsOverrides' => [
+                'bodytext' => [
+                    'defaultExtras' => 'richtext:rte_transform[mode=ts_css]',
+                ],
+            ],
+            'showitem' => '--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.header;header,
+                bodytext;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext_formlabel,
+                tx_t3themetypo3com_t3a_membership;LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.tx_t3themetypo3com_t3a_membership,
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.media,assets,
                 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.imagelinks;imagelinks,
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,layout;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:layout_formlabel,
@@ -130,6 +182,10 @@ $GLOBALS['TCA']['tt_content'] = array_replace_recursive($GLOBALS['TCA']['tt_cont
 $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items']['casestudy_teaser'] = [
     'Case Study Teaser',
     'casestudy_teaser',
+];
+$GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items']['casestudy_partner'] = [
+    'Case Study Partner',
+    'casestudy_partner',
 ];
 $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items']['indented_textmedia'] = [
     'Indented TextMedia Element',

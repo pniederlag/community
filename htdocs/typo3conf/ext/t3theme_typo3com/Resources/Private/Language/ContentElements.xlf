@@ -12,6 +12,24 @@
 			<trans-unit id="labels.case_studies">
 				<source>Related Case Studies</source>
 			</trans-unit>
+			<trans-unit id="labels.tx_t3themetypo3com_t3a_membership">
+				<source>TYPO3 Association Membership</source>
+			</trans-unit>
+			<trans-unit id="labels.tx_t3themetypo3com_t3a_membership.I.0">
+				<source>None</source>
+			</trans-unit>
+			<trans-unit id="labels.tx_t3themetypo3com_t3a_membership.I.1">
+				<source>Bronze</source>
+			</trans-unit>
+			<trans-unit id="labels.tx_t3themetypo3com_t3a_membership.I.2">
+				<source>Silver</source>
+			</trans-unit>
+			<trans-unit id="labels.tx_t3themetypo3com_t3a_membership.I.3">
+				<source>Gold</source>
+			</trans-unit>
+			<trans-unit id="labels.tx_t3themetypo3com_t3a_membership.I.4">
+				<source>Platinum</source>
+			</trans-unit>
 			<trans-unit id="labels.tx_t3themetypo3com_case_logo">
 				<source>Case Logo</source>
 			</trans-unit>

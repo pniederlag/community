@@ -1,0 +1,19 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="row">
+  <div class="col-sm-12 col-md-3">
+    <f:media file="{files.0}" style="width: 100%; height: auto;"/>
+  </div>
+  <div class="col-sm-12 col-md-6">
+    <f:render partial="Header/Header" arguments="{header: data.header, layout: data.header_layout, position: data.header_position, default: 3}"/>
+    {data.bodytext -> f:format.html()}
+  </div>
+  <div class="col-sm-12 col-md-3">
+    <f:switch expression="{data.tx_t3themetypo3com_t3a_membership}">
+      <f:case value="4">Platinum</f:case>
+      <f:case value="3">Gold</f:case>
+      <f:case value="2">Siver</f:case>
+      <f:case value="1">Bronze</f:case>
+    </f:switch>
+  </div>
+</div>
+</html>

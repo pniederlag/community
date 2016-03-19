@@ -1,0 +1,12 @@
+tt_content.casestudy_partner = FLUIDTEMPLATE
+tt_content.casestudy_partner {
+	file = EXT:t3theme_typo3com/Resources/Private/Templates/ContentElements/CaseStudyPartner.html
+	partialRootPath = EXT:t3theme_typo3com/Resources/Private/Partials/ContentElements/
+
+	dataProcessing {
+		10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+		10 {
+			references.fieldName = assets
+		}
+	}
+}
