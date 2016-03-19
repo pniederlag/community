@@ -1,4 +1,0 @@
-tt_content.hard_facts_section = FLUIDTEMPLATE
-tt_content.hard_facts_section {
-	file = EXT:t3theme_typo3com/Resources/Private/Templates/ContentElements/Hardfacts.html
-}

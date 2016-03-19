@@ -207,10 +207,7 @@ $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items']['related_ca
     'Related Case Studies',
     'related_case_studies',
 ];
-$GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items']['hard_facts_section'] = [
-    'Hardfacts Section',
-    'hard_facts_section',
-];
+
 $GLOBALS['TCA']['tt_content']['palettes'] = array_replace(
     $GLOBALS['TCA']['tt_content']['palettes'],
     [
