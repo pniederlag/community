@@ -4553,9 +4553,6 @@ body {
 #page-toggle:checked + .header .header-navigation {
   display: block; }
 
-footer {
-  margin-top: 6rem; }
-
 .footer-meta {
   background-color: #515151;
   color: #ffffff;
@@ -4841,6 +4838,12 @@ footer {
     font-family: "Source Sans Pro Bold";
     margin-bottom: 0.5rem;
     margin-top: -1rem; }
+
+.case-study-partner-block {
+  background-color: #f4f4f4; }
+
+.case-study-partner-block-inset {
+  margin-top: 2rem; }
 
 @media (min-width: 768px) {
   .overlap-box {
