@@ -94,6 +94,7 @@ tt_content {
 			10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
 			10 {
 				table = pages
+				pidInList.field = pages
 				as = featurePages
 
 				dataProcessing {
