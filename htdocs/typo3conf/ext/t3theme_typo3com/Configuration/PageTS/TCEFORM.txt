@@ -74,7 +74,6 @@ TCEFORM {
 		menu_type {
 			addItems {
 				feature_menu = Feature Menu
-				related_case_studies = Related Case Studies
 			}
 		}
 	}

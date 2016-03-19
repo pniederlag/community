@@ -1,0 +1,65 @@
+tt_content.related_case_studies = COA
+tt_content.related_case_studies {
+	stdWrap.wrap = <div class="row">|</div>
+	stdWrap.wrap.if.isTrue.data = field:bodytext
+
+	10 = COA
+	10 {
+		if.isTrue.data = field:bodytext
+
+		stdWrap.wrap = <div class="col-sm-12 col-md-9">|</div>
+
+		10 =< lib.fluidContent
+		10.templateName = HeaderOnly
+
+		20 = TEXT
+		20 {
+			value.field = bodytext
+			stdWrap.parseFunc < lib.parseFunc_RTE
+		}
+	}
+
+	20 = HMENU
+	20 {
+		includeNotInMenu = 1
+		special = list
+		special.value.field = pages
+
+		stdWrap.wrap = <div class="col-sm-12 col-md-3">|</div>
+		stdWrap.wrap.if.isTrue.data = field:bodytext
+
+		wrap.dataWrap = <h4>{LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:related_case_studies.successfully_used_by}</h4>
+		wrap.insertData = 1
+
+		1 = TMENU
+		1 {
+			NO {
+				doNotLinkIt = 1
+				stdWrap {
+					cObject = COA
+					cObject {
+						10 = FLUIDTEMPLATE
+						10 {
+							file = EXT:t3theme_typo3com/Resources/Private/Templates/ContentElements/Menu/RelatedCaseStudies.html
+							partialRootPath = EXT:t3theme_typo3com/Resources/Private/Partials/ContentElements/
+
+							variables {
+								count_menuObject = TEXT
+								count_menuObject.data = register:count_MENUOBJ
+								count_menuItems = TEXT
+								count_menuItems.data = register:count_menuItems
+							}
+
+							 dataProcessing {
+								 10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+								 10 {
+									 references.fieldName = media
+								 }
+							 }
+						}
+					}
+				}
+			}
+		}
+	}
+}

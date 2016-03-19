@@ -9,6 +9,9 @@
 			<trans-unit id="labels.pages">
 				<source>Case Study</source>
 			</trans-unit>
+			<trans-unit id="labels.case_studies">
+				<source>Related Case Studies</source>
+			</trans-unit>
 			<trans-unit id="labels.tx_t3themetypo3com_case_logo">
 				<source>Case Logo</source>
 			</trans-unit>
@@ -88,6 +91,9 @@
 				<source>Read more</source>
 			</trans-unit>
 
+			<trans-unit id="related_case_studies.successfully_used_by">
+				<source>Successfully used by</source>
+			</trans-unit>
 			<trans-unit id="related_case_studies.more">
 				<source>More</source>
 			</trans-unit>
