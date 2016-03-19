@@ -5,6 +5,9 @@ tt_content {
 			sectionName {
 				key.field = layout
 
+				brands = TEXT
+				brands.value = brands
+
 				feature-1-11 = TEXT
 				feature-1-11.value = feature-details
 

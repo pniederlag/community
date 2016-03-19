@@ -34,6 +34,16 @@
 	<f:render partial="Footer" arguments="{_all}"/>
 </f:section>
 
+<f:section name="brands">
+	<div class="row">
+		<f:for each="{files}" as="image">
+			<div class="col-lg-2 col-md-3 col-xs-4">
+				<f:media file="{image}" />
+			</div>
+		</f:for>
+	</div>
+</f:section>
+
 <f:section name="feature-details">
 	<div class="row">
 		<f:if condition="{data.imageorient} == 25">
