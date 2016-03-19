@@ -16,7 +16,7 @@ styles.content {
 }
 
 styles.templates {
-	templateRootPath = EXT:t3theme_typo3com/Resources/Private/Templates/ContentElements
-	partialRootPath = EXT:t3theme_typo3com/Resources/Private/Partials/ContentElements/
-
+    layoutRootPath = EXT:t3theme_typo3com/Resources/Private/Layouts/ContentElements/
+    templateRootPath = EXT:t3theme_typo3com/Resources/Private/Templates/ContentElements/
+    partialRootPath = EXT:t3theme_typo3com/Resources/Private/Partials/ContentElements/
 }

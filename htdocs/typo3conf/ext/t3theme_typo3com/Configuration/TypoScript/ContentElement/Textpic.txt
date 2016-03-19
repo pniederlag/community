@@ -1,5 +1,0 @@
-tt_content {
-	textpic {
-		20.text.wrap = <div class="csc-textpic-text col-md-12"> | </div>
-	}
-}

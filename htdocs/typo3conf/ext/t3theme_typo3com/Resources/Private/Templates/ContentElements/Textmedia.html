@@ -1,14 +1,9 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<div class="row">
-	<div class="col-md-12">
-		<div class="{f:if(condition:'{data.layout}',then:' {data.layout}')}">
-			<div id="c{data.uid}">
-				<f:render section="{sectionName}" arguments="{_all}"/>
-			</div>
-		</div>
-		<div class="clearfix"></div>
-	</div>
-</div>
+<f:layout name="Default" />
+
+<f:section name="Content">
+    <f:render section="{sectionName}" arguments="{_all}"/>
+</f:section>
 
 <f:section name="default">
 	<f:if condition="{gallery.position.noWrap} != 1">
