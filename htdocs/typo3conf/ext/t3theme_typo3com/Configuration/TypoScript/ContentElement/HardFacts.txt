@@ -1,0 +1,11 @@
+tt_content.hard_facts = FLUIDTEMPLATE
+tt_content.hard_facts {
+	file = EXT:t3theme_typo3com/Resources/Private/Templates/ContentElements/HardFacts.html
+	partialRootPath = EXT:t3theme_typo3com/Resources/Private/Partials/ContentElements/
+
+	settings {
+		downloadCount = 8817035
+		websiteCount = 500000
+		developerCount = 79000
+	}
+}

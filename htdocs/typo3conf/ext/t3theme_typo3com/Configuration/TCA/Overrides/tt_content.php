@@ -187,6 +187,10 @@ $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items']['casestudy_
     'Case Study Partner',
     'casestudy_partner',
 ];
+$GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items']['hard_facts'] = [
+    'Hard Facts',
+    'hard_facts',
+];
 $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items']['indented_textmedia'] = [
     'Indented TextMedia Element',
     'indented_textmedia',

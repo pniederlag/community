@@ -130,6 +130,16 @@
 				<source>Read more</source>
 			</trans-unit>
 
+			<trans-unit id="hard_facts.downloads">
+				<source>Downloads</source>
+			</trans-unit>
+			<trans-unit id="hard_facts.websites">
+				<source>Websites</source>
+			</trans-unit>
+			<trans-unit id="hard_facts.developers">
+				<source>Developers</source>
+			</trans-unit>
+
 			<trans-unit id="related_case_studies.successfully_used_by">
 				<source>Successfully used by</source>
 			</trans-unit>
