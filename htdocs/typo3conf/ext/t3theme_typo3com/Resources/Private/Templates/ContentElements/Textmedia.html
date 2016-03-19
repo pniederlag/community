@@ -44,7 +44,7 @@
 					</f:if>
 					<f:render partial="Header" arguments="{_all}"/>
 					{data.bodytext -> f:format.html()}
-					<f:if condition="data.image_overlap">
+					<f:if condition="{data.image_overlap}">
 						</div>
 					</f:if>
 				</div>
@@ -58,9 +58,9 @@
 					</f:if>
 					<f:render partial="Header" arguments="{_all}"/>
 					{data.bodytext -> f:format.html()}
-					<f:if condition="data.image_overlap">
-				</div>
-				</f:if>
+					<f:if condition="{data.image_overlap}">
+						</div>
+					</f:if>
 				</div>
 			</f:else>
 		</f:if>
