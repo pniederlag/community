@@ -23,3 +23,17 @@
 .center {
 	text-align: center !important;
 }
+
+
+//
+// Content Element
+//
+.contentelement {
+    margin: 2.5rem 0;
+    > *:first-child {
+        margin-top: 0;
+    }
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}

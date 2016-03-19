@@ -4600,6 +4600,13 @@ body {
 .center {
   text-align: center !important; }
 
+.contentelement {
+  margin: 2.5rem 0; }
+  .contentelement > *:first-child {
+    margin-top: 0; }
+  .contentelement > *:last-child {
+    margin-bottom: 0; }
+
 .navigation,
 .navigation ul {
   margin: 0;
