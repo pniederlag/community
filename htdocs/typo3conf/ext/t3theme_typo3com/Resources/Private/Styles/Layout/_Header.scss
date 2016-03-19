@@ -48,7 +48,7 @@ body {
 
 
 //
-// Headser Navigation
+// Header Navigation
 //
 .header-navigation {
     display: none;
@@ -56,76 +56,6 @@ body {
     background-color: #ffffff;
     padding: 2rem 1.35rem;
     margin: 0 -1.35rem;
-    ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;  
-    }
-}
-.header-navigation-list-headline {
-    color: $grey-light;
-    margin-bottom: 0.25rem;
-    font-size: 1.25rem;
-}
-.header-navigation-list-level-1 {
-    margin-top: 1rem;
-    &:first-child {
-        margin-top: 0;
-    }
-}
-.header-navigation-list-level-2 {
-    a {
-        position: relative;
-        display: block;
-        padding: 0.35rem 0 0.35rem 0.73rem;
-        color: $grey-dark;
-        &:before,
-        &:after {
-            content: '';
-            display: block;
-            position: absolute;
-            left: 0;
-            top: 50%;
-            height: 1px;
-            background-color: $grey-light;
-            width: 5px;                
-        }
-        &:before {
-            margin-top: -1.5px;
-            transform: rotate(45deg);
-        }
-        &:after {
-            margin-top: 1.5px;
-            transform: rotate(-45deg);
-        }
-        &:focus,
-        &:hover {
-            color: $grey-dark;
-            &:before,
-            &:after {
-                background-color: $typo3-key-color;
-            }
-        }
-    }
-    &.active {
-        > a {
-            color: $typo3-key-color;
-        }
-    }
-}
-@media (min-width: map-get($grid-breakpoints, md)) {
-    .header-navigation {
-        padding-left: 0;
-        padding-right: 0;
-        > ul {
-            display: table;
-        }
-        .header-navigation-list-level-1 {
-            display: table-cell;
-            padding-left: 1.35rem;
-            padding-right: 1.35rem;
-        }
-    }
 }
 
 

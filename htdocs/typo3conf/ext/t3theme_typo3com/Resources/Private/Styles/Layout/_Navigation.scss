@@ -1,0 +1,73 @@
+//
+// Navigation
+//
+.navigation,
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.navigation-list-headline {
+    font-family: $share, Helvetica, Arial, sans-serif;
+    color: $grey-light;
+    margin: 0.25rem 0;
+    font-size: 1.25rem;
+}
+.navigation-list-level-1 {
+    margin-top: 1rem;
+    &:first-child {
+        margin-top: 0;
+    }
+}
+.navigation-list-level-2 {
+    a {
+        position: relative;
+        display: block;
+        padding: 0.35rem 0 0.35rem 0.73rem;
+        color: $grey-dark;
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            height: 1px;
+            background-color: $grey-light;
+            width: 5px;                
+        }
+        &:before {
+            margin-top: -1.5px;
+            transform: rotate(45deg);
+        }
+        &:after {
+            margin-top: 1.5px;
+            transform: rotate(-45deg);
+        }
+        &:focus,
+        &:hover {
+            color: $grey-dark;
+            &:before,
+            &:after {
+                background-color: $typo3-key-color;
+            }
+        }
+    }
+    &.active {
+        > a {
+            color: $typo3-key-color;
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .navigation {
+        margin: 0 ($grid-gutter-width / 2 * -1);
+        width: 100%;
+        max-width: 740px;
+        display: table;
+    }
+    .navigation-list-level-1 {
+        display: table-cell;
+        padding: 0 ($grid-gutter-width / 2);
+    }
+}

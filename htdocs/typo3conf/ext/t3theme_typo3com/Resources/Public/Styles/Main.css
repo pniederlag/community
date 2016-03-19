@@ -4542,59 +4542,6 @@ body {
   background-color: #ffffff;
   padding: 2rem 1.35rem;
   margin: 0 -1.35rem; }
-  .header-navigation ul {
-    margin: 0;
-    padding: 0;
-    list-style: none; }
-
-.header-navigation-list-headline {
-  color: #b9b9b9;
-  margin-bottom: 0.25rem;
-  font-size: 1.25rem; }
-
-.header-navigation-list-level-1 {
-  margin-top: 1rem; }
-  .header-navigation-list-level-1:first-child {
-    margin-top: 0; }
-
-.header-navigation-list-level-2 a {
-  position: relative;
-  display: block;
-  padding: 0.35rem 0 0.35rem 0.73rem;
-  color: #515151; }
-  .header-navigation-list-level-2 a:before, .header-navigation-list-level-2 a:after {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    height: 1px;
-    background-color: #b9b9b9;
-    width: 5px; }
-  .header-navigation-list-level-2 a:before {
-    margin-top: -1.5px;
-    transform: rotate(45deg); }
-  .header-navigation-list-level-2 a:after {
-    margin-top: 1.5px;
-    transform: rotate(-45deg); }
-  .header-navigation-list-level-2 a:focus, .header-navigation-list-level-2 a:hover {
-    color: #515151; }
-    .header-navigation-list-level-2 a:focus:before, .header-navigation-list-level-2 a:focus:after, .header-navigation-list-level-2 a:hover:before, .header-navigation-list-level-2 a:hover:after {
-      background-color: #ff8700; }
-
-.header-navigation-list-level-2.active > a {
-  color: #ff8700; }
-
-@media (min-width: 768px) {
-  .header-navigation {
-    padding-left: 0;
-    padding-right: 0; }
-    .header-navigation > ul {
-      display: table; }
-    .header-navigation .header-navigation-list-level-1 {
-      display: table-cell;
-      padding-left: 1.35rem;
-      padding-right: 1.35rem; } }
 
 #page-toggle {
   display: none; }
@@ -4637,45 +4584,7 @@ footer {
   font-weight: bold; }
 
 .footer-navigation {
-  padding: 1.875rem 0;
-  color: #8c8c8c; }
-  @media (min-width: 768px) {
-    .footer-navigation {
-      padding-top: 2.34375rem;
-      padding-bottom: 2.34375rem; } }
-  .footer-navigation a {
-    color: #8c8c8c; }
-    .footer-navigation a:focus, .footer-navigation a:hover {
-      color: #515151; }
-
-.footer-navigation-headline {
-  font-family: "Share", Helvetica, Arial, sans-serif;
-  color: #515151;
-  margin-bottom: 0.75rem; }
-
-.footer-navigation-menu {
-  margin: 0 -0.9375rem; }
-
-.footer-navigation-menu-column {
-  padding: 0 0.9375rem;
-  margin-top: 1.875rem; }
-  .footer-navigation-menu-column:first-child {
-    margin-top: 0; }
-
-.footer-navigation-menu-list {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-  .footer-navigation-menu-list > li {
-    margin-top: 0.5rem; }
-
-@media (min-width: 680px) {
-  .footer-navigation-menu {
-    display: table;
-    width: 100%;
-    max-width: 740px; }
-  .footer-navigation-menu-column {
-    display: table-cell; } }
+  padding: 2rem 0; }
 
 .layout-homepage main {
   position: relative; }
@@ -4699,6 +4608,61 @@ footer {
 
 .center {
   text-align: center !important; }
+
+.navigation,
+.navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.navigation-list-headline {
+  font-family: "Share", Helvetica, Arial, sans-serif;
+  color: #b9b9b9;
+  margin: 0.25rem 0;
+  font-size: 1.25rem; }
+
+.navigation-list-level-1 {
+  margin-top: 1rem; }
+  .navigation-list-level-1:first-child {
+    margin-top: 0; }
+
+.navigation-list-level-2 a {
+  position: relative;
+  display: block;
+  padding: 0.35rem 0 0.35rem 0.73rem;
+  color: #515151; }
+  .navigation-list-level-2 a:before, .navigation-list-level-2 a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 1px;
+    background-color: #b9b9b9;
+    width: 5px; }
+  .navigation-list-level-2 a:before {
+    margin-top: -1.5px;
+    transform: rotate(45deg); }
+  .navigation-list-level-2 a:after {
+    margin-top: 1.5px;
+    transform: rotate(-45deg); }
+  .navigation-list-level-2 a:focus, .navigation-list-level-2 a:hover {
+    color: #515151; }
+    .navigation-list-level-2 a:focus:before, .navigation-list-level-2 a:focus:after, .navigation-list-level-2 a:hover:before, .navigation-list-level-2 a:hover:after {
+      background-color: #ff8700; }
+
+.navigation-list-level-2.active > a {
+  color: #ff8700; }
+
+@media (min-width: 768px) {
+  .navigation {
+    margin: 0 -0.9375rem;
+    width: 100%;
+    max-width: 740px;
+    display: table; }
+  .navigation-list-level-1 {
+    display: table-cell;
+    padding: 0 0.9375rem; } }
 
 .button {
   display: inline-block;
