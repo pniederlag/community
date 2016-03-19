@@ -2,4 +2,5 @@ tt_content.intro_block = FLUIDTEMPLATE
 tt_content.intro_block {
 	file = EXT:t3theme_typo3com/Resources/Private/Templates/ContentElements/IntroBlock.html
 	partialRootPath = EXT:t3theme_typo3com/Resources/Private/Partials/ContentElements/
+	layoutRootPath = EXT:t3theme_typo3com/Resources/Private/Layouts/ContentElements/
 }
