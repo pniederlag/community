@@ -1,0 +1,13 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+
+<f:section name="Content">
+  <div class="col-xs-6 col-sm-4">
+    <div class="feature-item">
+      <f:if condition="{files.0}"><f:media file="{files.0}" height="50"/></f:if>
+      <h4>{data.title}</h4>
+      <small><f:link.page pageUid="{data.uid}">More</f:link.page></small>
+    </div>
+  </div>
+</f:section>
+</html>

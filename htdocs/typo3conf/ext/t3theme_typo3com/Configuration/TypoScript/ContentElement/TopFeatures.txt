@@ -1,0 +1,63 @@
+tt_content.top_features = COA
+tt_content.top_features {
+	10 = HMENU
+	10 {
+		includeNotInMenu = 1
+		special = list
+		special.value.field = pages
+		maxItems = 5
+
+		1 = TMENU
+		1 {
+			NO {
+				doNotLinkIt = 1
+				stdWrap {
+					cObject = COA
+					cObject {
+						10 = FLUIDTEMPLATE
+						10 {
+							templateName = TopFeatures
+							templateRootPaths {
+								0 = EXT:t3theme_typo3com/Resources/Private/Templates/ContentElements/Menu/
+							}
+							partialRootPaths {
+								0 = EXT:t3theme_typo3com/Resources/Private/Partials/ContentElements/
+							}
+							layoutRootPaths {
+								0 = EXT:t3theme_typo3com/Resources/Private/Layouts/ContentElements/
+							}
+
+							variables {
+								count_menuObject = TEXT
+								count_menuObject.data = register:count_MENUOBJ
+								count_menuItems = TEXT
+								count_menuItems.data = register:count_menuItems
+							}
+
+							 dataProcessing {
+								 10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+								 10 {
+									 references.fieldName = media
+								 }
+							 }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	20 = COA
+	20 {
+		wrap = <div class="col-xs-6 col-sm-4"><div class="feature-item feature-item-more">|</div></div>
+
+		10 = TEXT
+		10.value = <h4>{LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:top_features.so_many_more}</h4>
+		10.insertData = 1
+
+		20 = TEXT
+		20.value = {LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:top_features.features}
+		20.insertData = 1
+		20.typolink.parameter.field = tx_t3themetypo3com_featurelist_link
+	}
+}

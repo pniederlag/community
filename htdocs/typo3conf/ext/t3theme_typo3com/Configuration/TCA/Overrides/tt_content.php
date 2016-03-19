@@ -85,6 +85,28 @@ $tca = [
                 'default' => 0,
             ],
         ],
+        'tx_t3themetypo3com_featurelist_link' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.tx_t3themetypo3com_featurelist_link',
+            'config' => [
+                'type' => 'input',
+                'size' => 50,
+                'max' => 1024,
+                'eval' => 'trim',
+                'wizards' => [
+                    'link' => [
+                        'type' => 'popup',
+                        'title' => 'LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.tx_t3themetypo3com_featurelist_link',
+                        'icon' => 'EXT:backend/Resources/Public/Images/FormFieldWizard/wizard_link.gif',
+                        'module' => [
+                            'name' => 'wizard_link',
+                        ],
+                        'JSopenParams' => 'width=800,height=600,status=0,menubar=0,scrollbars=1',
+                    ],
+                ],
+                'softref' => 'typolink',
+            ],
+        ],
     ],
     'types' => [
         'casestudy_teaser' => [
@@ -155,6 +177,16 @@ $tca = [
                 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.extended,tx_gridelements_container,tx_gridelements_columns',
         ],
+        'top_features' => [
+            'showitem' => '--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.header;header,
+                pages;LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.top_features,
+                tx_t3themetypo3com_featurelist_link;LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.tx_t3themetypo3com_featurelist_link,
+                --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
+                --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.extended,tx_gridelements_container,tx_gridelements_columns',
+        ],
     ],
 ];
 
@@ -182,6 +214,10 @@ $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items']['intro_bloc
 $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items']['related_case_studies'] = [
     'Related Case Studies',
     'related_case_studies',
+];
+$GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items']['top_features'] = [
+    'Top Features',
+    'top_features',
 ];
 
 $GLOBALS['TCA']['tt_content']['palettes'] = array_replace(

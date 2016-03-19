@@ -12,6 +12,9 @@
 			<trans-unit id="labels.case_studies">
 				<source>Related Case Studies</source>
 			</trans-unit>
+			<trans-unit id="labels.top_features">
+				<source>Top Features</source>
+			</trans-unit>
 			<trans-unit id="labels.tx_t3themetypo3com_t3a_membership">
 				<source>TYPO3 Association Membership</source>
 			</trans-unit>
@@ -68,6 +71,9 @@
 			</trans-unit>
 			<trans-unit id="labels.tx_t3themetypo3com_case_study_hero">
 				<source>Select Case Study</source>
+			</trans-unit>
+			<trans-unit id="labels.tx_t3themetypo3com_featurelist_link">
+				<source>Link to Feature List</source>
 			</trans-unit>
 
 			<trans-unit id="pages.tabs.case_study_testimonial">
@@ -145,6 +151,13 @@
 			</trans-unit>
 			<trans-unit id="related_case_studies.more">
 				<source>More</source>
+			</trans-unit>
+
+			<trans-unit id="top_features.so_many_more">
+				<source>There are so many more…</source>
+			</trans-unit>
+			<trans-unit id="top_features.features">
+				<source>Features</source>
 			</trans-unit>
 
 			<trans-unit id="feature_menu.category.agency">
