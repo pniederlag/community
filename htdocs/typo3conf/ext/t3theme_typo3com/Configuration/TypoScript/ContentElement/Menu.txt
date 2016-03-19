@@ -141,52 +141,45 @@ tt_content {
 	}
 }
 
+
 // Main Menu
 // -------------------------------------
 lib.mainMenu = HMENU
 lib.mainMenu {
 	entryLevel = 0
-	wrap = <ul class="burger-navigation">|</ul>
-	wrap = <ul class="burger-navigation closed">|</ul>
-
 	1 = TMENU
 	1 {
+        wrap = <ul>|</ul>
 		expAll = 1
 		noBlur = 1
-		wrap = |
-
 		NO = 1
 		NO {
-			wrapItemAndSub = <li class="menu-lvl1"><span class="list-icon"></span>|</li>
+			wrapItemAndSub = <li class="header-navigation-list-level-1">|</li>
 			doNotLinkIt = 1
-			linkWrap = <span class="headline-lvl1">|</span>
+            linkWrap = <div class="header-navigation-list-headline">|</div>
 		}
-
 		ACT < .NO
-		ACT = 1
 		ACT {
-			ATagParams = class="active"
+            wrapItemAndSub = <li class="header-navigation-list-level-1 active">|</li>
 		}
 	}
-
 	2 = TMENU
 	2 {
-		wrap = <ul class="list-inline">|</ul>
+		wrap = <ul>|</ul>
 		expAll = 1
 		noBlur = 1
 		NO = 1
 		NO {
-			wrapItemAndSub = <li class="list-inline-item menu-lvl2">|</li>
+			wrapItemAndSub = <li class="header-navigation-list-level-2">|</li>
 			stdWrap.htmlSpecialChars = 1
 		}
-
 		ACT < .NO
-		ACT = 1
 		ACT {
-			ATagParams = class="active"
+            wrapItemAndSub = <li class="header-navigation-list-level-2 active">|</li>
 		}
 	}
 }
+
 
 // Footer-Menu
 // -------------------------------------
