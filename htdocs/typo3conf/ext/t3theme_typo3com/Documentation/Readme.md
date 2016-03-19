@@ -13,7 +13,7 @@ Initial Installation
 
 In Folder
 
-`typo3conf/ext/t3theme_typo3com/Resources/Private`
+`typo3conf/ext/t3theme_typo3com/Build`
 
 run the following command
 
@@ -24,7 +24,7 @@ to install Grunt and Bootstrap.
 
 Grunt
 -----
-Grunt is a task runner configured in the **Gruntfile.js** in **Resources/Private**. To add more tasks/grunt plugins to Grunt, (e.g. grunt-contrib-compass), you need to add them in the **package.json** first and then configure and load them in the **Gruntfile.js**.
+Grunt is a task runner configured in the **Gruntfile.js** in **Build**. To add more tasks/grunt plugins to Grunt, (e.g. grunt-contrib-compass), you need to add them in the **package.json** first and then configure and load them in the **Gruntfile.js**.
 
 ### Using Grunt
 
@@ -32,7 +32,7 @@ Install **grunt-cli** globally to use the `grunt` command in the terminal:
 
 	sudo npm install -g grunt-cli
 
-Run `npm install` in **Resources/Private** to install all configured Node modules.
+Run `npm install` in **Build** to install all configured Node modules.
 
 Finally run the grunt task of your choice, e.g
 
