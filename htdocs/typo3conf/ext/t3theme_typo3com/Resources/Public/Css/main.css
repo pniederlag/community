@@ -4594,9 +4594,6 @@ body {
       top: -7vw;
       background-color: #ffffff; } }
 
-.content.container {
-  margin-top: 4.375rem; }
-
 .left {
   text-align: left !important; }
 
@@ -4816,9 +4813,6 @@ body {
 .case-study-teaser-box {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 2rem; }
-
-.case-outer .row {
-  margin: 2rem 0 3rem 0; }
 
 .case-text {
   border-bottom: 1px solid #f4f4f4; }
