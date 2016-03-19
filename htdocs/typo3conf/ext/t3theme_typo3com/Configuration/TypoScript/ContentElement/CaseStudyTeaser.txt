@@ -19,7 +19,7 @@ tt_content.casestudy_teaser {
 			dataProcessing {
 				10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
 				10 {
-					references.fieldName = media
+					references.fieldName = tx_t3themetypo3com_longteaser_image
 				}
 			}
 		}
