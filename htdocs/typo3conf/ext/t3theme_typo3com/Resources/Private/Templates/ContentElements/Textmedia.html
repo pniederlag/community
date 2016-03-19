@@ -39,7 +39,7 @@
 		<f:if condition="{data.imageorient} == 25">
 			<f:then>
 				<div class="{textColumnClass} block--text block--text-left">
-					<f:if condition="data.image_overlap">
+					<f:if condition="{data.image_overlap}">
 						<div class="overlap-box">
 					</f:if>
 					<f:render partial="Header" arguments="{_all}"/>
@@ -53,7 +53,7 @@
 			<f:else>
 				<div class="{imageColumnClass} block--image">{f:media(file: files.0, style: 'width: 100%; height: auto;')}</div>
 				<div class="{textColumnClass} block--text block--text-right">
-					<f:if condition="data.image_overlap">
+					<f:if condition="{data.image_overlap}">
 						<div class="overlap-box">
 					</f:if>
 					<f:render partial="Header" arguments="{_all}"/>
