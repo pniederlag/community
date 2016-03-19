@@ -77,6 +77,27 @@ $additionalFields = [
                 'max' => '255',
             ],
         ],
+        'tx_t3themetypo3com_hero_image' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.tx_t3themetypo3com_hero_image',
+            'config' => ExtensionManagementUtility::getFileFieldTCAConfig(
+                'tx_t3themetypo3com_hero_image',
+                [
+                    'foreign_types' => [
+                        '0' => [
+                            'showitem' => '
+                                    --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                                    --palette--;;filePalette',
+                        ],
+                        \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
+                            'showitem' => '
+                                    --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                                    --palette--;;filePalette',
+                        ],
+                    ],
+                ]
+            ),
+        ],
         'tx_t3themetypo3com_longteaser_headline' => [
             'exclude' => 1,
             'label' => 'LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.tx_t3themetypo3com_longteaser_headline',
@@ -86,14 +107,26 @@ $additionalFields = [
                 'max' => '255',
             ],
         ],
-        'tx_t3themetypo3com_longteaser_author' => [
+        'tx_t3themetypo3com_longteaser_image' => [
             'exclude' => 1,
-            'label' => 'LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.tx_t3themetypo3com_longteaser_author',
-            'config' => [
-                'type' => 'input',
-                'eval' => 'trim',
-                'max' => '255',
-            ],
+            'label' => 'LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.tx_t3themetypo3com_longteaser_image',
+            'config' => ExtensionManagementUtility::getFileFieldTCAConfig(
+                'tx_t3themetypo3com_longteaser_image',
+                [
+                    'foreign_types' => [
+                        '0' => [
+                            'showitem' => '
+                                    --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                                    --palette--;;filePalette',
+                        ],
+                        \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
+                            'showitem' => '
+                                    --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                                    --palette--;;filePalette',
+                        ],
+                    ],
+                ]
+            ),
         ],
         'tx_t3themetypo3com_shortteaser_headline' => [
             'exclude' => 1,
@@ -119,9 +152,30 @@ $additionalFields = [
             'config' => [
                 'type' => 'text',
                 'cols' => '80',
-                'rows' => '15',
+                'rows' => '3',
             ],
             'defaultExtras' => 'richtext:rte_transform',
+        ],
+        'tx_t3themetypo3com_testimonial_image' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.tx_t3themetypo3com_testimonial_image',
+            'config' => ExtensionManagementUtility::getFileFieldTCAConfig(
+                'tx_t3themetypo3com_testimonial_image',
+                [
+                    'foreign_types' => [
+                        '0' => [
+                            'showitem' => '
+                                    --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                                    --palette--;;filePalette',
+                        ],
+                        \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
+                            'showitem' => '
+                                    --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                                    --palette--;;filePalette',
+                        ],
+                    ],
+                ]
+            ),
         ],
         'tx_t3themetypo3com_case_copytext' => [
             'exclude' => 1,
@@ -129,7 +183,7 @@ $additionalFields = [
             'config' => [
                 'type' => 'text',
                 'cols' => '80',
-                'rows' => '15',
+                'rows' => '3',
             ],
             'defaultExtras' => 'richtext:rte_transform',
         ],
@@ -201,13 +255,18 @@ $additionalFields = [
              --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.media;media,
              --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.config;config,
              --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.extended,
-             --div--;Case Study,
-             tx_t3themetypo3com_hero_headline,
-             tx_t3themetypo3com_longteaser_headline,
-             tx_t3themetypo3com_longteaser_author,
-             tx_t3themetypo3com_shortteaser_headline,
+             --div--;LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:pages.tabs.case_study_testimonial,
              tx_t3themetypo3com_testimonial_headline,
              tx_t3themetypo3com_testimonial_copytext,
+             tx_t3themetypo3com_testimonial_image,
+             --div--;LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:pages.tabs.case_study_heroteaser,
+             tx_t3themetypo3com_hero_headline,
+             tx_t3themetypo3com_hero_image,
+             --div--;LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:pages.tabs.case_study_successstory,
+             tx_t3themetypo3com_longteaser_headline,
+             tx_t3themetypo3com_longteaser_image,
+             --div--;LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:pages.tabs.case_study_vendor,
+             tx_t3themetypo3com_shortteaser_headline,
              tx_t3themetypo3com_case_copytext,
              tx_t3themetypo3com_case_logo',
         ],
