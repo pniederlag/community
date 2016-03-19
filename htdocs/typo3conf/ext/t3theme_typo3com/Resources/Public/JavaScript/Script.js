@@ -21,6 +21,9 @@ jQuery.noConflict();
 			percentPosition: true,
 			transitionDuration: '0.2s'
 		});
+		$isotope.on('layoutComplete', function() {
+			$(window).trigger('calculate.bk2k.equalheight');
+		});
 		$isotope.imagesLoaded().progress( function() {
 			$isotope.isotope('layout');
 		});

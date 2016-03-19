@@ -44,6 +44,7 @@ page {
 	includeJSFooterlibs {
 		jQuery = EXT:t3theme_typo3com/Resources/Public/JavaScript/jQuery/jquery-2.2.1.js
         jQuery.forceOnTop = 1
+		equalheight = EXT:t3theme_typo3com/Resources/Public/JavaScript/jquery.equalheight.js
 		tether = EXT:t3theme_typo3com/Resources/Public/JavaScript/bootstrap/tether.min.js
 		bootstrap = EXT:t3theme_typo3com/Resources/Public/JavaScript/bootstrap/bootstrap.min.js
 		imagesloaded = EXT:t3theme_typo3com/Resources/Public/JavaScript/imagesloaded.pkgd.min.js

@@ -9,7 +9,7 @@
 			</f:for>
 		</div>
 	</div>
-	<div class="isotope-items">
+	<div class="isotope-items" data-equalheight="container">
 		<f:for each="{featurePages}" as="page">
 			<div class="isotope-item col-md-4 col-sm-6 col-xs-12"
 				<f:if condition="{page.categories -> f:count()} > 0">
@@ -35,8 +35,8 @@
 							</div>
 						</div>
 					</div>
-					<h3>{page.data.title}</h3>
-					<p>{page.data.abstract}</p>
+					<h3 class="text-xs-center" data-equalheight="item">{page.data.title}</h3>
+					<p class="text-justify">{page.data.abstract}</p>
 
 					<f:if condition="{page.content -> f:count()} > 0">
 						<p class="text-xs-center">
