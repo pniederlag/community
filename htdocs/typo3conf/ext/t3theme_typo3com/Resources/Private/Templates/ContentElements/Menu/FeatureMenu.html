@@ -26,15 +26,17 @@
 				</f:if>
 			>
 				<div class="isotope-content">
-					<div class="column">
-						<div class="ce-row row">
-							<div class="ce-column col-md-12">
-								<div class="ce-media">
-									<f:media file="{page.files.0}" height="80" class="center-block" />
+					<f:if condition="{page.files.0}">
+						<div class="column">
+							<div class="ce-row row">
+								<div class="ce-column col-md-12">
+									<div class="ce-media">
+										<f:media file="{page.files.0}" height="80" class="center-block" />
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
+					</f:if>
 					<h3 class="text-xs-center" data-equalheight="item">{page.data.title}</h3>
 					<p class="text-justify">{page.data.abstract}</p>
 
