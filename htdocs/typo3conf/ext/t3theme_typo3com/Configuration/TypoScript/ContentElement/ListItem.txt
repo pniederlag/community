@@ -1,5 +1,23 @@
+############################################################
+#### CTYPE: LIST_ITEM                                   ####
+############################################################
+
+tt_content.list_item >
 tt_content.list_item = FLUIDTEMPLATE
 tt_content.list_item {
-	file = EXT:t3theme_typo3com/Resources/Private/Templates/ContentElements/ListItem.html
-	partialRootPath = EXT:t3theme_typo3com/Resources/Private/Partials/ContentElements/
+
+    ################
+    ### TEMPLATE ###
+    ################
+    templateName = ListItem
+    templateRootPaths {
+        0 = EXT:t3theme_typo3com/Resources/Private/Templates/ContentElements/
+    }
+    partialRootPaths {
+        0 = EXT:t3theme_typo3com/Resources/Private/Partials/ContentElements/
+    }
+    layoutRootPaths {
+        0 = EXT:t3theme_typo3com/Resources/Private/Layouts/ContentElements/
+    }
+
 }
