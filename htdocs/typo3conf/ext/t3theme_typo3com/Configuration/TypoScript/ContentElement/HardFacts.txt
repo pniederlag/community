@@ -1,11 +1,19 @@
 tt_content.hard_facts = FLUIDTEMPLATE
 tt_content.hard_facts {
-	file = EXT:t3theme_typo3com/Resources/Private/Templates/ContentElements/HardFacts.html
-	partialRootPath = EXT:t3theme_typo3com/Resources/Private/Partials/ContentElements/
+    templateName = HardFacts
+    templateRootPaths {
+        0 = EXT:t3theme_typo3com/Resources/Private/Templates/ContentElements/
+    }
+    partialRootPaths {
+        0 = EXT:t3theme_typo3com/Resources/Private/Partials/ContentElements/
+    }
+    layoutRootPaths {
+        0 = EXT:t3theme_typo3com/Resources/Private/Layouts/ContentElements/
+    }
 
-	settings {
-		downloadCount = 8817035
-		websiteCount = 500000
-		developerCount = 79000
-	}
+    settings {
+        downloadCount = 8817035
+        websiteCount = 500000
+        developerCount = 79000
+    }
 }
