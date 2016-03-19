@@ -57,6 +57,9 @@ page {
 
 	10 = FLUIDTEMPLATE
 	10 {
+        ################
+        ### TEMPLATE ###
+        ################
 		templateName = TEXT
 		templateName.stdWrap.cObject = CASE
 		templateName.stdWrap.cObject {
@@ -72,23 +75,34 @@ page {
 			default = TEXT
 			default.value = Default
 		}
-
-		settings {
-			contactPid = {$plugin.t3theme_typo3com.footer.contactPid}
-			legalInfoPid = {$plugin.t3theme_typo3com.footer.legalInfoPid}
-		}
-
 		templateRootPaths {
 			0 = EXT:t3theme_typo3com/Resources/Private/Templates/Page/
 		}
-
 		partialRootPaths {
 			0 = EXT:t3theme_typo3com/Resources/Private/Partials/Page/
 		}
-
 		layoutRootPaths {
 			0 = EXT:t3theme_typo3com/Resources/Private/Layouts/Page/
 		}
+        
+        ################
+        ### SETTINGS ###
+        ################
+        settings {
+			contactPid = {$plugin.t3theme_typo3com.footer.contactPid}
+			legalInfoPid = {$plugin.t3theme_typo3com.footer.legalInfoPid}
+		}
+        
+        ##########################
+        ### DATA PREPROCESSING ###
+        ##########################
+        dataProcessing {
+            100 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            100 {
+                references.fieldName = media
+                as = media
+            }
+        }
 	}
 
 	bodyTagCObject = COA

@@ -4658,11 +4658,22 @@ footer {
   .navigation {
     margin: 0 -0.9375rem;
     width: 100%;
-    max-width: 740px;
+    max-width: 700px;
     display: table; }
   .navigation-list-level-1 {
     display: table-cell;
     padding: 0 0.9375rem; } }
+
+.masthead {
+  height: 160px;
+  background-size: cover;
+  background-position: center center;
+  margin: 0 auto;
+  max-width: 1300px; }
+  @media (min-width: 544px) {
+    .masthead {
+      height: 27.75vw;
+      max-height: 400px; } }
 
 .button {
   display: inline-block;

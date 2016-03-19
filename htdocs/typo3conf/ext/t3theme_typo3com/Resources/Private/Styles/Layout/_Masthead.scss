@@ -1,0 +1,14 @@
+//
+// Masthead
+//
+.masthead {
+    height: 160px;
+    background-size: cover;
+    background-position: center center;
+    margin: 0 auto;
+    max-width: 1300px;
+    @media (min-width: map-get($grid-breakpoints, sm)) {
+        height: 27.75vw;
+        max-height: 400px;
+    }
+}
