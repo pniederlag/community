@@ -2,9 +2,9 @@
 <div class="container isotope-container">
 	<div class="text-xs-center">
 		<div class="btn-group">
-			<f:for each="{settings.categories}" as="category">
-				<button class="btn btn-secondary isotope-filter" data-toggle="button" data-category="{category}">
-					<f:translate key="LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:feature_menu.category.{category}" />
+			<f:for each="{categories}" as="category">
+				<button class="btn btn-secondary isotope-filter" data-toggle="button" data-category="{category.data.uid}">
+					{category.data.title}
 				</button>
 			</f:for>
 		</div>
@@ -15,12 +15,12 @@
 				<f:if condition="{page.categories -> f:count()} > 0">
 					<f:then>
 						<f:for each="{page.categories}" as="category">
-							data-{category}="1"
+							data-category-{category.data.uid}="1"
 						</f:for>
 					</f:then>
 					<f:else>
-						<f:for each="{settings.categories}" as="category">
-							data-{category}="1"
+						<f:for each="{categories}" as="category">
+							data-category-{category.data.uid}="1"
 						</f:for>
 					</f:else>
 				</f:if>

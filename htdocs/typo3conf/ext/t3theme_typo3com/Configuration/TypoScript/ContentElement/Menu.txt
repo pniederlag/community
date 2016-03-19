@@ -116,26 +116,30 @@ tt_content {
 						as = content
 					}
 
-					30 = TYPO3\CMS\Frontend\DataProcessing\SplitProcessor
+					30 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
 					30 {
-						if.isTrue.field = keywords
-						delimiter = ,
-						fieldName = keywords
-						removeEmptyEntries = 1
-						filterUnique = 1
+						table = sys_category
+						pidInList = this
+						join = sys_category_record_mm ON (sys_category.uid = sys_category_record_mm.uid_local)
+						andWhere = sys_category_record_mm.uid_foreign = ###uid_foreign### AND sys_category_record_mm.tablenames='pages' AND sys_category_record_mm.fieldname='categories'
+						orderBy = sys_category.uid
 						as = categories
+						markers {
+							uid_foreign.data = field:uid
+						}
 					}
 				}
 			}
-		}
 
-		# This belongs into `variables`, but doesn't work :(
-		settings {
-			categories {
-				0 = agency
-				1 = marketer
-				2 = developer
-				3 = editor
+			20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+			20 {
+				table = sys_category
+				pidInList = this
+				join = sys_category_record_mm ON (sys_category.uid = sys_category_record_mm.uid_local)
+				andWhere = sys_category_record_mm.tablenames='pages' AND sys_category_record_mm.fieldname='categories'
+				groupBy = sys_category.uid
+				groupBy = sys_category.title
+				as = categories
 			}
 		}
 	}

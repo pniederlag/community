@@ -37,7 +37,7 @@ jQuery.noConflict();
 				filterCfg = [];
 				$activeFilters.each(function(_, filter) {
 					var filterId = $(filter).data('category');
-					filterCfg.push('[data-' + filterId + ']');
+					filterCfg.push('[data-category-' + filterId + ']');
 				});
 				filterCfg = filterCfg.join(',');
 			}
