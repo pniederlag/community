@@ -10,12 +10,8 @@
 // -----------------------------------------------------------------------------
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/Extension/GridElements.txt">
 
-// Content
+// Content Elements
 // -----------------------------------------------------------------------------
-tt_content {
-	stdWrap.innerWrap.cObject.default.20.10.value = csc-default row
-}
-
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/ContentElement/CaseStudyHero.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/ContentElement/CaseStudyPartner.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/ContentElement/CaseStudyTeaser.txt">
