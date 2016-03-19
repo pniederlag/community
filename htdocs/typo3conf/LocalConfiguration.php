@@ -15,7 +15,6 @@ return [
     ],
     'EXT' => [
         'extConf' => [
-            'belayout_fileprovider' => 'a:0:{}',
             'bootstrap_grids' => 'a:2:{s:19:"enableGridSimpleRow";s:1:"0";s:15:"useOldRecordIds";s:1:"0";}',
             'fluid_styled_content' => 'a:1:{s:32:"loadContentElementWizardTsConfig";s:1:"1";}',
             'gridelements' => 'a:2:{s:20:"additionalStylesheet";s:0:"";s:19:"nestingInListModule";s:1:"0";}',
