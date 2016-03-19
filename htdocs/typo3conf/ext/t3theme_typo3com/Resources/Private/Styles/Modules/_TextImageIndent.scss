@@ -1,36 +1,40 @@
-.indented-text-media {
-  position: relative;
+@media (min-width: map-get($grid-breakpoints, md)) {
+	.overlap-box {
+		position: relative;
+		z-index: 10;
+		background-color: white;
+		padding: 1rem 2rem;
+		margin-right: -8rem;
+		margin-left: -8rem;
+		margin-top: 2rem;
+	}
+	.block--text-right .overlap-box {
+	  margin-right : 0;
+	  padding-right: 0;
+	}
+	.block--text-left .overlap-box {
+	  margin-left : 0;
+	  padding-left: 0;
+	}
 }
 
-.ce-right .indented-text-media-text {
-
-  @include medium {
-    background-color: #fff;
-    padding-left: 15px;
-    padding-bottom: 15px;
-    padding-top: 15px;
-    margin-top: 5%;
-    margin-left: 10.638297872340425%;
-    z-index: 10;
-  }
+.block--text ul {
+	padding-left: 1rem;
+	list-style: none;
+}
+.block--text ul li {
+	position: relative;
+	font-weight: bolder;
+	padding-bottom: 0.5rem;
+}
+.block--text ul li:before {
+  content: "";
+  background-color: $support-orange-dark;
+  position: absolute;
+  display: block;
+  height:7px;
+  width: 7px;
+  top: 8px;
+  left: -1rem;
 }
 
-.ce-right .indented-text-media {
-
-  @include medium {
-    margin-left: -10.638297872340425%;
-    z-index: 5;
-  }
-}
-
-.ce-left .indented-text-media-text {
-
-  @include medium {
-    background-color: #fff;
-    padding-left: 15px;
-    padding-bottom: 15px;
-    padding-top: 15px;
-    margin-top: 5%;
-    margin-left: -10.638297872340425%;
-  }
-}
