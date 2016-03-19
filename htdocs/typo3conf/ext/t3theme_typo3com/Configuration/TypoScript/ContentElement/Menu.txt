@@ -104,7 +104,7 @@ tt_content {
 						references {
 							table = pages
 							uid.field = uid
-							fieldName = media
+							fieldName = tx_t3themetypo3com_feature_icon
 						}
 					}
 
