@@ -33,7 +33,7 @@ jQuery.noConflict();
 			if ($activeFilters.length > 0) {
 				filterCfg = [];
 				$activeFilters.each(function(_, filter) {
-					var filterId = $(filter).text().toLowerCase().replace(' ', '_');
+					var filterId = $(filter).data('category');
 					filterCfg.push('[data-' + filterId + ']');
 				});
 				filterCfg = filterCfg.join(',');

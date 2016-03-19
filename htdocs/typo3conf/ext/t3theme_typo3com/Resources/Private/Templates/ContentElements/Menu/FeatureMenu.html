@@ -1,0 +1,51 @@
+<html xmlns:f="http://xsd.helhum.io/ns/typo3/cms-fluid/master/ViewHelpers">
+<div class="container isotope-container">
+	<div class="text-xs-center">
+		<div class="btn-group">
+			<f:for each="{settings.categories}" as="category">
+				<button class="btn btn-secondary isotope-filter" data-toggle="button" data-category="{category}">
+					<f:translate key="LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:feature_menu.category.{category}" />
+				</button>
+			</f:for>
+		</div>
+	</div>
+	<div class="isotope-items">
+		<f:for each="{featurePages}" as="page">
+			<div class="isotope-item col-md-4 col-sm-6 col-xs-12"
+				<f:if condition="{page.categories -> f:count()} > 0">
+					<f:then>
+						<f:for each="{page.categories}" as="category">
+							data-{category}="1"
+						</f:for>
+					</f:then>
+					<f:else>
+						<f:for each="{settings.categories}" as="category">
+							data-{category}="1"
+						</f:for>
+					</f:else>
+				</f:if>
+			>
+				<div class="isotope-content">
+					<div class="column">
+						<div class="ce-row row">
+							<div class="ce-column col-md-12">
+								<div class="ce-media">
+									<f:media file="{page.files.0}" height="80" class="center-block" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<h3>{page.data.title}</h3>
+					<p>{page.data.abstract}</p>
+
+					<f:if condition="{page.content -> f:count()} > 0">
+						<p class="text-xs-center">
+							<f:link.typolink class="btn btn-primary" parameter="{page.data.uid}">Learn more</f:link.typolink>
+						</p>
+					</f:if>
+				</div>
+			</div>
+		</f:for>
+	</div>
+</div>
+</html>

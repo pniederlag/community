@@ -88,6 +88,18 @@
 				<source>Read more</source>
 			</trans-unit>
 
+			<trans-unit id="feature_menu.category.agency">
+				<source>Agency</source>
+			</trans-unit>
+			<trans-unit id="feature_menu.category.marketer">
+				<source>Marketer</source>
+			</trans-unit>
+			<trans-unit id="feature_menu.category.developer">
+				<source>Developer</source>
+			</trans-unit>
+			<trans-unit id="feature_menu.category.editor">
+				<source>Editor</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
