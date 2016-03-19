@@ -88,6 +88,10 @@
 				<source>Read more</source>
 			</trans-unit>
 
+			<trans-unit id="related_case_studies.more">
+				<source>More</source>
+			</trans-unit>
+
 			<trans-unit id="feature_menu.category.agency">
 				<source>Agency</source>
 			</trans-unit>
