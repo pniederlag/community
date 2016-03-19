@@ -37,7 +37,7 @@ return [
         'loginSecurityLevel' => 'rsa',
     ],
     'GFX' => [
-        'colorspace' => 'sRGB',
+        'colorspace' => '',
         'im' => 1,
         'im_mask_temp_ext_gif' => 1,
         'im_path' => '/usr/bin/',
