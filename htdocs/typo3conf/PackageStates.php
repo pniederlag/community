@@ -200,12 +200,6 @@ return [
             'packagePath' => 'typo3conf/ext/amqp/',
             'suggestions' => [],
         ],
-        'belayout_fileprovider' => [
-            'composerName' => 'georgringer/belayout-fileprovider',
-            'state' => 'inactive',
-            'packagePath' => 'typo3conf/ext/belayout_fileprovider/',
-            'suggestions' => [],
-        ],
         'beuser' => [
             'composerName' => 'typo3/cms-beuser',
             'state' => 'inactive',
