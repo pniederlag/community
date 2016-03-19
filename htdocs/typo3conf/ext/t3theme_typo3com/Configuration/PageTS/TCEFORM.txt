@@ -9,7 +9,6 @@ TCEFORM {
 				hero-section = Hero Section
 				why-typo3 = Why-Check
 				subpage-header = Subpage Header
-				text-image-indented = Indented Text Image
 				casestudy-company = Company section in Case Study
 				casestudy-header = Header Picture Case Study
 			}
