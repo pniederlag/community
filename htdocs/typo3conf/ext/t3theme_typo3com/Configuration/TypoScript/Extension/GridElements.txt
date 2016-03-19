@@ -5,22 +5,22 @@ tt_content.gridelements_pi1 {
 			columns {
 				# colPos from BE grid layout
 				1 < .default
-				1.wrap = <div class="col-md-4"><div class="feature-start feature-first-line">|</div></div>
+				1.wrap = |
 				2 < .default
-				2.wrap = <div class="col-md-4"><div class="feature-start feature-first-line">|</div></div>
+				2.wrap = |
 				3 < .default
-				3.wrap = <div class="col-md-4"><div class="feature-start feature-first-line">|</div></div>
+				3.wrap = |
 				4 < .default
-				4.wrap = <div class="col-md-4"><div class="feature-start hidden-xs">|</div></div>
+				4.wrap = |
 				5< .default
-				5.wrap = <div class="col-md-4"><div class="feature-start hidden-xs">|</div></div>
+				5.wrap = |
 				6 < .default
-				6.wrap = <div class="col-md-4"><div class="feature-start more-features">|</div></div>
+				6.wrap = |
 				7 < .default
-				7.wrap = <div class="col-md-12 feature-head">|</div>
+				7.wrap = |
 
 			}
-		wrap = <div class="row">|</div>
+		    wrap = |
 		}
 	}
 }
