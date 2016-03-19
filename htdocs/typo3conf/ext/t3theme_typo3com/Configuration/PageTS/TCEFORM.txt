@@ -79,3 +79,16 @@ TCEFORM {
 		}
 	}
 }
+
+TCEFORM.tt_content {
+  date.disabled = 1
+  subheader.disabled = 1
+  header_link.disabled = 1
+  linkToTop.disabled = 1
+  sectionIndex.disabled = 1
+  editlock.disabled = 1
+  imagewidth.disabled = 1
+  imageheight.disabled = 1
+  imagecols.disabled = 1
+  imageborder.disabled = 1
+}
