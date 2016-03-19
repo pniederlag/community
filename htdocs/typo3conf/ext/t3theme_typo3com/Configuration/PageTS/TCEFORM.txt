@@ -34,6 +34,38 @@ TCEFORM {
 			}
 		}
 
+		header_layout {
+			types {
+				intro_block {
+					disabled = 1
+				}
+			}
+		}
+
+		header_link {
+			types {
+				intro_block {
+					disabled = 1
+				}
+			}
+		}
+
+		header_position {
+			types {
+				intro_block {
+					disabled = 1
+				}
+			}
+		}
+
+		date {
+			types {
+				intro_block {
+					disabled = 1
+				}
+			}
+		}
+
 		imageorient {
 			# Remove items from select
 			keepItems = 25, 26
