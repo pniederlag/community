@@ -26,12 +26,6 @@ return [
             'packagePath' => 'typo3/sysext/fluid/',
             'suggestions' => [],
         ],
-        'documentation' => [
-            'composerName' => 'typo3/cms-documentation',
-            'state' => 'active',
-            'packagePath' => 'typo3/sysext/documentation/',
-            'suggestions' => [],
-        ],
         'extensionmanager' => [
             'composerName' => 'typo3/cms-extensionmanager',
             'state' => 'active',
@@ -72,30 +66,6 @@ return [
                 'rsaauth',
             ],
         ],
-        'func' => [
-            'composerName' => 'typo3/cms-func',
-            'state' => 'active',
-            'packagePath' => 'typo3/sysext/func/',
-            'suggestions' => [],
-        ],
-        'wizard_crpages' => [
-            'composerName' => 'typo3/cms-wizard-crpages',
-            'state' => 'active',
-            'packagePath' => 'typo3/sysext/wizard_crpages/',
-            'suggestions' => [],
-        ],
-        'about' => [
-            'composerName' => 'typo3/cms-about',
-            'state' => 'active',
-            'packagePath' => 'typo3/sysext/about/',
-            'suggestions' => [],
-        ],
-        'aboutmodules' => [
-            'composerName' => 'typo3/cms-aboutmodules',
-            'state' => 'active',
-            'packagePath' => 'typo3/sysext/aboutmodules/',
-            'suggestions' => [],
-        ],
         'backend' => [
             'composerName' => 'typo3/cms-backend',
             'state' => 'active',
@@ -106,30 +76,6 @@ return [
             'composerName' => 'typo3/cms-belog',
             'state' => 'active',
             'packagePath' => 'typo3/sysext/belog/',
-            'suggestions' => [],
-        ],
-        'beuser' => [
-            'composerName' => 'typo3/cms-beuser',
-            'state' => 'active',
-            'packagePath' => 'typo3/sysext/beuser/',
-            'suggestions' => [],
-        ],
-        'context_help' => [
-            'composerName' => 'typo3/cms-context-help',
-            'state' => 'active',
-            'packagePath' => 'typo3/sysext/context_help/',
-            'suggestions' => [],
-        ],
-        'cshmanual' => [
-            'composerName' => 'typo3/cms-cshmanual',
-            'state' => 'active',
-            'packagePath' => 'typo3/sysext/cshmanual/',
-            'suggestions' => [],
-        ],
-        'felogin' => [
-            'composerName' => 'typo3/cms-felogin',
-            'state' => 'active',
-            'packagePath' => 'typo3/sysext/felogin/',
             'suggestions' => [],
         ],
         'filelist' => [
@@ -156,10 +102,10 @@ return [
             'packagePath' => 'typo3/sysext/frontend/',
             'suggestions' => [],
         ],
-        'impexp' => [
-            'composerName' => 'typo3/cms-impexp',
+        'func' => [
+            'composerName' => 'typo3/cms-func',
             'state' => 'active',
-            'packagePath' => 'typo3/sysext/impexp/',
+            'packagePath' => 'typo3/sysext/func/',
             'suggestions' => [],
         ],
         'info' => [
@@ -198,12 +144,6 @@ return [
             'packagePath' => 'typo3/sysext/sv/',
             'suggestions' => [],
         ],
-        't3editor' => [
-            'composerName' => 'typo3/cms-t3editor',
-            'state' => 'active',
-            'packagePath' => 'typo3/sysext/t3editor/',
-            'suggestions' => [],
-        ],
         't3skin' => [
             'composerName' => 'typo3/cms-t3skin',
             'state' => 'active',
@@ -216,22 +156,10 @@ return [
             'packagePath' => 'typo3/sysext/tstemplate/',
             'suggestions' => [],
         ],
-        'viewpage' => [
-            'composerName' => 'typo3/cms-viewpage',
-            'state' => 'active',
-            'packagePath' => 'typo3/sysext/viewpage/',
-            'suggestions' => [],
-        ],
         'gridelements' => [
             'composerName' => 'GridElementsTeam/Gridelements',
             'state' => 'active',
             'packagePath' => 'typo3conf/ext/gridelements/',
-            'suggestions' => [],
-        ],
-        'bootstrap_grids' => [
-            'composerName' => 'laxap/bootstrap-grids',
-            'state' => 'active',
-            'packagePath' => 'typo3conf/ext/bootstrap_grids/',
             'suggestions' => [],
         ],
         'realurl' => [
@@ -248,6 +176,18 @@ return [
             'packagePath' => 'typo3conf/ext/t3theme_typo3com/',
             'suggestions' => [],
         ],
+        'about' => [
+            'composerName' => 'typo3/cms-about',
+            'state' => 'inactive',
+            'packagePath' => 'typo3/sysext/about/',
+            'suggestions' => [],
+        ],
+        'aboutmodules' => [
+            'composerName' => 'typo3/cms-aboutmodules',
+            'state' => 'inactive',
+            'packagePath' => 'typo3/sysext/aboutmodules/',
+            'suggestions' => [],
+        ],
         'adodb' => [
             'composerName' => 'typo3/cms-adodb',
             'state' => 'inactive',
@@ -258,6 +198,36 @@ return [
             'composerName' => 'amqp',
             'state' => 'inactive',
             'packagePath' => 'typo3conf/ext/amqp/',
+            'suggestions' => [],
+        ],
+        'belayout_fileprovider' => [
+            'composerName' => 'georgringer/belayout-fileprovider',
+            'state' => 'inactive',
+            'packagePath' => 'typo3conf/ext/belayout_fileprovider/',
+            'suggestions' => [],
+        ],
+        'beuser' => [
+            'composerName' => 'typo3/cms-beuser',
+            'state' => 'inactive',
+            'packagePath' => 'typo3/sysext/beuser/',
+            'suggestions' => [],
+        ],
+        'bootstrap_grids' => [
+            'composerName' => 'laxap/bootstrap-grids',
+            'state' => 'inactive',
+            'packagePath' => 'typo3conf/ext/bootstrap_grids/',
+            'suggestions' => [],
+        ],
+        'context_help' => [
+            'composerName' => 'typo3/cms-context-help',
+            'state' => 'inactive',
+            'packagePath' => 'typo3/sysext/context_help/',
+            'suggestions' => [],
+        ],
+        'cshmanual' => [
+            'composerName' => 'typo3/cms-cshmanual',
+            'state' => 'inactive',
+            'packagePath' => 'typo3/sysext/cshmanual/',
             'suggestions' => [],
         ],
         'css_styled_content' => [
@@ -280,16 +250,34 @@ return [
             'packagePath' => 'typo3/sysext/dbal/',
             'suggestions' => [],
         ],
+        'documentation' => [
+            'composerName' => 'typo3/cms-documentation',
+            'state' => 'inactive',
+            'packagePath' => 'typo3/sysext/documentation/',
+            'suggestions' => [],
+        ],
         'feedit' => [
             'composerName' => 'typo3/cms-feedit',
             'state' => 'inactive',
             'packagePath' => 'typo3/sysext/feedit/',
             'suggestions' => [],
         ],
+        'felogin' => [
+            'composerName' => 'typo3/cms-felogin',
+            'state' => 'inactive',
+            'packagePath' => 'typo3/sysext/felogin/',
+            'suggestions' => [],
+        ],
         'filemetadata' => [
             'composerName' => 'typo3/cms-filemetadata',
             'state' => 'inactive',
             'packagePath' => 'typo3/sysext/filemetadata/',
+            'suggestions' => [],
+        ],
+        'impexp' => [
+            'composerName' => 'typo3/cms-impexp',
+            'state' => 'inactive',
+            'packagePath' => 'typo3/sysext/impexp/',
             'suggestions' => [],
         ],
         'indexed_search' => [
@@ -382,6 +370,12 @@ return [
             'packagePath' => 'typo3/sysext/sys_note/',
             'suggestions' => [],
         ],
+        't3editor' => [
+            'composerName' => 'typo3/cms-t3editor',
+            'state' => 'inactive',
+            'packagePath' => 'typo3/sysext/t3editor/',
+            'suggestions' => [],
+        ],
         't3org_flickrfeed' => [
             'composerName' => 't3org_flickrfeed',
             'state' => 'inactive',
@@ -424,10 +418,22 @@ return [
             'packagePath' => 'typo3/sysext/version/',
             'suggestions' => [],
         ],
+        'viewpage' => [
+            'composerName' => 'typo3/cms-viewpage',
+            'state' => 'inactive',
+            'packagePath' => 'typo3/sysext/viewpage/',
+            'suggestions' => [],
+        ],
         'voice' => [
             'composerName' => 'voice',
             'state' => 'inactive',
             'packagePath' => 'typo3conf/ext/voice/',
+            'suggestions' => [],
+        ],
+        'wizard_crpages' => [
+            'composerName' => 'typo3/cms-wizard-crpages',
+            'state' => 'inactive',
+            'packagePath' => 'typo3/sysext/wizard_crpages/',
             'suggestions' => [],
         ],
         'wizard_sortpages' => [
