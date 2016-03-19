@@ -4827,14 +4827,15 @@ footer {
 .case-study-detail-view {
   margin-right: 1rem; }
 
+@media only screen and (min-width: 768px) {
+  .case-study-teaser-block {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; } }
+
 .case-study-teaser-box {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 2rem; }
-  @media only screen and (min-width: 768px) {
-    .case-study-teaser-box {
-      position: absolute;
-      top: 4rem;
-      left: 4rem; } }
 
 .case-outer .row {
   margin: 2rem 0 3rem 0; }

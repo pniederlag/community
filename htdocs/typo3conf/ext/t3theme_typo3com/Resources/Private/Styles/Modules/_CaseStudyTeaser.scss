@@ -1,55 +1,57 @@
 .case-study-teaser {
-	@include medium {
-		position: relative;
-	}
+  @include medium {
+	position: relative;
+  }
 }
 
 .case-study-teaser-image {
-	@include medium {
-		position: relative;
-	}
+  @include medium {
+	position: relative;
+  }
 }
 
 .case-study-teaser-subheader {
-	font-family: $share;
-	color: $typo3-key-color;
+  font-family: $share;
+  color: $typo3-key-color;
 }
 
 .case-study-teaser-headline {
-	color: $white;
+  color: $white;
 }
 
 .case-study-teaser-author {
-	color: $grey-light;
-	margin-top: 0.8rem;
-	margin-bottom: 1.5rem;
+  color: $grey-light;
+  margin-top: 0.8rem;
+  margin-bottom: 1.5rem;
 }
 
 .case-study-detail-view, .case-study-overview-page {
-	&:hover, &:active {
-		text-decoration: none;
-	}
+  &:hover, &:active {
+	text-decoration: none;
+  }
 }
 
 .case-study-detail-view {
-	margin-right: 1rem;
+  margin-right: 1rem;
+}
+
+.case-study-teaser-block {
+  @include medium {
+	position: absolute;
+	top: 4rem;
+	left: 4rem;
+  }
 }
 
 .case-study-teaser-box {
-	background-color: rgba($black, 0.7);
-	padding: 2rem;
-
-	@include medium {
-		position: absolute;
-		top: 4rem;
-		left: 4rem;
-	}
+  background-color: rgba($black, 0.7);
+  padding: 2rem;
 }
 
 
 .case-outer .row{
-	margin: 2rem 0 3rem 0 ;
+  margin: 2rem 0 3rem 0 ;
 }
 .case-text{
-	border-bottom: 1px solid $grey-superlight;
+  border-bottom: 1px solid $grey-superlight;
 }
