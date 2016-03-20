@@ -70,6 +70,49 @@
 
 
 //
+// Content Element List Item
+//
+.contentelement-list_item {
+    @media (min-width: map-get($grid-breakpoints, sm)) {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    @media (min-width: map-get($grid-breakpoints, md)) {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    @media (min-width: map-get($grid-breakpoints, lg)) {
+        padding-left: 9rem;
+        padding-right: 9rem;
+    }
+}
+.contentelement-list_item + .contentelement-list_item {
+    margin-top: -1.5rem;
+}
+.contentelement-list_item-content {
+    position: relative;
+    padding-left: 50px;
+    > *:first-child {
+        margin-top: 0;
+    }
+    > *:last-child {
+        margin-bottom: 0;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -0.25rem;
+        height: 30px;
+        width: 30px;
+        background-image: url('../Images/Icons/check.svg');
+        background-size: 30px 30px;
+        background-position: center center;
+    }
+}
+
+
+//
 // Content Element Text Media
 //
 .contentelement-textmedia {
