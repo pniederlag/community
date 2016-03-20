@@ -89,14 +89,6 @@ $tca = [
                         'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_position.I.1',
                         'center',
                     ],
-                    [
-                        'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_position.I.2',
-                        'right',
-                    ],
-                    [
-                        'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_position.I.3',
-                        'left',
-                    ],
                 ],
                 'default' => '',
             ],
@@ -288,7 +280,18 @@ $tca = [
                 --linebreak--,
                 header_link;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_link_formlabel
             ',
-        ],
+        ],        
     ],
 ];
 $GLOBALS['TCA']['tt_content'] = array_replace_recursive($GLOBALS['TCA']['tt_content'], $tca);
+
+
+/***************
+ * Modify palettes
+ */
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+    'tt_content',
+    'headers',
+    'header_position',
+    'after:header_layout'
+);
