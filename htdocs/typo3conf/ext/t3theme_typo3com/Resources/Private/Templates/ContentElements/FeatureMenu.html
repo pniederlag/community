@@ -1,17 +1,20 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<div class="container isotope-container">
-	<div class="text-xs-center">
-		<div class="btn-group">
-			<f:for each="{categories}" as="category">
-				<button class="btn btn-secondary isotope-filter" data-toggle="button" data-category="{category.data.uid}">
-					{category.data.title}
-				</button>
-			</f:for>
+<f:layout name="None"/>
+
+<f:section name="Content">
+	<div class="isotope-container">
+		<div class="text-xs-center">
+			<div class="btn-group">
+				<f:for each="{categories}" as="category">
+					<button class="btn btn-secondary isotope-filter" data-toggle="button" data-category="{category.data.uid}">
+						{category.data.title}
+					</button>
+				</f:for>
+			</div>
 		</div>
-	</div>
-	<div class="isotope-items" data-equalheight="container">
-		<f:for each="{featurePages}" as="page">
-			<div class="isotope-item col-md-4 col-sm-6 col-xs-12"
+		<div class="isotope-items" data-equalheight="container">
+			<f:for each="{featurePages}" as="page">
+				<div class="isotope-item col-md-4 col-sm-6 col-xs-12"
 				<f:if condition="{page.categories -> f:count()} > 0">
 					<f:then>
 						<f:for each="{page.categories}" as="category">
@@ -24,14 +27,14 @@
 						</f:for>
 					</f:else>
 				</f:if>
-			>
+				>
 				<div class="isotope-content">
 					<f:if condition="{page.files.0}">
 						<div class="column">
 							<div class="ce-row row">
 								<div class="ce-column col-md-12">
 									<div class="ce-media">
-										<f:media file="{page.files.0}" height="80" class="center-block" />
+										<f:media file="{page.files.0}" height="80" class="center-block"/>
 									</div>
 								</div>
 							</div>
@@ -46,8 +49,9 @@
 						</p>
 					</f:if>
 				</div>
-			</div>
+		</div>
 		</f:for>
 	</div>
-</div>
+	</div>
+</f:section>
 </html>

@@ -1,13 +1,4 @@
-tt_content.intro_block = FLUIDTEMPLATE
+tt_content.intro_block =< lib.baseContentElement
 tt_content.intro_block {
-       templateName = IntroBlock
-       templateRootPaths {
-           0 = EXT:t3theme_typo3com/Resources/Private/Templates/ContentElements/
-       }
-       partialRootPaths {
-           0 = EXT:t3theme_typo3com/Resources/Private/Partials/ContentElements/
-       }
-       layoutRootPaths {
-           0 = EXT:t3theme_typo3com/Resources/Private/Layouts/ContentElements/
-       }
+	templateName = IntroBlock
 }

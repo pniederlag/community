@@ -4603,6 +4603,10 @@ body {
 .layout-default .masthead + .content > .container:first-child .contentelement-intro_block {
   margin-top: -5rem; }
 
+.container-fluid-nopadding {
+  padding-left: 0;
+  padding-right: 0; }
+
 .contentelement {
   margin: 2rem 0; }
   .contentelement > *:first-child {

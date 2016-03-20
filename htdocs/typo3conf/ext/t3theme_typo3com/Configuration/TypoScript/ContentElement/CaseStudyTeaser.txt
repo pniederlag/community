@@ -1,16 +1,7 @@
-tt_content.casestudy_teaser = FLUIDTEMPLATE
+tt_content.casestudy_teaser =< lib.baseContentElement
 tt_content.casestudy_teaser {
 	templateName = CaseStudyTeaser
-	templateRootPaths {
-		0 = EXT:t3theme_typo3com/Resources/Private/Templates/ContentElements/
-	}
-	partialRootPaths {
-		0 = EXT:t3theme_typo3com/Resources/Private/Partials/ContentElements/
-	}
-	layoutRootPaths {
-		0 = EXT:t3theme_typo3com/Resources/Private/Layouts/ContentElements/
-	}
-	partialRootPath = EXT:t3theme_typo3com/Resources/Private/Partials/ContentElements/
+
 	dataProcessing {
 		10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
 		10 {

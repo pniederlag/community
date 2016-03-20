@@ -12,6 +12,21 @@
 
 // Content Elements
 // -----------------------------------------------------------------------------
+lib.baseContentElement = FLUIDTEMPLATE
+lib.baseContentElement {
+	templateRootPaths {
+		0 = EXT:t3theme_typo3com/Resources/Private/Templates/ContentElements/
+	}
+
+	partialRootPaths {
+		0 = EXT:t3theme_typo3com/Resources/Private/Partials/ContentElements/
+	}
+
+	layoutRootPaths {
+		0 = EXT:t3theme_typo3com/Resources/Private/Layouts/ContentElements/
+	}
+}
+
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/ContentElement/CaseStudyHero.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/ContentElement/CaseStudyPartner.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/ContentElement/CaseStudyTeaser.txt">
@@ -32,8 +47,8 @@ page {
 		viewport = width=device-width, initial-scale=1
 		X-UA-Compatible = IE=edge
 		X-UA-Compatible {
-            attribute = http-equiv
-        }
+			attribute = http-equiv
+		}
 	}
 
 	includeCSS {
@@ -42,7 +57,7 @@ page {
 
 	includeJSFooterlibs {
 		jQuery = EXT:t3theme_typo3com/Resources/Public/JavaScript/jQuery/jquery-2.2.1.js
-        jQuery.forceOnTop = 1
+		jQuery.forceOnTop = 1
 		equalheight = EXT:t3theme_typo3com/Resources/Public/JavaScript/jquery.equalheight.js
 		tether = EXT:t3theme_typo3com/Resources/Public/JavaScript/bootstrap/tether.min.js
 		bootstrap = EXT:t3theme_typo3com/Resources/Public/JavaScript/bootstrap/bootstrap.min.js
@@ -53,9 +68,9 @@ page {
 
 	10 = FLUIDTEMPLATE
 	10 {
-        ################
-        ### TEMPLATE ###
-        ################
+		################
+		### TEMPLATE ###
+		################
 		templateName = TEXT
 		templateName.stdWrap.cObject = CASE
 		templateName.stdWrap.cObject {
@@ -71,34 +86,37 @@ page {
 			default = TEXT
 			default.value = Default
 		}
+
 		templateRootPaths {
 			0 = EXT:t3theme_typo3com/Resources/Private/Templates/Page/
 		}
+
 		partialRootPaths {
 			0 = EXT:t3theme_typo3com/Resources/Private/Partials/Page/
 		}
+
 		layoutRootPaths {
 			0 = EXT:t3theme_typo3com/Resources/Private/Layouts/Page/
 		}
-        
-        ################
-        ### SETTINGS ###
-        ################
-        settings {
+
+		################
+		### SETTINGS ###
+		################
+		settings {
 			contactPid = {$plugin.t3theme_typo3com.footer.contactPid}
 			legalInfoPid = {$plugin.t3theme_typo3com.footer.legalInfoPid}
 		}
-        
-        ##########################
-        ### DATA PREPROCESSING ###
-        ##########################
-        dataProcessing {
-            100 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-            100 {
-                references.fieldName = media
-                as = media
-            }
-        }
+
+		##########################
+		### DATA PREPROCESSING ###
+		##########################
+		dataProcessing {
+			100 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+			100 {
+				references.fieldName = media
+				as = media
+			}
+		}
 	}
 
 	bodyTagCObject = COA

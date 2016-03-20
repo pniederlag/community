@@ -3,21 +3,7 @@
 ############################################################
 
 tt_content.list_item >
-tt_content.list_item = FLUIDTEMPLATE
+tt_content.list_item =< lib.baseContentElement
 tt_content.list_item {
-
-    ################
-    ### TEMPLATE ###
-    ################
-    templateName = ListItem
-    templateRootPaths {
-        0 = EXT:t3theme_typo3com/Resources/Private/Templates/ContentElements/
-    }
-    partialRootPaths {
-        0 = EXT:t3theme_typo3com/Resources/Private/Partials/ContentElements/
-    }
-    layoutRootPaths {
-        0 = EXT:t3theme_typo3com/Resources/Private/Layouts/ContentElements/
-    }
-
+	templateName = ListItem
 }

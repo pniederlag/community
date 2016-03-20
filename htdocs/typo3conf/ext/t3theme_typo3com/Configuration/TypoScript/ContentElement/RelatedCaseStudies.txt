@@ -38,10 +38,9 @@ tt_content.related_case_studies {
 				stdWrap {
 					cObject = COA
 					cObject {
-						10 = FLUIDTEMPLATE
+						10 =< lib.baseContentElement
 						10 {
-							file = EXT:t3theme_typo3com/Resources/Private/Templates/ContentElements/Menu/RelatedCaseStudies.html
-							partialRootPath = EXT:t3theme_typo3com/Resources/Private/Partials/ContentElements/
+							templateName = RelatedCaseStudies
 
 							variables {
 								count_menuObject = TEXT

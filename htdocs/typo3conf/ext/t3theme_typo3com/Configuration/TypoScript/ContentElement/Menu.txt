@@ -85,10 +85,9 @@ tt_content {
 		}
 	}
 
-	menu.feature_menu = FLUIDTEMPLATE
+	menu.feature_menu =< lib.baseContentElement
 	menu.feature_menu {
-		file = EXT:t3theme_typo3com/Resources/Private/Templates/ContentElements/Menu/FeatureMenu.html
-		partialRootPath = EXT:t3theme_typo3com/Resources/Private/Partials/ContentElements/
+		templateName = FeatureMenu.html
 
 		dataProcessing {
 			10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
