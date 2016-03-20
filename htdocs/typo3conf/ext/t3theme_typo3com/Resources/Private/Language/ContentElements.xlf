@@ -3,6 +3,9 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2015-07-21T10:17:45Z" product-name="t3theme_typo3com">
 		<header/>
 		<body>
+			<trans-unit id="ce_group">
+				<source>TYPO3.com Elements</source>
+			</trans-unit>
 			<trans-unit id="labels.image_overlap">
 				<source>Text overlaps Image</source>
 			</trans-unit>
