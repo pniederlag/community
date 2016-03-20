@@ -45,7 +45,7 @@
 // Content Element
 //
 .contentelement {
-    margin: 2rem 0;
+    margin: 3rem 0;
     > *:first-child {
         margin-top: 0;
     }
@@ -59,11 +59,133 @@
 // Content Element Intro Block
 //
 .contentelement-intro_block {
-   background-color: #ffffff;
+   background-color: $white;
    text-align: center;
    padding: 3rem;
    @media (min-width: map-get($grid-breakpoints, md)) {
        padding-left: 8rem;
        padding-right: 8rem;
    }
+}
+
+
+//
+// Content Element Text Media
+//
+.contentelement-textmedia {
+    &-right,
+    &-left {
+        &:before,
+        &:after {
+            display: table;
+            content: " ";
+        }
+        &:after {
+            clear: both;
+        }
+    }
+}
+.contentelement-textmedia-right,
+.contentelement-textmedia-left,
+.contentelement-textmedia-text {
+    position: relative;
+}
+.contentelement-textmedia-image {
+    background-size: cover;
+    background-position: center center;
+    height: 160px;
+    @media (min-width: map-get($grid-breakpoints, sm)) {
+        height: auto;
+        min-height: 160px;
+    }
+}
+.contentelement-textmedia-text-inner {
+    > *:first-child {
+        margin-top: 0;
+    }
+    > *:last-child {
+        margin-bottom: 0;
+    }
+    min-height: 160px;
+    @media (min-width: map-get($grid-breakpoints, sm)) {
+        padding: 0 $grid-gutter-width;
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, sm)) {
+    .contentelement-textmedia-image {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 33.33%;
+    }
+    .contentelement-textmedia-right {
+        .contentelement-textmedia-image {
+            right: 0;
+        }
+        .contentelement-textmedia-text {
+            margin-right: 33.33%;
+        }
+        .contentelement-textmedia-text-inner {
+            padding-left: 0;
+            margin-left: 0;
+        }
+    }
+    .contentelement-textmedia-left {
+        .contentelement-textmedia-image {
+            left: 0;
+        }
+        .contentelement-textmedia-text {
+            margin-left: 33.33%;
+        }
+        .contentelement-textmedia-text-inner {
+            padding-right: 0;
+            margin-right: 0;
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .contentelement-textmedia-right {
+        .contentelement-textmedia-text {
+            margin-right: 33.33%;
+        }
+    }
+    .contentelement-textmedia-left {
+        .contentelement-textmedia-text {
+            margin-left: 33.33%;
+        }
+    }
+}
+
+
+//
+// Content Element Text Media Overlap
+//
+.contentelement-textmedia-overlap {
+    .contentelement-textmedia-text {
+        margin-top: $container-padding;
+    }
+    @media (min-width: map-get($grid-breakpoints, sm)) {
+        .contentelement-textmedia-text {
+            margin-bottom: $container-padding;
+        }
+        .contentelement-textmedia-text-inner {
+            background-color: $white;
+            padding-top: $grid-gutter-width;
+            padding-bottom: $grid-gutter-width;
+        }
+        .contentelement-textmedia-right {
+            .contentelement-textmedia-text {
+                margin-right: 30%;
+            }
+        }
+        .contentelement-textmedia-left {
+            .contentelement-textmedia-text {
+                margin-left: 30%;
+            }
+        }
+        .contentelement-textmedia-image {
+            width: 40%;   
+        }
+    }
 }
