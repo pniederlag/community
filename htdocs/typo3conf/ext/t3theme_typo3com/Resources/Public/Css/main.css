@@ -4580,17 +4580,6 @@ body {
 .footer-navigation {
   padding: 2rem 0; }
 
-.layout-homepage main {
-  position: relative; }
-  @media only screen and (min-width: 1250px) {
-    .layout-homepage main {
-      top: -5vw;
-      background-color: #ffffff; } }
-  @media only screen and (min-width: 1480px) {
-    .layout-homepage main {
-      top: -7vw;
-      background-color: #ffffff; } }
-
 .left {
   text-align: left !important; }
 
