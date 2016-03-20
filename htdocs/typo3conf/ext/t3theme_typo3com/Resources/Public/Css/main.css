@@ -4490,6 +4490,13 @@ img {
   padding-left: 1.35rem;
   padding-right: 1.35rem; }
 
+.row:before, .row:after {
+  display: table;
+  content: " "; }
+
+.row:after {
+  clear: both; }
+
 body {
   padding-top: 4.375rem; }
 
