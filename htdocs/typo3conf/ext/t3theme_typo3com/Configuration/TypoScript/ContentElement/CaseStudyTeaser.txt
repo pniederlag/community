@@ -3,13 +3,8 @@ tt_content.casestudy_teaser {
 	templateName = CaseStudyTeaser
 
 	dataProcessing {
-		10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+		10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
 		10 {
-			references.fieldName = assets
-		}
-
-		20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
-		20 {
 			table = pages
 			uidInList.field = pages
 			pidInList = {$plugin.t3theme_typo3com.caseStudy.overviewPage}
