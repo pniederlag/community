@@ -16,7 +16,7 @@
 .layout-default {
     .masthead + .content {
         > .container:first-child {
-            .contentelement-intro_block {
+            .contentelement-intro_block:first-child {
                 margin-top: -5rem;
             }
         }
