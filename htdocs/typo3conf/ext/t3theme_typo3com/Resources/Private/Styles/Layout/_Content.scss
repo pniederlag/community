@@ -10,19 +10,6 @@
 	text-align: center !important;
 }
 
-//
-// Default Layout
-//
-.layout-default {
-    .masthead + .content {
-        > .container:first-child {
-            .contentelement-intro_block:first-child {
-                margin-top: -5rem;
-            }
-        }
-    }
-}
-
 
 //
 // Page
@@ -59,13 +46,35 @@
 // Content Element Intro Block
 //
 .contentelement-intro_block {
-   background-color: $white;
-   text-align: center;
-   padding: 3rem;
-   @media (min-width: map-get($grid-breakpoints, md)) {
-       padding-left: 8rem;
-       padding-right: 8rem;
-   }
+    background-color: $white;
+    text-align: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    @media (min-width: map-get($grid-breakpoints, sm)) {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    @media (min-width: map-get($grid-breakpoints, md)) {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    @media (min-width: map-get($grid-breakpoints, lg)) {
+        padding-left: 9rem;
+        padding-right: 9rem;
+    }
+}
+.layout-default {
+    .masthead + .content {
+        > .container:first-child {
+            .contentelement-intro_block:first-child {
+                padding-top: 3rem;
+                margin-top: -3rem;
+                @media (min-width: map-get($grid-breakpoints, sm)) {
+                    margin-top: -5rem;
+                }
+            }
+        }
+    }
 }
 
 
