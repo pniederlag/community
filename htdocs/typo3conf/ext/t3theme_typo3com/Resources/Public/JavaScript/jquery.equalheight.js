@@ -37,12 +37,13 @@
 			rowStart = null,
 			rowTallest = null,
 			topPosition = 0,
+			threshold = 2,
 			$elements = this.$elements;
 		$elements.each(function() {
 			var $element = $(this);
 			if (!$element.is(':hidden')) {
-				topPosition = $element.offset().top;
-				if (rowStart !== topPosition) {
+				topPosition = Math.ceil($element.offset().top);
+				if (rowStart < topPosition - threshold || rowStart > topPosition + threshold) {
 					$.each(rowElements, function(){
 						$(this).height(rowTallest);
 					});
@@ -54,6 +55,7 @@
 					rowElements.push($element);
 					rowTallest = (rowTallest < $element.height()) ? ($element.height()) : (rowTallest);
 				}
+				rowTallest = Math.ceil(rowTallest);
 				$.each(rowElements, function(){
 					$(this).height(rowTallest);
 				});
