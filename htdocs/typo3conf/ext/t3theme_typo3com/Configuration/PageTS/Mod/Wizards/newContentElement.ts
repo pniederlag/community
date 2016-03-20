@@ -1,6 +1,23 @@
 mod.wizards {
+    newContentElement {
+        wizardItems {
+        }
+    }
+}
+
+
+mod.wizards {
    newContentElement {
       wizardItems {
+         common {
+            elements {
+               textmedia {
+                  tt_content_defValues {
+                     imageorient = 25
+                  }
+               }
+            }
+         }
          typo3com {
             header = LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:ce_group
             elements {
