@@ -6,10 +6,6 @@
 // -----------------------------------------------------------------------------
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/Helper/DynamicContent.txt">
 
-// Extensions
-// -----------------------------------------------------------------------------
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/Extension/GridElements.txt">
-
 // Content Elements
 // -----------------------------------------------------------------------------
 lib.baseContentElement = FLUIDTEMPLATE
