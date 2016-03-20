@@ -1,17 +1,77 @@
 <?php
-/**
- * This file is part of the TYPO3 CMS project.
- *
- * It is free software; you can redistribute it and/or modify it under
- * the terms of the GNU General Public License, either version 2
- * of the License, or any later version.
- *
- * For the full copyright and license information, please read the
- * LICENSE.txt file that was distributed with this source code.
- *
- * The TYPO3 project - inspiring people to share!
+if (! defined('TYPO3_MODE')) {
+    die('Access denied.');
+}
+ 
+ 
+/***************
+ * Add Content Elements to List
  */
+$backupCTypeItems = $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items'];
+$GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items'] = [
+    [
+        'LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:ce_group',
+        '--div--',
+    ],
+    [
+        'Case Study Teaser',
+        'casestudy_teaser',
+        'apps-clipboard-images',
+    ],
+    [
+        'Case Study Partner',
+        'casestudy_partner',
+        'apps-pagetree-backend-user-hideinmenu',
+    ],
+    [
+        'Hard Facts',
+        'hard_facts',
+        'overlay-shop',
+    ],
+    [
+        'List Item',
+        'list_item',
+        'overlay-approved',
+    ],
+    [
+        'Intro Block',
+        'intro_block',
+        'content-beside-text-img-above-center',
+    ],
+    [
+        'Related Case Studies',
+        'related_case_studies',
+        'content-textpic',
+    ],
+    [
+        'Top Features',
+        'top_features',
+        'apps-filetree-folder-list',
+    ],
+];
+foreach ($backupCTypeItems as $key => $value) {
+    $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items'][] = $value;
+}
+unset($key);
+unset($value);
+unset($backupCTypeItems);
 
+
+/***************
+ * Add Icons
+ */
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['casestudy_teaser'] = 'apps-clipboard-images';
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['casestudy_partner'] = 'apps-pagetree-backend-user-hideinmenu';
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['hard_facts'] = 'overlay-shop';
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['list_item'] = 'overlay-approved';
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['intro_block'] = 'content-beside-text-img-above-center';
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['related_case_studies'] = 'content-textpic';
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['top_features'] = 'apps-filetree-folder-list';
+
+
+/***************
+ * Modify the tt_content TCA
+ */
 $tca = [
     'columns' => [
         'header_position' => [
@@ -188,41 +248,7 @@ $tca = [
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.extended,tx_gridelements_container,tx_gridelements_columns',
         ],
     ],
-];
-
-$GLOBALS['TCA']['tt_content'] = array_replace_recursive($GLOBALS['TCA']['tt_content'], $tca);
-$GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items']['casestudy_teaser'] = [
-    'Case Study Teaser',
-    'casestudy_teaser',
-];
-$GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items']['casestudy_partner'] = [
-    'Case Study Partner',
-    'casestudy_partner',
-];
-$GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items']['hard_facts'] = [
-    'Hard Facts',
-    'hard_facts',
-];
-$GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items']['list_item'] = [
-    'List Item',
-    'list_item',
-];
-$GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items']['intro_block'] = [
-    'Intro Block',
-    'intro_block',
-];
-$GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items']['related_case_studies'] = [
-    'Related Case Studies',
-    'related_case_studies',
-];
-$GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items']['top_features'] = [
-    'Top Features',
-    'top_features',
-];
-
-$GLOBALS['TCA']['tt_content']['palettes'] = array_replace(
-    $GLOBALS['TCA']['tt_content']['palettes'],
-    [
+    'palettes' => [
         'imagelinks' => [
             'showitem' => '
                 image_zoom;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:image_zoom_formlabel,
@@ -240,5 +266,6 @@ $GLOBALS['TCA']['tt_content']['palettes'] = array_replace(
                 header_link;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_link_formlabel
             ',
         ],
-    ]
-);
+    ],
+];
+$GLOBALS['TCA']['tt_content'] = array_replace_recursive($GLOBALS['TCA']['tt_content'], $tca);
