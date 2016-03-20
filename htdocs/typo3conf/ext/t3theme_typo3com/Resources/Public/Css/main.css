@@ -4599,7 +4599,7 @@ body {
 .layout-default .masthead + .content > .container:first-child .contentelement-intro_block:first-child {
   margin-top: -5rem; }
 
-.content {
+.page {
   overflow: hidden; }
 
 .container-fluid-nopadding {
