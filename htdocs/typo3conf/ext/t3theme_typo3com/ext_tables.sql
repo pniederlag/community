@@ -1,6 +1,7 @@
 CREATE TABLE tt_content (
   header_position varchar(6) DEFAULT '' NOT NULL,
   image_overlap tinyint(4) DEFAULT '0' NOT NULL,
+  layout varchar(255) DEFAULT '' NOT NULL,
   tx_t3themetypo3com_t3a_membership tinyint(4) DEFAULT '0' NOT NULL,
   tx_t3themetypo3com_featurelist_link varchar(255) DEFAULT '' NOT NULL,
 );
