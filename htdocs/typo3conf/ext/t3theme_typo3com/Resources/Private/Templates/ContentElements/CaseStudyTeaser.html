@@ -1,34 +1,29 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:layout name="Default"/>
-
 <f:section name="Content">
-	<div class="case-study-teaser row">
-		<f:alias map="{teaserPage: teaserPages.0.data, teaserImage: teaserPages.0.files.0}">
-			<div class="col-xs-12 case-study-teaser-image">
-				<f:link.page pageUid="{teaserPage.uid}">
-					<f:if condition="{teaserImage}">
-						<f:media file="{teaserImage}"/>
-					</f:if>
-				</f:link.page>
-			</div>
-			<div class="col-xs-12 col-md-6 col-lg-5 case-study-teaser-block">
-				<div class="case-study-teaser-box">
-					<p class="case-study-teaser-subheader">
-						<f:translate key="LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:casestudy_teaser.headline"/>
-					</p>
-					<h3 class="case-study-teaser-headline">{teaserPage.tx_t3themetypo3com_longteaser_headline}</h3>
-					<p class="case-study-teaser-author">{teaserPage.tx_t3themetypo3com_longteaser_author}</p>
-					<p>
-						<f:link.page pageUid="{data.pages}" class="case-study-detail-view typo3button">
-							<f:translate key="LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:casestudy_teaser.readmore"/>
-						</f:link.page>
-						<f:link.page pageUid="{settings.caseStudyOverviewPid}" class="case-study-overview-page button">
-							<f:translate key="LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:casestudy_teaser.overview"/>
-						</f:link.page>
-					</p>
-				</div>
-			</div>
-		</f:alias>
-	</div>
+<f:alias map="{teaserPage: teaserPages.0.data, teaserImage: teaserPages.0.files.0}">
+    
+    <div class="contentelement-casestudy_teaser-image">
+        <f:if condition="{teaserImage}"><div class="contentelement-casestudy_teaser-image-background" style="background-image: url({f:uri.image(image: teaserImage)})"></div></f:if>
+        <f:link.page pageUid="{teaserPage.uid}" class="contentelement-casestudy_teaser-image-link">&nbsp;</f:link.page>
+    </div>
+
+    <div class="contentelement-casestudy_teaser-block">       
+        <span class="contentelement-casestudy_teaser-subheader">
+            <f:translate key="LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:casestudy_teaser.headline"/>
+        </span>
+        <h3 class="contentelement-casestudy_teaser-headline">{teaserPage.tx_t3themetypo3com_longteaser_headline}</h3>
+        <f:if condition="{teaserPage.tx_t3themetypo3com_longteaser_author}">
+            <p class="text-muted">{teaserPage.tx_t3themetypo3com_longteaser_author}</p>
+        </f:if>
+        <f:link.page pageUid="{data.pages}" class="btn btn-primary m-r-1">
+            <f:translate key="LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:casestudy_teaser.readmore"/>
+        </f:link.page>
+        <f:link.page pageUid="{settings.caseStudyOverviewPid}" class="btn btn-secondary">
+            <f:translate key="LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:casestudy_teaser.overview"/>
+        </f:link.page>
+    </div>
+    
+</f:alias>
 </f:section>
 </html>

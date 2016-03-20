@@ -3,8 +3,8 @@
 //
 .container,
 .container-fluid {
-    padding-left: 1.35rem;
-    padding-right: 1.35rem;
+    padding-left: $container-padding;
+    padding-right: $container-padding;
 }
 
 

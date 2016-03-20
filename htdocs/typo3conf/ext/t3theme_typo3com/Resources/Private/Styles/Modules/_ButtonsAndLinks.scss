@@ -1,3 +1,6 @@
+//
+// Buttons
+//
 .button {
 	display: inline-block;
 	background: $gray-dark;
@@ -14,6 +17,8 @@
 	}
 }
 
+
+
 .typo3button {
 	display: inline-block;
 	background: $typo3-key-color;
@@ -24,7 +29,9 @@
 	border: 0;
 	text-align: center;
 
-	&:hover, &:focus {
+	&:hover, 
+    &:focus {
+        text-decoration: none;
 		background: $support-orange-dark;
 		color: $white;
 	}
