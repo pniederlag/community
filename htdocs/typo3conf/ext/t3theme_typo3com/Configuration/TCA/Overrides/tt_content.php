@@ -206,7 +206,7 @@ $tca = [
             ',
             'columnsOverrides' => [
                 'bodytext' => [
-                    'defaultExtras' => 'richtext:rte_transform[mode=ts_css]',
+                    'defaultExtras' => 'richtext:rte_transform',
                 ],
                 'assets' => [
                     'config' => [
@@ -241,7 +241,7 @@ $tca = [
             ',
             'columnsOverrides' => [
                 'bodytext' => [
-                    'defaultExtras' => 'richtext:rte_transform[mode=ts_css]',
+                    'defaultExtras' => 'richtext:rte_transform',
                 ],
             ],
         ],
@@ -266,7 +266,7 @@ $tca = [
         'related_case_studies' => [
             'columnsOverrides' => [
                 'bodytext' => [
-                    'defaultExtras' => 'richtext:rte_transform[mode=ts_css]',
+                    'defaultExtras' => 'richtext:rte_transform',
                 ],
             ],
             'showitem' => '--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
