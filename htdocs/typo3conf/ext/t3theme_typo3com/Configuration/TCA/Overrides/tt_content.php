@@ -217,6 +217,8 @@ $tca = [
                                 ],
                             ],
                         ],
+                        'minitems' => 1,
+                        'maxitems' => 1,
                         'foreign_types' => [
                             0 => [
                                 'showitem' => 'title, alternative, --palette--;;filePalette'
