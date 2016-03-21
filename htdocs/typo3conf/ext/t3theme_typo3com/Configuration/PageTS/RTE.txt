@@ -1,0 +1,17 @@
+RTE.default {
+
+    // Add Css file
+    contentCSS = typo3conf/ext/t3theme_typo3com/Resources/Public/Css/rte.css
+
+    // Remove html tags that are not suitable for an editor to maintain
+    buttons.formatblock.removeItems = address, article, aside, div, header, footer, section, h4, h5, h6, nav, pre
+
+    // Cleanup RTE Buttons
+    showButtons := removeFromList(table)
+    showButtons := removeFromList(subscript)
+    showButtons := removeFromList(superscript)
+    showButtons := removeFromList(about)
+    showButtons := removeFromList(outdent)
+    showButtons := removeFromList(indent)
+
+}

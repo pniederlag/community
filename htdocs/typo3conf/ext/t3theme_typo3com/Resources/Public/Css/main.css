@@ -42,7 +42,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
 
-body {
+body, .htmlarea-content-body {
   margin: 0; }
 
 article,
@@ -289,7 +289,7 @@ html {
   font-size: 16px;
   -webkit-tap-highlight-color: transparent; }
 
-body {
+body, .htmlarea-content-body {
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.3;
@@ -4441,7 +4441,7 @@ a.bg-danger:focus, a.bg-danger:hover {
   .hidden-print {
     display: none !important; } }
 
-body,
+body, .htmlarea-content-body,
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   font-style: normal; }
@@ -4497,7 +4497,7 @@ img {
 .row:after {
   clear: both; }
 
-body {
+body, .htmlarea-content-body {
   padding-top: 4.375rem; }
 
 .header {
