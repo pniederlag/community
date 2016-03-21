@@ -1,35 +1,34 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:layout name="None"/>
-
+<f:layout name="Default"/>
 <f:section name="Content">
-	<div class="case-study-partner-block">
-		<div class="row">
-			<div class="col-sm-12 col-md-3 case-study-partner-block-inset">
-				<f:media file="{files.0}" style="width: 100%; height: auto;"/>
-			</div>
-			<div class="col-sm-12 col-md-6 case-study-partner-block-inset">
-				<f:render partial="Header/Header" arguments="{header: data.header, layout: data.header_layout, position: data.header_position, default: 3}"/>
-				{data.bodytext -> f:format.html()}
-			</div>
-			<div class="col-sm-12 col-md-3">
-				<div class="text-xs-right">
-					<f:switch expression="{data.tx_t3themetypo3com_t3a_membership}">
-						<f:case value="4">
-							<f:image src="EXT:t3theme_typo3com/Resources/Public/Icons/t3a_membership_platinum.svg"/>
-						</f:case>
-						<f:case value="3">
-							<f:image src="EXT:t3theme_typo3com/Resources/Public/Icons/t3a_membership_gold.svg"/>
-						</f:case>
-						<f:case value="2">
-							<f:image src="EXT:t3theme_typo3com/Resources/Public/Icons/t3a_membership_silver.svg"/>
-						</f:case>
-						<f:case value="1">
-							<f:image src="EXT:t3theme_typo3com/Resources/Public/Icons/t3a_membership_bronze.svg"/>
-						</f:case>
-					</f:switch>
-				</div>
-			</div>
-		</div>
-	</div>
+
+    <div class="contentelement-casestudy_partner-row">
+        <div class="contentelement-casestudy_partner-logo">
+            <f:if condition="{files.0}">
+                <f:media file="{files.0}" title="{files.0.title}" alt="{files.0.alternative}" />
+            </f:if>
+        </div>
+        <div class="contentelement-casestudy_partner-text">
+            <h3 class="contentelement-casestudy_partner-name">{data.header}</h3>
+            {data.bodytext -> f:format.html()}
+        </div>
+        <div class="contentelement-casestudy_partner-badge">
+            <f:switch expression="{data.tx_t3themetypo3com_t3a_membership}">
+                <f:case value="4">
+                    <f:image src="EXT:t3theme_typo3com/Resources/Public/Icons/t3a_membership_platinum.svg"/>
+                </f:case>
+                <f:case value="3">
+                    <f:image src="EXT:t3theme_typo3com/Resources/Public/Icons/t3a_membership_gold.svg"/>
+                </f:case>
+                <f:case value="2">
+                    <f:image src="EXT:t3theme_typo3com/Resources/Public/Icons/t3a_membership_silver.svg"/>
+                </f:case>
+                <f:case value="1">
+                    <f:image src="EXT:t3theme_typo3com/Resources/Public/Icons/t3a_membership_bronze.svg"/>
+                </f:case>
+            </f:switch>
+        </div>
+    </div>
+
 </f:section>
 </html>
