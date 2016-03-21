@@ -1,0 +1,24 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Content">
+
+    <div class="contentelement-hard_facts-row">
+        <div class="contentelement-hard_facts-item">
+            <f:image src="EXT:t3theme_typo3com/Resources/Public/Icons/numbers_downloads.svg" alt="Downloads" height="50" width="50" class="contentelement-hard_facts-image" />
+            <h2 class="contentelement-hard_facts-headline">{settings.downloadCount -> f:format.number(decimals: 0, thousandsSeparator: '.')}</h2>
+            <small class="contentelement-hard_facts-subline">{f:translate(key: 'LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:hard_facts.downloads')}</small>
+        </div>
+        <div class="contentelement-hard_facts-item">
+            <f:image src="EXT:t3theme_typo3com/Resources/Public/Icons/numbers_websites.svg" alt="Websites" height="50" width="50" class="contentelement-hard_facts-image" />
+            <h2 class="contentelement-hard_facts-headline">{settings.websiteCount -> f:format.number(decimals: 0, thousandsSeparator: '.')}</h2>
+            <small class="contentelement-hard_facts-subline">{f:translate(key: 'LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:hard_facts.websites')}</small>
+        </div>        
+        <div class="contentelement-hard_facts-item">
+            <f:image src="EXT:t3theme_typo3com/Resources/Public/Icons/numbers_developers.svg" alt="Developers" height="50" width="50" class="contentelement-hard_facts-image" />
+            <h2 class="contentelement-hard_facts-headline">{settings.developerCount -> f:format.number(decimals: 0, thousandsSeparator: '.')}</h2>
+            <small class="contentelement-hard_facts-subline">{f:translate(key: 'LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:hard_facts.developers')}</small>
+        </div>
+    </div>
+
+</f:section>
+</html>
