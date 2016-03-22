@@ -73,7 +73,7 @@ body {
     width: $header-size-smartphone;
     margin: 0;
     background: url(#{$images}/Icons/burger-menu.svg) no-repeat center center;
-    background-size: 24px;
+    background-size: 1.6rem 1.6rem;
 
     @media (min-width: map-get($grid-breakpoints, md)) {
         height: $header-size-tablet;
