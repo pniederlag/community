@@ -44,18 +44,15 @@ body {
 .header-logo {
     display: block;
     margin: 0 $header-size-smartphone;
-    padding: 0 $space*2;
     height: 100%;
     text-align: center;
 
     @media (min-width: map-get($grid-breakpoints, md)) {
         margin: 0 $header-size-tablet;
-        padding: 0 $space;
     }
 
     @media (min-width: map-get($grid-breakpoints, lg)) {
         margin: 0 $header-size-desktop;
-        padding: 0;
     }
 }
 
@@ -74,18 +71,16 @@ body {
     display: block;
     height: $header-size-smartphone;
     width: $header-size-smartphone;
-    margin: 0 0 0 $space*2;
+    margin: 0;
     background: url(#{$images}/Icons/burger-menu.svg) no-repeat center center;
     background-size: 24px;
 
     @media (min-width: map-get($grid-breakpoints, md)) {
-        margin: 0 0 0 $space;
         height: $header-size-tablet;
         width: $header-size-tablet;
     }
 
     @media (min-width: map-get($grid-breakpoints, lg)) {
-        margin: 0;
         height: $header-size-desktop;
         width: $header-size-desktop;
     }

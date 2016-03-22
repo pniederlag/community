@@ -4539,17 +4539,14 @@ body, .htmlarea-content-body {
 .header-logo {
   display: block;
   margin: 0 50px;
-  padding: 0 10px;
   height: 100%;
   text-align: center; }
   @media (min-width: 768px) {
     .header-logo {
-      margin: 0 60px;
-      padding: 0 5px; } }
+      margin: 0 60px; } }
   @media (min-width: 992px) {
     .header-logo {
-      margin: 0 70px;
-      padding: 0; } }
+      margin: 0 70px; } }
 
 .header-logo-image {
   display: block;
@@ -4565,17 +4562,15 @@ body, .htmlarea-content-body {
   display: block;
   height: 50px;
   width: 50px;
-  margin: 0 0 0 10px;
+  margin: 0;
   background: url(../Images/Icons/burger-menu.svg) no-repeat center center;
   background-size: 24px; }
   @media (min-width: 768px) {
     .header-toggle {
-      margin: 0 0 0 5px;
       height: 60px;
       width: 60px; } }
   @media (min-width: 992px) {
     .header-toggle {
-      margin: 0;
       height: 70px;
       width: 70px; } }
 
