@@ -24,6 +24,29 @@ lib.parseFunc_RTE {
                 }
             }
         }
+        
+        blockquote {
+            callRecursive = 1
+            callRecursive {
+                tagStdWrap {
+                    HTMLparser = 1
+                    HTMLparser {
+                        tags {
+                            blockquote {
+                                overrideAttribs >
+                                fixAttrib {
+                                    class {
+                                        default = blockquote
+                                        always = 1
+                                        list = blockquote
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
     }
 }

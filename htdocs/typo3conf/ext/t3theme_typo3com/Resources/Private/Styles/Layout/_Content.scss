@@ -35,6 +35,26 @@ ul.content-list {
 
 
 //
+// Blockquote
+//
+.blockquote {
+    margin: $spacer 0;
+    padding: 0 1rem;
+    font-style: italic;
+    color: $gray-light;
+    > *:first-child {
+        margin-top: 0;
+    }
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+.htmlarea-content-body blockquote {
+    @extend .blockquote;
+}
+
+
+//
 // Page
 //
 .page {

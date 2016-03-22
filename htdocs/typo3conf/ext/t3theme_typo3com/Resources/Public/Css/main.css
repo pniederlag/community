@@ -535,11 +535,11 @@ mark,
   font-size: 90%;
   text-transform: uppercase; }
 
-.blockquote {
+.blockquote, .htmlarea-content-body blockquote {
   padding: 0.75rem 1.5rem;
   margin-bottom: 1.5rem;
   font-size: 1.25rem;
-  border-left: 0.25rem solid #eceeef; }
+  border-left: 0.25rem solid #ff8700; }
 
 .blockquote-footer {
   display: block;
@@ -553,7 +553,7 @@ mark,
   padding-right: 1.5rem;
   padding-left: 0;
   text-align: right;
-  border-right: 0.25rem solid #eceeef;
+  border-right: 0.25rem solid #ff8700;
   border-left: 0; }
 
 .blockquote-reverse .blockquote-footer::before {
@@ -4615,6 +4615,16 @@ ul.content-list {
       width: 7px;
       top: 8px;
       left: -1rem; }
+
+.blockquote, .htmlarea-content-body blockquote {
+  margin: 1.5rem 0;
+  padding: 0 1rem;
+  font-style: italic;
+  color: #818a91; }
+  .blockquote > *:first-child, .htmlarea-content-body blockquote > *:first-child {
+    margin-top: 0; }
+  .blockquote > *:last-child, .htmlarea-content-body blockquote > *:last-child {
+    margin-bottom: 0; }
 
 .page {
   overflow: hidden; }
