@@ -5121,31 +5121,43 @@ ul.content-list {
     margin-bottom: 0.5rem;
     margin-top: -1rem; }
 
-@media (min-width: 768px) {
-  .layout-casestudy .masthead {
-    margin-bottom: 60px; } }
+.contentelement-casestudy_info-image {
+  padding: 1.875rem;
+  padding-top: 0;
+  background-color: #ffffff; }
+  @media (min-width: 544px) {
+    .contentelement-casestudy_info-image {
+      padding-top: 1.875rem; } }
+  .contentelement-casestudy_info-image > img {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 150px; }
+    @media (min-width: 544px) {
+      .contentelement-casestudy_info-image > img {
+        max-height: 200px; } }
+
+.contentelement-casestudy_info-text {
+  padding: 1.875rem;
+  background: #f4f4f4; }
+  .contentelement-casestudy_info-text > *:first-child {
+    margin-top: 0; }
+  .contentelement-casestudy_info-text > *:last-child {
+    margin-bottom: 0; }
+
+@media (min-width: 544px) {
+  .layout-casestudy .masthead + .content > .container:first-child .contentelement-casestudy_info:first-child {
+    margin-top: -3rem; } }
 
 @media (min-width: 768px) {
-  .layout-casestudy .t3com-case-study-vendor,
-  .layout-casestudy .t3com-case-study-content-left {
-    float: right; } }
+  .layout-casestudy .masthead + .content > .container:first-child .contentelement-casestudy_info:first-child {
+    margin-top: -4.5rem; } }
 
-.layout-casestudy .t3com-case-study-vendor {
-  margin: 30px 0 60px; }
-  @media (min-width: 768px) {
-    .layout-casestudy .t3com-case-study-vendor {
-      margin-top: -150px; } }
-  .layout-casestudy .t3com-case-study-vendor .case-study-vendor-thumb > .entry-content {
-    background: #ffffff; }
-  .layout-casestudy .t3com-case-study-vendor .case-study-vendor-text > .entry-content {
-    background: #f4f4f4;
-    padding: 20px; }
-    .layout-casestudy .t3com-case-study-vendor .case-study-vendor-text > .entry-content > p:last-child {
-      margin: 0; }
-
-.layout-casestudy .contentelement {
-  margin-top: 0;
-  margin-bottom: 30px; }
+@media (min-width: 992px) {
+  .layout-casestudy .masthead + .content > .container:first-child .contentelement-casestudy_info:first-child {
+    margin-top: -6rem; } }
 
 @media (min-width: 768px) {
   .overlap-box {

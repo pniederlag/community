@@ -1,0 +1,10 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:ce="http://typo3.org/ns/TYPO3/CMS/FluidStyledContent/ViewHelpers" data-namespace-typo3-fluid="true">
+    <f:if condition="{caseLogo.0}">
+        <div class="contentelement-casestudy_info-image">
+            <f:image image="{caseLogo.0}" title="{caseLogo.0.title}" alt="{caseLogo.0.alternative}" />
+        </div>
+    </f:if>
+    <div class="contentelement-casestudy_info-text">
+        <f:format.html>{data.tx_t3themetypo3com_case_copytext}</f:format.html>
+    </div>
+</html>

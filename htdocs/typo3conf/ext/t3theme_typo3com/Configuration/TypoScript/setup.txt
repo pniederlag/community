@@ -114,6 +114,11 @@ page {
 				references.fieldName = media
 				as = media
 			}
+            150 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+			150 {
+				references.fieldName = tx_t3themetypo3com_case_logo
+				as = caseLogo
+			}
 		}
 	}
 

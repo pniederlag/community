@@ -1,51 +1,51 @@
+//
+// Content Element CaseStudy Info
+//
+.contentelement-casestudy_info-image { 
+    padding: $grid-gutter-width;
+    padding-top: 0;
+    background-color: $white;
+    @media (min-width: map-get($grid-breakpoints, sm)) {
+        padding-top: $grid-gutter-width;
+    }
+    > img {
+        display: block;
+        margin: 0 auto;
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 150px;
+        @media (min-width: map-get($grid-breakpoints, sm)) {
+            max-height: 200px;
+        }
+    }
+}
+.contentelement-casestudy_info-text {
+    padding: $grid-gutter-width;
+    background: $grey-superlight;
+    > *:first-child {
+        margin-top: 0;
+    }
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
 .layout-casestudy {
-
-    // header
-    .masthead {
-        @media (min-width: map-get($grid-breakpoints, md)) {
-            margin-bottom: $space*12;
-        }
-    }
-
-    // vendor box
-    .t3com-case-study-vendor,
-    .t3com-case-study-content-left {
-        @media (min-width: map-get($grid-breakpoints, md)) {
-            float: right;
-        }
-    }
-
-    .t3com-case-study-vendor {
-        margin: $space*6 0 $space*12;
-
-        @media (min-width: map-get($grid-breakpoints, md)) {
-            margin-top: (-$space*30);
-        }
-
-        .case-study-vendor-thumb {
-            > .entry-content {
-                background: $white;
-            }
-        }
-
-        .case-study-vendor-text {
-            > .entry-content {
-                background: $grey-superlight;
-                padding: $space*4;
-
-                > p {
-                    &:last-child {
-                        margin: 0;
-                    }
+    .masthead + .content {
+        > .container:first-child {
+            .contentelement-casestudy_info:first-child {
+                @media (min-width: map-get($grid-breakpoints, sm)) {
+                    margin-top: -($spacer * 2);
+                }
+                @media (min-width: map-get($grid-breakpoints, md)) {
+                    margin-top: -($spacer * 3);
+                }
+                @media (min-width: map-get($grid-breakpoints, lg)) {
+                    margin-top: -($spacer * 4);
                 }
             }
         }
-    }
-
-
-    // content
-    .contentelement {
-        margin-top: 0;
-        margin-bottom: $space*6;
     }
 }

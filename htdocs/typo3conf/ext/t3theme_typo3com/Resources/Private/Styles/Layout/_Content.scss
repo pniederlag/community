@@ -75,7 +75,7 @@ ul.content-list {
 // Content Element
 //
 .contentelement {
-    margin: 3rem 0;
+    margin: ($spacer * 2) 0;
     > *:first-child {
         margin-top: 0;
     }

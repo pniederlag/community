@@ -30,22 +30,26 @@ $additionalFields = [
             'exclude' => 1,
             'label' => 'LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:labels.tx_t3themetypo3com_case_logo',
             'config' => ExtensionManagementUtility::getFileFieldTCAConfig(
-                'tx_t3themetypo3com_case_logo',
-                [
+                'tx_t3themetypo3com_case_logo',                
+                [          
+                    'foreign_selector_fieldTcaOverride' => [
+                        'config' => [
+                            'appearance' => [
+                                'elementBrowserAllowed' => 'jpg,jpeg,png,svg'
+                            ],
+                        ],
+                    ],
+                    'maxitems' => 1,
                     'foreign_types' => [
-                        '0' => [
-                            'showitem' => '
-                                    --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
-                                    --palette--;;filePalette',
+                        0 => [
+                            'showitem' => 'title, alternative, --palette--;;filePalette'
                         ],
                         \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
-                            'showitem' => '
-                                    --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
-                                    --palette--;;filePalette',
+                            'showitem' => 'title, alternative, --palette--;;filePalette'
                         ],
                     ],
                 ]
-            ),
+            )
         ],
         'tx_t3themetypo3com_feature_icon' => [
             'exclude' => 1,
