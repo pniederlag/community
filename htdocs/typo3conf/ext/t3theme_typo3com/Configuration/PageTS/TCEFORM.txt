@@ -3,12 +3,6 @@ TCEFORM {
 		layout {
 			# Remove items from select
 			removeItems = 1,2,3,4
-
-			# Add new items to select
-			addItems {
-				subpage-header = Subpage Header
-			}
-
 			types {
                 header {
                     disabled = 1
