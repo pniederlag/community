@@ -20,9 +20,6 @@ ul.content-list {
     li {
         position: relative;
         font-weight: bolder;
-        + li {
-            margin-top: ($spacer / 2);    
-        }
         &:before {
             content: "";
             background-color: $brand-primary;
