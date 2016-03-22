@@ -4,7 +4,9 @@
             <f:image image="{caseLogo.0}" title="{caseLogo.0.title}" alt="{caseLogo.0.alternative}" />
         </div>
     </f:if>
-    <div class="contentelement-casestudy_info-text">
-        <f:format.html>{data.tx_t3themetypo3com_case_copytext}</f:format.html>
-    </div>
+    <f:if condition="{data.tx_t3themetypo3com_case_copytext}">
+        <div class="contentelement-casestudy_info-text">
+            <f:format.html>{data.tx_t3themetypo3com_case_copytext}</f:format.html>
+        </div>
+    </f:if>
 </html>
