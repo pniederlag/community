@@ -4596,6 +4596,29 @@ body, .htmlarea-content-body {
 .center {
   text-align: center !important; }
 
+.htmlarea-content-body ul,
+ul.content-list {
+  padding-left: 1rem;
+  list-style: none;
+  margin: 1rem 0; }
+  .htmlarea-content-body ul li,
+  ul.content-list li {
+    position: relative;
+    font-weight: bolder; }
+    .htmlarea-content-body ul li + li,
+    ul.content-list li + li {
+      margin-top: 0.5rem; }
+    .htmlarea-content-body ul li:before,
+    ul.content-list li:before {
+      content: "";
+      background-color: #ff8700;
+      position: absolute;
+      display: block;
+      height: 7px;
+      width: 7px;
+      top: 8px;
+      left: -1rem; }
+
 .page {
   overflow: hidden; }
 

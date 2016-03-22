@@ -5,6 +5,7 @@
 // Helper
 // -----------------------------------------------------------------------------
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/Helper/DynamicContent.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/Helper/ParseFunc.txt">
 
 // Content Elements
 // -----------------------------------------------------------------------------

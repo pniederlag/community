@@ -1,0 +1,21 @@
+#######################
+#### PARSEFUNC RTE ####
+#######################
+lib.parseFunc_RTE {
+
+    externalBlocks {
+        ul {
+            stripNL = 1
+            callRecursive = 1
+            callRecursive {
+                tagStdWrap {
+                    HTMLparser = 1
+                    HTMLparser.tags.ul {
+                        fixAttrib.class.default = content-list
+                    }
+                }
+            }
+        }
+    }
+
+}

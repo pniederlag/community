@@ -10,6 +10,34 @@
 
 
 //
+// Lists
+//
+.htmlarea-content-body ul,
+ul.content-list {
+	padding-left: 1rem;
+	list-style: none;
+    margin: $spacer 0;
+    li {
+        position: relative;
+        font-weight: bolder;
+        + li {
+            margin-top: ($spacer / 2);    
+        }
+        &:before {
+            content: "";
+            background-color: $brand-primary;
+            position: absolute;
+            display: block;
+            height:7px;
+            width: 7px;
+            top: 8px;
+            left: -1rem;   
+        }    
+    }
+}
+
+
+//
 // Page
 //
 .page {
