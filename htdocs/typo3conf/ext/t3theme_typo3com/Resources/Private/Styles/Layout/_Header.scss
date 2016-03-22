@@ -94,8 +94,16 @@ body {
     display: none;
     text-align: left;
     background-color: #ffffff;
-    padding: 2rem 1.35rem;
-    margin: 0 -1.35rem;
+    padding: $space*3 $space*2;
+    margin: 0;
+
+    @media (min-width: map-get($grid-breakpoints, md)) {
+        padding: $space*4 $space*3;
+    }
+
+    @media (min-width: map-get($grid-breakpoints, lg)) {
+        padding: $space*6 $space*4;
+    }
 }
 
 

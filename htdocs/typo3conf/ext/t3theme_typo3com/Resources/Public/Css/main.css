@@ -4572,8 +4572,14 @@ body, .htmlarea-content-body {
   display: none;
   text-align: left;
   background-color: #ffffff;
-  padding: 2rem 1.35rem;
-  margin: 0 -1.35rem; }
+  padding: 15px 10px;
+  margin: 0; }
+  @media (min-width: 768px) {
+    .header-navigation {
+      padding: 20px 15px; } }
+  @media (min-width: 992px) {
+    .header-navigation {
+      padding: 30px 20px; } }
 
 #page-toggle {
   display: none; }
