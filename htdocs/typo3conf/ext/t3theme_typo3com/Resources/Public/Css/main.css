@@ -1,3 +1,6 @@
+/*
+* SPACE
+*/
 @font-face {
   font-family: "Source Sans Pro";
   src: url("../Fonts/SourceSansPro-Regular.eot?1457770348");
@@ -5114,6 +5117,32 @@ body, .htmlarea-content-body {
     font-family: "Source Sans Pro Bold";
     margin-bottom: 0.5rem;
     margin-top: -1rem; }
+
+@media (min-width: 768px) {
+  .layout-casestudy .masthead {
+    margin-bottom: 60px; } }
+
+@media (min-width: 768px) {
+  .layout-casestudy .t3com-case-study-vendor,
+  .layout-casestudy .t3com-case-study-content-left {
+    float: right; } }
+
+.layout-casestudy .t3com-case-study-vendor {
+  margin: 30px 0 60px; }
+  @media (min-width: 768px) {
+    .layout-casestudy .t3com-case-study-vendor {
+      margin-top: -150px; } }
+  .layout-casestudy .t3com-case-study-vendor .case-study-vendor-thumb > .entry-content {
+    background: #ffffff; }
+  .layout-casestudy .t3com-case-study-vendor .case-study-vendor-text > .entry-content {
+    background: #f4f4f4;
+    padding: 20px; }
+    .layout-casestudy .t3com-case-study-vendor .case-study-vendor-text > .entry-content > p:last-child {
+      margin: 0; }
+
+.layout-casestudy .contentelement {
+  margin-top: 0;
+  margin-bottom: 30px; }
 
 @media (min-width: 768px) {
   .overlap-box {
