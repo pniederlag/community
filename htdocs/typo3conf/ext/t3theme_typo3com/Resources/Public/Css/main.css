@@ -4966,58 +4966,20 @@ ul.content-list {
     content: " ";
     padding-left: 73px; }
 
-.contentelement-casestudy_teaser {
-  position: relative;
-  margin-left: -1.35rem;
-  margin-right: -1.35rem; }
-  .contentelement-casestudy_teaser-image {
-    background-color: #f4f4f4;
-    height: 160px;
-    position: relative; }
-  .contentelement-casestudy_teaser-image-background, .contentelement-casestudy_teaser-image-link {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-size: cover;
-    background-position: center center; }
-  .contentelement-casestudy_teaser-block {
-    color: #ffffff;
-    padding: 2.025rem 1.35rem;
-    background-color: #515151; }
-  .contentelement-casestudy_teaser-subheader {
-    display: block;
-    text-transform: uppercase;
-    color: #ff8700;
-    margin-bottom: 0.5rem; }
-  .contentelement-casestudy_teaser-headline {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem; }
-  .contentelement-casestudy_teaser .btn {
-    margin-top: 0.5rem; }
-  @media (min-width: 544px) {
-    .contentelement-casestudy_teaser-image {
-      height: 250px; }
-    .contentelement-casestudy_teaser-subheader {
-      font-size: 1.3rem; }
-    .contentelement-casestudy_teaser-headline {
-      font-size: 2.1rem; } }
-  @media (min-width: 768px) {
-    .contentelement-casestudy_teaser-image {
-      height: 450px; }
-    .contentelement-casestudy_teaser-image-background, .contentelement-casestudy_teaser-image-link {
-      width: 1300px;
-      left: 50%;
-      transform: translate(-50%, 0); }
-    .contentelement-casestudy_teaser-block {
-      background-color: rgba(0, 0, 0, 0.7);
-      position: absolute;
-      top: 2.7rem;
-      left: 1.35rem;
-      width: 450px;
-      padding: 2.025rem; } }
+.casestudy-company {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: -5rem;
+  background-color: #f7f7f9; }
+  .casestudy-company img {
+    width: 100%;
+    height: auto; }
+  .casestudy-company .ce-bodytext {
+    padding: 1rem; }
+  .casestudy-company h3 {
+    font-family: "Source Sans Pro Bold";
+    margin-bottom: 0.5rem;
+    margin-top: -1rem; }
 
 .contentelement-casestudy_partner {
   position: relative;
@@ -5106,20 +5068,67 @@ ul.content-list {
   .contentelement-casestudy_partner-badge {
     width: 140px; } }
 
-.casestudy-company {
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: -5rem;
-  background-color: #f7f7f9; }
-  .casestudy-company img {
-    width: 100%;
-    height: auto; }
-  .casestudy-company .ce-bodytext {
-    padding: 1rem; }
-  .casestudy-company h3 {
-    font-family: "Source Sans Pro Bold";
-    margin-bottom: 0.5rem;
-    margin-top: -1rem; }
+.t3com-case-study-related .case-study-related-image {
+  margin-bottom: 15px; }
+  @media (min-width: 768px) {
+    .t3com-case-study-related .case-study-related-image {
+      margin-bottom: 0; } }
+
+.t3com-case-study-related .case-study-related-text h4 {
+  text-transform: uppercase; }
+
+.contentelement-casestudy_teaser {
+  position: relative;
+  margin-left: -1.35rem;
+  margin-right: -1.35rem; }
+  .contentelement-casestudy_teaser-image {
+    background-color: #f4f4f4;
+    height: 160px;
+    position: relative; }
+  .contentelement-casestudy_teaser-image-background, .contentelement-casestudy_teaser-image-link {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center center; }
+  .contentelement-casestudy_teaser-block {
+    color: #ffffff;
+    padding: 2.025rem 1.35rem;
+    background-color: #515151; }
+  .contentelement-casestudy_teaser-subheader {
+    display: block;
+    text-transform: uppercase;
+    color: #ff8700;
+    margin-bottom: 0.5rem; }
+  .contentelement-casestudy_teaser-headline {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem; }
+  .contentelement-casestudy_teaser .btn {
+    margin-top: 0.5rem; }
+  @media (min-width: 544px) {
+    .contentelement-casestudy_teaser-image {
+      height: 250px; }
+    .contentelement-casestudy_teaser-subheader {
+      font-size: 1.3rem; }
+    .contentelement-casestudy_teaser-headline {
+      font-size: 2.1rem; } }
+  @media (min-width: 768px) {
+    .contentelement-casestudy_teaser-image {
+      height: 450px; }
+    .contentelement-casestudy_teaser-image-background, .contentelement-casestudy_teaser-image-link {
+      width: 1300px;
+      left: 50%;
+      transform: translate(-50%, 0); }
+    .contentelement-casestudy_teaser-block {
+      background-color: rgba(0, 0, 0, 0.7);
+      position: absolute;
+      top: 2.7rem;
+      left: 1.35rem;
+      width: 450px;
+      padding: 2.025rem; } }
 
 @media (min-width: 768px) {
   .layout-casestudy .masthead {
