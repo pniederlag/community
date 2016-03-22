@@ -1,5 +1,5 @@
 /*
-* SPACE
+* LAYOUT SIZES
 */
 @font-face {
   font-family: "Source Sans Pro";
@@ -4501,7 +4501,13 @@ img {
   clear: both; }
 
 body, .htmlarea-content-body {
-  padding-top: 4.375rem; }
+  padding-top: 50px; }
+  @media (min-width: 768px) {
+    body, .htmlarea-content-body {
+      padding-top: 60px; } }
+  @media (min-width: 992px) {
+    body, .htmlarea-content-body {
+      padding-top: 70px; } }
 
 .header {
   position: fixed;
@@ -4512,22 +4518,35 @@ body, .htmlarea-content-body {
   z-index: 1030;
   background-color: #f4f4f4;
   text-align: center;
-  height: 4.375rem; }
+  height: 50px; }
+  @media (min-width: 768px) {
+    .header {
+      height: 60px; } }
+  @media (min-width: 992px) {
+    .header {
+      height: 70px; } }
   .header .container {
-    position: relative; }
+    position: relative;
+    padding: 0;
+    height: 100%; }
 
 .header-logo {
   display: block;
-  margin: 0;
-  margin-left: 3.025rem;
-  padding-right: 3.025rem;
+  margin: 0 50px;
+  height: 100%;
   text-align: center; }
+  @media (min-width: 768px) {
+    .header-logo {
+      margin: 0 60px; } }
+  @media (min-width: 992px) {
+    .header-logo {
+      margin: 0 70px; } }
 
 .header-logo-image {
   display: block;
-  width: auto;
   margin: 0 auto;
-  height: 4.375rem; }
+  height: 90%;
+  width: auto; }
 
 .header-toggle {
   cursor: pointer;
@@ -4535,13 +4554,19 @@ body, .htmlarea-content-body {
   top: 0;
   left: 0;
   display: block;
-  height: 4.375rem;
-  width: 4.375rem;
+  height: 50px;
+  width: 50px;
   margin: 0;
-  background-position: center center;
-  background-image: url(../Images/Icons/burger-menu.svg);
-  background-repeat: no-repeat;
+  background: url(../Images/Icons/burger-menu.svg) no-repeat center center;
   background-size: 1.6rem 1.6rem; }
+  @media (min-width: 768px) {
+    .header-toggle {
+      height: 60px;
+      width: 60px; } }
+  @media (min-width: 992px) {
+    .header-toggle {
+      height: 70px;
+      width: 70px; } }
 
 .header-navigation {
   display: none;
