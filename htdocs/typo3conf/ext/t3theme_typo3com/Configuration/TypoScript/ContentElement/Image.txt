@@ -1,6 +1,6 @@
 tt_content.image =< lib.baseContentElement
 tt_content.image {
-	templateName = Image
+    templateName = Image
 
     dataProcessing {
         10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor

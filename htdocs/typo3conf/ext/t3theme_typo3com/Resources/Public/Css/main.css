@@ -4623,14 +4623,17 @@ body, .htmlarea-content-body {
 .footer-navigation {
   padding: 2rem 0; }
 
+.text-left,
 .left {
-  text-align: left !important; }
+  text-align: left; }
 
+.text-right,
 .right {
-  text-align: right !important; }
+  text-align: right; }
 
+.text-center,
 .center {
-  text-align: center !important; }
+  text-align: center; }
 
 .htmlarea-content-body ul,
 ul.content-list {

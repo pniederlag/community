@@ -1,11 +1,17 @@
+//
+// Text Alignment
+//
+.text-left,
 .left {
-	text-align: left !important;
+	text-align: left;
 }
+.text-right,
 .right {
-	text-align: right !important;
+	text-align: right;
 }
+.text-center,
 .center {
-	text-align: center !important;
+	text-align: center;
 }
 
 
