@@ -47,5 +47,9 @@
     .contentelement {
         margin-top: 0;
         margin-bottom: $space*6;
+
+        &.contentelement-casestudy_partner {
+            margin: 0;
+        }
     }
 }

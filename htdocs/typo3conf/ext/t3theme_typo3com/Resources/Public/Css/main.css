@@ -5155,6 +5155,8 @@ ul.content-list {
 .layout-casestudy .contentelement {
   margin-top: 0;
   margin-bottom: 30px; }
+  .layout-casestudy .contentelement.contentelement-casestudy_partner {
+    margin: 0; }
 
 @media (min-width: 768px) {
   .overlap-box {
