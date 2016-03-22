@@ -1,3 +1,6 @@
+################################################
+#### DEFAULT                                ####
+################################################
 RTE.default {
 
     // Add Css file
@@ -15,3 +18,67 @@ RTE.default {
     showButtons := removeFromList(indent)
 
 }
+
+
+################################################
+#### PROCESSING entryHTMLparser_db          ####
+################################################
+RTE.default.proc.entryHTMLparser_db = 1
+RTE.default.proc.entryHTMLparser_db {
+
+    tags {
+
+        // Clean Tags
+        span {
+            fixAttrib {
+                style.unset = 1
+                lang.unset = 1
+            }
+            allowedAttribs >
+            rmTagIfNoAttrib = 1
+        }
+        
+        // Disallow all attributes
+        hr.allowedAttribs           = 0
+        b.allowedAttribs            = 0
+        strong.allowedAttribs       = 0
+        i.allowedAttribs            = 0
+        em.allowedAttribs           = 0
+        u.allowedAttribs            = 0
+        strike.allowedAttribs       = 0
+        del.allowedAttribs          = 0
+        big.allowedAttribs          = 0
+        small.allowedAttribs        = 0
+        sup.allowedAttribs          = 0
+        sub.allowedAttribs          = 0
+        li.allowedAttribs           = 0
+        blockquote.allowedAttribs   = 0
+        code.allowedAttribs         = 0
+        thead.allowedAttribs        = 0
+        tbody.allowedAttribs        = 0
+        tfoot.allowedAttribs        = 0
+        div.allowedAttribs = 0
+
+        // Special configuration for elements that are allowed to have classes
+        h1.allowedAttribs           = class
+        h2.allowedAttribs           = class
+        h3.allowedAttribs           = class
+        h4.allowedAttribs           = class
+        p.allowedAttribs            = class
+        ol.allowedAttribs           = class
+        ul.allowedAttribs           = class
+        a.allowedAttribs            = class, href, title, target
+        tr.allowedAttribs           = class
+        th.allowedAttribs           = class
+        td.allowedAttribs           = class, colspan, rowspan
+        
+    }
+
+}
+
+
+################################################
+#### SET WORDCLEAN PARSER                   ####
+################################################
+RTE.default.enableWordClean = 1
+RTE.default.enableWordClean.HTMLparser < RTE.default.proc.entryHTMLparser_db
