@@ -6,7 +6,6 @@ TCEFORM {
 
 			# Add new items to select
 			addItems {
-				hero-section = Hero Section
 				subpage-header = Subpage Header
 				casestudy-header = Header Picture Case Study
 			}
