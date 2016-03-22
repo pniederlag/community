@@ -2,16 +2,19 @@
 <f:layout name="Default"/>
 
 <f:section name="Content">
-	<div class="row">
-		<div class="col-sm-6">
-			<f:media file="{files.0}" style="width: 100%; height: auto;"/>
-		</div>
-		<div class="col-sm-6">
-			<h3>{data.title}</h3>
-			<f:link.page pageUid="{data.uid}">
-				<f:translate key="LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:related_case_studies.more"/>
-			</f:link.page>
-		</div>
+	<div class="row t3com-case-study-related">
+        <div class="entry-content">
+            <div class="col-sm-6 case-study-related-image">
+                <f:media file="{files.0}" style="width: 100%; height: auto;"/>
+            </div>
+
+            <div class="col-sm-6 case-study-related-text">
+                <h4>{data.title}</h4>
+                <f:link.page pageUid="{data.uid}">
+                    <f:translate key="LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:related_case_studies.more"/>
+                </f:link.page>
+            </div>
+        </div>
 	</div>
 </f:section>
 </html>
