@@ -1,0 +1,51 @@
+.layout-casestudy {
+
+    // header
+    .masthead {
+        @media (min-width: map-get($grid-breakpoints, md)) {
+            margin-bottom: $space*12;
+        }
+    }
+
+    // vendor box
+    .t3com-case-study-vendor,
+    .t3com-case-study-content-left {
+        @media (min-width: map-get($grid-breakpoints, md)) {
+            float: right;
+        }
+    }
+
+    .t3com-case-study-vendor {
+        margin: $space*6 0 $space*12;
+
+        @media (min-width: map-get($grid-breakpoints, md)) {
+            margin-top: (-$space*30);
+        }
+
+        .case-study-vendor-thumb {
+            > .entry-content {
+                background: $white;
+            }
+        }
+
+        .case-study-vendor-text {
+            > .entry-content {
+                background: $grey-superlight;
+                padding: $space*4;
+
+                > p {
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+
+    // content
+    .contentelement {
+        margin-top: 0;
+        margin-bottom: $space*6;
+    }
+}
