@@ -7,7 +7,6 @@ TCEFORM {
 			# Add new items to select
 			addItems {
 				subpage-header = Subpage Header
-				casestudy-header = Header Picture Case Study
 			}
 
 			types {
