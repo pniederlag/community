@@ -2,18 +2,8 @@
 // Header
 //
 body {
-    padding-top: $header-size-smartphone;
-
-    @media (min-width: map-get($grid-breakpoints, md)) {
-        padding-top: $header-size-tablet;
-    }
-
-    @media (min-width: map-get($grid-breakpoints, lg)) {
-        padding-top: $header-size-desktop;
-    }
+    padding-top: 4.375rem;
 }
-
-// header container
 .header {
     position: fixed;
     width: 100%;
@@ -23,67 +13,37 @@ body {
     z-index: $zindex-navbar-fixed;
     background-color: $grey-superlight;
     text-align: center;
-    height: $header-size-smartphone;
-
-    @media (min-width: map-get($grid-breakpoints, md)) {
-        height: $header-size-tablet;
-    }
-
-    @media (min-width: map-get($grid-breakpoints, lg)) {
-        height: $header-size-desktop;
-    }
-
+    height: 4.375rem;
     .container {
         position: relative;
-        padding: 0;
-        height: 100%;
     }
 }
-
-// logo
 .header-logo {
     display: block;
-    margin: 0 $header-size-smartphone;
-    height: 100%;
+    margin: 0;
+    margin-left: 3.025rem;
+    padding-right: 3.025rem;
     text-align: center;
-
-    @media (min-width: map-get($grid-breakpoints, md)) {
-        margin: 0 $header-size-tablet;
-    }
-
-    @media (min-width: map-get($grid-breakpoints, lg)) {
-        margin: 0 $header-size-desktop;
-    }
 }
-
 .header-logo-image {
     display: block;
-    margin: 0 auto;
-    height: 90%;
     width: auto;
+    margin: 0 auto;
+    height: 4.375rem;
 }
-
 .header-toggle {
     cursor: pointer;
     position: absolute;
     top: 0;
     left: 0;
     display: block;
-    height: $header-size-smartphone;
-    width: $header-size-smartphone;
+    height: 4.375rem;
+    width: 4.375rem;
     margin: 0;
-    background: url(#{$images}/Icons/burger-menu.svg) no-repeat center center;
+    background-position: center center;
+    background-image: url(#{$images}/Icons/burger-menu.svg);
+    background-repeat: no-repeat;
     background-size: 1.6rem 1.6rem;
-
-    @media (min-width: map-get($grid-breakpoints, md)) {
-        height: $header-size-tablet;
-        width: $header-size-tablet;
-    }
-
-    @media (min-width: map-get($grid-breakpoints, lg)) {
-        height: $header-size-desktop;
-        width: $header-size-desktop;
-    }
 }
 
 
