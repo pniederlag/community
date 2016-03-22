@@ -36,7 +36,9 @@ TCEFORM {
 				}
 			}
 		}
-
+        CType {
+            removeItems := addToList(table)
+        }
 		header_layout {
             removeItems = 4,5
 			types {
