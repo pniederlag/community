@@ -14,7 +14,7 @@
         </f:if>
         <div class="contentelement-textmedia-text">
             <div class="contentelement-textmedia-text-inner">
-                <f:render partial="Header" arguments="{_all}"/>
+                <f:render partial="Header/All" arguments="{_all}" />
                 <f:format.html>{data.bodytext}</f:format.html>
             </div>
 		</div>
@@ -40,7 +40,7 @@
 					<f:if condition="{data.image_overlap}">
 						<div class="overlap-box">
 					</f:if>
-					<f:render partial="Header" arguments="{_all}"/>
+					<f:render partial="Header/All" arguments="{_all}" />
 					{data.bodytext -> f:format.html()}
 					<f:if condition="{data.image_overlap}">
 						</div>
@@ -65,7 +65,7 @@
 					<f:if condition="{data.image_overlap}">
 						<div class="overlap-box">
 					</f:if>
-					<f:render partial="Header" arguments="{_all}"/>
+					<f:render partial="Header/All" arguments="{_all}" />
 					{data.bodytext -> f:format.html()}
 					<f:if condition="{data.image_overlap}">
 						</div>

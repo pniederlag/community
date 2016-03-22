@@ -1,23 +1,38 @@
+################################
+#### TYPO3 CONTENT ELEMENTS ####
+################################
 mod.wizards {
     newContentElement {
         wizardItems {
+            common {
+                elements {
+                    textmedia {
+                        tt_content_defValues {
+                            imageorient = 25
+                        }
+                    }
+                    text {
+                        iconIdentifier = content-text
+                        title = LLL:EXT:backend/Resources/Private/Language/locallang_db_new_content_el.xlf:common_regularText_title
+                        description = LLL:EXT:backend/Resources/Private/Language/locallang_db_new_content_el.xlf:common_regularText_description
+                        tt_content_defValues {
+                            CType = text
+                        }
+                    }
+                }
+                show = *
+            }
         }
     }
 }
 
 
+###################################
+#### TYPO3COM CONTENT ELEMENTS ####
+###################################
 mod.wizards {
    newContentElement {
       wizardItems {
-         common {
-            elements {
-               textmedia {
-                  tt_content_defValues {
-                     imageorient = 25
-                  }
-               }
-            }
-         }
          typo3com {
             header = LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:ce_group
             elements {
