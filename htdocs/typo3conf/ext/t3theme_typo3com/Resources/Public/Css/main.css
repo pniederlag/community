@@ -4812,33 +4812,6 @@ body, .htmlarea-content-body {
       height: 27.75vw;
       max-height: 400px; } }
 
-.button {
-  display: inline-block;
-  background: #373a3c;
-  color: #ffffff;
-  line-height: 1;
-  font-weight: bold;
-  padding: 1em;
-  border: 0;
-  text-align: center; }
-  .button:hover, .button:focus {
-    background: #8c8c8c;
-    color: #ffffff; }
-
-.typo3button {
-  display: inline-block;
-  background: #ff8700;
-  color: #ffffff;
-  line-height: 1;
-  font-weight: bold;
-  padding: 1em;
-  border: 0;
-  text-align: center; }
-  .typo3button:hover, .typo3button:focus {
-    text-decoration: none;
-    background: #e67a00;
-    color: #ffffff; }
-
 .contentelement-hard_facts-item {
   text-align: center;
   margin: 2em 0; }
