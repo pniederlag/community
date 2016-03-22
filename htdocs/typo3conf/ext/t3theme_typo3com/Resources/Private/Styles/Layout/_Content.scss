@@ -86,6 +86,17 @@ ul.content-list {
 
 
 //
+// Content Element Image
+//
+.contentelement-image {
+    img {
+        display: block;
+        margin: ($grid-gutter-width / 4) auto;
+    }
+}
+
+
+//
 // Content Element Intro Block
 //
 .contentelement-intro_block {

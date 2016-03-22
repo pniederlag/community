@@ -1,0 +1,11 @@
+tt_content.image =< lib.baseContentElement
+tt_content.image {
+	templateName = Image
+
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        10 {
+            references.fieldName = assets
+        }
+    }
+}

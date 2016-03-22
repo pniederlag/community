@@ -9,7 +9,6 @@ TCEFORM {
                 }            
 				textmedia {
 					addItems {
-						brands = LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:layout.brands
 						feature-1-11 = LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:layout.feature-1-11
 						feature-2-10 = LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:layout.feature-2-10
 						feature-3-9 = LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:layout.feature-3-9
@@ -69,7 +68,16 @@ TCEFORM {
 			# Remove items from select
 			keepItems = 25, 26
 		}
-
+        imagecols {
+            removeItems := addToList(8)
+            removeItems := addToList(7)
+            removeItems := addToList(5)
+            types {
+                textmedia {
+                    disabled = 1
+                }
+            }
+        }
 		menu_type {
 			addItems {
 				feature_menu = Feature Menu
@@ -87,7 +95,6 @@ TCEFORM.tt_content {
   editlock.disabled = 1
   imagewidth.disabled = 1
   imageheight.disabled = 1
-  imagecols.disabled = 1
   imageborder.disabled = 1
   rowDescription.disabled = 1
 }

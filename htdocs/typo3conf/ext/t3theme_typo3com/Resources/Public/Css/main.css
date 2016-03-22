@@ -4679,6 +4679,10 @@ ul.content-list {
   .contentelement > *:last-child {
     margin-bottom: 0; }
 
+.contentelement-image img {
+  display: block;
+  margin: 0.46875rem auto; }
+
 .contentelement-intro_block {
   background-color: #ffffff;
   text-align: center;

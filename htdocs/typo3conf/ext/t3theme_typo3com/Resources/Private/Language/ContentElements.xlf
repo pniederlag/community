@@ -92,9 +92,6 @@
 				<source>Case Study - Vendor</source>
 			</trans-unit>
 
-			<trans-unit id="layout.brands">
-				<source>Brands</source>
-			</trans-unit>
 			<trans-unit id="layout.feature-1-11">
 				<source>Text: 1 Column, Image: 11 Columns</source>
 			</trans-unit>

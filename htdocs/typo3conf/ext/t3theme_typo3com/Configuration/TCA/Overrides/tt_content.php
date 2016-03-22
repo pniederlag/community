@@ -41,6 +41,63 @@ $GLOBALS['TCA']['tt_content']['types']['text'] = array_replace_recursive(
         ]
     ]
 );
+
+
+/***************
+ * Add Content Element: Image
+ */
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['image'] = 'content-image';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+    'tt_content',
+    'CType',
+    [
+        'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType.I.3',
+        'image',
+        'content-image'
+    ],
+    'textmedia',
+    'after'
+);
+if (!is_array($GLOBALS['TCA']['tt_content']['types']['image'])) {
+    $GLOBALS['TCA']['tt_content']['types']['image'] = [];
+}
+$GLOBALS['TCA']['tt_content']['types']['image'] = array_replace_recursive(
+    $GLOBALS['TCA']['tt_content']['types']['image'],
+    [
+        'showitem' => '
+            --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
+            --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.header;header,
+            --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.images,
+            assets,
+            imagecols,
+            --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,
+            --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,
+            --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
+            --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.extended,
+        ',         
+        'columnsOverrides' => [
+            'assets' => [
+                'config' => [
+                    'foreign_selector_fieldTcaOverride' => [
+                        'config' => [
+                            'appearance' => [
+                                'elementBrowserAllowed' => 'jpg,jpeg,png,svg'
+                            ],
+                        ],
+                    ],
+                    'foreign_types' => [
+                        0 => [
+                            'showitem' => 'title, alternative, --palette--;;filePalette'
+                        ],
+                        \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
+                            'showitem' => 'title, alternative, --palette--;;filePalette'
+                        ],
+                    ],
+                ],
+            ],
+        ],
+    ]
+);
  
  
 /***************
