@@ -97,7 +97,7 @@ body {
         background-color: #ffffff;
 	    background-image: url(#{$images}/Icons/burger-menu-close-sm.svg);
         @media (min-width: map-get($grid-breakpoints, md)) {
-            background-image: url(#{$images}/Icons/burger-menu.svg);
+            background-image: url(#{$images}/Icons/burger-menu-close.svg);
         }
     }
     .header-navigation {

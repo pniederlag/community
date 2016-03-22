@@ -4588,7 +4588,7 @@ body, .htmlarea-content-body {
   background-image: url(../Images/Icons/burger-menu-close-sm.svg); }
   @media (min-width: 768px) {
     #page-toggle:checked + .header .header-toggle {
-      background-image: url(../Images/Icons/burger-menu.svg); } }
+      background-image: url(../Images/Icons/burger-menu-close.svg); } }
 
 #page-toggle:checked + .header .header-navigation {
   display: block; }
