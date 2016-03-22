@@ -128,6 +128,9 @@
 			<trans-unit id="layout.feature-11-1">
 				<source>Text: 11 Columns, Image: 1 Column</source>
 			</trans-unit>
+			<trans-unit id="layout.feature-12-0">
+				<source>Text: 12 Columns</source>
+			</trans-unit>
 
 			<trans-unit id="casestudy_teaser.headline">
 				<source>Success Story</source>
