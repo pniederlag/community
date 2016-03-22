@@ -2,7 +2,13 @@
 // Header
 //
 body {
-    padding-top: 4.375rem;
+    padding-top: 3.125rem;
+    @media (min-width: map-get($grid-breakpoints, sm)) {
+        padding-top: 3.75rem;
+    }
+    @media (min-width: map-get($grid-breakpoints, md)) {
+        padding-top: 4.375rem;
+    }
 }
 .header {
     position: fixed;
@@ -13,7 +19,13 @@ body {
     z-index: $zindex-navbar-fixed;
     background-color: $grey-superlight;
     text-align: center;
-    height: 4.375rem;
+    height: 3.125rem;
+    @media (min-width: map-get($grid-breakpoints, sm)) {
+        height: 3.75rem;
+    }
+    @media (min-width: map-get($grid-breakpoints, md)) {
+        height: 4.375rem;
+    }
     .container {
         position: relative;
     }
@@ -29,7 +41,13 @@ body {
     display: block;
     width: auto;
     margin: 0 auto;
-    height: 4.375rem;
+    height: 3.125rem;
+    @media (min-width: map-get($grid-breakpoints, sm)) {
+        height: 3.75rem;
+    }
+    @media (min-width: map-get($grid-breakpoints, md)) {
+        height: 4.375rem;
+    }
 }
 .header-toggle {
     cursor: pointer;
@@ -37,13 +55,22 @@ body {
     top: 0;
     left: 0;
     display: block;
-    height: 4.375rem;
-    width: 4.375rem;
     margin: 0;
     background-position: center center;
-    background-image: url(#{$images}/Icons/burger-menu.svg);
+    background-image: url(#{$images}/Icons/burger-menu-sm.svg);
     background-repeat: no-repeat;
-    background-size: 1.6rem 1.6rem;
+    background-size: 1.3125rem;
+    width: 4rem;
+    height: 3.125rem;
+    @media (min-width: map-get($grid-breakpoints, sm)) {
+        height: 3.75rem;
+    }
+    @media (min-width: map-get($grid-breakpoints, md)) {
+        background-image: url(#{$images}/Icons/burger-menu.svg);
+        background-size: 1.75rem;
+        height: 4.375rem;
+        width: 4.375rem;
+    }
 }
 
 
@@ -54,16 +81,8 @@ body {
     display: none;
     text-align: left;
     background-color: #ffffff;
-    padding: $space*3 $space*2;
-    margin: 0;
-
-    @media (min-width: map-get($grid-breakpoints, md)) {
-        padding: $space*4 $space*3;
-    }
-
-    @media (min-width: map-get($grid-breakpoints, lg)) {
-        padding: $space*6 $space*4;
-    }
+    padding: 2rem $container-padding;
+    margin: 0 ($container-padding * -1);
 }
 
 
@@ -76,7 +95,10 @@ body {
 #page-toggle:checked + .header {
     .header-toggle {
         background-color: #ffffff;
-	    background-image: url(#{$images}/Icons/burger-menu-close.svg);
+	    background-image: url(#{$images}/Icons/burger-menu-close-sm.svg);
+        @media (min-width: map-get($grid-breakpoints, md)) {
+            background-image: url(#{$images}/Icons/burger-menu.svg);
+        }
     }
     .header-navigation {
         display: block;

@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="129.4px" height="129.4px" viewBox="0 0 129.4 129.4" style="enable-background:new 0 0 129.4 129.4;" xml:space="preserve"
-	>
-<style type="text/css">
-	.st0{fill:#FF8700;}
-</style>
-<path class="st0" d="M2,117.7c-2.6-2.6-2.6-7,0-9.6L108.1,2c2.6-2.6,7-2.6,9.6,0l9.7,9.7c2.6,2.6,2.6,7,0,9.6L21.3,127.4
-	c-2.6,2.6-7,2.6-9.6,0L2,117.7L2,117.7z"/>
-<path class="st0" d="M117.8,127.4c-2.6,2.6-7,2.6-9.6,0L2,21.2c-2.7-2.5-2.7-6.9,0-9.6L11.6,2c2.6-2.6,7-2.6,9.6,0l106.1,106.1
-	c2.6,2.6,2.6,7,0,9.6L117.8,127.4L117.8,127.4z"/>
+	 viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
+<path fill="#FF8700" d="M24.6,6.9L6.9,24.6c-0.6,0.6-1.5,0.6-2.1,0l-1.4-1.4c-0.6-0.6-0.6-1.5,0-2.1L21.1,3.4c0.6-0.6,1.5-0.6,2.1,0
+	l1.4,1.4C25.2,5.4,25.2,6.3,24.6,6.9z"/>
+<path fill="#FF8700" d="M21.1,24.6L3.4,6.9c-0.6-0.6-0.6-1.5,0-2.1l1.4-1.4c0.6-0.6,1.5-0.6,2.1,0l17.7,17.7c0.6,0.6,0.6,1.5,0,2.1
+	l-1.4,1.4C22.6,25.2,21.7,25.2,21.1,24.6z"/>
 </svg>

@@ -1,12 +1,11 @@
 .t3com-case-study-related {
     .case-study-related-image {
-        margin-bottom: $space*3;
+        margin-bottom: $spacer;
 
         @media (min-width: map-get($grid-breakpoints, md)) {
             margin-bottom: 0;
         }
     }
-
     .case-study-related-text {
         h4 {
             text-transform: uppercase;

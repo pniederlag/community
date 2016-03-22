@@ -1,6 +1,3 @@
-/*
-* SPACE
-*/
 @font-face {
   font-family: "Source Sans Pro";
   src: url("../Fonts/SourceSansPro-Regular.eot?1457770348");
@@ -4507,7 +4504,13 @@ img {
   clear: both; }
 
 body, .htmlarea-content-body {
-  padding-top: 4.375rem; }
+  padding-top: 3.125rem; }
+  @media (min-width: 544px) {
+    body, .htmlarea-content-body {
+      padding-top: 3.75rem; } }
+  @media (min-width: 768px) {
+    body, .htmlarea-content-body {
+      padding-top: 4.375rem; } }
 
 .header {
   position: fixed;
@@ -4518,7 +4521,13 @@ body, .htmlarea-content-body {
   z-index: 1030;
   background-color: #f4f4f4;
   text-align: center;
-  height: 4.375rem; }
+  height: 3.125rem; }
+  @media (min-width: 544px) {
+    .header {
+      height: 3.75rem; } }
+  @media (min-width: 768px) {
+    .header {
+      height: 4.375rem; } }
   .header .container {
     position: relative; }
 
@@ -4533,7 +4542,13 @@ body, .htmlarea-content-body {
   display: block;
   width: auto;
   margin: 0 auto;
-  height: 4.375rem; }
+  height: 3.125rem; }
+  @media (min-width: 544px) {
+    .header-logo-image {
+      height: 3.75rem; } }
+  @media (min-width: 768px) {
+    .header-logo-image {
+      height: 4.375rem; } }
 
 .header-toggle {
   cursor: pointer;
@@ -4541,33 +4556,39 @@ body, .htmlarea-content-body {
   top: 0;
   left: 0;
   display: block;
-  height: 4.375rem;
-  width: 4.375rem;
   margin: 0;
   background-position: center center;
-  background-image: url(../Images/Icons/burger-menu.svg);
+  background-image: url(../Images/Icons/burger-menu-sm.svg);
   background-repeat: no-repeat;
-  background-size: 1.6rem 1.6rem; }
+  background-size: 1.3125rem;
+  width: 4rem;
+  height: 3.125rem; }
+  @media (min-width: 544px) {
+    .header-toggle {
+      height: 3.75rem; } }
+  @media (min-width: 768px) {
+    .header-toggle {
+      background-image: url(../Images/Icons/burger-menu.svg);
+      background-size: 1.75rem;
+      height: 4.375rem;
+      width: 4.375rem; } }
 
 .header-navigation {
   display: none;
   text-align: left;
   background-color: #ffffff;
-  padding: 15px 10px;
-  margin: 0; }
-  @media (min-width: 768px) {
-    .header-navigation {
-      padding: 20px 15px; } }
-  @media (min-width: 992px) {
-    .header-navigation {
-      padding: 30px 20px; } }
+  padding: 2rem 1.35rem;
+  margin: 0 -1.35rem; }
 
 #page-toggle {
   display: none; }
 
 #page-toggle:checked + .header .header-toggle {
   background-color: #ffffff;
-  background-image: url(../Images/Icons/burger-menu-close.svg); }
+  background-image: url(../Images/Icons/burger-menu-close-sm.svg); }
+  @media (min-width: 768px) {
+    #page-toggle:checked + .header .header-toggle {
+      background-image: url(../Images/Icons/burger-menu.svg); } }
 
 #page-toggle:checked + .header .header-navigation {
   display: block; }
@@ -5030,7 +5051,7 @@ ul.content-list {
     width: 140px; } }
 
 .t3com-case-study-related .case-study-related-image {
-  margin-bottom: 15px; }
+  margin-bottom: 1.5rem; }
   @media (min-width: 768px) {
     .t3com-case-study-related .case-study-related-image {
       margin-bottom: 0; } }
