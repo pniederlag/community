@@ -1,3 +1,20 @@
+################################################
+#### PAGES                                  ####
+################################################
+TCEFORM {
+    pages {
+        TSconfig.disabled = 1
+        module.disabled = 1
+        php_tree_stop.disabled = 1
+        newUntil.disabled = 1
+        layout.disabled = 1
+    }
+}
+    
+    
+################################################
+#### TT_CONTENT                             ####
+################################################
 TCEFORM {
 	tt_content {
 		layout {
@@ -83,18 +100,15 @@ TCEFORM {
 				feature_menu = Feature Menu
 			}
 		}
+        date.disabled = 1
+        subheader.disabled = 1
+        header_link.disabled = 1
+        linkToTop.disabled = 1
+        sectionIndex.disabled = 1
+        editlock.disabled = 1
+        imagewidth.disabled = 1
+        imageheight.disabled = 1
+        imageborder.disabled = 1
+        rowDescription.disabled = 1
 	}
-}
-
-TCEFORM.tt_content {
-  date.disabled = 1
-  subheader.disabled = 1
-  header_link.disabled = 1
-  linkToTop.disabled = 1
-  sectionIndex.disabled = 1
-  editlock.disabled = 1
-  imagewidth.disabled = 1
-  imageheight.disabled = 1
-  imageborder.disabled = 1
-  rowDescription.disabled = 1
 }
