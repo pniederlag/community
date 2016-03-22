@@ -4985,23 +4985,6 @@ ul.content-list {
     .feature-head h2 {
       margin-top: 4.2rem; } }
 
-.why-typo3 {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2rem; }
-  .why-typo3 h2 {
-    text-align: center; }
-  .why-typo3 li {
-    margin-top: 1rem;
-    list-style: none;
-    background-image: url(../Images/Icons/check.svg);
-    background-repeat: no-repeat;
-    background-size: 2rem;
-    background-position: 0.5rem 0.5rem;
-    content: " ";
-    padding-left: 73px; }
-
 .casestudy-company {
   margin-right: auto;
   margin-left: auto;

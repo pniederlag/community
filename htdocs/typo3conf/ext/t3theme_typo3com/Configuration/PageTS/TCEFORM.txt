@@ -7,7 +7,6 @@ TCEFORM {
 			# Add new items to select
 			addItems {
 				hero-section = Hero Section
-				why-typo3 = Why-Check
 				subpage-header = Subpage Header
 				casestudy-company = Company section in Case Study
 				casestudy-header = Header Picture Case Study
