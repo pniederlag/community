@@ -4985,21 +4985,6 @@ ul.content-list {
     .feature-head h2 {
       margin-top: 4.2rem; } }
 
-.casestudy-company {
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: -5rem;
-  background-color: #f7f7f9; }
-  .casestudy-company img {
-    width: 100%;
-    height: auto; }
-  .casestudy-company .ce-bodytext {
-    padding: 1rem; }
-  .casestudy-company h3 {
-    font-family: "Source Sans Pro Bold";
-    margin-bottom: 0.5rem;
-    margin-top: -1rem; }
-
 .contentelement-casestudy_partner {
   position: relative;
   background-color: #f4f4f4;

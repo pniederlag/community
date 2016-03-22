@@ -8,7 +8,6 @@ TCEFORM {
 			addItems {
 				hero-section = Hero Section
 				subpage-header = Subpage Header
-				casestudy-company = Company section in Case Study
 				casestudy-header = Header Picture Case Study
 			}
 
