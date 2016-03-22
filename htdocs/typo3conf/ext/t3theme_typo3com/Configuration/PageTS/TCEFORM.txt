@@ -38,6 +38,9 @@ TCEFORM {
 		}
         CType {
             removeItems := addToList(table)
+            removeItems := addToList(uploads)
+            removeItems := addToList(div)
+            removeItems := addToList(html)
         }
 		header_layout {
             removeItems = 4,5
