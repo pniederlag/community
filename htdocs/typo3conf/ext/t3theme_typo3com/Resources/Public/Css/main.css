@@ -4466,12 +4466,18 @@ a {
     color: #ff8700; }
 
 h1 {
-  font-size: 3.313rem;
+  font-size: 2.2rem;
   font-family: "Share"; }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3.313rem; } }
 
 h2 {
-  font-size: 2.188rem;
+  font-size: 1.8rem;
   font-family: "Share"; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 2.188rem; } }
 
 h3 {
   font-size: 1.375rem;

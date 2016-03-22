@@ -29,13 +29,18 @@ a{
 	}
 }
 h1 {
-	font-size: 3.313rem;
+    font-size: 2.2rem;
+    @media (min-width: map-get($grid-breakpoints, md)) {
+	    font-size: 3.313rem;
+    }
 	font-family: $share;
 }
 h2 {
-	font-size: 2.188rem;
+	font-size: 1.8rem;
+    @media (min-width: map-get($grid-breakpoints, md)) {
+        font-size: 2.188rem;
+    }
 	font-family: $share;
-
 }
 h3 {
 	font-size: 1.375rem;
