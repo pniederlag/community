@@ -4846,23 +4846,8 @@ ul.content-list {
 .navigation-list-level-2 a {
   position: relative;
   display: block;
-  padding: 0.35rem 0 0.35rem 0.73rem;
+  padding: 0.35rem 0;
   color: #515151; }
-  .navigation-list-level-2 a:before, .navigation-list-level-2 a:after {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    height: 1px;
-    background-color: #b9b9b9;
-    width: 5px; }
-  .navigation-list-level-2 a:before {
-    margin-top: -1.5px;
-    transform: rotate(45deg); }
-  .navigation-list-level-2 a:after {
-    margin-top: 1.5px;
-    transform: rotate(-45deg); }
   .navigation-list-level-2 a:focus, .navigation-list-level-2 a:hover {
     color: #515151; }
     .navigation-list-level-2 a:focus:before, .navigation-list-level-2 a:focus:after, .navigation-list-level-2 a:hover:before, .navigation-list-level-2 a:hover:after {

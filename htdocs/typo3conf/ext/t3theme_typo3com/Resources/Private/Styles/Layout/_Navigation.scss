@@ -23,27 +23,8 @@
     a {
         position: relative;
         display: block;
-        padding: 0.35rem 0 0.35rem 0.73rem;
+        padding: 0.35rem 0;
         color: $grey-dark;
-        &:before,
-        &:after {
-            content: '';
-            display: block;
-            position: absolute;
-            left: 0;
-            top: 50%;
-            height: 1px;
-            background-color: $grey-light;
-            width: 5px;                
-        }
-        &:before {
-            margin-top: -1.5px;
-            transform: rotate(45deg);
-        }
-        &:after {
-            margin-top: 1.5px;
-            transform: rotate(-45deg);
-        }
         &:focus,
         &:hover {
             color: $grey-dark;
