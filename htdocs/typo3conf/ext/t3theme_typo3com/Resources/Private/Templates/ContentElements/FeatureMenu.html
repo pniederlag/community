@@ -3,24 +3,26 @@
 	xmlns:t3com="http://typo3.org/ns/T3Com/Theme/ViewHelpers"
 	data-namespace-typo3-fluid="true"
 >
-<f:layout name="None"/>
+<f:layout name="Default"/>
 
 <f:section name="Content">
+
+	<f:render partial="Header/All" arguments="{_all}" />
 	<div class="isotope-container">
 		<div class="isotope-items" data-equalheight="container">
-			<div class="text-xs-center">
-				<div class="btn-group">
-					<button class="btn btn-secondary filter" data-filter="all">
+			<div class="text-sm-center">
+				<div class="btn-group feature-filters-group">
+					<button class="btn btn-primary filter" data-filter="all">
 						<f:translate key="LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:feature_menu.filter.all" />
 					</button>
 					<f:for each="{categories}" as="category">
-						<button class="btn btn-secondary filter" data-filter=".category-{category.data.uid}">
+						<button class="btn btn-primary filter" data-filter=".category-{category.data.uid}">
 							{category.data.title}
 						</button>
 					</f:for>
 				</div>
 			</div>
-			<f:for each="{featurePages}" as="page">
+			<div class="row"><f:for each="{featurePages}" as="page">
 				<div
 					class="isotope-item col-md-4 col-sm-6 col-xs-12 {t3com:category(separator: ' ', usedCategories: '{page.categories}', fallbackCategories: '{categories}')}"
 				>
@@ -30,7 +32,7 @@
 								<div class="ce-row row">
 									<div class="ce-column col-md-12">
 										<div class="ce-media">
-											<f:media file="{page.files.0}" height="80" class="center-block"/>
+											<f:media file="{page.files.0}" height="80" class="center-block feature-icon"/>
 										</div>
 									</div>
 								</div>
@@ -46,8 +48,9 @@
 						</f:if>
 					</div>
 				</div>
-			</f:for>
+			</f:for></div>
 		</div>
 	</div>
+
 </f:section>
 </html>

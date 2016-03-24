@@ -70,3 +70,21 @@
     }
   }
 }
+
+.feature-filters-group {
+  margin-bottom: 1rem;
+  @media (max-width : (map-get($grid-breakpoints, sm)-1)) {
+	.btn {
+	  padding-left: 0.75rem;
+	  padding-right: 0.75rem;
+	}
+  }@media (max-width : 360px) {
+	.btn {
+	  font-size: 0.75rem;
+	}
+  }
+}
+
+.feature-icon {
+  margin-bottom : $spacer;
+}

@@ -5071,6 +5071,19 @@ ul.content-list {
       .isotope-items .isotope-item .isotope-content p {
         margin-bottom: 0; }
 
+.feature-filters-group {
+  margin-bottom: 1rem; }
+  @media (max-width: 543px) {
+    .feature-filters-group .btn {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem; } }
+  @media (max-width: 360px) {
+    .feature-filters-group .btn {
+      font-size: 0.75rem; } }
+
+.feature-icon {
+  margin-bottom: 1.5rem; }
+
 .contentelement-casestudy_partner {
   position: relative;
   background-color: #f4f4f4;
