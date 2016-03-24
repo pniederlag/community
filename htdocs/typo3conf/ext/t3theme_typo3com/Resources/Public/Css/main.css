@@ -4930,7 +4930,8 @@ ul.content-list {
   left: 0;
   padding: 1.35rem;
   top: 50%;
-  transform: translate(0, -50%); }
+  transform: translate(0, -50%);
+  display: block; }
   .masthead-hero-inner > *:first-child {
     margin-top: 0; }
   .masthead-hero-inner > *:last-child {

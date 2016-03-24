@@ -63,6 +63,7 @@
   padding   : $container-padding;
   top       : 50%;
   transform : translate(0, -50%);
+  display   : block;
   > *:first-child {
 	margin-top : 0;
   }
