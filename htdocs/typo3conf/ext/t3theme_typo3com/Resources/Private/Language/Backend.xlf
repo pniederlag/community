@@ -4,69 +4,22 @@
 		  product-name="t3theme_typo3com">
 		<header/>
 		<body>
-			<trans-unit id="backend_layout.homepage">
-				<source>Homepage</source>
-			</trans-unit>
+			<!-- BACKEND LAYOUT NAMES -->
 			<trans-unit id="backend_layout.casestudy">
 				<source>Case Study</source>
 			</trans-unit>
 			<trans-unit id="backend_layout.default">
 				<source>Default</source>
 			</trans-unit>
-
-			<trans-unit id="backend_layout.column.hero">
-				<source>Hero</source>
-			</trans-unit>
+			<!-- BACKEND COLUMN NAMES -->
 			<trans-unit id="backend_layout.column.content">
 				<source>Content</source>
 			</trans-unit>
-			<trans-unit id="backend_layout.column.footer1">
-				<source>Footer Left</source>
+			<trans-unit id="backend_layout.column.footer">
+				<source>Footer (Implementation Partner Box)</source>
 			</trans-unit>
-			<trans-unit id="backend_layout.column.footer2">
-				<source>Footer Center</source>
-			</trans-unit>
-			<trans-unit id="backend_layout.column.footer3">
-				<source>Footer Right</source>
-			</trans-unit>
-			<trans-unit id="backend_layout.column.middle1">
-				<source>Middle Left</source>
-			</trans-unit>
-			<trans-unit id="backend_layout.column.middle2">
-				<source>Middle Center</source>
-			</trans-unit>
-			<trans-unit id="backend_layout.column.middle3">
-				<source>Middle Right</source>
-			</trans-unit>
-			<trans-unit id="backend_layout.column.special1">
+			<trans-unit id="backend_layout.column.special">
 				<source>Case Study Stage</source>
-			</trans-unit>
-			<trans-unit id="backend_layout.column.special2">
-				<source>Special 2</source>
-			</trans-unit>
-			<trans-unit id="backend_layout.column.special3">
-				<source>Special 3</source>
-			</trans-unit>
-			<trans-unit id="backend_layout.column.special4">
-				<source>Special 4</source>
-			</trans-unit>
-			<trans-unit id="backend_layout.column.special5">
-				<source>Special 5</source>
-			</trans-unit>
-			<trans-unit id="backend_layout.column.special6">
-				<source>Special 6</source>
-			</trans-unit>
-			<trans-unit id="backend_layout.column.special7">
-				<source>Special 7</source>
-			</trans-unit>
-			<trans-unit id="backend_layout.column.special8">
-				<source>Special 8</source>
-			</trans-unit>
-			<trans-unit id="backend_layout.column.special9">
-				<source>Special 9</source>
-			</trans-unit>
-			<trans-unit id="backend_layout.column.special10">
-				<source>Special 10</source>
 			</trans-unit>
 		</body>
 	</file>

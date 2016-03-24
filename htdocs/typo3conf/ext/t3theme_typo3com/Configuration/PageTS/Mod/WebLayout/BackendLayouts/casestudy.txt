@@ -9,12 +9,12 @@ mod {
 				config {
 					backend_layout {
 						colCount = 3
-						rowCount = 4
+						rowCount = 3
 						rows {
 							1 {
 								columns {
 									1 {
-										name = LLL:EXT:t3theme_typo3com/Resources/Private/Language/Backend.xlf:backend_layout.column.special1
+										name = LLL:EXT:t3theme_typo3com/Resources/Private/Language/Backend.xlf:backend_layout.column.special
 										colPos = 30
 										colspan = 2
 									}
@@ -24,7 +24,7 @@ mod {
 								columns {
 									1 {
 										name = LLL:EXT:t3theme_typo3com/Resources/Private/Language/Backend.xlf:backend_layout.column.content
-										colPos = 1
+										colPos = 0
 										colspan = 3
 									}
 								}
@@ -32,20 +32,7 @@ mod {
 							3 {
 								columns {
 									1 {
-										name = LLL:EXT:t3theme_typo3com/Resources/Private/Language/Backend.xlf:backend_layout.column.middle1
-										colPos = 20
-										colspan = 2
-									}
-									2 {
-										name = LLL:EXT:t3theme_typo3com/Resources/Private/Language/Backend.xlf:backend_layout.column.middle3
-										colPos = 22
-									}
-								}
-							}
-							4 {
-								columns {
-									1 {
-										name = LLL:EXT:t3theme_typo3com/Resources/Private/Language/Backend.xlf:backend_layout.column.footer1
+										name = LLL:EXT:t3theme_typo3com/Resources/Private/Language/Backend.xlf:backend_layout.column.footer
 										colPos = 10
 										colspan = 3
 									}
