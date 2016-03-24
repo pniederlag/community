@@ -1,64 +1,71 @@
-tt_content.top_features = COA
+tt_content.top_features =< lib.baseContentElement
 tt_content.top_features {
-	wrap = <div class="row row--topfeatures">|</div>
+	templateName = TopFeatures
 
-	10 = HMENU
-	10 {
-		includeNotInMenu = 1
-		special = list
-		special.value.field = pages
-		maxItems = 5
+	variables {
+	   content = COA
+	   content {
+	      	wrap = <div class="row row--topfeatures">|</div>
 
-		1 = TMENU
-		1 {
-			NO {
-				doNotLinkIt = 1
-				stdWrap {
-					cObject = COA
-					cObject {
-						10 =< lib.baseContentElement
-						10 {
-							templateName = TopFeatures
+         	10 = HMENU
+         	10 {
+         		includeNotInMenu = 1
+         		special = list
+         		special.value.field = pages
+         		maxItems = 5
 
-							variables {
-								count_menuObject = TEXT
-								count_menuObject.data = register:count_MENUOBJ
-								count_menuItems = TEXT
-								count_menuItems.data = register:count_menuItems
-							}
+         		1 = TMENU
+         		1 {
+         			NO {
+         				doNotLinkIt = 1
+         				stdWrap {
+         					cObject = COA
+         					cObject {
+         						10 =< lib.baseContentElement
+         						10 {
+         							templateName = TopFeaturesItem
 
-							 dataProcessing {
-								 10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-								 10 {
-									 references.fieldName = media
-								 }
-							 }
-						}
-					}
-				}
-			}
-		}
-	}
+         							variables {
+         								count_menuObject = TEXT
+         								count_menuObject.data = register:count_MENUOBJ
+         								count_menuItems = TEXT
+         								count_menuItems.data = register:count_menuItems
+         							}
 
-	20 = COA
-	20 {
-		wrap (
-			<div class="col-xs-6 col-sm-4">
-				<div class="feature-item feature-item-more">
-					<div class="feature-item-inner">|</div>
-				</div>
-			</div>
-		)
+         							 dataProcessing {
+         								 10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+         								 10 {
+         									 references.fieldName = media
+         								 }
+         							 }
+         						}
+         					}
+         				}
+         			}
+         		}
+         	}
 
-		10 = TEXT
-		10.value = {LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:top_features.so_many_more}
-		10.insertData = 1
-		10.wrap = <h4>|</h4>
+         	20 = COA
+         	20 {
+         		wrap (
+         			<div class="col-xs-6 col-sm-4">
+         				<div class="feature-item feature-item-more">
+         					<div class="feature-item-inner">|</div>
+         				</div>
+         			</div>
+         		)
 
-		20 = TEXT
-		20.value = {LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:top_features.features}
-		20.insertData = 1
-		20.typolink.parameter.field = tx_t3themetypo3com_featurelist_link
-		20.wrap = <small>|</small>
+         		10 = TEXT
+         		10.value = {LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:top_features.so_many_more}
+         		10.insertData = 1
+         		10.wrap = <h4>|</h4>
+
+         		20 = TEXT
+         		20.value = {LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:top_features.features}
+         		20.insertData = 1
+         		20.typolink.parameter.field = tx_t3themetypo3com_featurelist_link
+         		20.wrap = <small>|</small>
+         	}
+	   }
 	}
 }

@@ -1,6 +1,6 @@
 main.content {
-  position: relative;
-  z-index : 15;
+  position : relative;
+  z-index  : 15;
 }
 
 //
@@ -8,301 +8,310 @@ main.content {
 //
 .text-left,
 .left {
-	text-align: left;
-}
-.text-right,
-.right {
-	text-align: right;
-}
-.text-center,
-.center {
-	text-align: center;
+  text-align : left;
 }
 
+.text-right,
+.right {
+  text-align : right;
+}
+
+.text-center,
+.center {
+  text-align : center;
+}
 
 //
 // Lists
 //
 .htmlarea-content-body ul,
 ul.content-list {
-	padding-left: 1rem;
-	list-style: none;
-    margin: $spacer 0;
-    li {
-        position: relative;
-        font-weight: bolder;
-        &:before {
-            content: "";
-            background-color: $brand-primary;
-            position: absolute;
-            display: block;
-            height:7px;
-            width: 7px;
-            top: 8px;
-            left: -1rem;   
-        }    
-    }
+  padding-left : 1rem;
+  list-style   : none;
+  margin       : $spacer 0;
+  li {
+	position    : relative;
+	font-weight : bolder;
+	&:before {
+	  content          : "";
+	  background-color : $brand-primary;
+	  position         : absolute;
+	  display          : block;
+	  height           : 7px;
+	  width            : 7px;
+	  top              : 8px;
+	  left             : -1rem;
+	}
+  }
 }
-
 
 //
 // Blockquote
 //
 .blockquote {
-    margin: $spacer 0;
-    padding: 0 1rem;
-    font-style: italic;
-    color: $gray-light;
-    > *:first-child {
-        margin-top: 0;
-    }
-    > *:last-child {
-        margin-bottom: 0;
-    }
-}
-.htmlarea-content-body blockquote {
-    @extend .blockquote;
+  margin     : $spacer 0;
+  padding    : 0 1rem;
+  font-style : italic;
+  color      : $gray-light;
+  > *:first-child {
+	margin-top : 0;
+  }
+  > *:last-child {
+	margin-bottom : 0;
+  }
 }
 
+.htmlarea-content-body blockquote {
+  @extend .blockquote;
+}
 
 //
 // Page
 //
 .page {
-    overflow: hidden;
+  overflow : hidden;
 }
-
 
 //
 // Full width container without padding left/right
 //
 .container-fluid-nopadding {
-	padding-left: 0;
-	padding-right: 0;
+  padding-left  : 0;
+  padding-right : 0;
 }
-
 
 //
 // Content Element
 //
 .contentelement {
-    margin: ($spacer * 2) 0;
-    > *:first-child {
-        margin-top: 0;
-    }
-    > *:last-child {
-        margin-bottom: 0;
-    }
+  margin : ($spacer * 2) 0;
+  > *:first-child {
+	margin-top : 0;
+  }
+  > *:last-child {
+	margin-bottom : 0;
+  }
 }
-
 
 //
 // Content Element Image
 //
 .contentelement-image {
-    img {
-        display: block;
-        margin: ($grid-gutter-width / 4) auto;
-    }
+  img {
+	display : block;
+	margin  : ($grid-gutter-width / 4) auto;
+  }
 }
-
 
 //
 // Content Element Intro Block
 //
 .contentelement-intro_block {
-    background-color: $white;
-    text-align: center;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    @media (min-width: map-get($grid-breakpoints, sm)) {
-        padding-left: 3rem;
-        padding-right: 3rem;
-    }
-    @media (min-width: map-get($grid-breakpoints, md)) {
-        padding-left: 5rem;
-        padding-right: 5rem;
-    }
-    @media (min-width: map-get($grid-breakpoints, lg)) {
-        padding-left: 9rem;
-        padding-right: 9rem;
-    }
-}
-.layout-default {
-    .masthead + .content {
-        > .container:first-child {
-            .contentelement-intro_block:first-child {
-                padding-top: 3rem;
-                margin-top: -3rem;
-                @media (min-width: map-get($grid-breakpoints, sm)) {
-                    margin-top: -5rem;
-                }
-            }
-        }
-    }
+  background-color : $white;
+  text-align       : center;
+  padding-left     : 1.5rem;
+  padding-right    : 1.5rem;
+  @media (min-width : map-get($grid-breakpoints, sm)) {
+	padding-left  : 3rem;
+	padding-right : 3rem;
+  }
+  @media (min-width : map-get($grid-breakpoints, md)) {
+	padding-left  : 5rem;
+	padding-right : 5rem;
+  }
+  @media (min-width : map-get($grid-breakpoints, lg)) {
+	padding-left  : 9rem;
+	padding-right : 9rem;
+  }
 }
 
+.layout-default {
+  .masthead + .content {
+	> .container:first-child {
+	  .contentelement-intro_block:first-child {
+		padding-top : 3rem;
+		margin-top  : -3rem;
+		@media (min-width : map-get($grid-breakpoints, sm)) {
+		  margin-top : -5rem;
+		}
+	  }
+	}
+  }
+}
+
+//
+// Top Features
+//
+.contentelement-top_features {
+  h1, h2, h3, h4, h5, h6 {
+	margin-bottom : 3rem;
+  }
+}
 
 //
 // Content Element List Item
 //
 .contentelement-list_item {
-    @media (min-width: map-get($grid-breakpoints, sm)) {
-        padding-left: 3rem;
-        padding-right: 3rem;
-    }
-    @media (min-width: map-get($grid-breakpoints, md)) {
-        padding-left: 5rem;
-        padding-right: 5rem;
-    }
-    @media (min-width: map-get($grid-breakpoints, lg)) {
-        padding-left: 9rem;
-        padding-right: 9rem;
-    }
-}
-.contentelement-list_item + .contentelement-list_item {
-    margin-top: -1.5rem;
-}
-.contentelement-list_item-content {
-    position: relative;
-    padding-left: 50px;
-    > *:first-child {
-        margin-top: 0;
-    }
-    > *:last-child {
-        margin-bottom: 0;
-    }
-    &:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: -0.25rem;
-        height: 30px;
-        width: 30px;
-        background-image: url('../Images/Icons/check.svg');
-        background-size: 30px 30px;
-        background-position: center center;
-    }
+  @media (min-width : map-get($grid-breakpoints, sm)) {
+	padding-left  : 3rem;
+	padding-right : 3rem;
+  }
+  @media (min-width : map-get($grid-breakpoints, md)) {
+	padding-left  : 5rem;
+	padding-right : 5rem;
+  }
+  @media (min-width : map-get($grid-breakpoints, lg)) {
+	padding-left  : 9rem;
+	padding-right : 9rem;
+  }
 }
 
+.contentelement-list_item + .contentelement-list_item {
+  margin-top : -1.5rem;
+}
+
+.contentelement-list_item-content {
+  position     : relative;
+  padding-left : 50px;
+  > *:first-child {
+	margin-top : 0;
+  }
+  > *:last-child {
+	margin-bottom : 0;
+  }
+  &:before {
+	content             : '';
+	position            : absolute;
+	left                : 0;
+	top                 : -0.25rem;
+	height              : 30px;
+	width               : 30px;
+	background-image    : url('../Images/Icons/check.svg');
+	background-size     : 30px 30px;
+	background-position : center center;
+  }
+}
 
 //
 // Content Element Text Media
 //
 .contentelement-textmedia {
-    &-right,
-    &-left {
-        &:before,
-        &:after {
-            display: table;
-            content: " ";
-        }
-        &:after {
-            clear: both;
-        }
-    }
+  &-right,
+  &-left {
+	&:before,
+	&:after {
+	  display : table;
+	  content : " ";
+	}
+	&:after {
+	  clear : both;
+	}
+  }
 }
+
 .contentelement-textmedia-right,
 .contentelement-textmedia-left,
 .contentelement-textmedia-text {
-    position: relative;
+  position : relative;
 }
+
 .contentelement-textmedia-image {
-    background-size: cover;
-    background-position: center center;
-    height: 160px;
-    @media (min-width: map-get($grid-breakpoints, sm)) {
-        height: auto;
-        min-height: 160px;
-    }
+  background-size     : cover;
+  background-position : center center;
+  height              : 160px;
+  @media (min-width : map-get($grid-breakpoints, sm)) {
+	height     : auto;
+	min-height : 160px;
+  }
 }
+
 .contentelement-textmedia-text-inner {
-    > *:first-child {
-        margin-top: 0;
-    }
-    > *:last-child {
-        margin-bottom: 0;
-    }
-    min-height: 160px;
-    @media (min-width: map-get($grid-breakpoints, sm)) {
-        padding: 0 $grid-gutter-width;
-    }
+  > *:first-child {
+	margin-top : 0;
+  }
+  > *:last-child {
+	margin-bottom : 0;
+  }
+  min-height : 160px;
+  @media (min-width : map-get($grid-breakpoints, sm)) {
+	padding : 0 $grid-gutter-width;
+  }
 }
 
-@media (min-width: map-get($grid-breakpoints, sm)) {
-    .contentelement-textmedia-image {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 33.33%;
-    }
-    .contentelement-textmedia-right {
-        .contentelement-textmedia-image {
-            right: 0;
-        }
-        .contentelement-textmedia-text {
-            margin-right: 33.33%;
-        }
-        .contentelement-textmedia-text-inner {
-            padding-left: 0;
-            margin-left: 0;
-        }
-    }
-    .contentelement-textmedia-left {
-        .contentelement-textmedia-image {
-            left: 0;
-        }
-        .contentelement-textmedia-text {
-            margin-left: 33.33%;
-        }
-        .contentelement-textmedia-text-inner {
-            padding-right: 0;
-            margin-right: 0;
-        }
-    }
-}
-@media (min-width: map-get($grid-breakpoints, md)) {
-    .contentelement-textmedia-right {
-        .contentelement-textmedia-text {
-            margin-right: 33.33%;
-        }
-    }
-    .contentelement-textmedia-left {
-        .contentelement-textmedia-text {
-            margin-left: 33.33%;
-        }
-    }
+@media (min-width : map-get($grid-breakpoints, sm)) {
+  .contentelement-textmedia-image {
+	position : absolute;
+	top      : 0;
+	bottom   : 0;
+	width    : 33.33%;
+  }
+  .contentelement-textmedia-right {
+	.contentelement-textmedia-image {
+	  right : 0;
+	}
+	.contentelement-textmedia-text {
+	  margin-right : 33.33%;
+	}
+	.contentelement-textmedia-text-inner {
+	  padding-left : 0;
+	  margin-left  : 0;
+	}
+  }
+  .contentelement-textmedia-left {
+	.contentelement-textmedia-image {
+	  left : 0;
+	}
+	.contentelement-textmedia-text {
+	  margin-left : 33.33%;
+	}
+	.contentelement-textmedia-text-inner {
+	  padding-right : 0;
+	  margin-right  : 0;
+	}
+  }
 }
 
+@media (min-width : map-get($grid-breakpoints, md)) {
+  .contentelement-textmedia-right {
+	.contentelement-textmedia-text {
+	  margin-right : 33.33%;
+	}
+  }
+  .contentelement-textmedia-left {
+	.contentelement-textmedia-text {
+	  margin-left : 33.33%;
+	}
+  }
+}
 
 //
 // Content Element Text Media Overlap
 //
 .contentelement-textmedia-overlap {
-    .contentelement-textmedia-text {
-        margin-top: $container-padding;
-    }
-    @media (min-width: map-get($grid-breakpoints, sm)) {
-        .contentelement-textmedia-text {
-            margin-bottom: $container-padding;
-        }
-        .contentelement-textmedia-text-inner {
-            background-color: $white;
-            padding-top: $grid-gutter-width;
-            padding-bottom: $grid-gutter-width;
-        }
-        .contentelement-textmedia-right {
-            .contentelement-textmedia-text {
-                margin-right: 30%;
-            }
-        }
-        .contentelement-textmedia-left {
-            .contentelement-textmedia-text {
-                margin-left: 30%;
-            }
-        }
-        .contentelement-textmedia-image {
-            width: 40%;   
-        }
-    }
+  .contentelement-textmedia-text {
+	margin-top : $container-padding;
+  }
+  @media (min-width : map-get($grid-breakpoints, sm)) {
+	.contentelement-textmedia-text {
+	  margin-bottom : $container-padding;
+	}
+	.contentelement-textmedia-text-inner {
+	  background-color : $white;
+	  padding-top      : $grid-gutter-width;
+	  padding-bottom   : $grid-gutter-width;
+	}
+	.contentelement-textmedia-right {
+	  .contentelement-textmedia-text {
+		margin-right : 30%;
+	  }
+	}
+	.contentelement-textmedia-left {
+	  .contentelement-textmedia-text {
+		margin-left : 30%;
+	  }
+	}
+	.contentelement-textmedia-image {
+	  width : 40%;
+	}
+  }
 }

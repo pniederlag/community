@@ -4712,6 +4712,9 @@ ul.content-list {
     .layout-default .masthead + .content > .container:first-child .contentelement-intro_block:first-child {
       margin-top: -5rem; } }
 
+.contentelement-top_features h1, .contentelement-top_features h2, .contentelement-top_features h3, .contentelement-top_features h4, .contentelement-top_features h5, .contentelement-top_features h6 {
+  margin-bottom: 3rem; }
+
 @media (min-width: 544px) {
   .contentelement-list_item {
     padding-left: 3rem;
