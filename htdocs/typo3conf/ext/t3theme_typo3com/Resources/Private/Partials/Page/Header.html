@@ -16,10 +16,10 @@
 </header>
 <f:if condition="{heroTeaser.0}">
 	<f:then>
-		<div class="masthead-fullwidth" style="background-image: url({f:uri.image(image: heroTeaser.0.files.0)})">
+		<div class="masthead hero" style="background-image: url({f:uri.image(image: heroTeaser.0.files.0)})">
 			<div class="container">
-				<div class="row">
-					<div class="col-md-5 hero-teaser-box">
+				<div class="masthead-hero-content">
+					<div class="masthead-hero-inner">
 						<f:link.page pageUid="{heroTeaser.0.data.uid}">
 							<span class="claim-orange">TYPO3</span> is...<br/>
 							{heroTeaser.0.tagLine.0}

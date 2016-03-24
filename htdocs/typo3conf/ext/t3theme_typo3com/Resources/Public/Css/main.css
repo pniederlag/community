@@ -4897,42 +4897,51 @@ ul.content-list {
     transform: translateX(-50%);
     height: 100%; }
 
-.masthead-fullwidth {
-  background-size: cover;
-  background-position: center center;
-  margin: 0 auto;
-  position: relative;
-  min-height: 100px; }
+.masthead-hero-content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7); }
+  .masthead-hero-content a {
+    color: white;
+    font-family: "Share";
+    font-size: 1.375rem; }
+    .masthead-hero-content a .claim-orange {
+      color: #ff8700; }
   @media (min-width: 544px) {
-    .masthead-fullwidth {
-      height: 27.75vw; } }
-  .masthead-fullwidth > .container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 50%;
-    transform: translateX(-50%); }
-    .masthead-fullwidth > .container > .row {
-      height: 100%;
-      position: relative; }
-      .masthead-fullwidth > .container > .row .hero-teaser-box {
-        background-color: rgba(0, 0, 0, 0.7);
-        position: absolute;
-        bottom: 0;
-        right: 0; }
-        @media (min-width: 768px) {
-          .masthead-fullwidth > .container > .row .hero-teaser-box {
-            bottom: 3rem; } }
-        .masthead-fullwidth > .container > .row .hero-teaser-box a {
-          color: white;
-          font-family: "Share";
-          font-size: 150%;
-          padding-top: 25%; }
-          @media (min-width: 544px) {
-            .masthead-fullwidth > .container > .row .hero-teaser-box a {
-              font-size: 300%; } }
-          .masthead-fullwidth > .container > .row .hero-teaser-box a .claim-orange {
-            color: #ff8700; }
+    .masthead-hero-content {
+      right: 1.35rem;
+      bottom: 1.35rem;
+      left: auto;
+      top: auto;
+      width: 40%; } }
+  @media (min-width: 768px) {
+    .masthead-hero-content a {
+      font-size: 2rem; } }
+  @media (min-width: 992px) {
+    .masthead-hero-content a {
+      font-size: 2.5rem; } }
+
+.masthead-hero-inner {
+  position: absolute;
+  right: 0;
+  left: 0;
+  padding: 1.35rem;
+  top: 50%;
+  transform: translate(0, -50%); }
+  .masthead-hero-inner > *:first-child {
+    margin-top: 0; }
+  .masthead-hero-inner > *:last-child {
+    margin-bottom: 0; }
+  @media (min-width: 544px) {
+    .masthead-hero-inner {
+      position: relative;
+      transform: none;
+      top: auto;
+      left: auto;
+      right: auto; } }
 
 .masthead-casestudy-content {
   position: absolute;
