@@ -2,13 +2,80 @@
 // Masthead
 //
 .masthead {
-    height: 160px;
-    background-size: cover;
-    background-position: center center;
-    margin: 0 auto;
-    max-width: 1300px;
-    @media (min-width: map-get($grid-breakpoints, sm)) {
-        height: 27.75vw;
-        max-height: 400px;
-    }
+  height              : 160px;
+  background-size     : cover;
+  background-position : center center;
+  margin              : 0 auto;
+  max-width           : 1300px;
+  @media (min-width : map-get($grid-breakpoints, sm)) {
+	height     : 27.75vw;
+	max-height : 400px;
+  }
 }
+
+.masthead-casestudy {
+  background-size     : cover;
+  background-position : center center;
+  margin              : 0 auto;
+  position            : relative;
+  @media (min-width : map-get($grid-breakpoints, sm)) {
+	height : 27.75vw;
+  }
+  > .container {
+	position  : absolute;
+	width     : 100%;
+	left      : 50%;
+	transform : translateX(-50%);
+	height    : 100%;
+	> .row {
+	  height : 100%;
+	  .hero-teaser-box {
+		background-color : rgba($black, 0.7);
+		height           : 100%;
+		h3 {
+		  color       : white;
+		  font-family : $share;
+		  font-size   : 300%;
+		  padding-top : 25%;
+		  .claim-orange {
+			color : $typo3-key-color;
+		  }
+		}
+	  }
+	}
+  }
+}
+
+.masthead-fullwidth {
+  background-size     : cover;
+  background-position : center center;
+  margin              : 0 auto;
+  position            : relative;
+  @media (min-width : map-get($grid-breakpoints, sm)) {
+	height : 27.75vw;
+  }
+  > .container {
+	position  : absolute;
+	width     : 100%;
+	left      : 50%;
+	transform : translateX(-50%);
+	height    : 100%;
+	> .row {
+	  height : 100%;
+	  .hero-teaser-box {
+		background-color : rgba($black, 0.7);
+		height           : 100%;
+		a {
+		  color       : white;
+		  font-family : $share;
+		  font-size   : 300%;
+		  padding-top : 25%;
+		  .claim-orange {
+			color : $typo3-key-color;
+		  }
+		}
+	  }
+	}
+  }
+}
+

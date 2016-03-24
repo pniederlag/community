@@ -4885,6 +4885,60 @@ ul.content-list {
       height: 27.75vw;
       max-height: 400px; } }
 
+.masthead-casestudy {
+  background-size: cover;
+  background-position: center center;
+  margin: 0 auto;
+  position: relative; }
+  @media (min-width: 544px) {
+    .masthead-casestudy {
+      height: 27.75vw; } }
+  .masthead-casestudy > .container {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%; }
+    .masthead-casestudy > .container > .row {
+      height: 100%; }
+      .masthead-casestudy > .container > .row .hero-teaser-box {
+        background-color: rgba(0, 0, 0, 0.7);
+        height: 100%; }
+        .masthead-casestudy > .container > .row .hero-teaser-box h3 {
+          color: white;
+          font-family: "Share";
+          font-size: 300%;
+          padding-top: 25%; }
+          .masthead-casestudy > .container > .row .hero-teaser-box h3 .claim-orange {
+            color: #ff8700; }
+
+.masthead-fullwidth {
+  background-size: cover;
+  background-position: center center;
+  margin: 0 auto;
+  position: relative; }
+  @media (min-width: 544px) {
+    .masthead-fullwidth {
+      height: 27.75vw; } }
+  .masthead-fullwidth > .container {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%; }
+    .masthead-fullwidth > .container > .row {
+      height: 100%; }
+      .masthead-fullwidth > .container > .row .hero-teaser-box {
+        background-color: rgba(0, 0, 0, 0.7);
+        height: 100%; }
+        .masthead-fullwidth > .container > .row .hero-teaser-box a {
+          color: white;
+          font-family: "Share";
+          font-size: 300%;
+          padding-top: 25%; }
+          .masthead-fullwidth > .container > .row .hero-teaser-box a .claim-orange {
+            color: #ff8700; }
+
 .contentelement-hard_facts-item {
   text-align: center;
   margin: 2em 0; }

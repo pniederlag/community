@@ -61,7 +61,7 @@ page {
 		tether = EXT:t3theme_typo3com/Resources/Public/JavaScript/bootstrap/tether.min.js
 		bootstrap = EXT:t3theme_typo3com/Resources/Public/JavaScript/bootstrap/bootstrap.min.js
 		imagesloaded = EXT:t3theme_typo3com/Resources/Public/JavaScript/imagesloaded.pkgd.min.js
-		mixitup = EXT:t3theme_typo3com/Resources/Public/JavaScript/jquery.mixitup.min.js
+		isotope = EXT:t3theme_typo3com/Resources/Public/JavaScript/isotope.pkgd.min.js
 		script = EXT:t3theme_typo3com/Resources/Public/JavaScript/Script.js
 	}
 
@@ -75,9 +75,6 @@ page {
 		templateName.stdWrap.cObject {
 			key.data = levelfield:-1, backend_layout_next_level, slide
 			key.override.field = backend_layout
-
-			pagets__homepage = TEXT
-			pagets__homepage.value = Homepage
 
 			pagets__casestudy = TEXT
 			pagets__casestudy.value = CaseStudy
@@ -119,6 +116,36 @@ page {
 			150 {
 				references.fieldName = tx_t3themetypo3com_case_logo
 				as = caseLogo
+			}
+         175 = TYPO3\CMS\Frontend\DataProcessing\SplitProcessor
+         175 {
+            if.isTrue.field = title
+            delimiter = TYPO3 is...
+            fieldName = title
+            removeEmptyEntries = 1
+            as = tagLineCaseStudy
+         }
+			200 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+			200.if.isTrue.field = tx_t3themetypo3com_case_study_hero
+			200 {
+				table = pages
+				uidInList.field = tx_t3themetypo3com_case_study_hero
+				pidInList = {$plugin.t3theme_typo3com.caseStudy.overviewPage}
+				as = heroTeaser
+				dataProcessing {
+					10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+					10 {
+						references.fieldName = tx_t3themetypo3com_hero_image
+					}
+					20 = TYPO3\CMS\Frontend\DataProcessing\SplitProcessor
+					20 {
+						if.isTrue.field = title
+						delimiter = TYPO3 is...
+						fieldName = title
+						removeEmptyEntries = 1
+						as = tagLine
+					}
+				}
 			}
 		}
 	}

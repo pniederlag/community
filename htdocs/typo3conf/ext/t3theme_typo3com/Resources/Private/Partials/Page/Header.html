@@ -14,6 +14,42 @@
 
     </div>
 </header>
-<f:if condition="{media.0}">
-    <div class="masthead" style="background-image: url({f:uri.image(image: media.0)})"></div>
+<f:if condition="{heroTeaser.0}">
+	<f:then>
+		<div class="masthead-fullwidth" style="background-image: url({f:uri.image(image: heroTeaser.0.files.0)})">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5 hero-teaser-box">
+						<f:link.page pageUid="{heroTeaser.0.data.uid}">
+							<span class="claim-orange">TYPO3</span> is...<br /> {heroTeaser.0.tagLine.0}
+						</f:link.page>
+					</div>
+				</div>
+			</div>
+		</div>
+	</f:then>
+	<f:else>
+		<f:if condition="{data.doktype} == '102'">
+			<f:then>
+				<f:if condition="{media.0}">
+					<div class="masthead-casestudy" style="background-image: url({f:uri.image(image: media.0)})">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-5 hero-teaser-box">
+									<h3>
+										<span class="claim-orange">TYPO3</span> is...<br /> {tagLineCaseStudy.0}
+									</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</f:if>
+			</f:then>
+			<f:else>
+				<f:if condition="{media.0}">
+					<div class="masthead" style="background-image: url({f:uri.image(image: media.0)})"></div>
+				</f:if>
+			</f:else>
+		</f:if>
+	</f:else>
 </f:if>
