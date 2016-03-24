@@ -6,20 +6,11 @@
   background-size     : cover;
   background-position : center center;
   margin              : 0 auto;
+  position: relative;
   max-width           : 1300px;
   @media (min-width : map-get($grid-breakpoints, sm)) {
 	height     : 27.75vw;
 	max-height : 400px;
-  }
-}
-
-.masthead-casestudy {
-  background-size     : cover;
-  background-position : center center;
-  margin              : 0 auto;
-  position            : relative;
-  @media (min-width : map-get($grid-breakpoints, sm)) {
-	height : 27.75vw;
   }
   > .container {
 	position  : absolute;
@@ -59,7 +50,6 @@
 	width     : 100%;
 	left      : 50%;
 	transform : translateX(-50%);
-	height    : 100%;
 	> .row {
 	  height : 100%;
 	  .hero-teaser-box {
