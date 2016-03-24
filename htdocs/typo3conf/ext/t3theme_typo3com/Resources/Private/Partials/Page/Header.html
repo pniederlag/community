@@ -1,18 +1,18 @@
-<input id="page-toggle" type="checkbox" value="1" />
+<input id="page-toggle" type="checkbox" value="1"/>
 <header class="header">
-    <div class="container">
+	<div class="container">
 
-        <label class="header-toggle" for="page-toggle"></label>
+		<label class="header-toggle" for="page-toggle"></label>
 
-        <f:link.page pageUid="1" class="header-logo">
-            <f:image src="typo3conf/ext/t3theme_typo3com/Resources/Public/Images/TYPO3-logo.svg" class="header-logo-image" />
-        </f:link.page>
+		<f:link.page pageUid="1" class="header-logo">
+			<f:image src="typo3conf/ext/t3theme_typo3com/Resources/Public/Images/TYPO3-logo.svg" class="header-logo-image"/>
+		</f:link.page>
 
-        <div class="header-navigation">
-            <f:cObject typoscriptObjectPath="lib.navigation" />
-        </div>
+		<div class="header-navigation">
+			<f:cObject typoscriptObjectPath="lib.navigation"/>
+		</div>
 
-    </div>
+	</div>
 </header>
 <f:if condition="{heroTeaser.0}">
 	<f:then>
@@ -21,7 +21,8 @@
 				<div class="row">
 					<div class="col-md-5 hero-teaser-box">
 						<f:link.page pageUid="{heroTeaser.0.data.uid}">
-							<span class="claim-orange">TYPO3</span> is...<br /> {heroTeaser.0.tagLine.0}
+							<span class="claim-orange">TYPO3</span> is...<br/>
+							{heroTeaser.0.tagLine.0}
 						</f:link.page>
 					</div>
 				</div>
@@ -34,10 +35,11 @@
 				<f:if condition="{media.0}">
 					<div class="masthead casestudy" style="background-image: url({f:uri.image(image: media.0)})">
 						<div class="container">
-							<div class="row">
-								<div class="col-md-5 hero-teaser-box">
+							<div class="masthead-casestudy-content">
+								<div class="masthead-casestudy-content-verticalcenter">
 									<h3>
-										<span class="claim-orange">TYPO3</span> is...<br /> {tagLineCaseStudy.0}
+										<span class="claim-orange">TYPO3</span> is...<br/>
+										{tagLineCaseStudy.0}
 									</h3>
 								</div>
 							</div>
