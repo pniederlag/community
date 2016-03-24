@@ -4623,6 +4623,10 @@ body, .htmlarea-content-body {
 .footer-navigation {
   padding: 2rem 0; }
 
+main.content {
+  position: relative;
+  z-index: 15; }
+
 .text-left,
 .left {
   text-align: left; }
