@@ -98,6 +98,7 @@ TCEFORM {
 		menu_type {
 			addItems {
 				feature_menu = Feature Menu
+				casestudy_menu = Case Study Menu
 			}
 		}
         date.disabled = 1

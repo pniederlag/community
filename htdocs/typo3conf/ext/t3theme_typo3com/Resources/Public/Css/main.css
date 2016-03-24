@@ -5070,6 +5070,9 @@ ul.content-list {
 .t3com-case-study-related .case-study-related-text h4 {
   text-transform: uppercase; }
 
+.casestudy-menu-entry {
+  margin-bottom: 2rem; }
+
 .contentelement-casestudy_teaser {
   position: relative;
   margin-left: -1.35rem;

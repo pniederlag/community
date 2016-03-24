@@ -142,6 +142,57 @@ tt_content {
 			}
 		}
 	}
+
+   menu.casestudy_menu = COA
+   menu.casestudy_menu {
+     wrap = <div class="case-outer">|</div>
+     10 = HMENU
+     10.special = directory
+     10.special.field = pages
+     10.1 = TMENU
+     10.1.NO.doNotShowLink = 1
+     10.1.NO.before.cObject = COA
+     10.1.NO.before.cObject {
+       wrap = <div class="row casestudy-menu-entry">|</div>
+       10 = FILES
+       10.references {
+         table = pages
+         uid.field = uid
+         fieldName = media
+       }
+       10.renderObj = COA
+       10.renderObj {
+         5 = TEXT
+         5.value = this won't be displayed anyways
+         5.typolink.parameter.field = uid
+         5.typolink.returnLast = url
+         5.wrap = <a href="|">
+
+         10 = IMG_RESOURCE
+         10.stdWrap.wrap = <img src="|" width="100%" height="auto" />
+         10 {
+           file.import.data = file:current:publicUrl
+         }
+         15 = TEXT
+         15.value = </a>
+       }
+       10.stdWrap.wrap = <div class="col-md-4 col-sm-12 case-image">|</div>
+       20 = COA
+       20 {
+         wrap = <div class="col-md-8 col-sm-12 case-text">|</div>
+         20 = TEXT
+         20.field = title
+         20.typolink.parameter.field = uid
+         20.wrap = <h3>|</h3>
+         30 = TEXT
+         30.field = abstract
+         30.wrap = <p>|</p>
+         40 = TEXT
+         40.value = Read More
+         40.typolink.parameter.field = uid
+       }
+     }
+   }
 }
 
 
