@@ -1,9 +1,9 @@
 {
-    "repositories": [
+	"repositories": [
 		{
-            "type": "composer",
-            "url": "https://composer.typo3.org/"
-        },
+			"type": "composer",
+			"url": "https://composer.typo3.org/"
+		},
 		{
 			"type": "package",
 			"package": {
@@ -17,8 +17,8 @@
 				}
 			}
 		}
-    ],
-    "name": "typo3/t3o-community",
+	],
+	"name": "typo3/t3o-community",
 	"scripts": {
 		"post-update-cmd": "Helhum\\Typo3Console\\Composer\\InstallerScripts::setupConsole",
 		"post-install-cmd": "Helhum\\Typo3Console\\Composer\\InstallerScripts::setupConsole"
@@ -29,18 +29,18 @@
 			"web-dir": "htdocs"
 		}
 	},
-    "require": {
-        "typo3/cms": "^7.6",
-        "typo3-ter/static-info-tables": "^6.3.4",
-        "helhum/realurl": "^2.0.2",
-        "typo3-ter/typo3-console": "1.2.3",
+	"require": {
+		"typo3/cms": "^7.6",
+		"typo3-ter/static-info-tables": "^6.3.4",
+		"helhum/realurl": "^2.0.2",
+		"typo3-ter/typo3-console": "1.2.3",
 		"georgringer/news": "dev-master",
 		"kaystrobach/voice": "0.0.67",
 		"apache-solr-for-typo3/solr": "dev-master",
-        "typo3-ter/gridelements": "^7",
-        "typo3-ter/bootstrap-grids": "^1",
-        "typo3-ter/owl-slider": "^2.3"
-    },
+		"typo3-ter/gridelements": "^7",
+		"typo3-ter/bootstrap-grids": "^1",
+		"typo3-ter/owl-slider": "^2.3"
+	},
 	"autoload": {
 		"psr-4": {
 
