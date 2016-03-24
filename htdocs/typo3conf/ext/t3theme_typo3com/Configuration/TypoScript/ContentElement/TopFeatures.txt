@@ -5,7 +5,7 @@ tt_content.top_features {
 	variables {
 	   content = COA
 	   content {
-	      	wrap = <div class="row row--topfeatures">|</div>
+	      	wrap = <div class="topfeatures-container"><div class="row topfeatures-row" data-equalheight="container">|</div></div>
 
          	10 = HMENU
          	10 {
@@ -49,7 +49,7 @@ tt_content.top_features {
          	20 {
          		wrap (
          			<div class="col-xs-6 col-sm-4">
-         				<div class="feature-item feature-item-more">
+         				<div class="feature-item feature-item-more" data-equalheight="item">
          					<div class="feature-item-inner">|</div>
          				</div>
          			</div>
@@ -64,7 +64,8 @@ tt_content.top_features {
          		20.value = {LLL:EXT:t3theme_typo3com/Resources/Private/Language/ContentElements.xlf:top_features.features}
          		20.insertData = 1
          		20.typolink.parameter.field = tx_t3themetypo3com_featurelist_link
-         		20.wrap = <small>|</small>
+         		20.typolink.ATagParams = class="btn btn-primary topfeatures-button"
+         		20.wrap = <div class="topfeatures-button-container">|</div>
          	}
 	   }
 	}

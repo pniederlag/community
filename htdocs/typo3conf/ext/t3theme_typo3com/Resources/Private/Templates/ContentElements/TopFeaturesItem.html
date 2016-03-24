@@ -1,22 +1,23 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:layout name="None"/>
-<f:section name="Content">
-    
+
 	<div class="col-xs-6 col-sm-4">
-		<div class="feature-item">
+		<div class="feature-item"  data-equalheight="item">
 			<div class="feature-item-inner">
 				<f:if condition="{files.0}">
 					<f:then>
-						<f:media file="{files.0}" height="50"/>
+						<f:media file="{files.0}" height="50" class="contentelement-hard_facts-image"/>
 					</f:then>
 					<f:else>
 						<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEAAAAALAAAAAABAAEAAAI=" height="50"/>
 					</f:else>
 				</f:if>
 				<h4>{data.title}</h4>
+				<div class="topfeatures-button-container">
+					<f:link.page pageUid="{data.uid}" class="btn btn-primary topfeatures-button">More</f:link.page>
+				</div>
 			</div>
 		</div>
 	</div>
 
-</f:section>
+
 </html>
