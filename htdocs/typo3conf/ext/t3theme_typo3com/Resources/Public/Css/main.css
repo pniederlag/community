@@ -5335,6 +5335,7 @@ ul.content-list {
   transform: translate(-50%, 0); }
 
 .topfeatures-button-container {
-  height: 45px; }
+  height: 45px;
+  display: none; }
 
 /*# sourceMappingURL=main.css.map */
