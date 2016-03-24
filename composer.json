@@ -43,7 +43,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-
+			"T3Com\\Theme\\": "htdocs/typo3conf/ext/t3theme_typo3com/Classes/"
 		}
 	}
 }

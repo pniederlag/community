@@ -1,50 +1,83 @@
 jQuery.noConflict();
 
 (function($) {
-	$(document).ready(function() {
 
-		//------------------------------------------------------------------------------------------------------------------
-		// main navigation
-		//------------------------------------------------------------------------------------------------------------------
-		$('.header-burger-menu-link').click( function() {
-			$(this).toggleClass('active');
+	//------------------------------------------------------------------------------------------------------------------
+	// main navigation
+	//------------------------------------------------------------------------------------------------------------------
+	$('.header-burger-menu-link').click( function() {
+		$(this).toggleClass('active');
 
-			$('.burger-navigation')
-				.toggleClass('closed')
-				.toggleClass('open');
+		$('.burger-navigation')
+			.toggleClass('closed')
+			.toggleClass('open');
+	});
+
+	var $isotopeItems = $('.isotope-items');
+	if ($isotopeItems.length > 0) {
+		$isotopeItems.mixItUp({
+			animation: {
+				animateChangeLayout: true,
+				duration: 200,
+				effects: 'fade'
+			},
+			callbacks: {
+				onMixEnd: function () {
+					$(window).trigger('calculate.bk2k.equalheight');
+					adjustIsotopeContainerHeights($isotopeItems);
+				}
+			},
+			selectors: {
+				target: '.isotope-item'
+			}
 		});
 
-		// Isotope
-		var $isotope = $('.isotope-items').isotope({
-			itemSelector: '.isotope-item',
-			layoutMode: 'fitRows',
-			percentPosition: true,
-			transitionDuration: '0.2s'
+		$(window).on('resize', function() {
+			adjustIsotopeContainerHeights($isotopeItems);
 		});
-		$isotope.on('layoutComplete', function() {
-			$(window).trigger('calculate.bk2k.equalheight');
-		});
-		$isotope.imagesLoaded().progress( function() {
-			$isotope.isotope('layout');
-		});
+	}
 
-		$(document).on('click', '.isotope-filter', function() {
-			var $activeFilters = $('.isotope-filter.active'),
-				$isotope = $(this).closest('.isotope-container').find('.isotope-items'),
-				filterCfg = '*';
+	/**
+	 * Find items per row and adjust height
+	 * @param {Object} $itemContainer
+	 */
+	function adjustIsotopeContainerHeights($itemContainer) {
+		var groups = {},
+			$items = $itemContainer.find('[data-isotope="equalheight"]'),
+			y = Math.ceil($items.first().offset().top),
+			maxHeight = -1;
 
-			if ($activeFilters.length > 0) {
-				filterCfg = [];
-				$activeFilters.each(function(_, filter) {
-					var filterId = $(filter).data('category');
-					filterCfg.push('[data-category-' + filterId + ']');
-				});
-				filterCfg = filterCfg.join(',');
+		// Initially, reset the height of each element
+		$items.height('auto');
+
+		$items.each(function(index, item) {
+			var $item = $(item),
+				positionY = Math.ceil($item.offset().top);
+
+			if (positionY !== y || $items.length === index + 1) {
+				if (typeof groups[y] !== 'undefined') {
+					groups[y].maxHeight = maxHeight;
+				}
+				y = positionY;
+				maxHeight = -1;
 			}
 
-			$isotope.isotope({
-				filter: filterCfg
+			if (maxHeight < $item.height()) {
+				maxHeight = $item.height();
+			}
+
+			if (typeof groups[y] === 'undefined') {
+				groups[y] = {
+					maxHeight: maxHeight,
+					items: []
+				};
+			}
+			groups[y].items.push($item);
+		});
+		$.each(groups, function(y, group) {
+			$.each(group.items, function(_, item) {
+				$(item).height(group.maxHeight);
 			});
 		});
-	});
+	}
 })(jQuery);

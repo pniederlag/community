@@ -156,6 +156,12 @@ return [
             'packagePath' => 'typo3/sysext/tstemplate/',
             'suggestions' => [],
         ],
+        'gridelements' => [
+            'composerName' => 'GridElementsTeam/Gridelements',
+            'state' => 'active',
+            'packagePath' => 'typo3conf/ext/gridelements/',
+            'suggestions' => [],
+        ],
         'realurl' => [
             'composerName' => 'helhum/realurl',
             'state' => 'active',
@@ -165,7 +171,7 @@ return [
             ],
         ],
         't3theme_typo3com' => [
-            'composerName' => 't3theme_typo3com',
+            'composerName' => 't3com/t3theme-typo3com',
             'state' => 'active',
             'packagePath' => 'typo3conf/ext/t3theme_typo3com/',
             'suggestions' => [],
@@ -260,12 +266,6 @@ return [
             'composerName' => 'typo3/cms-filemetadata',
             'state' => 'inactive',
             'packagePath' => 'typo3/sysext/filemetadata/',
-            'suggestions' => [],
-        ],
-        'gridelements' => [
-            'composerName' => 'GridElementsTeam/Gridelements',
-            'state' => 'inactive',
-            'packagePath' => 'typo3conf/ext/gridelements/',
             'suggestions' => [],
         ],
         'impexp' => [

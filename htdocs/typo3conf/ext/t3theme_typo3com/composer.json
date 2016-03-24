@@ -1,0 +1,19 @@
+{
+	"name": "t3com/t3theme-typo3com",
+	"type": "typo3-cms-extension",
+	"description": "TYPO3.com base settings for templating",
+	"homepage": "http://typo3.org",
+	"license": "GPL-2.0+",
+
+	"require": {
+		"typo3/cms-core": ">=7.6.0"
+	},
+	"replace": {
+		"t3theme_typo3com": "*"
+	},
+	"autoload": {
+		"psr-4": {
+			"T3Com\\Theme\\": "Classes/"
+		}
+	}
+}

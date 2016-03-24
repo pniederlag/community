@@ -163,6 +163,9 @@
 				<source>Features</source>
 			</trans-unit>
 
+			<trans-unit id="feature_menu.filter.all">
+				<source>All</source>
+			</trans-unit>
 			<trans-unit id="feature_menu.category.agency">
 				<source>Agency</source>
 			</trans-unit>
