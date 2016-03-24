@@ -44,8 +44,29 @@
  * No idea if the stuff above is useless or not
  */
 
-.isotope-content {
-  padding : 2rem;
-  background-color : $grey-superlight;
-  margin-bottom: 2rem;
+.isotope-items {
+  font-size: 0;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+
+  .isotope-item {
+    display: none;
+    margin-bottom: 2rem;
+    vertical-align: top;
+    position: static;
+    float: none;
+
+    .isotope-content {
+      padding : 2rem;
+      background-color : $grey-superlight;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
 }

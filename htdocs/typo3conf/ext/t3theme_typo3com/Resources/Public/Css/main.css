@@ -4969,10 +4969,23 @@ ul.content-list {
 /*********************
  * No idea if the stuff above is useless or not
  */
-.isotope-content {
-  padding: 2rem;
-  background-color: #f4f4f4;
-  margin-bottom: 2rem; }
+.isotope-items {
+  font-size: 0; }
+  .isotope-items:after {
+    content: '';
+    display: inline-block;
+    width: 100%; }
+  .isotope-items .isotope-item {
+    display: none;
+    margin-bottom: 2rem;
+    vertical-align: top;
+    position: static;
+    float: none; }
+    .isotope-items .isotope-item .isotope-content {
+      padding: 2rem;
+      background-color: #f4f4f4; }
+      .isotope-items .isotope-item .isotope-content p {
+        margin-bottom: 0; }
 
 .contentelement-casestudy_partner {
   position: relative;
