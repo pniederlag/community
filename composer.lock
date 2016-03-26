@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "940d8622f6fdab08394bdaf50d572956",
-    "content-hash": "cf721e47a3cad3316279dd2363a8204a",
+    "hash": "f13c08c02bc5c259f8639b1ef6106264",
+    "content-hash": "a8ab44318b884513e00cdd1862c1d795",
     "packages": [
         {
             "name": "apache-solr-for-typo3/solr",
@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-Solr/ext-solr.git",
-                "reference": "b97e1861bb7b411c1507dcd36bbd40baad7b7f83"
+                "reference": "e3a0bde3ccbe1622ce58583a6873e2e2c9c457d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-Solr/ext-solr/zipball/5c0af89d40bb5219a27393a80e889155c788a8a3",
-                "reference": "b97e1861bb7b411c1507dcd36bbd40baad7b7f83",
+                "url": "https://api.github.com/repos/TYPO3-Solr/ext-solr/zipball/e3a0bde3ccbe1622ce58583a6873e2e2c9c457d4",
+                "reference": "e3a0bde3ccbe1622ce58583a6873e2e2c9c457d4",
                 "shasum": ""
             },
             "require": {
@@ -36,7 +36,7 @@
             "type": "typo3-cms-extension",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.2.x-dev"
+                    "dev-master": "4.0.x-dev"
                 },
                 "class-alias-maps": [
                     "Migrations/Code/ClassAliasMap.php"
@@ -79,7 +79,7 @@
                 "solr",
                 "typo3"
             ],
-            "time": "2016-03-11 07:02:53"
+            "time": "2016-03-25 22:31:05"
         },
         {
             "name": "cogpowered/finediff",
@@ -187,86 +187,6 @@
             "time": "2015-06-14 21:17:01"
         },
         {
-            "name": "georgringer/news",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/TYPO3-extensions/news.git",
-                "reference": "b326cb5dc6ee9834e515fb962c0dac9d37a49b9b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-extensions/news/zipball/780c11182da0476145c68336da52382cfebb3d44",
-                "reference": "b326cb5dc6ee9834e515fb962c0dac9d37a49b9b",
-                "shasum": ""
-            },
-            "require": {
-                "typo3/cms-core": ">=7.6.0,<8.0"
-            },
-            "replace": {
-                "news": "self.version",
-                "typo3-ter/news": "self.version"
-            },
-            "require-dev": {
-                "mikey179/vfsstream": "1.4.*@dev",
-                "phpunit/phpunit": "~4.8.0"
-            },
-            "suggest": {
-                "dmitryd/typo3-dd-googlesitemap": "~2.0",
-                "reelworx/rx-shariff": "~7.0"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.2.x-dev"
-                },
-                "typo3/cms": {
-                    "cms-package-dir": "{$vendor-dir}/typo3/cms",
-                    "web-dir": ".Build/Web"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "GeorgRinger\\News\\": "Classes"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "GeorgRinger\\News\\Tests\\": "Tests",
-                    "TYPO3\\CMS\\Core\\Tests\\": ".Build/vendor/typo3/cms/typo3/sysext/core/Tests/",
-                    "TYPO3\\CMS\\Fluid\\Tests\\": ".Build/vendor/typo3/cms/typo3/sysext/fluid/Tests/"
-                }
-            },
-            "scripts": {
-                "post-autoload-dump": [
-                    "mkdir -p .Build/Web/typo3conf/ext/",
-                    "[ -L .Build/Web/typo3conf/ext/news ] || ln -snvf ../../../../. .Build/Web/typo3conf/ext/news"
-                ]
-            },
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Georg Ringer",
-                    "role": "Developer",
-                    "homepage": "http://montagmorgen.at"
-                }
-            ],
-            "description": "Versatile news extension, based on extbase & fluid for TYPO3 CMS",
-            "homepage": "http://montagmorgen.at",
-            "keywords": [
-                "TYPO3",
-                "extension",
-                "news"
-            ],
-            "support": {
-                "source": "https://github.com/TYPO3-extensions/news/tree/master",
-                "issues": "https://github.com/TYPO3-extensions/news/issues"
-            },
-            "time": "2016-03-09 05:29:55"
-        },
-        {
             "name": "helhum/realurl",
             "version": "2.0.2",
             "source": {
@@ -304,16 +224,6 @@
             "description": "RealURL: speaking paths for TYPO3",
             "homepage": "http://typo3.org",
             "time": "2015-10-07 15:56:20"
-        },
-        {
-            "name": "kaystrobach/voice",
-            "version": "0.0.67",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kaystrobach/TYPO3.voice",
-                "reference": "master"
-            },
-            "type": "typo3-cms-extension"
         },
         {
             "name": "mso/idna-convert",
@@ -782,124 +692,6 @@
             "time": "2016-02-22 16:12:29"
         },
         {
-            "name": "typo3-ter/bootstrap-grids",
-            "version": "1.1.5",
-            "dist": {
-                "type": "t3x",
-                "url": "https://typo3.org/extensions/repository/download/bootstrap_grids/1.1.5/t3x/",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "typo3-ter/gridelements": ">= 3.0.0",
-                "typo3/cms-core": ">= 6.2.0, <= 7.6.99"
-            },
-            "replace": {
-                "bootstrap_grids": "self.version",
-                "typo3-ter/bootstrap_grids": "self.version"
-            },
-            "type": "typo3-cms-extension",
-            "autoload": {
-                "classmap": [
-                    ""
-                ],
-                "exclude-from-classmap": [
-                    "Tests",
-                    "tests",
-                    "class.ext_update.php"
-                ]
-            },
-            "authors": [
-                {
-                    "name": "Pascal Mayer",
-                    "email": "typo3@bsdist.ch",
-                    "company": "",
-                    "username": "laxap"
-                }
-            ],
-            "description": "Gridelements for bootstrap. Column grids, grids for simple accordions, tabs and content slider.",
-            "time": "2016-01-25 17:11:03"
-        },
-        {
-            "name": "typo3-ter/gridelements",
-            "version": "7.0.5",
-            "dist": {
-                "type": "t3x",
-                "url": "https://typo3.org/extensions/repository/download/gridelements/7.0.5/t3x/",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "typo3/cms-core": ">= 7.6.2, <= 7.99.99"
-            },
-            "conflict": {
-                "typo3-ter/jfmulticontent": "*",
-                "typo3-ter/templavoila": "*"
-            },
-            "replace": {
-                "gridelements": "self.version"
-            },
-            "type": "typo3-cms-extension",
-            "autoload": {
-                "classmap": [
-                    ""
-                ],
-                "exclude-from-classmap": [
-                    "Tests",
-                    "tests",
-                    "class.ext_update.php"
-                ]
-            },
-            "authors": [
-                {
-                    "name": "Grid Elements Team",
-                    "email": "info@cybercraft.de",
-                    "company": "",
-                    "username": "cybercraft"
-                }
-            ],
-            "description": "This extension integrates the grid layout concept also to regular content elements - the grid elements.\r\nIt offers a lot of new features like advanced drag & drop or real references, that improve the usability of the page and list module to speed up the daily work with the backend.",
-            "time": "2016-01-29 13:10:05"
-        },
-        {
-            "name": "typo3-ter/owl-slider",
-            "version": "2.3.3",
-            "dist": {
-                "type": "t3x",
-                "url": "https://typo3.org/extensions/repository/download/owl_slider/2.3.3/t3x/",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "typo3/cms-core": ">= 6.0.99, <= 7.6.99"
-            },
-            "replace": {
-                "owl_slider": "self.version",
-                "typo3-ter/owl_slider": "self.version"
-            },
-            "type": "typo3-cms-extension",
-            "autoload": {
-                "classmap": [
-                    ""
-                ],
-                "exclude-from-classmap": [
-                    "Tests",
-                    "tests",
-                    "class.ext_update.php"
-                ]
-            },
-            "authors": [
-                {
-                    "name": "comsolit AG",
-                    "email": "info@comsolit.com",
-                    "company": "comsolit AG",
-                    "username": "larsmessmer"
-                }
-            ],
-            "description": "Responsive carousel slider for TYPO3, Touch enabled based on the jQuery OWL Carousel.",
-            "time": "2016-01-29 13:23:56"
-        },
-        {
             "name": "typo3-ter/static-info-tables",
             "version": "6.3.9",
             "dist": {
@@ -1239,16 +1031,16 @@
         },
         {
             "name": "typo3/cms-composer-installers",
-            "version": "1.2.5",
+            "version": "1.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3/CmsComposerInstallers.git",
-                "reference": "68dce62bbfed9912583de4a1db16df8feb8f7e2d"
+                "reference": "501fc9a55f357b5f3b2e81cfedba26f7bf4b7ebb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3/CmsComposerInstallers/zipball/68dce62bbfed9912583de4a1db16df8feb8f7e2d",
-                "reference": "68dce62bbfed9912583de4a1db16df8feb8f7e2d",
+                "url": "https://api.github.com/repos/TYPO3/CmsComposerInstallers/zipball/501fc9a55f357b5f3b2e81cfedba26f7bf4b7ebb",
+                "reference": "501fc9a55f357b5f3b2e81cfedba26f7bf4b7ebb",
                 "shasum": ""
             },
             "require": {
@@ -1299,14 +1091,13 @@
                 "installer",
                 "typo3"
             ],
-            "time": "2015-11-03 21:19:57"
+            "time": "2016-03-23 11:08:19"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "georgringer/news": 20,
         "apache-solr-for-typo3/solr": 20
     },
     "prefer-stable": false,

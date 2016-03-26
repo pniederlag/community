@@ -200,12 +200,6 @@ return [
             'packagePath' => 'typo3/sysext/beuser/',
             'suggestions' => [],
         ],
-        'bootstrap_grids' => [
-            'composerName' => 'laxap/bootstrap-grids',
-            'state' => 'inactive',
-            'packagePath' => 'typo3conf/ext/bootstrap_grids/',
-            'suggestions' => [],
-        ],
         'context_help' => [
             'composerName' => 'typo3/cms-context-help',
             'state' => 'inactive',
@@ -262,12 +256,6 @@ return [
             'packagePath' => 'typo3/sysext/filemetadata/',
             'suggestions' => [],
         ],
-        'gridelements' => [
-            'composerName' => 'GridElementsTeam/Gridelements',
-            'state' => 'inactive',
-            'packagePath' => 'typo3conf/ext/gridelements/',
-            'suggestions' => [],
-        ],
         'impexp' => [
             'composerName' => 'typo3/cms-impexp',
             'state' => 'inactive',
@@ -298,22 +286,10 @@ return [
             'packagePath' => 'typo3/sysext/linkvalidator/',
             'suggestions' => [],
         ],
-        'news' => [
-            'composerName' => 'georgringer/news',
-            'state' => 'inactive',
-            'packagePath' => 'typo3conf/ext/news/',
-            'suggestions' => [],
-        ],
         'opendocs' => [
             'composerName' => 'typo3/cms-opendocs',
             'state' => 'inactive',
             'packagePath' => 'typo3/sysext/opendocs/',
-            'suggestions' => [],
-        ],
-        'owl_slider' => [
-            'composerName' => 'owl_slider',
-            'state' => 'inactive',
-            'packagePath' => 'typo3conf/ext/owl_slider/',
             'suggestions' => [],
         ],
         'randombanners' => [
@@ -388,7 +364,6 @@ return [
             'packagePath' => 'typo3conf/ext/t3theme/',
             'suggestions' => [
                 'static_info_tables',
-                'gridelements',
                 'css_styled_content',
             ],
         ],
@@ -416,12 +391,6 @@ return [
             'composerName' => 'typo3/cms-viewpage',
             'state' => 'inactive',
             'packagePath' => 'typo3/sysext/viewpage/',
-            'suggestions' => [],
-        ],
-        'voice' => [
-            'composerName' => 'voice',
-            'state' => 'inactive',
-            'packagePath' => 'typo3conf/ext/voice/',
             'suggestions' => [],
         ],
         'wizard_crpages' => [
