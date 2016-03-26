@@ -5,17 +5,8 @@
 			"url": "https://composer.typo3.org/"
 		},
 		{
-			"type": "package",
-			"package": {
-				"version": "0.0.67",
-				"name": "kaystrobach/voice",
-				"type": "typo3-cms-extension",
-				"source": {
-					"url": "https://github.com/kaystrobach/TYPO3.voice",
-					"type": "git",
-					"reference": "master"
-				}
-			}
+			"type": "vcs",
+			"url": "https://github.com/reinhardfuehricht/typo3-formhandler"
 		}
 	],
 	"name": "typo3/t3o-community",
