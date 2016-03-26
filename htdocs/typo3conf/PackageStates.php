@@ -156,6 +156,18 @@ return [
             'packagePath' => 'typo3/sysext/tstemplate/',
             'suggestions' => [],
         ],
+        'formhandler' => [
+            'composerName' => 'typoheads/formhandler',
+            'state' => 'active',
+            'packagePath' => 'typo3conf/ext/formhandler/',
+            'suggestions' => [],
+        ],
+        'jm_recaptcha' => [
+            'composerName' => 'mblaschke/jm-recaptcha',
+            'state' => 'active',
+            'packagePath' => 'typo3conf/ext/jm_recaptcha/',
+            'suggestions' => [],
+        ],
         'realurl' => [
             'composerName' => 'helhum/realurl',
             'state' => 'active',
@@ -364,6 +376,7 @@ return [
             'packagePath' => 'typo3conf/ext/t3theme/',
             'suggestions' => [
                 'static_info_tables',
+                'formhandler',
                 'css_styled_content',
             ],
         ],
