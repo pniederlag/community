@@ -1,0 +1,54 @@
+plugin.Tx_Formhandler.settings.predef.formhandler-basic-contactform {
+
+   name = Contact Form
+   formValuesPrefix = contact
+   langFile.1 = TEXT
+   langFile.1.value = EXT:t3theme_typo3com/Resources/Private/Language/Forms/ContactForm.xlf
+   templateFile = TEXT
+   templateFile.value = EXT:t3theme_typo3com/Resources/Private/Templates/Forms/ContactForm/form.html
+   masterTemplateFile = TEXT
+   masterTemplateFile.value = EXT:t3theme_typo3com/Resources/Private/Templates/Forms/mastertemplate.html
+   isErrorMarker {
+      default = has-danger
+   }
+   singleErrorTemplate {
+      totalWrap = <p class="text-muted">|</p>
+   }
+   validators {
+      1.class = Validator_Default
+      1.config.fieldConf {
+         name.errorCheck.1 = required
+         email.errorCheck.1 = required
+         email.errorCheck.2 = email
+         message.errorCheck.1 = required
+         recaptcha_response_field.errorCheck.1 = jmRecaptcha
+      }
+   }
+   finishers {
+      1.class = Finisher_Mail
+      1.config {
+         checkBinaryCrLf = message
+         admin {
+            templateFile = TEXT
+            templateFile.value = EXT:t3theme_typo3com/Resources/Private/Templates/Forms/ContactForm/email-admin.html
+            sender_email = no-reply@typo3.org
+            to_email = info@typo3.org
+            subject = TEXT
+            subject.data = LLL:EXT:t3theme_typo3com/Resources/Private/Language/Forms/ContactForm.xlf:email_admin_subject
+         }
+      }
+      5.class = Finisher_Redirect
+      5.config {
+         redirectPage = {$plugin.t3theme_typo3com.footer.contactSuccessPid}
+      }
+   }
+}
+
+page.headerData.203 = TEXT
+page.headerData.203.value = <script src="https://www.google.com/recaptcha/api.js"></script>
+
+plugin.tx_jmrecaptcha {
+   public_key = {$plugin.t3theme_typo3com.spam-protection.jm_recaptcha.public_key}
+   private_key = {$plugin.t3theme_typo3com.spam-protection.jm_recaptcha.private_key}
+   theme = clean
+}

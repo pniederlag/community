@@ -38,6 +38,10 @@ lib.baseContentElement {
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/ContentElement/Image.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/ContentElement/TopFeatures.txt">
 
+// Forms
+// -----------------------------------------------------------------------------
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3theme_typo3com/Configuration/TypoScript/Forms/ContactForm/setup.ts1">
+
 // Page
 // -----------------------------------------------------------------------------
 page = PAGE

@@ -1,6 +1,7 @@
 plugin.t3theme_typo3com {
 	footer {
 		contactPid = 18
+		contactSuccessPid = 69
 		legalInfoPid = 16
 
 		menuPid = 4
