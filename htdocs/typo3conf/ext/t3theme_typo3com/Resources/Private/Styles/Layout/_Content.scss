@@ -221,7 +221,6 @@ ul.content-list {
   height              : 160px;
   @media (min-width : map-get($grid-breakpoints, sm)) {
 	height     : auto;
-	min-height : 160px;
   }
 }
 
@@ -232,7 +231,6 @@ ul.content-list {
   > *:last-child {
 	margin-bottom : 0;
   }
-  min-height : 160px;
   @media (min-width : map-get($grid-breakpoints, sm)) {
 	padding : 0 $grid-gutter-width;
   }

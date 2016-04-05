@@ -4769,18 +4769,17 @@ ul.content-list {
   height: 160px; }
   @media (min-width: 544px) {
     .contentelement-textmedia-image {
-      height: auto;
-      min-height: 160px; } }
+      height: auto; } }
 
-.contentelement-textmedia-text-inner {
-  min-height: 160px; }
-  .contentelement-textmedia-text-inner > *:first-child {
-    margin-top: 0; }
-  .contentelement-textmedia-text-inner > *:last-child {
-    margin-bottom: 0; }
-  @media (min-width: 544px) {
-    .contentelement-textmedia-text-inner {
-      padding: 0 1.875rem; } }
+.contentelement-textmedia-text-inner > *:first-child {
+  margin-top: 0; }
+
+.contentelement-textmedia-text-inner > *:last-child {
+  margin-bottom: 0; }
+
+@media (min-width: 544px) {
+  .contentelement-textmedia-text-inner {
+    padding: 0 1.875rem; } }
 
 @media (min-width: 544px) {
   .contentelement-textmedia-image {
