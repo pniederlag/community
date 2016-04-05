@@ -4884,6 +4884,22 @@ ul.content-list {
     transform: translateX(-50%);
     height: 100%; }
 
+.masthead-hero {
+  height: 160px;
+  background-size: cover;
+  margin: 0 auto;
+  position: relative; }
+  @media (min-width: 544px) {
+    .masthead-hero {
+      height: 27.75vw; } }
+  .masthead-hero > .container {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    height: 100%; }
+
 .masthead-hero-content {
   position: absolute;
   top: 0;
