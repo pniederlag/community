@@ -172,6 +172,7 @@ tt_content {
          10.stdWrap.wrap = <img src="|" width="100%" height="auto" />
          10 {
            file.import.data = file:current:publicUrl
+           file.maxW = 640
          }
          15 = TEXT
          15.value = </a>
